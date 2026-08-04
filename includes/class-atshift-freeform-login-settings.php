@@ -130,19 +130,17 @@ class Atshift_Freeform_Login_Settings {
 	}
 
 	/**
-	 * Add the top-level menu.
+	 * Add the settings submenu.
 	 *
 	 * @return void
 	 */
 	public function add_menu() {
-		add_menu_page(
+		add_options_page(
 			__( 'atshift Freeform Login', 'atshift-freeform-login' ),
-			__( 'Freeform Login', 'atshift-freeform-login' ),
+			__( 'atshift Freeform Login', 'atshift-freeform-login' ),
 			'manage_options',
 			self::PAGE_SLUG,
-			array( $this, 'render_page' ),
-			'dashicons-lock',
-			81
+			array( $this, 'render_page' )
 		);
 	}
 
@@ -153,7 +151,7 @@ class Atshift_Freeform_Login_Settings {
 	 * @return void
 	 */
 	public function enqueue_assets( $hook ) {
-		if ( 'toplevel_page_' . self::PAGE_SLUG !== $hook ) {
+		if ( 'settings_page_' . self::PAGE_SLUG !== $hook ) {
 			return;
 		}
 
@@ -211,7 +209,7 @@ class Atshift_Freeform_Login_Settings {
 					'page'    => self::PAGE_SLUG,
 					'updated' => '1',
 				),
-				admin_url( 'admin.php' )
+				admin_url( 'options-general.php' )
 			)
 		);
 		exit;

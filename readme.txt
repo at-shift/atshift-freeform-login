@@ -24,7 +24,7 @@ An optional add-on can extend the free plugin with custom logo images, precise p
 
 1. Upload the plugin folder to `/wp-content/plugins/`.
 2. Activate the plugin.
-3. Open Freeform Login in the WordPress administration menu.
+3. Open Settings > atshift Freeform Login in the WordPress administration menu.
 4. Configure and save the design.
 5. Enable login-screen application after reviewing the preview.
 
