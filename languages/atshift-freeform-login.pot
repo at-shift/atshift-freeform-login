@@ -41,14 +41,18 @@ msgstr ""
 msgid "Background color"
 msgstr ""
 
+msgid "Background type"
+msgstr ""
+
+msgid "Fallback background color"
+msgstr ""
+
 #: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:455
-msgid ""
-"Background color, image, position, and size are all available in the free "
-"version."
+msgid "Background color and images are available in the free version. Upgrade to Pro to use a lightweight loop video."
 msgstr ""
 
 #: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:267
-msgid "Background image"
+msgid "Image"
 msgstr ""
 
 #: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:503
@@ -156,11 +160,11 @@ msgid "Freeform Login"
 msgstr ""
 
 #: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:268
-msgid "Image position"
+msgid "Display position"
 msgstr ""
 
 #: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:269
-msgid "Image size"
+msgid "Display size"
 msgstr ""
 
 #: atshift-freeform-login/includes/class-atshift-freeform-login-jetpack.php:145
@@ -392,4 +396,22 @@ msgstr ""
 #: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:139
 #: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:235
 msgid "atshift Freeform Login"
+msgstr ""
+
+msgid "Introductory text"
+msgstr ""
+
+msgid "Displayed between the brand and login form. Leave blank to hide it."
+msgstr ""
+
+msgid "Text width"
+msgstr ""
+
+msgid "Select a loop video"
+msgstr ""
+
+msgid "Use this video"
+msgstr ""
+
+msgid "Select video"
 msgstr ""

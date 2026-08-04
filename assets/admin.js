@@ -13,6 +13,7 @@
 	const previewGroup = root.querySelector('[data-preview-group]');
 	const previewForm = root.querySelector('[data-preview-form]');
 	const previewLogo = root.querySelector('[data-preview-logo]');
+	const previewIntro = root.querySelector('[data-preview-intro]');
 	const logoModeControls = root.querySelectorAll('[data-logo-mode-visible]');
 	const settingsGroups = root.querySelectorAll('[data-settings-accordion] > details');
 
@@ -151,8 +152,19 @@
 		}
 
 		const backgroundImage = value('background_image_url', '');
+		const backgroundMediaType = value('background_media_type', 'color');
+		root.querySelectorAll('[data-background-media-visible]').forEach(function (control) {
+			control.hidden = control.dataset.backgroundMediaVisible !== backgroundMediaType;
+		});
+		root.querySelectorAll('[data-background-media-details]').forEach(function (control) {
+			control.hidden = backgroundMediaType === 'color';
+		});
+		const backgroundColorLabel = root.querySelector('[data-background-color-label]');
+		if (backgroundColorLabel) {
+			backgroundColorLabel.textContent = backgroundMediaType === 'color' ? atshiftFreeformLoginAdmin.backgroundColorLabel : atshiftFreeformLoginAdmin.fallbackColorLabel;
+		}
 		preview.style.backgroundColor = value('background_color', '#f0f2f5');
-		preview.style.backgroundImage = backgroundImage ? 'url("' + backgroundImage + '")' : 'none';
+		preview.style.backgroundImage = backgroundMediaType !== 'color' && backgroundImage ? 'url("' + backgroundImage + '")' : 'none';
 		preview.style.backgroundPosition = value('background_position', 'center center');
 		preview.style.backgroundSize = value('background_size', 'cover');
 
@@ -199,6 +211,13 @@
 		previewLogo.style.width = '100%';
 		previewLogo.style.backgroundImage = 'none';
 		previewLogo.style.aspectRatio = '';
+		if (previewIntro) {
+			const introText = value('intro_text', '').trim();
+			previewIntro.hidden = introText === '';
+			previewIntro.textContent = introText;
+			previewIntro.style.width = value('intro_width', 100) + '%';
+			previewIntro.style.color = value('label_color', '#1d2327');
+		}
 
 		document.dispatchEvent(new CustomEvent('atshift-freeform-login:preview-updated', {
 			detail: {
@@ -240,12 +259,13 @@
 		const idField = control.querySelector('[data-media-id]');
 		const urlField = control.querySelector('[data-media-url]');
 		const removeButton = control.querySelector('[data-remove-media]');
+		const mediaType = control.dataset.mediaType || 'image';
 
 		control.querySelector('[data-select-media]').addEventListener('click', function () {
 			const frame = wp.media({
-				title: atshiftFreeformLoginAdmin.mediaTitle,
-				button: { text: atshiftFreeformLoginAdmin.mediaButton },
-				library: { type: 'image' },
+				title: mediaType === 'video' ? atshiftFreeformLoginAdmin.videoTitle : atshiftFreeformLoginAdmin.imageTitle,
+				button: { text: mediaType === 'video' ? atshiftFreeformLoginAdmin.videoButton : atshiftFreeformLoginAdmin.imageButton },
+				library: { type: mediaType },
 				multiple: false
 			});
 

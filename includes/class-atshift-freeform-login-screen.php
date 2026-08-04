@@ -18,6 +18,7 @@ class Atshift_Freeform_Login_Screen {
 		add_action( 'login_enqueue_scripts', array( $this, 'enqueue_assets' ) );
 		add_filter( 'login_headerurl', array( $this, 'header_url' ) );
 		add_filter( 'login_headertext', array( $this, 'header_text' ) );
+		add_filter( 'login_message', array( $this, 'intro_message' ) );
 	}
 
 	/**
@@ -82,6 +83,23 @@ class Atshift_Freeform_Login_Screen {
 	}
 
 	/**
+	 * Insert optional plain text between the brand and login form.
+	 *
+	 * @param string $message Existing WordPress login message.
+	 * @return string
+	 */
+	public function intro_message( $message ) {
+		$settings = Atshift_Freeform_Login_Settings::get_settings();
+		$text     = isset( $settings['intro_text'] ) ? trim( (string) $settings['intro_text'] ) : '';
+
+		if ( empty( $settings['enabled'] ) || '' === $text ) {
+			return $message;
+		}
+
+		return $message . '<div class="atshift-freeform-login-intro">' . nl2br( esc_html( $text ) ) . '</div>';
+	}
+
+	/**
 	 * Build CSS only from normalized settings.
 	 *
 	 * @param array<string, mixed> $settings Settings.
@@ -89,14 +107,14 @@ class Atshift_Freeform_Login_Screen {
 	 */
 	private function build_css( $settings ) {
 		$position      = $this->position_values( $settings['form_position'] );
-		$image         = '' !== $settings['background_image_url'] ? 'url("' . esc_url_raw( $settings['background_image_url'] ) . '")' : 'none';
+		$image         = 'color' !== $settings['background_media_type'] && '' !== $settings['background_image_url'] ? 'url("' . esc_url_raw( $settings['background_image_url'] ) . '")' : 'none';
 		$shadow        = self::box_shadow( $settings );
 		$logo_css      = $this->logo_css( $settings );
 		$link_states   = self::interactive_color_states( $settings['link_color'] );
 		$button_states = self::interactive_color_states( $settings['button_background_color'] );
 
 		$css = sprintf(
-			'body.login{background-color:%1$s;background-image:%2$s;background-position:%3$s;background-size:%4$s;background-repeat:no-repeat;justify-content:%5$s;align-items:%6$s;color:%7$s}body.login #login{width:min(%8$dpx,calc(100vw - 48px))}body.login #loginform,body.login #lostpasswordform,body.login #registerform{background:%9$s;border:0;border-radius:8px;box-shadow:%10$s}body.login label,body.login .forgetmenot label{color:%7$s}body.login #nav a,body.login #backtoblog a,body.login .privacy-policy-page-link a,body.login #jetpack-sso-wrap a:not(.button){color:%11$s}body.login #nav a:hover,body.login #backtoblog a:hover,body.login .privacy-policy-page-link a:hover,body.login #jetpack-sso-wrap a:not(.button):hover{color:%12$s}body.login #nav a:active,body.login #backtoblog a:active,body.login .privacy-policy-page-link a:active,body.login #jetpack-sso-wrap a:not(.button):active{color:%13$s}body.login #nav a:focus-visible,body.login #backtoblog a:focus-visible,body.login .privacy-policy-page-link a:focus-visible,body.login #jetpack-sso-wrap a:not(.button):focus-visible{outline:2px solid %14$s;outline-offset:2px}body.login .button-primary{background:%15$s;border-color:%15$s;color:%16$s}body.login .button-primary:hover{background:%17$s;border-color:%17$s;color:%16$s}body.login .button-primary:active{background:%18$s;border-color:%18$s;color:%16$s}body.login .button-primary:focus-visible{background:%17$s;border-color:%17$s;color:%16$s;box-shadow:none;outline:2px solid %19$s;outline-offset:2px}body.login.atshift-freeform-login-jetpack-sso #jetpack-sso-wrap p,body.login.atshift-freeform-login-jetpack-sso #jetpack-sso-wrap__user h2{color:%7$s}body.login.atshift-freeform-login-jetpack-sso .jetpack-sso-or span{background:%9$s;color:%7$s}%20$s',
+			'body.login{background-color:%1$s;background-image:%2$s;background-position:%3$s;background-size:%4$s;background-repeat:no-repeat;justify-content:%5$s;align-items:%6$s;color:%7$s}body.login #login{width:min(%8$dpx,calc(100vw - 48px))}body.login .atshift-freeform-login-intro{width:%21$d%%;max-width:100%%;margin:0 auto 18px;color:%7$s;line-height:1.65}body.login #loginform,body.login #lostpasswordform,body.login #registerform{background:%9$s;border:0;border-radius:8px;box-shadow:%10$s}body.login label,body.login .forgetmenot label{color:%7$s}body.login #nav a,body.login #backtoblog a,body.login .privacy-policy-page-link a,body.login #jetpack-sso-wrap a:not(.button){color:%11$s}body.login #nav a:hover,body.login #backtoblog a:hover,body.login .privacy-policy-page-link a:hover,body.login #jetpack-sso-wrap a:not(.button):hover{color:%12$s}body.login #nav a:active,body.login #backtoblog a:active,body.login .privacy-policy-page-link a:active,body.login #jetpack-sso-wrap a:not(.button):active{color:%13$s}body.login #nav a:focus-visible,body.login #backtoblog a:focus-visible,body.login .privacy-policy-page-link a:focus-visible,body.login #jetpack-sso-wrap a:not(.button):focus-visible{outline:2px solid %14$s;outline-offset:2px}body.login .button-primary{background:%15$s;border-color:%15$s;color:%16$s}body.login .button-primary:hover{background:%17$s;border-color:%17$s;color:%16$s}body.login .button-primary:active{background:%18$s;border-color:%18$s;color:%16$s}body.login .button-primary:focus-visible{background:%17$s;border-color:%17$s;color:%16$s;box-shadow:none;outline:2px solid %19$s;outline-offset:2px}body.login.atshift-freeform-login-jetpack-sso #jetpack-sso-wrap p,body.login.atshift-freeform-login-jetpack-sso #jetpack-sso-wrap__user h2{color:%7$s}body.login.atshift-freeform-login-jetpack-sso .jetpack-sso-or span{background:%9$s;color:%7$s}%20$s',
 			esc_attr( $settings['background_color'] ),
 			$image,
 			esc_attr( $settings['background_position'] ),
@@ -116,7 +134,8 @@ class Atshift_Freeform_Login_Screen {
 			esc_attr( $button_states['hover'] ),
 			esc_attr( $button_states['active'] ),
 			esc_attr( $button_states['focus'] ),
-			$logo_css
+			$logo_css,
+			(int) $settings['intro_width']
 		);
 
 		return apply_filters( 'atshift_freeform_login_screen_css', $css, $settings );

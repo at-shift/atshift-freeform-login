@@ -36,15 +36,19 @@ msgstr "背景"
 msgid "Background color"
 msgstr "背景色"
 
+msgid "Background type"
+msgstr "背景の種類"
+
+msgid "Fallback background color"
+msgstr "代替の背景色"
+
 #: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:455
-msgid ""
-"Background color, image, position, and size are all available in the free "
-"version."
-msgstr "背景色、背景画像、位置、サイズは、すべて無料版で利用できます。"
+msgid "Background color and images are available in the free version. Upgrade to Pro to use a lightweight loop video."
+msgstr "背景色と画像は無料版で利用できます。Proでは、軽量なループ動画を使用できます。"
 
 #: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:267
-msgid "Background image"
-msgstr "背景画像"
+msgid "Image"
+msgstr "画像"
 
 #: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:503
 #: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:518
@@ -152,12 +156,12 @@ msgid "Freeform Login"
 msgstr "Freeform Login"
 
 #: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:268
-msgid "Image position"
-msgstr "画像の位置"
+msgid "Display position"
+msgstr "表示位置"
 
 #: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:269
-msgid "Image size"
-msgstr "画像サイズ"
+msgid "Display size"
+msgstr "表示サイズ"
 
 #: atshift-freeform-login/includes/class-atshift-freeform-login-jetpack.php:145
 msgid ""
@@ -398,3 +402,21 @@ msgstr "この設定を管理する権限がありません。"
 #: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:235
 msgid "atshift Freeform Login"
 msgstr "atshift Freeform Login"
+
+msgid "Introductory text"
+msgstr "説明テキスト"
+
+msgid "Displayed between the brand and login form. Leave blank to hide it."
+msgstr "ブランドとログインフォームの間に表示します。空欄の場合は表示されません。"
+
+msgid "Text width"
+msgstr "テキスト幅"
+
+msgid "Select a loop video"
+msgstr "ループ動画を選択"
+
+msgid "Use this video"
+msgstr "この動画を使用"
+
+msgid "Select video"
+msgstr "動画を選択"
