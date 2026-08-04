@@ -21,6 +21,8 @@ Design a beautiful WordPress login screen and place a matching login form anywhe
 
 Optional attributes include `redirect`, `show_lost_password`, `remember`, `jetpack`, and `class`.
 
+Shortcode usage is documented here rather than in the plugin settings screen, keeping the design workspace focused on visual customization.
+
 ## Requirements
 
 - WordPress 6.5 or later

@@ -4,7 +4,7 @@ Tags: login, custom login, login form, shortcode, branding
 Requires at least: 6.5
 Tested up to: 7.0
 Requires PHP: 7.4
-Stable tag: 0.9.0-beta.1
+Stable tag: 0.9.1-beta.1
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -24,11 +24,15 @@ An optional add-on can extend the free plugin with custom logo images, precise p
 
 1. Upload the plugin folder to `/wp-content/plugins/`.
 2. Activate the plugin.
-3. Open Freeform Login in the WordPress administration menu.
+3. Open Settings > atshift Freeform Login in the WordPress administration menu.
 4. Configure and save the design.
 5. Enable login-screen application after reviewing the preview.
 
 == Changelog ==
+
+= 0.9.1-beta.1 =
+* Moved the design screen under Settings > atshift Freeform Login.
+* Added product illustration and plugin icon source assets for GitHub and future directory use.
 
 = 0.9.0-beta.1 =
 * Public beta with responsive login customization, shortcode output, and Jetpack SSO compatibility.
