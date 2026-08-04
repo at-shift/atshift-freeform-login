@@ -2,7 +2,7 @@
 
 Design a beautiful WordPress login screen and place a matching login form anywhere with a shortcode.
 
-> This repository currently contains a public beta. Test it on a staging site before using it in production.
+The `codex/wordpress-org-1.0` branch contains the WordPress.org submission candidate. Translations are distributed through WordPress.org language packs rather than bundled with this branch.
 
 ## Features
 

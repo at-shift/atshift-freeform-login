@@ -47,25 +47,9 @@ final class Atshift_Freeform_Login {
 	 * Constructor.
 	 */
 	private function __construct() {
-		add_action( 'init', array( $this, 'load_textdomain' ) );
-
 		new Atshift_Freeform_Login_Jetpack();
 		new Atshift_Freeform_Login_Settings();
 		new Atshift_Freeform_Login_Screen();
 		new Atshift_Freeform_Login_Shortcode();
-	}
-
-	/**
-	 * Load bundled translations for the privately distributed plugin.
-	 *
-	 * @return void
-	 */
-	public function load_textdomain() {
-		// phpcs:ignore PluginCheck.CodeAnalysis.DiscouragedFunctions.load_plugin_textdomainFound -- The source package includes a Japanese translation for immediate use outside WordPress.org language packs.
-		load_plugin_textdomain(
-			'atshift-freeform-login',
-			false,
-			dirname( plugin_basename( ATSHIFT_FREEFORM_LOGIN_FILE ) ) . '/languages'
-		);
 	}
 }
