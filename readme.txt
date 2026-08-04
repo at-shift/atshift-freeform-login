@@ -1,0 +1,34 @@
+=== atshift Freeform Login ===
+Contributors: atshift
+Tags: login, custom login, login form, shortcode, branding
+Requires at least: 6.5
+Tested up to: 7.0
+Requires PHP: 7.4
+Stable tag: 0.9.0-beta.1
+License: GPLv2 or later
+License URI: https://www.gnu.org/licenses/gpl-2.0.html
+
+Design a beautiful WordPress login screen and place a matching login form anywhere with a shortcode.
+
+== Description ==
+
+atshift Freeform Login customizes the standard WordPress login screen without replacing WordPress authentication. It also provides the `[atshift_login]` shortcode for site pages.
+
+The free plugin includes background colors and images, a site-title brand display, form placement and width, core color controls, responsive fallback, a live preview, the login shortcode, and Jetpack SSO compatibility.
+
+When Jetpack SSO is active, its WordPress.com login UI is styled without replacing Jetpack authentication. The shortcode uses Jetpack automatically and respects Jetpack settings that hide or bypass the local login form. Use `[atshift_login jetpack="hide"]` only when local username and password login remains available.
+
+An optional add-on can extend the free plugin with custom logo images, precise position offsets, transparency, borders, corner radius, and detailed shadow controls. The free plugin remains usable without an add-on.
+
+== Installation ==
+
+1. Upload the plugin folder to `/wp-content/plugins/`.
+2. Activate the plugin.
+3. Open Freeform Login in the WordPress administration menu.
+4. Configure and save the design.
+5. Enable login-screen application after reviewing the preview.
+
+== Changelog ==
+
+= 0.9.0-beta.1 =
+* Public beta with responsive login customization, shortcode output, and Jetpack SSO compatibility.

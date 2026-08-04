@@ -1,0 +1,203 @@
+body.login {
+	box-sizing: border-box;
+	display: flex;
+	min-height: 100vh;
+	padding: 24px;
+}
+
+body.login *,
+body.login *::before,
+body.login *::after {
+	box-sizing: border-box;
+}
+
+body.login #login {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body.login #loginform,
+body.login #lostpasswordform,
+body.login #registerform {
+	border: 0;
+	padding: 28px;
+}
+
+body.login #loginform .forgetmenot {
+	float: none;
+	margin: 20px 0 0;
+}
+
+body.login #loginform .submit {
+	margin: 18px 0 0;
+}
+
+body.login #loginform .button-primary {
+	display: block;
+	float: none;
+	width: 100%;
+	min-height: 46px;
+}
+
+body.login.atshift-freeform-login-jetpack-sso #jetpack-sso-wrap {
+	box-sizing: border-box;
+}
+
+body.login.atshift-freeform-login-jetpack-sso #jetpack-sso-wrap .button {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	min-height: 46px;
+}
+
+body.login.atshift-freeform-login-jetpack-sso #jetpack-sso-wrap .genericon-wordpress {
+	margin-right: 7px;
+}
+
+body.login.atshift-freeform-login-jetpack-sso #jetpack-sso-wrap__action > p {
+	line-height: 1.55;
+}
+
+body.login.atshift-freeform-login-jetpack-sso .jetpack-sso-or {
+	margin: 20px 0;
+}
+
+body.login.atshift-freeform-login-jetpack-sso #jetpack-sso-wrap__user h2 {
+	line-height: 1.4;
+}
+
+body.login .atshift-freeform-login-visually-hidden {
+	position: absolute !important;
+	width: 1px !important;
+	height: 1px !important;
+	padding: 0 !important;
+	margin: -1px !important;
+	overflow: hidden !important;
+	clip: rect(0, 0, 0, 0) !important;
+	white-space: nowrap !important;
+	border: 0 !important;
+}
+
+body.login .atshift-freeform-login-field-label:not(.atshift-freeform-login-visually-hidden) {
+	display: block;
+	margin-bottom: 7px;
+}
+
+body.login #loginform input[type="text"],
+body.login #loginform input[type="password"] {
+	margin-top: 0;
+}
+
+body.login #nav,
+body.login #backtoblog,
+body.login .privacy-policy-page-link {
+	margin-right: 0;
+	margin-left: 0;
+	text-align: center;
+}
+
+body.login .language-switcher {
+	position: fixed;
+	right: 24px;
+	bottom: 24px;
+	margin: 0;
+}
+
+body.login .privacy-policy-page-link {
+	position: fixed;
+	bottom: 24px;
+	left: 24px;
+}
+
+body.login .atshift-freeform-login-secondary {
+	display: grid;
+	gap: 14px;
+	margin-top: 22px;
+	font-size: 13px;
+	text-align: center;
+}
+
+body.login .atshift-freeform-login-secondary-links {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	gap: 7px 18px;
+}
+
+body.login .atshift-freeform-login-secondary #nav,
+body.login .atshift-freeform-login-secondary #backtoblog,
+body.login .atshift-freeform-login-secondary .privacy-policy-page-link {
+	position: static;
+	margin: 0;
+	padding: 0;
+	transform: none;
+}
+
+body.login .atshift-freeform-login-secondary .language-switcher {
+	position: static;
+	margin: 0;
+	transform: none;
+}
+
+body.login .atshift-freeform-login-secondary .language-switcher form {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 8px;
+}
+
+body.login .atshift-freeform-login-secondary .language-switcher select,
+body.login .atshift-freeform-login-secondary .language-switcher .button {
+	min-height: 34px;
+}
+
+@media (max-width: 782px) {
+	body.login {
+		align-items: center !important;
+		justify-content: center !important;
+		padding: 20px 20px 96px;
+	}
+
+	body.login #login {
+		width: 100% !important;
+		max-width: 100%;
+		transform: none !important;
+	}
+
+	body.login .language-switcher {
+		right: 50%;
+		bottom: 20px;
+		transform: translateX(50%);
+	}
+
+	body.login .privacy-policy-page-link {
+		bottom: 72px;
+		left: 50%;
+		transform: translateX(-50%);
+	}
+
+	body.login .atshift-freeform-login-secondary {
+		margin-top: 20px;
+	}
+
+	body.login .atshift-freeform-login-secondary .privacy-policy-page-link,
+	body.login .atshift-freeform-login-secondary .language-switcher {
+		position: static;
+		transform: none;
+	}
+}
+
+@media (max-height: 600px) {
+	body.login {
+		align-items: flex-start !important;
+		overflow-y: auto;
+	}
+
+	body.login #login {
+		margin-top: 0;
+		margin-bottom: 20px;
+		transform: none !important;
+	}
+}

@@ -1,0 +1,395 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR @shift
+# This file is distributed under the same license as the atshift-freeform-login package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: atshift-freeform-login 0.9.0-beta.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-08-04 23:41+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:375
+msgid "390 × 844 (Standard)"
+msgstr ""
+
+#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:376
+msgid "844 × 390 (Landscape)"
+msgstr ""
+
+#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:254
+msgid "Apply this design to the WordPress login screen"
+msgstr ""
+
+#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:409
+msgid "Back to site"
+msgstr ""
+
+#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:263
+msgid "Background"
+msgstr ""
+
+#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:266
+msgid "Background color"
+msgstr ""
+
+#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:455
+msgid ""
+"Background color, image, position, and size are all available in the free "
+"version."
+msgstr ""
+
+#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:267
+msgid "Background image"
+msgstr ""
+
+#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:503
+#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:518
+msgid "Bottom center"
+msgstr ""
+
+#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:502
+#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:517
+msgid "Bottom left"
+msgstr ""
+
+#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:504
+#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:519
+msgid "Bottom right"
+msgstr ""
+
+#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:275
+msgid "Brand"
+msgstr ""
+
+#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:327
+msgid "Button color"
+msgstr ""
+
+#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:328
+msgid "Button text"
+msgstr ""
+
+#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:500
+#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:515
+msgid "Center"
+msgstr ""
+
+#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:499
+#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:514
+msgid "Center left"
+msgstr ""
+
+#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:501
+#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:516
+msgid "Center right"
+msgstr ""
+
+#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:414
+msgid "Change"
+msgstr ""
+
+#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:335
+msgid "Choose whether the form has a shadow."
+msgstr ""
+
+#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:276
+msgid ""
+"Choose whether the site title appears above the login form and set its color."
+msgstr ""
+
+#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:269
+msgid "Contain"
+msgstr ""
+
+#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:269
+msgid "Cover"
+msgstr ""
+
+#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:236
+msgid "Design your login, your way."
+msgstr ""
+
+#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:357
+#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:364
+msgid "Desktop"
+msgstr ""
+
+#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:283
+msgid "Do not show"
+msgstr ""
+
+#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:338
+msgid "Enable shadow"
+msgstr ""
+
+#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:320
+msgid "Field labels"
+msgstr ""
+
+#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:309
+msgid "Form background"
+msgstr ""
+
+#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:306
+msgid "Form background and border"
+msgstr ""
+
+#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:295
+msgid "Form placement and size"
+msgstr ""
+
+#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:299
+msgid "Form width"
+msgstr ""
+
+#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:140
+msgid "Freeform Login"
+msgstr ""
+
+#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:268
+msgid "Image position"
+msgstr ""
+
+#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:269
+msgid "Image size"
+msgstr ""
+
+#: atshift-freeform-login/includes/class-atshift-freeform-login-jetpack.php:145
+msgid ""
+"Jetpack SSO currently redirects the login screen directly to WordPress.com. "
+"This login screen design is not shown during that redirect."
+msgstr ""
+
+#: atshift-freeform-login/includes/class-atshift-freeform-login-jetpack.php:148
+msgid ""
+"Jetpack SSO is set to use WordPress.com login only. The local username and "
+"password fields are hidden, and the WordPress.com login area uses this "
+"design."
+msgstr ""
+
+#: atshift-freeform-login/includes/class-atshift-freeform-login-jetpack.php:151
+msgid ""
+"Jetpack SSO was detected. The local login and WordPress.com login areas both "
+"use this design."
+msgstr ""
+
+#: atshift-freeform-login/includes/class-atshift-freeform-login-jetpack.php:158
+msgid "Jetpack SSO:"
+msgstr ""
+
+#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:413
+msgid "Language"
+msgstr ""
+
+#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:326
+msgid "Link color"
+msgstr ""
+
+#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:400
+msgid "Log In"
+msgstr ""
+
+#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:389
+#: atshift-freeform-login/includes/class-atshift-freeform-login-jetpack.php:117
+msgid "Log in with WordPress.com"
+msgstr ""
+
+#: atshift-freeform-login/includes/class-atshift-freeform-login-shortcode.php:64
+msgid "Log out"
+msgstr ""
+
+#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:241
+msgid "Login design settings saved."
+msgstr ""
+
+#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:286
+msgid "Logo"
+msgstr ""
+
+#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:407
+#: atshift-freeform-login/includes/class-atshift-freeform-login-shortcode.php:114
+msgid "Lost your password?"
+msgstr ""
+
+#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:359
+#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:374
+msgid "Mobile"
+msgstr ""
+
+#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:392
+#: atshift-freeform-login/includes/class-atshift-freeform-login-shortcode.php:122
+msgid "Or"
+msgstr ""
+
+#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:269
+msgid "Original size"
+msgstr ""
+
+#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:397
+#: atshift-freeform-login/includes/class-atshift-freeform-login-screen.php:54
+#: atshift-freeform-login/includes/class-atshift-freeform-login-shortcode.php:151
+msgid "Password"
+msgstr ""
+
+#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:298
+msgid "Position"
+msgstr ""
+
+#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:352
+msgid "Preview"
+msgstr ""
+
+#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:356
+msgid "Preview device"
+msgstr ""
+
+#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:353
+msgid "Preview using representative screen sizes."
+msgstr ""
+
+#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:410
+msgid "Privacy Policy"
+msgstr ""
+
+#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:399
+msgid "Remember Me"
+msgstr ""
+
+#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:602
+msgid "Remove"
+msgstr ""
+
+#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:256
+msgid "Save changes"
+msgstr ""
+
+#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:362
+#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:363
+msgid "Screen size"
+msgstr ""
+
+#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:178
+msgid "Select an image"
+msgstr ""
+
+#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:601
+msgid "Select image"
+msgstr ""
+
+#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:317
+msgid ""
+"Set field labels and the colors used for text, links, and the login button."
+msgstr ""
+
+#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:264
+msgid "Set the background color and image for the entire login screen."
+msgstr ""
+
+#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:307
+msgid "Set the form background color."
+msgstr ""
+
+#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:296
+msgid "Set the login form position and width."
+msgstr ""
+
+#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:334
+msgid "Shadow"
+msgstr ""
+
+#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:323
+msgid "Show above input fields"
+msgstr ""
+
+#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:282
+msgid "Site title"
+msgstr ""
+
+#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:288
+msgid "Site title color"
+msgstr ""
+
+#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:358
+#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:370
+msgid "Tablet"
+msgstr ""
+
+#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:316
+msgid "Text and buttons"
+msgstr ""
+
+#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:325
+msgid "Text color"
+msgstr ""
+
+#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:471
+msgid ""
+"Text, link, and button colors, including automatic interaction colors, are "
+"all available in the free version."
+msgstr ""
+
+#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:497
+#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:512
+msgid "Top center"
+msgstr ""
+
+#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:496
+#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:511
+msgid "Top left"
+msgstr ""
+
+#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:498
+#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:513
+msgid "Top right"
+msgstr ""
+
+#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:467
+msgid "Upgrade to Pro to adjust opacity, corner radius, and border styling."
+msgstr ""
+
+#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:475
+msgid ""
+"Upgrade to Pro to adjust shadow position, blur, spread, color, and opacity."
+msgstr ""
+
+#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:463
+msgid ""
+"Upgrade to Pro to fine-tune the horizontal and vertical position in pixels."
+msgstr ""
+
+#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:459
+msgid "Upgrade to Pro to use a custom logo image and adjust its display width."
+msgstr ""
+
+#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:179
+msgid "Use this image"
+msgstr ""
+
+#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:396
+#: atshift-freeform-login/includes/class-atshift-freeform-login-screen.php:53
+#: atshift-freeform-login/includes/class-atshift-freeform-login-shortcode.php:150
+msgid "Username / Email"
+msgstr ""
+
+#: atshift-freeform-login/includes/class-atshift-freeform-login-shortcode.php:62
+#, php-format
+msgid "You are logged in as %s."
+msgstr ""
+
+#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:191
+msgid "You are not allowed to manage these settings."
+msgstr ""
+
+#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:139
+#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:235
+msgid "atshift Freeform Login"
+msgstr ""

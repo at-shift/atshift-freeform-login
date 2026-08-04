@@ -1,0 +1,190 @@
+.atshift-freeform-login {
+	box-sizing: border-box;
+	width: min(100%, var(--atshift-login-width, 340px));
+	padding: 28px;
+	color: var(--atshift-login-label, #1d2327);
+	background: var(--atshift-login-bg, #fff);
+	border: var(--atshift-login-border-width, 0) solid var(--atshift-login-border-color, #dcdcde);
+	border-radius: var(--atshift-login-radius, 8px);
+	box-shadow: var(--atshift-login-shadow, none);
+}
+
+.atshift-freeform-login *,
+.atshift-freeform-login *::before,
+.atshift-freeform-login *::after {
+	box-sizing: border-box;
+}
+
+.atshift-freeform-login form,
+.atshift-freeform-login p {
+	margin: 0;
+}
+
+.atshift-freeform-login form > p + p {
+	margin-top: 18px;
+}
+
+.atshift-freeform-login label {
+	display: block;
+	color: var(--atshift-login-label, #1d2327);
+}
+
+.atshift-freeform-login .atshift-freeform-login-visually-hidden {
+	position: absolute !important;
+	width: 1px !important;
+	height: 1px !important;
+	padding: 0 !important;
+	margin: -1px !important;
+	overflow: hidden !important;
+	clip: rect(0, 0, 0, 0) !important;
+	white-space: nowrap !important;
+	border: 0 !important;
+}
+
+.atshift-freeform-login .atshift-freeform-login-field-label:not(.atshift-freeform-login-visually-hidden) {
+	display: block;
+	margin-bottom: 7px;
+}
+
+.atshift-freeform-login input[type="text"],
+.atshift-freeform-login input[type="password"] {
+	display: block;
+	width: 100%;
+	min-height: 44px;
+	margin-top: 0;
+}
+
+.atshift-freeform-login .login-remember label {
+	display: inline-flex;
+	gap: 7px;
+	align-items: center;
+}
+
+.atshift-freeform-login .login-remember {
+	float: none;
+	margin-top: 20px;
+}
+
+.atshift-freeform-login .login-submit {
+	margin-top: 18px;
+}
+
+.atshift-freeform-login .login-submit input {
+	display: block;
+	float: none;
+	width: 100%;
+	min-height: 44px;
+	color: var(--atshift-login-button-text, #fff);
+	background: var(--atshift-login-button, #2271b1);
+	border: 1px solid var(--atshift-login-button, #2271b1);
+	cursor: pointer;
+}
+
+.atshift-freeform-login .login-submit input:hover {
+	color: var(--atshift-login-button-text, #fff);
+	background: var(--atshift-login-button-hover, #3d82ba);
+	border-color: var(--atshift-login-button-hover, #3d82ba);
+}
+
+.atshift-freeform-login .login-submit input:active {
+	color: var(--atshift-login-button-text, #fff);
+	background: var(--atshift-login-button-active, #1d6198);
+	border-color: var(--atshift-login-button-active, #1d6198);
+}
+
+.atshift-freeform-login .login-submit input:focus-visible {
+	color: var(--atshift-login-button-text, #fff);
+	background: var(--atshift-login-button-hover, #3d82ba);
+	border-color: var(--atshift-login-button-hover, #3d82ba);
+	box-shadow: none;
+	outline: 2px solid var(--atshift-login-button-focus, #2271b1);
+	outline-offset: 2px;
+}
+
+.atshift-freeform-login-jetpack .jetpack-sso.button {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	min-height: 44px;
+	color: var(--atshift-login-button-text, #fff);
+	text-align: center;
+	text-decoration: none;
+	background: var(--atshift-login-button, #2271b1);
+	border: 1px solid var(--atshift-login-button, #2271b1);
+	cursor: pointer;
+}
+
+.atshift-freeform-login-jetpack .jetpack-sso.button:hover {
+	color: var(--atshift-login-button-text, #fff);
+	background: var(--atshift-login-button-hover, #3d82ba);
+	border-color: var(--atshift-login-button-hover, #3d82ba);
+}
+
+.atshift-freeform-login-jetpack .jetpack-sso.button:active {
+	color: var(--atshift-login-button-text, #fff);
+	background: var(--atshift-login-button-active, #1d6198);
+	border-color: var(--atshift-login-button-active, #1d6198);
+}
+
+.atshift-freeform-login-jetpack .jetpack-sso.button:focus-visible {
+	color: var(--atshift-login-button-text, #fff);
+	background: var(--atshift-login-button-hover, #3d82ba);
+	border-color: var(--atshift-login-button-hover, #3d82ba);
+	box-shadow: none;
+	outline: 2px solid var(--atshift-login-button-focus, #2271b1);
+	outline-offset: 2px;
+}
+
+.atshift-freeform-login-jetpack .genericon-wordpress {
+	margin-right: 7px;
+}
+
+.atshift-freeform-login-separator {
+	position: relative;
+	margin: 20px 0;
+	color: var(--atshift-login-label, #1d2327);
+	text-align: center;
+}
+
+.atshift-freeform-login-separator::before {
+	position: absolute;
+	top: 50%;
+	left: 0;
+	width: 100%;
+	height: 1px;
+	background: currentColor;
+	opacity: 0.18;
+	content: "";
+}
+
+.atshift-freeform-login-separator span {
+	position: relative;
+	padding: 0 10px;
+	background: var(--atshift-login-bg, #fff);
+}
+
+.atshift-freeform-login a {
+	color: var(--atshift-login-link, #2271b1);
+}
+
+.atshift-freeform-login a:hover {
+	color: var(--atshift-login-link-hover, #3d82ba);
+}
+
+.atshift-freeform-login a:active {
+	color: var(--atshift-login-link-active, #1d6198);
+}
+
+.atshift-freeform-login a:focus-visible {
+	outline: 2px solid var(--atshift-login-link-focus, #2271b1);
+	outline-offset: 2px;
+}
+
+.atshift-freeform-login-lost {
+	margin-top: 18px !important;
+}
+
+.atshift-freeform-login-logged-in {
+	padding: 16px 0;
+}

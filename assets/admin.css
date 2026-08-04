@@ -1,0 +1,531 @@
+.atshift-freeform-login-admin {
+	max-width: none;
+	color: #1d2327;
+}
+
+.atshift-freeform-login-page-header {
+	display: flex;
+	align-items: flex-end;
+	justify-content: space-between;
+	margin: 30px 0 24px;
+}
+
+.atshift-freeform-login-page-header h1 {
+	margin: 0;
+	font-size: 40px;
+	line-height: 1.15;
+	letter-spacing: 0;
+}
+
+.atshift-freeform-login-page-header p {
+	margin: 8px 0 0;
+	color: #646970;
+	font-size: 17px;
+}
+
+.atshift-freeform-login-toolbar {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 24px;
+	padding: 16px 20px;
+	background: #fff;
+	border: 1px solid #c3c4c7;
+	border-bottom: 0;
+}
+
+.atshift-freeform-login-toggle {
+	display: inline-flex;
+	align-items: center;
+	gap: 10px;
+	font-weight: 600;
+}
+
+.atshift-freeform-login-workspace {
+	display: grid;
+	grid-template-columns: minmax(420px, 520px) minmax(560px, 1fr);
+	min-height: 680px;
+	background: #fff;
+	border: 1px solid #c3c4c7;
+}
+
+.atshift-freeform-login-settings {
+	border-right: 1px solid #dcdcde;
+}
+
+.atshift-freeform-login-preview-column h2 {
+	margin: 0 0 20px;
+	font-size: 20px;
+}
+
+.atshift-freeform-login-control-grid {
+	display: grid;
+	grid-template-columns: repeat(2, minmax(0, 1fr));
+	gap: 18px;
+}
+
+.atshift-freeform-login-settings-accordion {
+	display: grid;
+	gap: 0;
+}
+
+.atshift-freeform-login-settings-group {
+	background: #fff;
+	border-bottom: 1px solid #dcdcde;
+}
+
+.atshift-freeform-login-settings-group summary {
+	padding: 20px 24px;
+	font-size: 17px;
+	font-weight: 600;
+	cursor: pointer;
+}
+
+.atshift-freeform-login-settings-group[open] summary {
+	border-bottom: 1px solid #dcdcde;
+}
+
+.atshift-freeform-login-settings-description {
+	margin: 0;
+	padding: 18px 24px 0;
+	color: #646970;
+	font-size: 14px;
+	line-height: 1.6;
+}
+
+.atshift-freeform-login-settings-group .atshift-freeform-login-control-grid {
+	padding: 16px 24px 24px;
+}
+
+.atshift-freeform-login-upgrade-note {
+	display: flex;
+	align-items: flex-start;
+	gap: 10px;
+	margin: 0 24px 24px;
+	padding: 12px 14px;
+	color: #50575e;
+	font-size: 13px;
+	line-height: 1.55;
+	background: #f6f7f7;
+	border-left: 3px solid #a7aaad;
+	border-radius: 4px;
+}
+
+.atshift-freeform-login-upgrade-note.is-pro {
+	background: #f4f5ff;
+	border-left-color: #3858e9;
+}
+
+.atshift-freeform-login-upgrade-badge {
+	flex: 0 0 auto;
+	padding: 2px 7px;
+	color: #fff;
+	font-size: 11px;
+	font-weight: 700;
+	line-height: 1.45;
+	background: #646970;
+	border-radius: 4px;
+}
+
+.atshift-freeform-login-upgrade-note.is-pro .atshift-freeform-login-upgrade-badge {
+	background: #1d2327;
+}
+
+.atshift-freeform-login-control {
+	display: flex;
+	flex-direction: column;
+	gap: 7px;
+	min-width: 0;
+	font-weight: 600;
+}
+
+.atshift-freeform-login-control[data-logo-mode-visible][hidden] {
+	display: none;
+}
+
+.atshift-freeform-login-control select,
+.atshift-freeform-login-control input[type="number"] {
+	width: 100%;
+	min-height: 40px;
+}
+
+.atshift-freeform-login-control input[type="color"] {
+	width: 100%;
+	height: 40px;
+	padding: 3px;
+}
+
+.atshift-freeform-login-checkbox-control {
+	justify-content: flex-end;
+}
+
+.atshift-freeform-login-checkbox-control input {
+	margin: 8px 0;
+}
+
+.atshift-freeform-login-checkbox-control small {
+	color: #646970;
+	font-weight: 400;
+}
+
+.atshift-freeform-login-number {
+	display: grid;
+	grid-template-columns: minmax(0, 1fr) auto;
+	align-items: center;
+	gap: 7px;
+}
+
+.atshift-freeform-login-number small {
+	color: #646970;
+}
+
+.atshift-freeform-login-media-actions {
+	display: flex;
+	align-items: center;
+	gap: 12px;
+	min-height: 40px;
+}
+
+.atshift-freeform-login-preview-column {
+	min-width: 0;
+	padding: 24px;
+}
+
+.atshift-freeform-login-preview-heading {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 20px;
+	margin-bottom: 20px;
+}
+
+.atshift-freeform-login-preview-heading h2 {
+	margin: 0;
+}
+
+.atshift-freeform-login-preview-heading p {
+	margin: 5px 0 0;
+	color: #646970;
+}
+
+.atshift-freeform-login-preview-toolbar,
+.atshift-freeform-login-device-switch {
+	display: flex;
+	align-items: center;
+}
+
+.atshift-freeform-login-preview-toolbar {
+	gap: 10px;
+}
+
+.atshift-freeform-login-device-switch button {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	box-sizing: border-box;
+	width: 42px;
+	height: 40px;
+	margin: 0 -1px 0 0;
+	padding: 0;
+	color: #50575e;
+	background: #fff;
+	border: 1px solid #8c8f94;
+	cursor: pointer;
+}
+
+.atshift-freeform-login-device-switch button:first-child {
+	border-radius: 4px 0 0 4px;
+}
+
+.atshift-freeform-login-device-switch button:last-child {
+	margin-right: 0;
+	border-radius: 0 4px 4px 0;
+}
+
+.atshift-freeform-login-device-switch button.is-active {
+	position: relative;
+	z-index: 1;
+	color: #fff;
+	background: #2271b1;
+	border-color: #2271b1;
+}
+
+.atshift-freeform-login-device-switch .dashicons {
+	width: 20px;
+	height: 20px;
+	font-size: 20px;
+}
+
+.atshift-freeform-login-preview-toolbar select {
+	min-width: 210px;
+	min-height: 40px;
+}
+
+.atshift-freeform-login-preview-stage {
+	position: relative;
+	box-sizing: border-box;
+	height: max(600px, calc(100vh - 300px));
+	padding: 24px;
+	overflow: hidden;
+	background: #dcdcde;
+	border: 1px solid #c3c4c7;
+}
+
+.atshift-freeform-login-preview {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	box-sizing: border-box;
+	padding: 32px;
+	overflow: hidden;
+	background-color: #f0f2f5;
+	background-repeat: no-repeat;
+	border: 1px solid #dcdcde;
+	transform-origin: center;
+}
+
+.atshift-freeform-login-preview[data-position^="left-"] { justify-content: flex-start; }
+.atshift-freeform-login-preview[data-position^="right-"] { justify-content: flex-end; }
+.atshift-freeform-login-preview[data-position$="-top"] { align-items: flex-start; }
+.atshift-freeform-login-preview[data-position$="-bottom"] { align-items: flex-end; }
+
+.atshift-freeform-login-preview-group {
+	box-sizing: border-box;
+	max-width: 100%;
+}
+
+.atshift-freeform-login-preview-form {
+	box-sizing: border-box;
+	width: 100%;
+	padding: 28px;
+}
+
+.atshift-freeform-login-preview-form > label {
+	display: block;
+	font-weight: 600;
+}
+
+.atshift-freeform-login-preview-form .atshift-freeform-login-visually-hidden {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	padding: 0;
+	margin: -1px;
+	overflow: hidden;
+	clip: rect(0, 0, 0, 0);
+	white-space: nowrap;
+	border: 0;
+}
+
+.atshift-freeform-login-preview-form .atshift-freeform-login-field-label:not(.atshift-freeform-login-visually-hidden) {
+	display: block;
+	margin-bottom: 7px;
+}
+
+.atshift-freeform-login-preview-form > label + label {
+	margin-top: 18px;
+}
+
+.atshift-freeform-login-preview-form input[type="text"],
+.atshift-freeform-login-preview-form input[type="password"] {
+	box-sizing: border-box;
+	width: 100%;
+	height: 44px;
+	margin-top: 0;
+	background: #fff;
+}
+
+.atshift-freeform-login-preview-actions {
+	display: flex;
+	align-items: stretch;
+	flex-direction: column;
+	gap: 16px;
+	margin: 20px 0;
+}
+
+.atshift-freeform-login-preview-actions label {
+	display: inline-flex;
+	align-items: center;
+	gap: 7px;
+}
+
+.atshift-freeform-login-preview-actions button {
+	width: 100%;
+	min-height: 40px;
+	border: 1px solid transparent;
+}
+
+.atshift-freeform-login-preview-actions button:hover {
+	background: var(--atshift-preview-button-hover, #3d82ba) !important;
+	border-color: var(--atshift-preview-button-hover, #3d82ba) !important;
+}
+
+.atshift-freeform-login-preview-actions button:active {
+	background: var(--atshift-preview-button-active, #1d6198) !important;
+	border-color: var(--atshift-preview-button-active, #1d6198) !important;
+}
+
+.atshift-freeform-login-preview-actions button:focus-visible {
+	background: var(--atshift-preview-button-hover, #3d82ba) !important;
+	border-color: var(--atshift-preview-button-hover, #3d82ba) !important;
+	box-shadow: none;
+	outline: 2px solid var(--atshift-preview-button-focus, #2271b1);
+	outline-offset: 2px;
+}
+
+.atshift-freeform-login-preview-sso button {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	min-height: 40px;
+	border: 1px solid transparent;
+}
+
+.atshift-freeform-login-preview-sso .dashicons {
+	width: 20px;
+	height: 20px;
+	margin-right: 7px;
+	font-size: 20px;
+}
+
+.atshift-freeform-login-preview-separator {
+	position: relative;
+	margin: 20px 0;
+	text-align: center;
+}
+
+.atshift-freeform-login-preview-separator::before {
+	position: absolute;
+	top: 50%;
+	left: 0;
+	width: 100%;
+	height: 1px;
+	background: currentColor;
+	opacity: 0.18;
+	content: "";
+}
+
+.atshift-freeform-login-preview-separator span {
+	position: relative;
+	padding: 0 10px;
+	background: var(--atshift-preview-form-bg, #fff);
+}
+
+.atshift-freeform-login-jetpack-status {
+	margin: 16px 0;
+}
+
+.atshift-freeform-login-preview-links a {
+	color: var(--atshift-preview-link, #2271b1);
+}
+
+.atshift-freeform-login-preview-links a:hover {
+	color: var(--atshift-preview-link-hover, #3d82ba);
+}
+
+.atshift-freeform-login-preview-links a:active {
+	color: var(--atshift-preview-link-active, #1d6198);
+}
+
+.atshift-freeform-login-preview-links a:focus-visible {
+	outline: 2px solid var(--atshift-preview-link-focus, #2271b1);
+	outline-offset: 2px;
+}
+
+.atshift-freeform-login-preview-logo {
+	max-width: 100%;
+	min-height: 54px;
+	margin: 0 auto 22px;
+	font-size: 25px;
+	font-weight: 700;
+	line-height: 54px;
+	text-align: center;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: contain;
+}
+
+.atshift-freeform-login-preview-logo.has-image {
+	min-height: 0;
+	line-height: normal;
+	color: transparent;
+}
+
+.atshift-freeform-login-preview-secondary {
+	display: grid;
+	gap: 14px;
+	margin-top: 20px;
+	font-size: 13px;
+	text-align: center;
+}
+
+.atshift-freeform-login-preview-links {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	gap: 7px 16px;
+}
+
+.atshift-freeform-login-preview-language {
+	display: flex;
+	justify-content: center;
+	gap: 8px;
+}
+
+.atshift-freeform-login-preview-language select,
+.atshift-freeform-login-preview-language button {
+	min-height: 34px;
+}
+
+@media (max-width: 1180px) {
+	.atshift-freeform-login-workspace {
+		grid-template-columns: 1fr;
+	}
+
+	.atshift-freeform-login-settings {
+		border-right: 0;
+		border-bottom: 1px solid #dcdcde;
+	}
+}
+
+@media (max-width: 782px) {
+	.atshift-freeform-login-page-header h1 {
+		font-size: 30px;
+	}
+
+	.atshift-freeform-login-toolbar {
+		align-items: stretch;
+		flex-direction: column;
+	}
+
+	.atshift-freeform-login-control-grid {
+		grid-template-columns: 1fr;
+	}
+
+	.atshift-freeform-login-preview-column {
+		padding: 16px;
+	}
+
+	.atshift-freeform-login-preview-heading {
+		align-items: stretch;
+		flex-direction: column;
+	}
+
+	.atshift-freeform-login-preview-toolbar {
+		justify-content: space-between;
+	}
+
+	.atshift-freeform-login-preview-toolbar select {
+		min-width: 0;
+		width: 100%;
+	}
+
+	.atshift-freeform-login-preview-stage {
+		height: 520px;
+		padding: 16px;
+	}
+}
