@@ -234,8 +234,8 @@ class Atshift_Freeform_Login_Settings {
 		wp_safe_redirect(
 			add_query_arg(
 				array(
-					'page'    => self::PAGE_SLUG,
-					'updated' => '1',
+					'page'            => self::PAGE_SLUG,
+					'atshift_updated' => '1',
 				),
 				admin_url( 'options-general.php' )
 			)
@@ -255,7 +255,7 @@ class Atshift_Freeform_Login_Settings {
 
 		$settings = self::get_settings();
 		// phpcs:ignore WordPress.Security.NonceVerification.Recommended -- Read-only success flag set by handle_save() after nonce verification.
-		$updated = isset( $_GET['updated'] ) ? sanitize_text_field( wp_unslash( $_GET['updated'] ) ) : '';
+		$updated = isset( $_GET['atshift_updated'] ) ? sanitize_text_field( wp_unslash( $_GET['atshift_updated'] ) ) : '';
 		?>
 		<div class="wrap atshift-freeform-login-admin">
 			<header class="atshift-freeform-login-page-header">

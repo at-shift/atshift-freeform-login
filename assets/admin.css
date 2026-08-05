@@ -26,6 +26,17 @@
 	font-size: 17px;
 }
 
+.atshift-freeform-login-admin > .notice {
+	box-sizing: border-box;
+	width: 100%;
+	margin: 0 0 20px;
+}
+
+.atshift-freeform-login-admin > .notice p {
+	font-size: 15px;
+	line-height: 1.6;
+}
+
 .atshift-freeform-login-toolbar {
 	display: flex;
 	align-items: center;
