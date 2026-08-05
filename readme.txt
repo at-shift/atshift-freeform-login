@@ -4,7 +4,7 @@ Tags: login, custom login, login form, shortcode, branding
 Requires at least: 6.5
 Tested up to: 7.0
 Requires PHP: 7.4
-Stable tag: 0.9.1-beta.1
+Stable tag: 0.9.2-beta.3
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -29,6 +29,11 @@ An optional add-on can extend the free plugin with custom logo images, precise p
 5. Enable login-screen application after reviewing the preview.
 
 == Changelog ==
+
+= 0.9.2-beta.3 =
+* Added background type controls, introductory text, and a cropped wide-logo option.
+* Improved automatic interaction colors and login-screen compatibility styling.
+* Refined the live preview and grouped conditional settings for clearer editing.
 
 = 0.9.1-beta.1 =
 * Moved the design screen under Settings > atshift Freeform Login.
