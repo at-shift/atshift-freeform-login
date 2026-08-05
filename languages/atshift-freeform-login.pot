@@ -413,5 +413,32 @@ msgstr ""
 msgid "Use this video"
 msgstr ""
 
+msgid "Wide logo image"
+msgstr ""
+
+msgid "Displayed in a 4:1 frame. Tall images are cropped from the center."
+msgstr ""
+
+msgid "Free accepts a wide logo image in a fixed 4:1 frame; images with a different height are cropped from the center. Pro preserves wide and tall image ratios and lets you adjust the logo width."
+msgstr ""
+
+msgid "Free automatically adjusts link and button colors for hover and pressed states. Pro lets you choose each interaction color and hide the language selector on the login screen."
+msgstr ""
+
 msgid "Select video"
+msgstr ""
+
+msgid "Choose labels or placeholders and set the colors used for text, links, and the login button."
+msgstr ""
+
+msgid "Use placeholders"
+msgstr ""
+
+msgid "Button text color"
+msgstr ""
+
+msgid "Drop shadow"
+msgstr ""
+
+msgid "Enable drop shadow"
 msgstr ""

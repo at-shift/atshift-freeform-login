@@ -418,5 +418,32 @@ msgstr "ループ動画を選択"
 msgid "Use this video"
 msgstr "この動画を使用"
 
+msgid "Wide logo image"
+msgstr "横長ロゴ画像"
+
+msgid "Displayed in a 4:1 frame. Tall images are cropped from the center."
+msgstr "4:1の枠で表示します。高さが合わない画像は中央を基準に切り取られます。"
+
+msgid "Free accepts a wide logo image in a fixed 4:1 frame; images with a different height are cropped from the center. Pro preserves wide and tall image ratios and lets you adjust the logo width."
+msgstr "無料版では横長ロゴ画像を4:1の固定枠で表示し、高さが合わない画像は中央を基準に切り取ります。Proでは横長・縦長画像の比率を保ち、ロゴ幅を調整できます。"
+
+msgid "Free automatically adjusts link and button colors for hover and pressed states. Pro lets you choose each interaction color and hide the language selector on the login screen."
+msgstr "無料版ではリンクとボタンのホバー時・押下時の色を自動調整します。Proでは各状態の色を指定し、ログイン画面の言語選択を非表示にできます。"
+
 msgid "Select video"
 msgstr "動画を選択"
+
+msgid "Choose labels or placeholders and set the colors used for text, links, and the login button."
+msgstr "フィールドラベルまたはプレイスホルダを選び、文字、リンク、ログインボタンの色を設定します。"
+
+msgid "Use placeholders"
+msgstr "プレイスホルダを使用"
+
+msgid "Button text color"
+msgstr "ボタンの文字色"
+
+msgid "Drop shadow"
+msgstr "ドロップシャドウ"
+
+msgid "Enable drop shadow"
+msgstr "ドロップシャドウを有効化"

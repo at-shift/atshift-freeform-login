@@ -52,6 +52,8 @@ class Atshift_Freeform_Login_Settings {
 			'background_position'     => 'center center',
 			'background_size'         => 'cover',
 			'logo_mode'               => 'site_title',
+			'banner_logo_image_id'    => 0,
+			'banner_logo_image_url'   => '',
 			'brand_text_color'        => '#1d2327',
 			'intro_text'              => '',
 			'intro_width'             => 100,
@@ -119,10 +121,15 @@ class Atshift_Freeform_Login_Settings {
 		$background_url = $output['background_image_id'] ? wp_get_attachment_image_url( $output['background_image_id'], 'full' ) : false;
 
 		$output['background_image_url'] = $background_url ? esc_url_raw( $background_url ) : '';
+		$output['banner_logo_image_id'] = isset( $input['banner_logo_image_id'] ) ? absint( $input['banner_logo_image_id'] ) : 0;
+
+		$banner_logo_url = $output['banner_logo_image_id'] ? wp_get_attachment_image_url( $output['banner_logo_image_id'], 'full' ) : false;
+
+		$output['banner_logo_image_url'] = $banner_logo_url ? esc_url_raw( $banner_logo_url ) : '';
 
 		$output['logo_mode'] = self::allowed_value(
 			isset( $input['logo_mode'] ) ? $input['logo_mode'] : '',
-			array( 'site_title', 'none' ),
+			array( 'site_title', 'banner', 'none' ),
 			$defaults['logo_mode']
 		);
 		$output['form_position'] = self::allowed_value(
@@ -253,7 +260,7 @@ class Atshift_Freeform_Login_Settings {
 		<div class="wrap atshift-freeform-login-admin">
 			<header class="atshift-freeform-login-page-header">
 				<div>
-					<h1><?php do_action( 'atshift_freeform_login_page_title' ); ?><?php esc_html_e( 'atshift Freeform Login', 'atshift-freeform-login' ); ?></h1>
+					<h1><?php esc_html_e( 'atshift Freeform Login', 'atshift-freeform-login' ); ?><?php do_action( 'atshift_freeform_login_page_title' ); ?></h1>
 					<p><?php esc_html_e( 'Design your login, your way.', 'atshift-freeform-login' ); ?></p>
 				</div>
 			</header>
@@ -293,13 +300,15 @@ class Atshift_Freeform_Login_Settings {
 									)
 								);
 								$this->render_select_field( 'background_media_type', __( 'Background type', 'atshift-freeform-login' ), $settings, $background_type_options );
-								$this->render_color_field( 'background_color', __( 'Background color', 'atshift-freeform-login' ), $settings, '', true );
 								?>
-								<?php do_action( 'atshift_freeform_login_settings_background_controls', $this, $settings ); ?>
-								<?php $this->render_media_field( 'background_image', __( 'Image', 'atshift-freeform-login' ), $settings, 'image', 'image' ); ?>
-								<div class="atshift-freeform-login-background-media-details" data-background-media-details<?php echo 'color' === $settings['background_media_type'] ? ' hidden' : ''; ?>>
-									<?php $this->render_select_field( 'background_position', __( 'Display position', 'atshift-freeform-login' ), $settings, $this->background_positions() ); ?>
-									<?php $this->render_select_field( 'background_size', __( 'Display size', 'atshift-freeform-login' ), $settings, array( 'cover' => __( 'Cover', 'atshift-freeform-login' ), 'contain' => __( 'Contain', 'atshift-freeform-login' ), 'auto' => __( 'Original size', 'atshift-freeform-login' ) ) ); ?>
+								<div class="atshift-freeform-login-expanded-options" data-background-options>
+									<?php $this->render_color_field( 'background_color', __( 'Background color', 'atshift-freeform-login' ), $settings, '', true ); ?>
+									<?php do_action( 'atshift_freeform_login_settings_background_controls', $this, $settings ); ?>
+									<?php $this->render_media_field( 'background_image', __( 'Image', 'atshift-freeform-login' ), $settings, 'image', 'image' ); ?>
+									<div class="atshift-freeform-login-background-media-details" data-background-media-details<?php echo 'color' === $settings['background_media_type'] ? ' hidden' : ''; ?>>
+										<?php $this->render_select_field( 'background_position', __( 'Display position', 'atshift-freeform-login' ), $settings, $this->background_positions() ); ?>
+										<?php $this->render_select_field( 'background_size', __( 'Display size', 'atshift-freeform-login' ), $settings, array( 'cover' => __( 'Cover', 'atshift-freeform-login' ), 'contain' => __( 'Contain', 'atshift-freeform-login' ), 'auto' => __( 'Original size', 'atshift-freeform-login' ) ) ); ?>
+									</div>
 								</div>
 							</div>
 							<?php $this->render_upgrade_note( 'background' ); ?>
@@ -314,13 +323,20 @@ class Atshift_Freeform_Login_Settings {
 								'atshift_freeform_login_logo_modes',
 								array(
 									'site_title' => __( 'Site title', 'atshift-freeform-login' ),
+									'banner'     => __( 'Wide logo image', 'atshift-freeform-login' ),
 									'none'       => __( 'Do not show', 'atshift-freeform-login' ),
 								)
 							);
 							$this->render_select_field( 'logo_mode', __( 'Logo', 'atshift-freeform-login' ), $settings, $logo_modes );
 							?>
-							<?php $this->render_color_field( 'brand_text_color', __( 'Site title color', 'atshift-freeform-login' ), $settings, 'site_title' ); ?>
-							<?php do_action( 'atshift_freeform_login_settings_brand_controls', $this, $settings ); ?>
+							<div class="atshift-freeform-login-expanded-options" data-logo-options<?php echo 'none' === $settings['logo_mode'] ? ' hidden' : ''; ?>>
+								<?php $this->render_color_field( 'brand_text_color', __( 'Site title color', 'atshift-freeform-login' ), $settings, 'site_title' ); ?>
+								<div class="atshift-freeform-login-logo-mode-control" data-logo-mode-visible="banner">
+									<?php $this->render_media_field( 'banner_logo_image', __( 'Wide logo image', 'atshift-freeform-login' ), $settings ); ?>
+									<small><?php esc_html_e( 'Displayed in a 4:1 frame. Tall images are cropped from the center.', 'atshift-freeform-login' ); ?></small>
+								</div>
+								<?php do_action( 'atshift_freeform_login_settings_brand_controls', $this, $settings ); ?>
+							</div>
 							<?php $this->render_textarea_field( 'intro_text', __( 'Introductory text', 'atshift-freeform-login' ), $settings, __( 'Displayed between the brand and login form. Leave blank to hide it.', 'atshift-freeform-login' ) ); ?>
 							<?php $this->render_number_field( 'intro_width', __( 'Text width', 'atshift-freeform-login' ), $settings, 30, 100, 1, '%' ); ?>
 						</div>
@@ -351,19 +367,23 @@ class Atshift_Freeform_Login_Settings {
 								</details>
 
 								<details class="atshift-freeform-login-settings-group">
-									<summary><?php esc_html_e( 'Text and buttons', 'atshift-freeform-login' ); ?></summary>
-									<p class="atshift-freeform-login-settings-description"><?php esc_html_e( 'Set field labels and the colors used for text, links, and the login button.', 'atshift-freeform-login' ); ?></p>
+								<summary><?php do_action( 'atshift_freeform_login_settings_group_summary', 'text_buttons' ); ?><?php esc_html_e( 'Text and buttons', 'atshift-freeform-login' ); ?></summary>
+									<p class="atshift-freeform-login-settings-description"><?php esc_html_e( 'Choose labels or placeholders and set the colors used for text, links, and the login button.', 'atshift-freeform-login' ); ?></p>
 									<div class="atshift-freeform-login-control-grid">
 									<label class="atshift-freeform-login-control atshift-freeform-login-checkbox-control">
 										<span><?php esc_html_e( 'Field labels', 'atshift-freeform-login' ); ?></span>
-										<input type="hidden" name="settings[show_field_labels]" value="0">
-										<input type="checkbox" name="settings[show_field_labels]" value="1" <?php checked( $settings['show_field_labels'], 1 ); ?> data-setting="show_field_labels">
-											<small><?php esc_html_e( 'Show above input fields', 'atshift-freeform-login' ); ?></small>
+										<span class="atshift-freeform-login-checkbox-line">
+											<input type="hidden" name="settings[show_field_labels]" value="1">
+											<input type="checkbox" name="settings[show_field_labels]" value="0" <?php checked( empty( $settings['show_field_labels'] ) ); ?> data-setting="use_placeholders">
+											<span><?php esc_html_e( 'Use placeholders', 'atshift-freeform-login' ); ?></span>
+										</span>
 										</label>
 										<?php $this->render_color_field( 'label_color', __( 'Text color', 'atshift-freeform-login' ), $settings ); ?>
 										<?php $this->render_color_field( 'link_color', __( 'Link color', 'atshift-freeform-login' ), $settings ); ?>
 										<?php $this->render_color_field( 'button_background_color', __( 'Button color', 'atshift-freeform-login' ), $settings ); ?>
-									<?php $this->render_color_field( 'button_text_color', __( 'Button text', 'atshift-freeform-login' ), $settings ); ?>
+										<?php $this->render_color_field( 'button_text_color', __( 'Button text color', 'atshift-freeform-login' ), $settings ); ?>
+										<?php do_action( 'atshift_freeform_login_settings_button_border_controls', $this, $settings ); ?>
+										<?php do_action( 'atshift_freeform_login_settings_text_button_controls', $this, $settings ); ?>
 									</div>
 									<?php $this->render_upgrade_note( 'text_buttons' ); ?>
 								</details>
@@ -373,9 +393,12 @@ class Atshift_Freeform_Login_Settings {
 									<p class="atshift-freeform-login-settings-description"><?php echo esc_html( $this->group_description( 'shadow', __( 'Choose whether the form has a shadow.', 'atshift-freeform-login' ) ) ); ?></p>
 									<div class="atshift-freeform-login-control-grid">
 									<label class="atshift-freeform-login-control atshift-freeform-login-checkbox-control">
-										<span><?php esc_html_e( 'Enable shadow', 'atshift-freeform-login' ); ?></span>
-										<input type="hidden" name="settings[form_shadow]" value="0">
-										<input type="checkbox" name="settings[form_shadow]" value="1" <?php checked( $settings['form_shadow'], 1 ); ?> data-setting="form_shadow">
+										<span><?php esc_html_e( 'Drop shadow', 'atshift-freeform-login' ); ?></span>
+										<span class="atshift-freeform-login-checkbox-line">
+											<input type="hidden" name="settings[form_shadow]" value="0">
+											<input type="checkbox" name="settings[form_shadow]" value="1" <?php checked( $settings['form_shadow'], 1 ); ?> data-setting="form_shadow">
+											<span><?php esc_html_e( 'Enable drop shadow', 'atshift-freeform-login' ); ?></span>
+										</span>
 									</label>
 									<?php do_action( 'atshift_freeform_login_settings_shadow_controls', $this, $settings ); ?>
 									</div>
@@ -451,7 +474,7 @@ class Atshift_Freeform_Login_Settings {
 									</div>
 									<div class="atshift-freeform-login-preview-language">
 										<select disabled><option><?php esc_html_e( 'Language', 'atshift-freeform-login' ); ?></option></select>
-										<button type="button" disabled><?php esc_html_e( 'Change', 'atshift-freeform-login' ); ?></button>
+										<button type="button" data-preview-button disabled><?php esc_html_e( 'Change', 'atshift-freeform-login' ); ?></button>
 									</div>
 								</div>
 								</div>
@@ -496,7 +519,7 @@ class Atshift_Freeform_Login_Settings {
 			),
 			'brand'        => array(
 				'tier' => 'pro',
-				'text' => __( 'Upgrade to Pro to use a custom logo image and adjust its display width.', 'atshift-freeform-login' ),
+				'text' => __( 'Free accepts a wide logo image in a fixed 4:1 frame; images with a different height are cropped from the center. Pro preserves wide and tall image ratios and lets you adjust the logo width.', 'atshift-freeform-login' ),
 			),
 			'placement'    => array(
 				'tier' => 'pro',
@@ -507,8 +530,8 @@ class Atshift_Freeform_Login_Settings {
 				'text' => __( 'Upgrade to Pro to adjust opacity, corner radius, and border styling.', 'atshift-freeform-login' ),
 			),
 			'text_buttons' => array(
-				'tier' => 'free',
-				'text' => __( 'Text, link, and button colors, including automatic interaction colors, are all available in the free version.', 'atshift-freeform-login' ),
+				'tier' => 'pro',
+				'text' => __( 'Free automatically adjusts link and button colors for hover and pressed states. Pro lets you choose each interaction color and hide the language selector on the login screen.', 'atshift-freeform-login' ),
 			),
 			'shadow'       => array(
 				'tier' => 'pro',

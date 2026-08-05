@@ -110,11 +110,12 @@ class Atshift_Freeform_Login_Screen {
 		$image         = 'color' !== $settings['background_media_type'] && '' !== $settings['background_image_url'] ? 'url("' . esc_url_raw( $settings['background_image_url'] ) . '")' : 'none';
 		$shadow        = self::box_shadow( $settings );
 		$logo_css      = $this->logo_css( $settings );
-		$link_states   = self::interactive_color_states( $settings['link_color'] );
-		$button_states = self::interactive_color_states( $settings['button_background_color'] );
+		$link_states   = apply_filters( 'atshift_freeform_login_link_states', self::interactive_color_states( $settings['link_color'] ), $settings );
+		$button_states = apply_filters( 'atshift_freeform_login_button_states', self::interactive_color_states( $settings['button_background_color'] ), $settings );
+		$form_text     = self::contrast_text_color( $settings['form_background_color'] );
 
 		$css = sprintf(
-			'body.login{background-color:%1$s;background-image:%2$s;background-position:%3$s;background-size:%4$s;background-repeat:no-repeat;justify-content:%5$s;align-items:%6$s;color:%7$s}body.login #login{width:min(%8$dpx,calc(100vw - 48px))}body.login .atshift-freeform-login-intro{width:%21$d%%;max-width:100%%;margin:0 auto 18px;color:%7$s;line-height:1.65}body.login #loginform,body.login #lostpasswordform,body.login #registerform{background:%9$s;border:0;border-radius:8px;box-shadow:%10$s}body.login label,body.login .forgetmenot label{color:%7$s}body.login #nav a,body.login #backtoblog a,body.login .privacy-policy-page-link a,body.login #jetpack-sso-wrap a:not(.button){color:%11$s}body.login #nav a:hover,body.login #backtoblog a:hover,body.login .privacy-policy-page-link a:hover,body.login #jetpack-sso-wrap a:not(.button):hover{color:%12$s}body.login #nav a:active,body.login #backtoblog a:active,body.login .privacy-policy-page-link a:active,body.login #jetpack-sso-wrap a:not(.button):active{color:%13$s}body.login #nav a:focus-visible,body.login #backtoblog a:focus-visible,body.login .privacy-policy-page-link a:focus-visible,body.login #jetpack-sso-wrap a:not(.button):focus-visible{outline:2px solid %14$s;outline-offset:2px}body.login .button-primary{background:%15$s;border-color:%15$s;color:%16$s}body.login .button-primary:hover{background:%17$s;border-color:%17$s;color:%16$s}body.login .button-primary:active{background:%18$s;border-color:%18$s;color:%16$s}body.login .button-primary:focus-visible{background:%17$s;border-color:%17$s;color:%16$s;box-shadow:none;outline:2px solid %19$s;outline-offset:2px}body.login.atshift-freeform-login-jetpack-sso #jetpack-sso-wrap p,body.login.atshift-freeform-login-jetpack-sso #jetpack-sso-wrap__user h2{color:%7$s}body.login.atshift-freeform-login-jetpack-sso .jetpack-sso-or span{background:%9$s;color:%7$s}%20$s',
+			'body.login{background-color:%1$s;background-image:%2$s;background-position:%3$s;background-size:%4$s;background-repeat:no-repeat;justify-content:%5$s;align-items:%6$s;color:%7$s}body.login #login{width:min(%8$dpx,calc(100vw - 48px))}body.login .atshift-freeform-login-intro{width:%21$d%%;max-width:100%%;margin:0 auto 18px;color:%7$s;line-height:1.65}body.login #loginform,body.login #lostpasswordform,body.login #registerform{background:%9$s;border:0;border-radius:8px;box-shadow:%10$s}body.login #login_error,body.login .message,body.login .success{min-height:0;margin:0 0 18px;padding:16px 18px;color:%22$s;background:%9$s;border:0;border-left:4px solid %11$s;border-radius:6px;box-shadow:none;line-height:1.6}body.login label,body.login .forgetmenot label,body.login .language-switcher{color:%7$s}body.login .language-switcher select{font-size:14px;color:%22$s;background:%9$s;border-color:%11$s}body.login #nav a,body.login #backtoblog a,body.login .privacy-policy-page-link a,body.login #login_error a,body.login .message a,body.login .success a,body.login #jetpack-sso-wrap a:not(.button){color:%11$s!important;text-decoration-thickness:2px;text-underline-offset:3px}body.login #nav a:hover,body.login #backtoblog a:hover,body.login .privacy-policy-page-link a:hover,body.login #login_error a:hover,body.login .message a:hover,body.login .success a:hover,body.login #jetpack-sso-wrap a:not(.button):hover{color:%12$s!important;text-decoration-thickness:3px}body.login #nav a:active,body.login #backtoblog a:active,body.login .privacy-policy-page-link a:active,body.login #login_error a:active,body.login .message a:active,body.login .success a:active,body.login #jetpack-sso-wrap a:not(.button):active{color:%13$s!important}body.login #nav a:focus-visible,body.login #backtoblog a:focus-visible,body.login .privacy-policy-page-link a:focus-visible,body.login #login_error a:focus-visible,body.login .message a:focus-visible,body.login .success a:focus-visible,body.login #jetpack-sso-wrap a:not(.button):focus-visible{outline:2px solid %14$s;outline-offset:2px}body.login .button-primary{background:%15$s;border-color:%15$s;color:%16$s}body.login .button-primary:hover{background:%17$s;border-color:%17$s;color:%16$s}body.login .button-primary:active{background:%18$s;border-color:%18$s;color:%16$s}body.login .button-primary:focus-visible{background:%17$s;border-color:%17$s;color:%16$s;box-shadow:none;outline:2px solid %19$s;outline-offset:2px}body.login .language-switcher .button{background:%15$s!important;border-color:%15$s!important;color:%16$s!important}body.login .language-switcher .button:hover{background:%17$s!important;border-color:%17$s!important;color:%16$s!important}body.login .language-switcher .button:active{background:%18$s!important;border-color:%18$s!important;color:%16$s!important}body.login .language-switcher .button:focus-visible{background:%17$s!important;border-color:%17$s!important;color:%16$s!important;box-shadow:none;outline:2px solid %19$s;outline-offset:2px}body.login.atshift-freeform-login-jetpack-sso #jetpack-sso-wrap,body.login.atshift-freeform-login-jetpack-sso #jetpack-sso-wrap p,body.login.atshift-freeform-login-jetpack-sso #jetpack-sso-wrap__action>p,body.login.atshift-freeform-login-jetpack-sso #jetpack-sso-wrap__user h2,body.login.atshift-freeform-login-jetpack-sso #jetpack-sso-wrap__user p,body.login.atshift-freeform-login-jetpack-sso .jetpack-sso-or{color:%7$s!important}body.login.atshift-freeform-login-jetpack-sso .jetpack-sso-or span{background:%9$s;color:%22$s!important}%20$s',
 			esc_attr( $settings['background_color'] ),
 			$image,
 			esc_attr( $settings['background_position'] ),
@@ -135,7 +136,8 @@ class Atshift_Freeform_Login_Screen {
 			esc_attr( $button_states['active'] ),
 			esc_attr( $button_states['focus'] ),
 			$logo_css,
-			(int) $settings['intro_width']
+			(int) $settings['intro_width'],
+			esc_attr( $form_text )
 		);
 
 		return apply_filters( 'atshift_freeform_login_screen_css', $css, $settings );
@@ -164,6 +166,15 @@ class Atshift_Freeform_Login_Screen {
 	private function logo_css( $settings ) {
 		if ( 'none' === $settings['logo_mode'] ) {
 			return 'body.login #login h1{display:none}';
+		}
+
+		if ( 'banner' === $settings['logo_mode'] && '' !== $settings['banner_logo_image_url'] ) {
+			$css = sprintf(
+				'body.login #login h1 a{display:block;width:100%%;max-width:100%%;height:auto;aspect-ratio:4/1;overflow:hidden;background-image:url("%1$s");background-size:cover;background-position:center;background-repeat:no-repeat;text-indent:-9999px}',
+				esc_url_raw( $settings['banner_logo_image_url'] )
+			);
+
+			return apply_filters( 'atshift_freeform_login_logo_css', $css, $settings );
 		}
 
 		$css = sprintf(
@@ -238,17 +249,21 @@ class Atshift_Freeform_Login_Screen {
 		$rgb       = self::hex_to_rgb( $hex );
 		$luminance = ( 0.2126 * $rgb[0] + 0.7152 * $rgb[1] + 0.0722 * $rgb[2] ) / 255;
 
-		if ( $luminance >= 0.86 ) {
-			$hover  = self::mix_hex_color( $hex, '#000000', 0.06 );
-			$active = self::mix_hex_color( $hex, '#000000', 0.12 );
-			$focus  = self::mix_hex_color( $hex, '#000000', 0.45 );
-		} elseif ( $luminance <= 0.12 ) {
-			$hover  = self::mix_hex_color( $hex, '#ffffff', 0.12 );
-			$active = self::mix_hex_color( $hex, '#ffffff', 0.22 );
-			$focus  = self::mix_hex_color( $hex, '#ffffff', 0.40 );
+		if ( $luminance >= 0.72 ) {
+			$hover  = self::mix_hex_color( $hex, '#000000', 0.15 );
+			$active = self::mix_hex_color( $hex, '#000000', 0.28 );
+			$focus  = self::mix_hex_color( $hex, '#000000', 0.55 );
+		} elseif ( $luminance <= 0.18 ) {
+			$hover  = self::mix_hex_color( $hex, '#ffffff', 0.18 );
+			$active = self::mix_hex_color( $hex, '#ffffff', 0.32 );
+			$focus  = self::mix_hex_color( $hex, '#ffffff', 0.50 );
+		} elseif ( $luminance >= 0.48 ) {
+			$hover  = self::mix_hex_color( $hex, '#000000', 0.18 );
+			$active = self::mix_hex_color( $hex, '#000000', 0.30 );
+			$focus  = self::mix_hex_color( $hex, '#000000', 0.42 );
 		} else {
-			$hover  = self::mix_hex_color( $hex, '#ffffff', 0.12 );
-			$active = self::mix_hex_color( $hex, '#000000', 0.14 );
+			$hover  = self::mix_hex_color( $hex, '#ffffff', 0.24 );
+			$active = self::mix_hex_color( $hex, '#000000', 0.22 );
 			$focus  = $hex;
 		}
 
@@ -257,6 +272,19 @@ class Atshift_Freeform_Login_Screen {
 			'active' => $active,
 			'focus'  => $focus,
 		);
+	}
+
+	/**
+	 * Choose readable text for a solid UI surface.
+	 *
+	 * @param string $hex Surface color.
+	 * @return string
+	 */
+	public static function contrast_text_color( $hex ) {
+		$rgb       = self::hex_to_rgb( $hex );
+		$luminance = ( 0.2126 * $rgb[0] + 0.7152 * $rgb[1] + 0.0722 * $rgb[2] ) / 255;
+
+		return $luminance > 0.55 ? '#1d2327' : '#ffffff';
 	}
 
 	/**

@@ -87,7 +87,22 @@ body.login .atshift-freeform-login-field-label:not(.atshift-freeform-login-visua
 
 body.login #loginform input[type="text"],
 body.login #loginform input[type="password"] {
+	font-size: 16px;
 	margin-top: 0;
+}
+
+body.login #loginform input[type="text"]::placeholder,
+body.login #loginform input[type="password"]::placeholder,
+body.login #lostpasswordform input[type="text"]::placeholder,
+body.login #registerform input[type="text"]::placeholder {
+	font-size: 16px;
+	opacity: 0.72;
+}
+
+body.login #login_error p:last-child,
+body.login .message p:last-child,
+body.login .success p:last-child {
+	margin-bottom: 0;
 }
 
 body.login #nav,

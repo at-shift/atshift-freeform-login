@@ -148,6 +148,14 @@
 	display: none;
 }
 
+.atshift-freeform-login-logo-mode-control {
+	display: contents;
+}
+
+.atshift-freeform-login-logo-mode-control[data-logo-mode-visible][hidden] {
+	display: none;
+}
+
 .atshift-freeform-login-control[data-background-media-visible][hidden] {
 	display: none;
 }
@@ -157,6 +165,20 @@
 }
 
 .atshift-freeform-login-background-media-details[hidden] {
+	display: none;
+}
+
+.atshift-freeform-login-expanded-options {
+	grid-column: 1 / -1;
+	display: grid;
+	grid-template-columns: repeat(2, minmax(0, 1fr));
+	gap: 18px 20px;
+	margin: 0 0 6px;
+	padding: 4px 0 4px 18px;
+	border-left: 3px solid #c3c4c7;
+}
+
+.atshift-freeform-login-expanded-options[hidden] {
 	display: none;
 }
 
@@ -188,11 +210,22 @@
 }
 
 .atshift-freeform-login-checkbox-control {
-	justify-content: flex-end;
+	grid-column: 1 / -1;
+	justify-content: flex-start;
 }
 
-.atshift-freeform-login-checkbox-control input {
-	margin: 8px 0;
+.atshift-freeform-login-checkbox-line {
+	display: inline-flex;
+	align-items: flex-start;
+	gap: 8px;
+	min-height: 32px;
+	font-weight: 400;
+	line-height: 1.5;
+}
+
+.atshift-freeform-login-checkbox-line input[type="checkbox"] {
+	flex: 0 0 auto;
+	margin: 1px 0 0;
 }
 
 .atshift-freeform-login-checkbox-control small {
@@ -373,8 +406,15 @@
 	box-sizing: border-box;
 	width: 100%;
 	height: 44px;
+	font-size: 16px;
 	margin-top: 0;
 	background: #fff;
+}
+
+.atshift-freeform-login-preview-form input[type="text"]::placeholder,
+.atshift-freeform-login-preview-form input[type="password"]::placeholder {
+	font-size: 16px;
+	opacity: 0.72;
 }
 
 .atshift-freeform-login-preview-actions {
@@ -399,17 +439,14 @@
 
 .atshift-freeform-login-preview-actions button:hover {
 	background: var(--atshift-preview-button-hover, #3d82ba) !important;
-	border-color: var(--atshift-preview-button-hover, #3d82ba) !important;
 }
 
 .atshift-freeform-login-preview-actions button:active {
 	background: var(--atshift-preview-button-active, #1d6198) !important;
-	border-color: var(--atshift-preview-button-active, #1d6198) !important;
 }
 
 .atshift-freeform-login-preview-actions button:focus-visible {
 	background: var(--atshift-preview-button-hover, #3d82ba) !important;
-	border-color: var(--atshift-preview-button-hover, #3d82ba) !important;
 	box-shadow: none;
 	outline: 2px solid var(--atshift-preview-button-focus, #2271b1);
 	outline-offset: 2px;
@@ -460,10 +497,13 @@
 
 .atshift-freeform-login-preview-links a {
 	color: var(--atshift-preview-link, #2271b1);
+	text-decoration-thickness: 2px;
+	text-underline-offset: 3px;
 }
 
 .atshift-freeform-login-preview-links a:hover {
 	color: var(--atshift-preview-link-hover, #3d82ba);
+	text-decoration-thickness: 3px;
 }
 
 .atshift-freeform-login-preview-links a:active {
@@ -492,6 +532,10 @@
 	min-height: 0;
 	line-height: normal;
 	color: transparent;
+}
+
+.atshift-freeform-login-preview-logo.is-banner-image {
+	background-size: cover;
 }
 
 .atshift-freeform-login-preview-secondary {
@@ -532,6 +576,10 @@
 }
 
 @media (max-width: 782px) {
+	.atshift-freeform-login-expanded-options {
+		grid-template-columns: minmax(0, 1fr);
+	}
+
 	.atshift-freeform-login-page-header h1 {
 		font-size: 30px;
 	}

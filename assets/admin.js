@@ -78,25 +78,33 @@
 		const blue = parseInt(normalized.slice(5, 7), 16);
 		const luminance = (0.2126 * red + 0.7152 * green + 0.0722 * blue) / 255;
 
-		if (luminance >= 0.86) {
+		if (luminance >= 0.72) {
 			return {
-				hover: mixHexColor(normalized, '#000000', 0.06),
-				active: mixHexColor(normalized, '#000000', 0.12),
-				focus: mixHexColor(normalized, '#000000', 0.45)
+				hover: mixHexColor(normalized, '#000000', 0.15),
+				active: mixHexColor(normalized, '#000000', 0.28),
+				focus: mixHexColor(normalized, '#000000', 0.55)
 			};
 		}
 
-		if (luminance <= 0.12) {
+		if (luminance <= 0.18) {
 			return {
-				hover: mixHexColor(normalized, '#ffffff', 0.12),
-				active: mixHexColor(normalized, '#ffffff', 0.22),
-				focus: mixHexColor(normalized, '#ffffff', 0.40)
+				hover: mixHexColor(normalized, '#ffffff', 0.18),
+				active: mixHexColor(normalized, '#ffffff', 0.32),
+				focus: mixHexColor(normalized, '#ffffff', 0.50)
+			};
+		}
+
+		if (luminance >= 0.48) {
+			return {
+				hover: mixHexColor(normalized, '#000000', 0.18),
+				active: mixHexColor(normalized, '#000000', 0.30),
+				focus: mixHexColor(normalized, '#000000', 0.42)
 			};
 		}
 
 		return {
-			hover: mixHexColor(normalized, '#ffffff', 0.12),
-			active: mixHexColor(normalized, '#000000', 0.14),
+			hover: mixHexColor(normalized, '#ffffff', 0.24),
+			active: mixHexColor(normalized, '#000000', 0.22),
 			focus: normalized
 		};
 	}
@@ -175,7 +183,7 @@
 		previewForm.style.borderRadius = '8px';
 		previewForm.style.boxShadow = shadowValue();
 		previewForm.style.color = value('label_color', '#1d2327');
-		const showFieldLabels = value('show_field_labels', false);
+		const showFieldLabels = !value('use_placeholders', true);
 		previewGroup.querySelectorAll('[data-preview-field-label]').forEach(function (label) {
 			label.classList.toggle('atshift-freeform-login-visually-hidden', !showFieldLabels);
 		});
@@ -188,7 +196,7 @@
 		previewGroup.style.setProperty('--atshift-preview-link-hover', linkStates.hover);
 		previewGroup.style.setProperty('--atshift-preview-link-active', linkStates.active);
 		previewGroup.style.setProperty('--atshift-preview-link-focus', linkStates.focus);
-		const buttons = previewForm.querySelectorAll('[data-preview-button]');
+		const buttons = previewGroup.querySelectorAll('[data-preview-button]');
 		const buttonColor = value('button_background_color', '#2271b1');
 		const buttonStates = interactiveColorStates(buttonColor);
 		previewGroup.style.setProperty('--atshift-preview-button', buttonColor);
@@ -205,12 +213,21 @@
 		logoModeControls.forEach(function (control) {
 			control.hidden = control.dataset.logoModeVisible !== logoMode;
 		});
+		const logoOptions = root.querySelector('[data-logo-options]');
+		if (logoOptions) {
+			logoOptions.hidden = logoMode === 'none';
+		}
 		previewLogo.hidden = logoMode === 'none';
-		previewLogo.classList.remove('has-image');
+		previewLogo.classList.remove('has-image', 'is-banner-image');
 		previewLogo.style.color = logoMode === 'site_title' ? value('brand_text_color', '#1d2327') : '';
 		previewLogo.style.width = '100%';
 		previewLogo.style.backgroundImage = 'none';
 		previewLogo.style.aspectRatio = '';
+		if (logoMode === 'banner' && value('banner_logo_image_url', '')) {
+			previewLogo.classList.add('has-image', 'is-banner-image');
+			previewLogo.style.backgroundImage = 'url("' + value('banner_logo_image_url', '') + '")';
+			previewLogo.style.aspectRatio = '4 / 1';
+		}
 		if (previewIntro) {
 			const introText = value('intro_text', '').trim();
 			previewIntro.hidden = introText === '';
