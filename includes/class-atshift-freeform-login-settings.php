@@ -527,7 +527,7 @@ class Atshift_Freeform_Login_Settings {
 			),
 			'form_style'   => array(
 				'tier' => 'pro',
-				'text' => __( 'Upgrade to Pro to adjust opacity, corner radius, and border styling.', 'atshift-freeform-login' ),
+				'text' => __( 'Upgrade to Pro to add a glass panel, rectangle, vertical band, or horizontal band behind the form, and adjust opacity, corner radius, and border styling.', 'atshift-freeform-login' ),
 			),
 			'text_buttons' => array(
 				'tier' => 'pro',

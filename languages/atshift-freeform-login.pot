@@ -357,7 +357,9 @@ msgid "Top right"
 msgstr ""
 
 #: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:467
-msgid "Upgrade to Pro to adjust opacity, corner radius, and border styling."
+msgid ""
+"Upgrade to Pro to add a glass panel, rectangle, vertical band, or horizontal "
+"band behind the form, and adjust opacity, corner radius, and border styling."
 msgstr ""
 
 #: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:475
