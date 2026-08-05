@@ -51,7 +51,14 @@
 	display: block;
 	width: 100%;
 	min-height: 44px;
+	font-size: 16px;
 	margin-top: 0;
+}
+
+.atshift-freeform-login input[type="text"]::placeholder,
+.atshift-freeform-login input[type="password"]::placeholder {
+	font-size: 16px;
+	opacity: 0.72;
 }
 
 .atshift-freeform-login .login-remember label {
@@ -76,26 +83,26 @@
 	min-height: 44px;
 	color: var(--atshift-login-button-text, #fff);
 	background: var(--atshift-login-button, #2271b1);
-	border: 1px solid var(--atshift-login-button, #2271b1);
+	border: var(--atshift-login-button-border-width, 1px) solid var(--atshift-login-button-border-color, var(--atshift-login-button, #2271b1));
 	cursor: pointer;
 }
 
 .atshift-freeform-login .login-submit input:hover {
 	color: var(--atshift-login-button-text, #fff);
 	background: var(--atshift-login-button-hover, #3d82ba);
-	border-color: var(--atshift-login-button-hover, #3d82ba);
+	border-color: var(--atshift-login-button-border-color, var(--atshift-login-button-hover, #3d82ba));
 }
 
 .atshift-freeform-login .login-submit input:active {
 	color: var(--atshift-login-button-text, #fff);
 	background: var(--atshift-login-button-active, #1d6198);
-	border-color: var(--atshift-login-button-active, #1d6198);
+	border-color: var(--atshift-login-button-border-color, var(--atshift-login-button-active, #1d6198));
 }
 
 .atshift-freeform-login .login-submit input:focus-visible {
 	color: var(--atshift-login-button-text, #fff);
 	background: var(--atshift-login-button-hover, #3d82ba);
-	border-color: var(--atshift-login-button-hover, #3d82ba);
+	border-color: var(--atshift-login-button-border-color, var(--atshift-login-button-hover, #3d82ba));
 	box-shadow: none;
 	outline: 2px solid var(--atshift-login-button-focus, #2271b1);
 	outline-offset: 2px;
@@ -111,26 +118,26 @@
 	text-align: center;
 	text-decoration: none;
 	background: var(--atshift-login-button, #2271b1);
-	border: 1px solid var(--atshift-login-button, #2271b1);
+	border: var(--atshift-login-button-border-width, 1px) solid var(--atshift-login-button-border-color, var(--atshift-login-button, #2271b1));
 	cursor: pointer;
 }
 
 .atshift-freeform-login-jetpack .jetpack-sso.button:hover {
 	color: var(--atshift-login-button-text, #fff);
 	background: var(--atshift-login-button-hover, #3d82ba);
-	border-color: var(--atshift-login-button-hover, #3d82ba);
+	border-color: var(--atshift-login-button-border-color, var(--atshift-login-button-hover, #3d82ba));
 }
 
 .atshift-freeform-login-jetpack .jetpack-sso.button:active {
 	color: var(--atshift-login-button-text, #fff);
 	background: var(--atshift-login-button-active, #1d6198);
-	border-color: var(--atshift-login-button-active, #1d6198);
+	border-color: var(--atshift-login-button-border-color, var(--atshift-login-button-active, #1d6198));
 }
 
 .atshift-freeform-login-jetpack .jetpack-sso.button:focus-visible {
 	color: var(--atshift-login-button-text, #fff);
 	background: var(--atshift-login-button-hover, #3d82ba);
-	border-color: var(--atshift-login-button-hover, #3d82ba);
+	border-color: var(--atshift-login-button-border-color, var(--atshift-login-button-hover, #3d82ba));
 	box-shadow: none;
 	outline: 2px solid var(--atshift-login-button-focus, #2271b1);
 	outline-offset: 2px;
@@ -166,10 +173,13 @@
 
 .atshift-freeform-login a {
 	color: var(--atshift-login-link, #2271b1);
+	text-decoration-thickness: 2px;
+	text-underline-offset: 3px;
 }
 
 .atshift-freeform-login a:hover {
 	color: var(--atshift-login-link-hover, #3d82ba);
+	text-decoration-thickness: 3px;
 }
 
 .atshift-freeform-login a:active {

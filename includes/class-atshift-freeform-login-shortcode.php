@@ -67,8 +67,8 @@ class Atshift_Freeform_Login_Shortcode {
 		}
 
 		$settings      = Atshift_Freeform_Login_Settings::get_settings();
-		$link_states   = Atshift_Freeform_Login_Screen::interactive_color_states( $settings['link_color'] );
-		$button_states = Atshift_Freeform_Login_Screen::interactive_color_states( $settings['button_background_color'] );
+		$link_states   = apply_filters( 'atshift_freeform_login_link_states', Atshift_Freeform_Login_Screen::interactive_color_states( $settings['link_color'] ), $settings );
+		$button_states = apply_filters( 'atshift_freeform_login_button_states', Atshift_Freeform_Login_Screen::interactive_color_states( $settings['button_background_color'] ), $settings );
 		$redirect      = self::safe_redirect( $attributes['redirect'] );
 		$show_lost     = self::to_bool( $attributes['show_lost_password'] );
 		$remember      = self::to_bool( $attributes['remember'] );
