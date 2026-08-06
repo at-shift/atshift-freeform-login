@@ -58,12 +58,12 @@ msgstr "下中央"
 #: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:502
 #: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:517
 msgid "Bottom left"
-msgstr "左下"
+msgstr "下左"
 
 #: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:504
 #: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:519
 msgid "Bottom right"
-msgstr "右下"
+msgstr "下右"
 
 #: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:275
 msgid "Brand"
@@ -85,12 +85,12 @@ msgstr "中央"
 #: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:499
 #: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:514
 msgid "Center left"
-msgstr "左中央"
+msgstr "中央左"
 
 #: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:501
 #: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:516
 msgid "Center right"
-msgstr "右中央"
+msgstr "中央右"
 
 #: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:414
 msgid "Change"
@@ -354,12 +354,12 @@ msgstr "上中央"
 #: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:496
 #: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:511
 msgid "Top left"
-msgstr "左上"
+msgstr "上左"
 
 #: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:498
 #: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:513
 msgid "Top right"
-msgstr "右上"
+msgstr "上右"
 
 #: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:467
 msgid ""
@@ -410,11 +410,20 @@ msgstr "atshift Freeform Login"
 msgid "Introductory text"
 msgstr "説明テキスト"
 
-msgid "Displayed between the brand and login form. Leave blank to hide it."
-msgstr "ブランドとログインフォームの間に表示します。空欄の場合は表示されません。"
+msgid "The site tagline is used initially. You can replace it here, or leave it blank to hide the text."
+msgstr "初期状態ではサイトのキャッチフレーズを使用します。ここで文言を置き換えられ、空欄にすると表示されません。"
 
 msgid "Text width"
 msgstr "テキスト幅"
+
+msgid "Text alignment"
+msgstr "テキストの配置"
+
+msgid "Left"
+msgstr "左"
+
+msgid "Right"
+msgstr "右"
 
 msgid "Select a loop video"
 msgstr "ループ動画を選択"
@@ -451,3 +460,7 @@ msgstr "ドロップシャドウ"
 
 msgid "Enable drop shadow"
 msgstr "ドロップシャドウを有効化"
+
+#: atshift-freeform-login/includes/class-atshift-freeform-login.php:84
+msgid "Upgrade to Pro"
+msgstr "Pro版へアップグレード"

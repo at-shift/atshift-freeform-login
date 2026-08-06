@@ -403,10 +403,19 @@ msgstr ""
 msgid "Introductory text"
 msgstr ""
 
-msgid "Displayed between the brand and login form. Leave blank to hide it."
+msgid "The site tagline is used initially. You can replace it here, or leave it blank to hide the text."
 msgstr ""
 
 msgid "Text width"
+msgstr ""
+
+msgid "Text alignment"
+msgstr ""
+
+msgid "Left"
+msgstr ""
+
+msgid "Right"
 msgstr ""
 
 msgid "Select a loop video"
@@ -443,4 +452,8 @@ msgid "Drop shadow"
 msgstr ""
 
 msgid "Enable drop shadow"
+msgstr ""
+
+#: atshift-freeform-login/includes/class-atshift-freeform-login.php:84
+msgid "Upgrade to Pro"
 msgstr ""

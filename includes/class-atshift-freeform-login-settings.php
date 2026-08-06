@@ -56,7 +56,9 @@ class Atshift_Freeform_Login_Settings {
 			'banner_logo_image_url'   => '',
 			'brand_text_color'        => '#1d2327',
 			'intro_text'              => '',
+			'intro_text_customized'   => 0,
 			'intro_width'             => 100,
+			'intro_alignment'         => 'center',
 			'form_position'           => 'center-center',
 			'form_width'              => 340,
 			'form_background_color'   => '#ffffff',
@@ -79,6 +81,10 @@ class Atshift_Freeform_Login_Settings {
 		$stored   = is_array( $stored ) ? $stored : array();
 		$settings = array_intersect_key( $stored, self::base_defaults() );
 
+		if ( empty( $stored['intro_text_customized'] ) && empty( $stored['intro_text'] ) ) {
+			$settings['intro_text'] = get_bloginfo( 'description' );
+		}
+
 		if ( ! array_key_exists( 'background_media_type', $stored ) ) {
 			$settings['background_media_type'] = empty( $stored['background_image_id'] ) ? 'color' : 'image';
 		}
@@ -86,6 +92,28 @@ class Atshift_Freeform_Login_Settings {
 		$settings = apply_filters( 'atshift_freeform_login_stored_settings', $settings );
 
 		return self::sanitize_settings( array_merge( self::defaults(), is_array( $settings ) ? $settings : array() ) );
+	}
+
+	/**
+	 * Check whether the settings screen belongs to its own top-level menu.
+	 *
+	 * Add-ons can enable the shared top-level menu while they are active.
+	 *
+	 * @return bool
+	 */
+	public static function uses_top_level_menu() {
+		return (bool) apply_filters( 'atshift_freeform_login_use_top_level_menu', false );
+	}
+
+	/**
+	 * Return the settings screen URL for the current menu arrangement.
+	 *
+	 * @return string
+	 */
+	public static function admin_page_url() {
+		$parent = self::uses_top_level_menu() ? 'admin.php' : 'options-general.php';
+
+		return admin_url( $parent . '?page=' . self::PAGE_SLUG );
 	}
 
 	/**
@@ -103,7 +131,13 @@ class Atshift_Freeform_Login_Settings {
 		$output['form_shadow']       = empty( $input['form_shadow'] ) ? 0 : 1;
 		$output['show_field_labels'] = empty( $input['show_field_labels'] ) ? 0 : 1;
 		$output['intro_text']        = isset( $input['intro_text'] ) ? sanitize_textarea_field( (string) $input['intro_text'] ) : '';
+		$output['intro_text_customized'] = empty( $input['intro_text_customized'] ) ? 0 : 1;
 		$output['intro_width']       = self::bounded_int( isset( $input['intro_width'] ) ? $input['intro_width'] : $defaults['intro_width'], 30, 100 );
+		$output['intro_alignment']   = self::allowed_value(
+			isset( $input['intro_alignment'] ) ? $input['intro_alignment'] : '',
+			array( 'left', 'center', 'right' ),
+			$defaults['intro_alignment']
+		);
 		$background_media_types      = apply_filters( 'atshift_freeform_login_background_media_types', array( 'color', 'image' ) );
 		$output['background_media_type'] = self::allowed_value(
 			isset( $input['background_media_type'] ) ? $input['background_media_type'] : '',
@@ -132,9 +166,13 @@ class Atshift_Freeform_Login_Settings {
 			array( 'site_title', 'banner', 'none' ),
 			$defaults['logo_mode']
 		);
+		$form_position_values = apply_filters(
+			'atshift_freeform_login_form_position_values',
+			array( 'left-top', 'center-top', 'right-top', 'left-center', 'center-center', 'right-center', 'left-bottom', 'center-bottom', 'right-bottom' )
+		);
 		$output['form_position'] = self::allowed_value(
 			isset( $input['form_position'] ) ? $input['form_position'] : '',
-			array( 'left-top', 'center-top', 'right-top', 'left-center', 'center-center', 'right-center', 'left-bottom', 'center-bottom', 'right-bottom' ),
+			is_array( $form_position_values ) ? $form_position_values : array(),
 			$defaults['form_position']
 		);
 		$output['background_position'] = self::allowed_value(
@@ -159,6 +197,27 @@ class Atshift_Freeform_Login_Settings {
 	 * @return void
 	 */
 	public function add_menu() {
+		if ( self::uses_top_level_menu() ) {
+			add_menu_page(
+				__( 'atshift Freeform Login', 'atshift-freeform-login' ),
+				__( 'atshift Freeform Login', 'atshift-freeform-login' ),
+				'manage_options',
+				self::PAGE_SLUG,
+				array( $this, 'render_page' ),
+				'dashicons-lock'
+			);
+
+			add_submenu_page(
+				self::PAGE_SLUG,
+				__( 'Settings' ),
+				__( 'Settings' ),
+				'manage_options',
+				self::PAGE_SLUG,
+				array( $this, 'render_page' )
+			);
+			return;
+		}
+
 		add_options_page(
 			__( 'atshift Freeform Login', 'atshift-freeform-login' ),
 			__( 'atshift Freeform Login', 'atshift-freeform-login' ),
@@ -175,7 +234,12 @@ class Atshift_Freeform_Login_Settings {
 	 * @return void
 	 */
 	public function enqueue_assets( $hook ) {
-		if ( 'settings_page_' . self::PAGE_SLUG !== $hook ) {
+		$allowed_hooks = array(
+			'settings_page_' . self::PAGE_SLUG,
+			'toplevel_page_' . self::PAGE_SLUG,
+		);
+
+		if ( ! in_array( $hook, $allowed_hooks, true ) ) {
 			return;
 		}
 
@@ -184,13 +248,13 @@ class Atshift_Freeform_Login_Settings {
 			'atshift-freeform-login-admin',
 			ATSHIFT_FREEFORM_LOGIN_URL . 'assets/admin.css',
 			array(),
-			ATSHIFT_FREEFORM_LOGIN_VERSION
+			self::asset_version( 'assets/admin.css' )
 		);
 		wp_enqueue_script(
 			'atshift-freeform-login-admin',
 			ATSHIFT_FREEFORM_LOGIN_URL . 'assets/admin.js',
 			array( 'jquery' ),
-			ATSHIFT_FREEFORM_LOGIN_VERSION,
+			self::asset_version( 'assets/admin.js' ),
 			true
 		);
 		wp_localize_script(
@@ -205,6 +269,12 @@ class Atshift_Freeform_Login_Settings {
 				'fallbackColorLabel'   => __( 'Fallback background color', 'atshift-freeform-login' ),
 			)
 		);
+	}
+
+	/** Return a cache-busting asset version. */
+	private static function asset_version( $relative_path ) {
+		$path = ATSHIFT_FREEFORM_LOGIN_DIR . ltrim( (string) $relative_path, '/' );
+		return is_file( $path ) ? (string) filemtime( $path ) : ATSHIFT_FREEFORM_LOGIN_VERSION;
 	}
 
 	/**
@@ -231,15 +301,7 @@ class Atshift_Freeform_Login_Settings {
 
 		update_option( self::OPTION_KEY, $free_only, false );
 
-		wp_safe_redirect(
-			add_query_arg(
-				array(
-					'page'            => self::PAGE_SLUG,
-					'atshift_updated' => '1',
-				),
-				admin_url( 'options-general.php' )
-			)
-		);
+		wp_safe_redirect( add_query_arg( 'atshift_updated', '1', self::admin_page_url() ) );
 		exit;
 	}
 
@@ -259,15 +321,15 @@ class Atshift_Freeform_Login_Settings {
 		?>
 		<div class="wrap atshift-freeform-login-admin">
 			<header class="atshift-freeform-login-page-header">
-				<div>
+				<div class="atshift-freeform-login-page-heading">
 					<h1><?php esc_html_e( 'atshift Freeform Login', 'atshift-freeform-login' ); ?><?php do_action( 'atshift_freeform_login_page_title' ); ?></h1>
 					<p><?php esc_html_e( 'Design your login, your way.', 'atshift-freeform-login' ); ?></p>
+
+					<?php if ( '1' === $updated ) : ?>
+						<div class="notice notice-success is-dismissible"><p><?php esc_html_e( 'Login design settings saved.', 'atshift-freeform-login' ); ?></p></div>
+					<?php endif; ?>
 				</div>
 			</header>
-
-			<?php if ( '1' === $updated ) : ?>
-				<div class="notice notice-success is-dismissible"><p><?php esc_html_e( 'Login design settings saved.', 'atshift-freeform-login' ); ?></p></div>
-			<?php endif; ?>
 
 			<?php Atshift_Freeform_Login_Jetpack::render_admin_status(); ?>
 
@@ -337,8 +399,21 @@ class Atshift_Freeform_Login_Settings {
 								</div>
 								<?php do_action( 'atshift_freeform_login_settings_brand_controls', $this, $settings ); ?>
 							</div>
-							<?php $this->render_textarea_field( 'intro_text', __( 'Introductory text', 'atshift-freeform-login' ), $settings, __( 'Displayed between the brand and login form. Leave blank to hide it.', 'atshift-freeform-login' ) ); ?>
+							<input type="hidden" name="settings[intro_text_customized]" value="1">
+							<?php $this->render_textarea_field( 'intro_text', __( 'Introductory text', 'atshift-freeform-login' ), $settings, __( 'The site tagline is used initially. You can replace it here, or leave it blank to hide the text.', 'atshift-freeform-login' ) ); ?>
 							<?php $this->render_number_field( 'intro_width', __( 'Text width', 'atshift-freeform-login' ), $settings, 30, 100, 1, '%' ); ?>
+							<?php
+							$this->render_select_field(
+								'intro_alignment',
+								__( 'Text alignment', 'atshift-freeform-login' ),
+								$settings,
+								array(
+									'left'   => __( 'Left', 'atshift-freeform-login' ),
+									'center' => __( 'Center', 'atshift-freeform-login' ),
+									'right'  => __( 'Right', 'atshift-freeform-login' ),
+								)
+							);
+							?>
 						</div>
 							<?php $this->render_upgrade_note( 'brand' ); ?>
 							</details>
@@ -508,7 +583,10 @@ class Atshift_Freeform_Login_Settings {
 	 * @return void
 	 */
 	private function render_upgrade_note( $group ) {
-		if ( defined( 'ATSHIFT_FREEFORM_LOGIN_PRO_VERSION' ) || class_exists( 'Atshift_Freeform_Login_Pro' ) ) {
+		if (
+			function_exists( 'atshift_freeform_login_pro_features_available' )
+			&& atshift_freeform_login_pro_features_available()
+		) {
 			return;
 		}
 
@@ -555,7 +633,7 @@ class Atshift_Freeform_Login_Settings {
 
 	/** @return array<string, string> */
 	private function form_positions() {
-		return array(
+		$positions = array(
 			'left-top'     => __( 'Top left', 'atshift-freeform-login' ),
 			'center-top'   => __( 'Top center', 'atshift-freeform-login' ),
 			'right-top'    => __( 'Top right', 'atshift-freeform-login' ),
@@ -566,6 +644,8 @@ class Atshift_Freeform_Login_Settings {
 			'center-bottom'=> __( 'Bottom center', 'atshift-freeform-login' ),
 			'right-bottom' => __( 'Bottom right', 'atshift-freeform-login' ),
 		);
+
+		return apply_filters( 'atshift_freeform_login_form_positions', $positions );
 	}
 
 	/** @return array<string, string> */

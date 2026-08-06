@@ -234,6 +234,14 @@
 			previewIntro.textContent = introText;
 			previewIntro.style.width = value('intro_width', 100) + '%';
 			previewIntro.style.color = value('label_color', '#1d2327');
+			const introAlignment = value('intro_alignment', 'center');
+			previewIntro.style.textAlign = introAlignment;
+			previewIntro.style.marginLeft = introAlignment === 'right' ? 'auto' : '0';
+			previewIntro.style.marginRight = introAlignment === 'left' ? 'auto' : '0';
+			if (introAlignment === 'center') {
+				previewIntro.style.marginLeft = 'auto';
+				previewIntro.style.marginRight = 'auto';
+			}
 		}
 
 		document.dispatchEvent(new CustomEvent('atshift-freeform-login:preview-updated', {
