@@ -457,3 +457,48 @@ msgstr ""
 #: atshift-freeform-login/includes/class-atshift-freeform-login.php:84
 msgid "Upgrade to Pro"
 msgstr ""
+
+#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:638
+#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:654
+msgid "Left side - Top edge"
+msgstr ""
+
+#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:639
+#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:655
+msgid "Left side - Center"
+msgstr ""
+
+#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:640
+#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:656
+msgid "Left side - Bottom edge"
+msgstr ""
+
+#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:641
+#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:657
+msgid "Center - Top edge"
+msgstr ""
+
+#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:642
+#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:658
+msgid "Center of screen"
+msgstr ""
+
+#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:643
+#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:659
+msgid "Center - Bottom edge"
+msgstr ""
+
+#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:644
+#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:660
+msgid "Right side - Top edge"
+msgstr ""
+
+#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:645
+#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:661
+msgid "Right side - Center"
+msgstr ""
+
+#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:646
+#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:662
+msgid "Right side - Bottom edge"
+msgstr ""

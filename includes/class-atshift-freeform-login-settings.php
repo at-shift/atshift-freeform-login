@@ -634,15 +634,15 @@ class Atshift_Freeform_Login_Settings {
 	/** @return array<string, string> */
 	private function form_positions() {
 		$positions = array(
-			'left-top'     => __( 'Top left', 'atshift-freeform-login' ),
-			'center-top'   => __( 'Top center', 'atshift-freeform-login' ),
-			'right-top'    => __( 'Top right', 'atshift-freeform-login' ),
-			'left-center'  => __( 'Center left', 'atshift-freeform-login' ),
-			'center-center'=> __( 'Center', 'atshift-freeform-login' ),
-			'right-center' => __( 'Center right', 'atshift-freeform-login' ),
-			'left-bottom'  => __( 'Bottom left', 'atshift-freeform-login' ),
-			'center-bottom'=> __( 'Bottom center', 'atshift-freeform-login' ),
-			'right-bottom' => __( 'Bottom right', 'atshift-freeform-login' ),
+			'left-top'      => __( 'Left side - Top edge', 'atshift-freeform-login' ),
+			'left-center'   => __( 'Left side - Center', 'atshift-freeform-login' ),
+			'left-bottom'   => __( 'Left side - Bottom edge', 'atshift-freeform-login' ),
+			'center-top'    => __( 'Center - Top edge', 'atshift-freeform-login' ),
+			'center-center' => __( 'Center of screen', 'atshift-freeform-login' ),
+			'center-bottom' => __( 'Center - Bottom edge', 'atshift-freeform-login' ),
+			'right-top'     => __( 'Right side - Top edge', 'atshift-freeform-login' ),
+			'right-center'  => __( 'Right side - Center', 'atshift-freeform-login' ),
+			'right-bottom'  => __( 'Right side - Bottom edge', 'atshift-freeform-login' ),
 		);
 
 		return apply_filters( 'atshift_freeform_login_form_positions', $positions );
@@ -651,15 +651,15 @@ class Atshift_Freeform_Login_Settings {
 	/** @return array<string, string> */
 	private function background_positions() {
 		return array(
-			'left top'     => __( 'Top left', 'atshift-freeform-login' ),
-			'center top'   => __( 'Top center', 'atshift-freeform-login' ),
-			'right top'    => __( 'Top right', 'atshift-freeform-login' ),
-			'left center'  => __( 'Center left', 'atshift-freeform-login' ),
-			'center center'=> __( 'Center', 'atshift-freeform-login' ),
-			'right center' => __( 'Center right', 'atshift-freeform-login' ),
-			'left bottom'  => __( 'Bottom left', 'atshift-freeform-login' ),
-			'center bottom'=> __( 'Bottom center', 'atshift-freeform-login' ),
-			'right bottom' => __( 'Bottom right', 'atshift-freeform-login' ),
+			'left top'      => __( 'Left side - Top edge', 'atshift-freeform-login' ),
+			'left center'   => __( 'Left side - Center', 'atshift-freeform-login' ),
+			'left bottom'   => __( 'Left side - Bottom edge', 'atshift-freeform-login' ),
+			'center top'    => __( 'Center - Top edge', 'atshift-freeform-login' ),
+			'center center' => __( 'Center of screen', 'atshift-freeform-login' ),
+			'center bottom' => __( 'Center - Bottom edge', 'atshift-freeform-login' ),
+			'right top'     => __( 'Right side - Top edge', 'atshift-freeform-login' ),
+			'right center'  => __( 'Right side - Center', 'atshift-freeform-login' ),
+			'right bottom'  => __( 'Right side - Bottom edge', 'atshift-freeform-login' ),
 		);
 	}
 

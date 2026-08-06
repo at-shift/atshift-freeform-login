@@ -4,7 +4,7 @@ Tags: login, custom login, login form, shortcode, branding
 Requires at least: 6.5
 Tested up to: 7.0
 Requires PHP: 7.4
-Stable tag: 0.9.3-beta.1
+Stable tag: 0.9.3-beta.2
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -29,6 +29,10 @@ An optional add-on can extend the free plugin with custom logo images, precise p
 5. Enable login-screen application after reviewing the preview.
 
 == Changelog ==
+
+= 0.9.3-beta.2 =
+* Reordered form and background placement options from left to right, with each column arranged from top to bottom.
+* Clarified placement labels in English and Japanese.
 
 = 0.9.3-beta.1 =
 * Added introductory text alignment and site-tagline defaults.

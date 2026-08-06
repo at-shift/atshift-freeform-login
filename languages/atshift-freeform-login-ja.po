@@ -464,3 +464,48 @@ msgstr "ドロップシャドウを有効化"
 #: atshift-freeform-login/includes/class-atshift-freeform-login.php:84
 msgid "Upgrade to Pro"
 msgstr "Pro版へアップグレード"
+
+#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:638
+#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:654
+msgid "Left side - Top edge"
+msgstr "左側 - 上辺"
+
+#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:639
+#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:655
+msgid "Left side - Center"
+msgstr "左側 - 中央"
+
+#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:640
+#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:656
+msgid "Left side - Bottom edge"
+msgstr "左側 - 下辺"
+
+#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:641
+#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:657
+msgid "Center - Top edge"
+msgstr "中央 - 上辺"
+
+#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:642
+#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:658
+msgid "Center of screen"
+msgstr "上下左右中央"
+
+#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:643
+#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:659
+msgid "Center - Bottom edge"
+msgstr "中央 - 下辺"
+
+#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:644
+#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:660
+msgid "Right side - Top edge"
+msgstr "右側 - 上辺"
+
+#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:645
+#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:661
+msgid "Right side - Center"
+msgstr "右側 - 中央"
+
+#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:646
+#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:662
+msgid "Right side - Bottom edge"
+msgstr "右側 - 下辺"
