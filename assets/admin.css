@@ -4,10 +4,13 @@
 }
 
 .atshift-freeform-login-page-header {
-	display: flex;
-	align-items: flex-end;
-	justify-content: space-between;
 	margin: 30px 0 24px;
+}
+
+.atshift-freeform-login-page-heading {
+	box-sizing: border-box;
+	width: 100%;
+	min-width: 0;
 }
 
 .atshift-freeform-login-page-header h1 {
@@ -26,13 +29,14 @@
 	font-size: 17px;
 }
 
-.atshift-freeform-login-admin > .notice {
+.atshift-freeform-login-page-heading > .notice {
 	box-sizing: border-box;
 	width: 100%;
-	margin: 0 0 20px;
+	max-width: none;
+	margin: 20px 0 0;
 }
 
-.atshift-freeform-login-admin > .notice p {
+.atshift-freeform-login-page-heading > .notice p {
 	font-size: 15px;
 	line-height: 1.6;
 }
