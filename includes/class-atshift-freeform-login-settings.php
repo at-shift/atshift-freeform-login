@@ -341,7 +341,7 @@ class Atshift_Freeform_Login_Settings {
 					<label class="atshift-freeform-login-toggle">
 						<input type="hidden" name="settings[enabled]" value="0">
 						<input type="checkbox" name="settings[enabled]" value="1" <?php checked( $settings['enabled'], 1 ); ?>>
-						<span><?php esc_html_e( 'Apply this design to the WordPress login screen', 'atshift-freeform-login' ); ?></span>
+						<span><?php esc_html_e( 'Apply design to the login screen', 'atshift-freeform-login' ); ?></span>
 					</label>
 					<?php submit_button( __( 'Save changes', 'atshift-freeform-login' ), 'primary', 'submit', false ); ?>
 				</div>
@@ -421,10 +421,12 @@ class Atshift_Freeform_Login_Settings {
 								<details class="atshift-freeform-login-settings-group">
 								<summary><?php do_action( 'atshift_freeform_login_settings_group_summary', 'placement' ); ?><?php esc_html_e( 'Form placement and size', 'atshift-freeform-login' ); ?></summary>
 									<p class="atshift-freeform-login-settings-description"><?php echo esc_html( $this->group_description( 'placement', __( 'Set the login form position and width.', 'atshift-freeform-login' ) ) ); ?></p>
-									<div class="atshift-freeform-login-control-grid">
-										<?php $this->render_select_field( 'form_position', __( 'Position', 'atshift-freeform-login' ), $settings, $this->form_positions() ); ?>
-									<?php $this->render_number_field( 'form_width', __( 'Form width', 'atshift-freeform-login' ), $settings, 240, 720, 1, 'px' ); ?>
-									<?php do_action( 'atshift_freeform_login_settings_placement_controls', $this, $settings ); ?>
+									<div class="atshift-freeform-login-control-grid atshift-freeform-login-placement-grid">
+										<?php $this->render_position_picker( $settings ); ?>
+										<div class="atshift-freeform-login-placement-fields">
+											<?php $this->render_number_field( 'form_width', __( 'Form width', 'atshift-freeform-login' ), $settings, 240, 720, 1, 'px' ); ?>
+											<?php do_action( 'atshift_freeform_login_settings_placement_controls', $this, $settings ); ?>
+										</div>
 									</div>
 									<?php $this->render_upgrade_note( 'placement' ); ?>
 								</details>
@@ -631,21 +633,69 @@ class Atshift_Freeform_Login_Settings {
 		<?php
 	}
 
-	/** @return array<string, string> */
-	private function form_positions() {
-		$positions = array(
-			'left-top'     => __( 'Top left', 'atshift-freeform-login' ),
-			'center-top'   => __( 'Top center', 'atshift-freeform-login' ),
-			'right-top'    => __( 'Top right', 'atshift-freeform-login' ),
-			'left-center'  => __( 'Center left', 'atshift-freeform-login' ),
-			'center-center'=> __( 'Center', 'atshift-freeform-login' ),
-			'right-center' => __( 'Center right', 'atshift-freeform-login' ),
-			'left-bottom'  => __( 'Bottom left', 'atshift-freeform-login' ),
-			'center-bottom'=> __( 'Bottom center', 'atshift-freeform-login' ),
-			'right-bottom' => __( 'Bottom right', 'atshift-freeform-login' ),
-		);
+	/**
+	 * Render a spatial position control instead of a long text menu.
+	 *
+	 * @param array<string, mixed> $settings Current settings.
+	 * @return void
+	 */
+	private function render_position_picker( $settings ) {
+		$free_values = array( 'left-top', 'center-top', 'right-top', 'left-center', 'center-center', 'right-center', 'left-bottom', 'center-bottom', 'right-bottom' );
+		$enabled     = apply_filters( 'atshift_freeform_login_form_position_values', $free_values );
+		$enabled     = is_array( $enabled ) ? $enabled : $free_values;
+		$positions   = $this->form_position_grid();
+		$current     = isset( $settings['form_position'] ) ? (string) $settings['form_position'] : 'center-center';
+		?>
+		<fieldset class="atshift-freeform-login-control atshift-freeform-login-position-control" data-position-picker>
+			<legend>
+				<span><?php esc_html_e( 'Position', 'atshift-freeform-login' ); ?></span>
+				<output class="atshift-freeform-login-position-label" data-position-label><?php echo esc_html( isset( $positions[ $current ] ) ? $positions[ $current ] : $positions['center-center'] ); ?></output>
+			</legend>
+			<input type="hidden" name="settings[form_position]" value="<?php echo esc_attr( $current ); ?>" data-setting="form_position" data-position-value>
+			<div class="atshift-freeform-login-position-grid" role="group" aria-label="<?php esc_attr_e( 'Form position', 'atshift-freeform-login' ); ?>">
+				<?php foreach ( $positions as $value => $label ) : ?>
+					<?php $available = in_array( $value, $enabled, true ); ?>
+					<button type="button" class="atshift-freeform-login-position-point<?php echo $current === $value ? ' is-selected' : ''; ?>" data-position-option="<?php echo esc_attr( $value ); ?>" aria-label="<?php echo esc_attr( $label ); ?>" aria-pressed="<?php echo $current === $value ? 'true' : 'false'; ?>"<?php disabled( ! $available ); ?>>
+						<span aria-hidden="true"></span>
+					</button>
+				<?php endforeach; ?>
+			</div>
+			<?php if ( count( $enabled ) < count( $positions ) ) : ?>
+				<small><?php esc_html_e( 'Pro unlocks the intermediate positions.', 'atshift-freeform-login' ); ?></small>
+			<?php endif; ?>
+		</fieldset>
+		<?php
+	}
 
-		return apply_filters( 'atshift_freeform_login_form_positions', $positions );
+	/** @return array<string, string> */
+	private function form_position_grid() {
+		return array(
+			'left-top'              => __( 'Left side - Top edge', 'atshift-freeform-login' ),
+			'innerleft-top'         => __( 'Left-center - Top edge', 'atshift-freeform-login' ),
+			'center-top'            => __( 'Center - Top edge', 'atshift-freeform-login' ),
+			'innerright-top'        => __( 'Right-center - Top edge', 'atshift-freeform-login' ),
+			'right-top'             => __( 'Right side - Top edge', 'atshift-freeform-login' ),
+			'left-innertop'         => __( 'Left side - Upper-center', 'atshift-freeform-login' ),
+			'innerleft-innertop'    => __( 'Left-center - Upper-center', 'atshift-freeform-login' ),
+			'center-innertop'       => __( 'Center - Upper-center', 'atshift-freeform-login' ),
+			'innerright-innertop'   => __( 'Right-center - Upper-center', 'atshift-freeform-login' ),
+			'right-innertop'        => __( 'Right side - Upper-center', 'atshift-freeform-login' ),
+			'left-center'           => __( 'Left side - Center', 'atshift-freeform-login' ),
+			'innerleft-center'      => __( 'Left-center - Center', 'atshift-freeform-login' ),
+			'center-center'         => __( 'Center of screen', 'atshift-freeform-login' ),
+			'innerright-center'     => __( 'Right-center - Center', 'atshift-freeform-login' ),
+			'right-center'          => __( 'Right side - Center', 'atshift-freeform-login' ),
+			'left-innerbottom'      => __( 'Left side - Lower-center', 'atshift-freeform-login' ),
+			'innerleft-innerbottom' => __( 'Left-center - Lower-center', 'atshift-freeform-login' ),
+			'center-innerbottom'    => __( 'Center - Lower-center', 'atshift-freeform-login' ),
+			'innerright-innerbottom' => __( 'Right-center - Lower-center', 'atshift-freeform-login' ),
+			'right-innerbottom'     => __( 'Right side - Lower-center', 'atshift-freeform-login' ),
+			'left-bottom'           => __( 'Left side - Bottom edge', 'atshift-freeform-login' ),
+			'innerleft-bottom'      => __( 'Left-center - Bottom edge', 'atshift-freeform-login' ),
+			'center-bottom'         => __( 'Center - Bottom edge', 'atshift-freeform-login' ),
+			'innerright-bottom'     => __( 'Right-center - Bottom edge', 'atshift-freeform-login' ),
+			'right-bottom'          => __( 'Right side - Bottom edge', 'atshift-freeform-login' ),
+		);
 	}
 
 	/** @return array<string, string> */

@@ -82,6 +82,18 @@
 	gap: 18px;
 }
 
+.atshift-freeform-login-placement-grid {
+	grid-template-columns: repeat(auto-fit, minmax(min(100%, 240px), 1fr));
+	align-items: start;
+}
+
+.atshift-freeform-login-placement-fields {
+	display: grid;
+	grid-template-columns: minmax(0, 1fr);
+	gap: 18px;
+	min-width: 0;
+}
+
 .atshift-freeform-login-settings-accordion {
 	display: grid;
 	gap: 0;
@@ -207,6 +219,90 @@
 	width: 100%;
 	height: 40px;
 	padding: 3px;
+}
+
+.atshift-freeform-login-position-control {
+	margin: 0;
+	padding: 0;
+	border: 0;
+}
+
+.atshift-freeform-login-position-control legend {
+	display: flex;
+	align-items: baseline;
+	flex-wrap: wrap;
+	gap: 6px 12px;
+	margin: 0 0 7px;
+	padding: 0;
+}
+
+.atshift-freeform-login-position-grid {
+	display: grid;
+	grid-template-columns: repeat(5, 34px);
+	grid-template-rows: repeat(5, 34px);
+	gap: 5px;
+	width: max-content;
+	padding: 12px;
+	background: #f6f7f7;
+	border: 1px solid #c3c4c7;
+	border-radius: 6px;
+}
+
+.atshift-freeform-login-position-point {
+	display: grid;
+	place-items: center;
+	box-sizing: border-box;
+	width: 34px;
+	height: 34px;
+	min-width: 34px;
+	min-height: 34px;
+	margin: 0;
+	padding: 0;
+	background: #fff;
+	border: 1px solid #a7aaad;
+	border-radius: 3px;
+	cursor: pointer;
+}
+
+.atshift-freeform-login-position-point span {
+	width: 8px;
+	height: 8px;
+	background: #646970;
+	border-radius: 50%;
+}
+
+.atshift-freeform-login-position-point:hover:not(:disabled),
+.atshift-freeform-login-position-point:focus-visible {
+	border-color: #3858e9;
+	box-shadow: 0 0 0 1px #3858e9;
+	outline: 0;
+}
+
+.atshift-freeform-login-position-point.is-selected {
+	background: #3858e9;
+	border-color: #3858e9;
+}
+
+.atshift-freeform-login-position-point.is-selected span {
+	background: #fff;
+}
+
+.atshift-freeform-login-position-point:disabled {
+	opacity: .25;
+	cursor: not-allowed;
+}
+
+.atshift-freeform-login-position-label {
+	color: #50575e;
+	font-size: 13px;
+	font-weight: 600;
+}
+
+.atshift-freeform-login-position-control small {
+	max-width: 220px;
+	color: #646970;
+	font-weight: 400;
+	line-height: 1.5;
 }
 
 .atshift-freeform-login-textarea-control {
@@ -572,6 +668,10 @@
 	display: flex;
 	justify-content: center;
 	gap: 8px;
+}
+
+.atshift-freeform-login-preview-language[hidden] {
+	display: none;
 }
 
 .atshift-freeform-login-preview-language select,
