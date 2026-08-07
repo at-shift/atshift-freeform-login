@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: atshift Freeform Login 0.9.1-beta.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-08-04 23:41+0900\n"
+"POT-Creation-Date: 2026-08-07 09:03+0900\n"
 "PO-Revision-Date: 2026-08-03 18:20+0900\n"
 "Last-Translator: @shift\n"
 "Language-Team: Japanese\n"
@@ -12,356 +12,499 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:375
+#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:511
 msgid "390 × 844 (Standard)"
 msgstr "390 × 844（標準）"
 
-#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:376
+#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:512
 msgid "844 × 390 (Landscape)"
 msgstr "844 × 390（横向き）"
 
-#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:254
-msgid "Apply this design to the WordPress login screen"
-msgstr "このデザインをWordPressログイン画面に適用"
+#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:344
+msgid "Apply design to the login screen"
+msgstr "ログイン画面にデザインを適用する"
 
-#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:409
+#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:547
 msgid "Back to site"
 msgstr "サイトへ戻る"
 
-#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:263
+#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:353
 msgid "Background"
 msgstr "背景"
 
-#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:266
+#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:268
+#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:360
+#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:367
 msgid "Background color"
 msgstr "背景色"
 
+#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:596
+msgid ""
+"Background color and images are available in the free version. Upgrade to "
+"Pro to use a lightweight loop video."
+msgstr ""
+"背景色と画像は無料版で利用できます。Proでは、軽量なループ動画を使用できます。"
+
+#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:364
 msgid "Background type"
 msgstr "背景の種類"
 
-msgid "Fallback background color"
-msgstr "代替の背景色"
-
-#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:455
-msgid "Background color and images are available in the free version. Upgrade to Pro to use a lightweight loop video."
-msgstr "背景色と画像は無料版で利用できます。Proでは、軽量なループ動画を使用できます。"
-
-#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:267
-msgid "Image"
-msgstr "画像"
-
-#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:503
-#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:518
-msgid "Bottom center"
-msgstr "下中央"
-
-#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:502
-#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:517
-msgid "Bottom left"
-msgstr "下左"
-
-#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:504
-#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:519
-msgid "Bottom right"
-msgstr "下右"
-
-#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:275
+#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:380
 msgid "Brand"
 msgstr "ブランド"
 
-#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:327
+#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:458
 msgid "Button color"
 msgstr "ボタン色"
 
-#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:328
-msgid "Button text"
+#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:459
+msgid "Button text color"
 msgstr "ボタンの文字色"
 
-#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:500
-#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:515
+#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:412
 msgid "Center"
 msgstr "中央"
 
-#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:499
-#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:514
-msgid "Center left"
-msgstr "中央左"
+#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:691
+#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:705
+msgid "Center - Bottom edge"
+msgstr "中央 - 下辺"
 
-#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:501
-#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:516
-msgid "Center right"
-msgstr "中央右"
+#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:686
+msgid "Center - Lower-center"
+msgstr "中央 - 下寄り"
 
-#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:414
+#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:671
+#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:703
+msgid "Center - Top edge"
+msgstr "中央 - 上辺"
+
+#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:676
+msgid "Center - Upper-center"
+msgstr "中央 - 上寄り"
+
+#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:681
+#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:704
+msgid "Center of screen"
+msgstr "上下左右中央"
+
+#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:552
 msgid "Change"
 msgstr "変更"
 
-#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:335
+#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:446
+msgid ""
+"Choose labels or placeholders and set the colors used for text, links, and "
+"the login button."
+msgstr ""
+"フィールドラベルまたはプレイスホルダを選び、文字、リンク、ログインボタンの色"
+"を設定します。"
+
+#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:468
 msgid "Choose whether the form has a shadow."
 msgstr "フォームにシャドウを付けるか選択します。"
 
-#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:276
+#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:381
 msgid ""
 "Choose whether the site title appears above the login form and set its color."
 msgstr ""
 "ログインフォーム上部にサイトタイトルを表示するか選び、文字色を設定します。"
 
-#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:269
+#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:372
 msgid "Contain"
 msgstr "全体を収める"
 
-#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:269
+#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:372
 msgid "Cover"
 msgstr "全体を覆う"
 
-#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:236
+#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:326
 msgid "Design your login, your way."
 msgstr "ログイン画面を、思いどおりに。"
 
-#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:357
-#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:364
+#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:493
+#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:500
 msgid "Desktop"
 msgstr "デスクトップ"
 
-#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:283
-msgid "Do not show"
-msgstr "表示しない"
-
-#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:338
-msgid "Enable shadow"
-msgstr "シャドウを有効化"
-
-#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:320
-msgid "Field labels"
-msgstr "フィールドラベル"
-
-#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:309
-msgid "Form background"
-msgstr "フォーム背景"
-
-#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:306
-msgid "Form background and border"
-msgstr "フォームの背景と枠線"
-
-#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:295
-msgid "Form placement and size"
-msgstr "フォームの配置とサイズ"
-
-#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:299
-msgid "Form width"
-msgstr "フォーム幅"
-
-#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:140
-msgid "Freeform Login"
-msgstr "Freeform Login"
-
-#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:268
+#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:371
 msgid "Display position"
 msgstr "表示位置"
 
-#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:269
+#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:372
 msgid "Display size"
 msgstr "表示サイズ"
 
-#: atshift-freeform-login/includes/class-atshift-freeform-login-jetpack.php:145
+#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:398
+msgid "Displayed in a 4:1 frame. Tall images are cropped from the center."
+msgstr "4:1の枠で表示します。高さが合わない画像は中央を基準に切り取られます。"
+
+#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:389
+msgid "Do not show"
+msgstr "表示しない"
+
+#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:471
+msgid "Drop shadow"
+msgstr "ドロップシャドウ"
+
+#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:475
+msgid "Enable drop shadow"
+msgstr "ドロップシャドウを有効化"
+
+#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:269
+msgid "Fallback background color"
+msgstr "代替の背景色"
+
+#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:449
+msgid "Field labels"
+msgstr "フィールドラベル"
+
+#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:438
+msgid "Form background"
+msgstr "フォーム背景"
+
+#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:435
+msgid "Form background and border"
+msgstr "フォームの背景と枠線"
+
+#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:422
+msgid "Form placement and size"
+msgstr "フォームの配置とサイズ"
+
+#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:650
+msgid "Form position"
+msgstr "フォームの配置"
+
+#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:426
+msgid "Form width"
+msgstr "フォーム幅"
+
+#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:600
+msgid ""
+"Free accepts a wide logo image in a fixed 4:1 frame; images with a different "
+"height are cropped from the center. Pro preserves wide and tall image ratios "
+"and lets you adjust the logo width."
+msgstr ""
+"無料版では横長ロゴ画像を4:1の固定枠で表示し、高さが合わない画像は中央を基準に"
+"切り取ります。Proでは横長・縦長画像の比率を保ち、ロゴ幅を調整できます。"
+
+#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:612
+msgid ""
+"Free automatically adjusts link and button colors for hover and pressed "
+"states. Pro lets you choose each interaction color and hide the language "
+"selector on the login screen."
+msgstr ""
+"無料版ではリンクとボタンのホバー時・押下時の色を自動調整します。Proでは各状態"
+"の色を指定し、ログイン画面の言語選択を非表示にできます。"
+
+#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:361
+#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:369
+msgid "Image"
+msgstr "画像"
+
+#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:403
+msgid "Introductory text"
+msgstr "説明テキスト"
+
+#: atshift-freeform-login/includes/class-atshift-freeform-login-jetpack.php:147
 msgid ""
 "Jetpack SSO currently redirects the login screen directly to WordPress.com. "
 "This login screen design is not shown during that redirect."
 msgstr ""
-"Jetpack SSOは現在、ログイン画面からWordPress.comへ直接転送する設定です。転送中は"
-"このログイン画面デザインは表示されません。"
+"Jetpack SSOは現在、ログイン画面からWordPress.comへ直接転送する設定です。転送"
+"中はこのログイン画面デザインは表示されません。"
 
-#: atshift-freeform-login/includes/class-atshift-freeform-login-jetpack.php:148
+#: atshift-freeform-login/includes/class-atshift-freeform-login-jetpack.php:150
 msgid ""
 "Jetpack SSO is set to use WordPress.com login only. The local username and "
 "password fields are hidden, and the WordPress.com login area uses this "
 "design."
 msgstr ""
-"Jetpack SSOはWordPress.comログインのみを使用する設定です。ユーザー名とパスワード"
-"の入力欄は非表示になり、WordPress.comログインのエリアにこのデザインが適用され"
-"ます。"
+"Jetpack SSOはWordPress.comログインのみを使用する設定です。ユーザー名とパス"
+"ワードの入力欄は非表示になり、WordPress.comログインのエリアにこのデザインが適"
+"用されます。"
 
-#: atshift-freeform-login/includes/class-atshift-freeform-login-jetpack.php:151
+#: atshift-freeform-login/includes/class-atshift-freeform-login-jetpack.php:153
 msgid ""
 "Jetpack SSO was detected. The local login and WordPress.com login areas both "
 "use this design."
 msgstr ""
-"Jetpack SSOを検出しました。通常のログインとWordPress.comログインの両方にこのデザ"
-"インが適用されます。"
+"Jetpack SSOを検出しました。通常のログインとWordPress.comログインの両方にこの"
+"デザインが適用されます。"
 
-#: atshift-freeform-login/includes/class-atshift-freeform-login-jetpack.php:158
+#: atshift-freeform-login/includes/class-atshift-freeform-login-jetpack.php:160
 msgid "Jetpack SSO:"
 msgstr "Jetpack SSO:"
 
-#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:413
+#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:551
 msgid "Language"
 msgstr "言語"
 
-#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:326
+#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:411
+msgid "Left"
+msgstr "左"
+
+#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:689
+#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:702
+msgid "Left side - Bottom edge"
+msgstr "左側 - 下辺"
+
+#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:679
+#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:701
+msgid "Left side - Center"
+msgstr "左側 - 中央"
+
+#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:684
+msgid "Left side - Lower-center"
+msgstr "左側 - 下寄り"
+
+#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:669
+#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:700
+msgid "Left side - Top edge"
+msgstr "左側 - 上辺"
+
+#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:674
+msgid "Left side - Upper-center"
+msgstr "左側 - 上寄り"
+
+#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:690
+msgid "Left-center - Bottom edge"
+msgstr "左寄り - 下辺"
+
+#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:680
+msgid "Left-center - Center"
+msgstr "左寄り - 中央"
+
+#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:685
+msgid "Left-center - Lower-center"
+msgstr "左寄り - 下寄り"
+
+#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:670
+msgid "Left-center - Top edge"
+msgstr "左寄り - 上辺"
+
+#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:675
+msgid "Left-center - Upper-center"
+msgstr "左寄り - 上寄り"
+
+#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:457
 msgid "Link color"
 msgstr "リンク色"
 
-#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:400
+#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:538
 msgid "Log In"
 msgstr "ログイン"
 
-#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:389
-#: atshift-freeform-login/includes/class-atshift-freeform-login-jetpack.php:117
+#: atshift-freeform-login/includes/class-atshift-freeform-login-jetpack.php:119
+#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:527
 msgid "Log in with WordPress.com"
 msgstr "WordPress.comでログイン"
 
-#: atshift-freeform-login/includes/class-atshift-freeform-login-shortcode.php:64
+#: atshift-freeform-login/includes/class-atshift-freeform-login-shortcode.php:65
 msgid "Log out"
 msgstr "ログアウト"
 
-#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:241
+#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:329
 msgid "Login design settings saved."
 msgstr "ログインデザイン設定を保存しました。"
 
-#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:286
+#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:392
 msgid "Logo"
 msgstr "ロゴ"
 
-#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:407
-#: atshift-freeform-login/includes/class-atshift-freeform-login-shortcode.php:114
+#: atshift-freeform-login/includes/class-atshift-freeform-login-shortcode.php:115
+#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:545
 msgid "Lost your password?"
 msgstr "パスワードをお忘れですか？"
 
-#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:359
-#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:374
+#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:495
+#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:510
 msgid "Mobile"
 msgstr "モバイル"
 
-#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:392
-#: atshift-freeform-login/includes/class-atshift-freeform-login-shortcode.php:122
+#: atshift-freeform-login/includes/class-atshift-freeform-login-shortcode.php:123
+#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:530
 msgid "Or"
 msgstr "または"
 
-#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:269
+#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:372
 msgid "Original size"
 msgstr "元のサイズ"
 
-#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:397
-#: atshift-freeform-login/includes/class-atshift-freeform-login-screen.php:54
-#: atshift-freeform-login/includes/class-atshift-freeform-login-shortcode.php:151
+#: atshift-freeform-login/includes/class-atshift-freeform-login-shortcode.php:152
+#: atshift-freeform-login/includes/class-atshift-freeform-login-screen.php:55
+#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:535
 msgid "Password"
 msgstr "パスワード"
 
-#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:298
+#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:648
 msgid "Position"
 msgstr "配置"
 
-#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:352
+#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:488
 msgid "Preview"
 msgstr "プレビュー"
 
-#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:356
+#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:492
 msgid "Preview device"
 msgstr "プレビュー端末"
 
-#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:353
+#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:489
 msgid "Preview using representative screen sizes."
 msgstr "代表的な画面サイズでのプレビューです。"
 
-#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:410
+#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:548
 msgid "Privacy Policy"
 msgstr "プライバシーポリシー"
 
-#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:399
+#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:660
+msgid "Pro unlocks the intermediate positions."
+msgstr "Proでは中間位置も選択できます。"
+
+#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:537
 msgid "Remember Me"
 msgstr "ログイン状態を保存"
 
-#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:602
+#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:818
 msgid "Remove"
 msgstr "削除"
 
-#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:256
+#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:413
+msgid "Right"
+msgstr "右"
+
+#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:693
+#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:708
+msgid "Right side - Bottom edge"
+msgstr "右側 - 下辺"
+
+#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:683
+#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:707
+msgid "Right side - Center"
+msgstr "右側 - 中央"
+
+#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:688
+msgid "Right side - Lower-center"
+msgstr "右側 - 下寄り"
+
+#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:673
+#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:706
+msgid "Right side - Top edge"
+msgstr "右側 - 上辺"
+
+#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:678
+msgid "Right side - Upper-center"
+msgstr "右側 - 上寄り"
+
+#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:692
+msgid "Right-center - Bottom edge"
+msgstr "右寄り - 下辺"
+
+#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:682
+msgid "Right-center - Center"
+msgstr "右寄り - 中央"
+
+#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:687
+msgid "Right-center - Lower-center"
+msgstr "右寄り - 下寄り"
+
+#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:672
+msgid "Right-center - Top edge"
+msgstr "右寄り - 上辺"
+
+#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:677
+msgid "Right-center - Upper-center"
+msgstr "右寄り - 上寄り"
+
+#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:346
 msgid "Save changes"
 msgstr "変更を保存"
 
-#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:362
-#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:363
+#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:498
+#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:499
 msgid "Screen size"
 msgstr "画面サイズ"
 
-#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:178
+#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:266
+msgid "Select a loop video"
+msgstr "ループ動画を選択"
+
+#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:264
 msgid "Select an image"
 msgstr "画像を選択"
 
-#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:601
+#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:809
 msgid "Select image"
 msgstr "画像を選択"
 
-#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:317
-msgid ""
-"Set field labels and the colors used for text, links, and the login button."
-msgstr "入力項目のラベルと、文字、リンク、ログインボタンの色を設定します。"
+#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:809
+msgid "Select video"
+msgstr "動画を選択"
 
-#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:264
+#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:354
 msgid "Set the background color and image for the entire login screen."
 msgstr "ログイン画面全体の背景色や背景画像を設定します。"
 
-#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:307
+#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:436
 msgid "Set the form background color."
 msgstr "フォームエリアの背景色を設定します。"
 
-#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:296
+#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:423
 msgid "Set the login form position and width."
 msgstr "ログインフォームの配置と幅を設定します。"
 
-#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:334
+#: atshift-freeform-login/includes/class-atshift-freeform-login.php:69
+#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:212
+#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:213
+msgid "Settings"
+msgstr ""
+
+#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:467
 msgid "Shadow"
 msgstr "シャドウ"
 
-#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:323
-msgid "Show above input fields"
-msgstr "入力欄の上に表示"
-
-#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:282
+#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:387
 msgid "Site title"
 msgstr "サイトタイトル"
 
-#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:288
+#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:395
 msgid "Site title color"
 msgstr "サイトタイトルの文字色"
 
-#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:358
-#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:370
+#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:494
+#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:506
 msgid "Tablet"
 msgstr "タブレット"
 
-#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:316
+#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:408
+msgid "Text alignment"
+msgstr "テキストの配置"
+
+#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:445
 msgid "Text and buttons"
 msgstr "文字とボタン"
 
-#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:325
+#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:456
 msgid "Text color"
 msgstr "文字色"
 
-#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:471
+#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:404
+msgid "Text width"
+msgstr "テキスト幅"
+
+#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:403
 msgid ""
-"Text, link, and button colors, including automatic interaction colors, are "
-"all available in the free version."
+"The site tagline is used initially. You can replace it here, or leave it "
+"blank to hide the text."
 msgstr ""
-"文字、リンク、ボタンの配色と操作時の自動色調整は、すべて無料版で利用できま"
-"す。"
+"初期状態ではサイトのキャッチフレーズを使用します。ここで文言を置き換えられ、"
+"空欄にすると表示されません。"
 
-#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:497
-#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:512
-msgid "Top center"
-msgstr "上中央"
+#: atshift-freeform-login/includes/class-atshift-freeform-login.php:84
+msgid "Upgrade to Pro"
+msgstr "Pro版へアップグレード"
 
-#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:496
-#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:511
-msgid "Top left"
-msgstr "上左"
-
-#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:498
-#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:513
-msgid "Top right"
-msgstr "上右"
-
-#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:467
+#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:608
 msgid ""
 "Upgrade to Pro to add a glass panel, rectangle, vertical band, or horizontal "
 "band behind the form, and adjust opacity, corner radius, and border styling."
@@ -369,143 +512,105 @@ msgstr ""
 "Proでは、フォームの背面にグラス、矩形、縦帯、横帯を追加し、透明度、角丸、枠線"
 "を調整できます。"
 
-#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:475
+#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:616
 msgid ""
 "Upgrade to Pro to adjust shadow position, blur, spread, color, and opacity."
 msgstr "Proでは、シャドウの位置、ぼかし、広がり、色、透明度を調整できます。"
 
-#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:463
+#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:604
 msgid ""
 "Upgrade to Pro to fine-tune the horizontal and vertical position in pixels."
 msgstr "Proでは、水平・垂直方向の位置をピクセル単位で微調整できます。"
 
-#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:459
-msgid "Upgrade to Pro to use a custom logo image and adjust its display width."
-msgstr "Proでは、独自のロゴ画像を使用し、表示幅を調整できます。"
+#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:453
+msgid "Use placeholders"
+msgstr "プレイスホルダを使用"
 
-#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:179
+#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:265
 msgid "Use this image"
 msgstr "この画像を使用"
 
-#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:396
-#: atshift-freeform-login/includes/class-atshift-freeform-login-screen.php:53
-#: atshift-freeform-login/includes/class-atshift-freeform-login-shortcode.php:150
+#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:267
+msgid "Use this video"
+msgstr "この動画を使用"
+
+#: atshift-freeform-login/includes/class-atshift-freeform-login-shortcode.php:151
+#: atshift-freeform-login/includes/class-atshift-freeform-login-screen.php:54
+#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:534
 msgid "Username / Email"
 msgstr "ユーザー名 / メール"
 
-#: atshift-freeform-login/includes/class-atshift-freeform-login-shortcode.php:62
+#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:388
+#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:397
+msgid "Wide logo image"
+msgstr "横長ロゴ画像"
+
+#. translators: %s: Display name of the currently logged-in user.
+#: atshift-freeform-login/includes/class-atshift-freeform-login-shortcode.php:63
 #, php-format
 msgid "You are logged in as %s."
 msgstr "%s としてログインしています。"
 
-#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:191
+#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:287
 msgid "You are not allowed to manage these settings."
 msgstr "この設定を管理する権限がありません。"
 
-#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:139
-#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:235
+#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:202
+#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:203
+#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:222
+#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:223
+#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:325
 msgid "atshift Freeform Login"
 msgstr "atshift Freeform Login"
 
-msgid "Introductory text"
-msgstr "説明テキスト"
+#~ msgid "Bottom center"
+#~ msgstr "下中央"
 
-msgid "The site tagline is used initially. You can replace it here, or leave it blank to hide the text."
-msgstr "初期状態ではサイトのキャッチフレーズを使用します。ここで文言を置き換えられ、空欄にすると表示されません。"
+#~ msgid "Bottom left"
+#~ msgstr "下左"
 
-msgid "Text width"
-msgstr "テキスト幅"
+#~ msgid "Bottom right"
+#~ msgstr "下右"
 
-msgid "Text alignment"
-msgstr "テキストの配置"
+#~ msgid "Button text"
+#~ msgstr "ボタンの文字色"
 
-msgid "Left"
-msgstr "左"
+#~ msgid "Center left"
+#~ msgstr "中央左"
 
-msgid "Right"
-msgstr "右"
+#~ msgid "Center right"
+#~ msgstr "中央右"
 
-msgid "Select a loop video"
-msgstr "ループ動画を選択"
+#~ msgid "Enable shadow"
+#~ msgstr "シャドウを有効化"
 
-msgid "Use this video"
-msgstr "この動画を使用"
+#~ msgid "Freeform Login"
+#~ msgstr "Freeform Login"
 
-msgid "Wide logo image"
-msgstr "横長ロゴ画像"
+#~ msgid ""
+#~ "Set field labels and the colors used for text, links, and the login "
+#~ "button."
+#~ msgstr "入力項目のラベルと、文字、リンク、ログインボタンの色を設定します。"
 
-msgid "Displayed in a 4:1 frame. Tall images are cropped from the center."
-msgstr "4:1の枠で表示します。高さが合わない画像は中央を基準に切り取られます。"
+#~ msgid "Show above input fields"
+#~ msgstr "入力欄の上に表示"
 
-msgid "Free accepts a wide logo image in a fixed 4:1 frame; images with a different height are cropped from the center. Pro preserves wide and tall image ratios and lets you adjust the logo width."
-msgstr "無料版では横長ロゴ画像を4:1の固定枠で表示し、高さが合わない画像は中央を基準に切り取ります。Proでは横長・縦長画像の比率を保ち、ロゴ幅を調整できます。"
+#~ msgid ""
+#~ "Text, link, and button colors, including automatic interaction colors, "
+#~ "are all available in the free version."
+#~ msgstr ""
+#~ "文字、リンク、ボタンの配色と操作時の自動色調整は、すべて無料版で利用できま"
+#~ "す。"
 
-msgid "Free automatically adjusts link and button colors for hover and pressed states. Pro lets you choose each interaction color and hide the language selector on the login screen."
-msgstr "無料版ではリンクとボタンのホバー時・押下時の色を自動調整します。Proでは各状態の色を指定し、ログイン画面の言語選択を非表示にできます。"
+#~ msgid "Top center"
+#~ msgstr "上中央"
 
-msgid "Select video"
-msgstr "動画を選択"
+#~ msgid "Top left"
+#~ msgstr "上左"
 
-msgid "Choose labels or placeholders and set the colors used for text, links, and the login button."
-msgstr "フィールドラベルまたはプレイスホルダを選び、文字、リンク、ログインボタンの色を設定します。"
+#~ msgid "Top right"
+#~ msgstr "上右"
 
-msgid "Use placeholders"
-msgstr "プレイスホルダを使用"
-
-msgid "Button text color"
-msgstr "ボタンの文字色"
-
-msgid "Drop shadow"
-msgstr "ドロップシャドウ"
-
-msgid "Enable drop shadow"
-msgstr "ドロップシャドウを有効化"
-
-#: atshift-freeform-login/includes/class-atshift-freeform-login.php:84
-msgid "Upgrade to Pro"
-msgstr "Pro版へアップグレード"
-
-#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:638
-#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:654
-msgid "Left side - Top edge"
-msgstr "左側 - 上辺"
-
-#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:639
-#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:655
-msgid "Left side - Center"
-msgstr "左側 - 中央"
-
-#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:640
-#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:656
-msgid "Left side - Bottom edge"
-msgstr "左側 - 下辺"
-
-#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:641
-#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:657
-msgid "Center - Top edge"
-msgstr "中央 - 上辺"
-
-#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:642
-#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:658
-msgid "Center of screen"
-msgstr "上下左右中央"
-
-#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:643
-#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:659
-msgid "Center - Bottom edge"
-msgstr "中央 - 下辺"
-
-#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:644
-#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:660
-msgid "Right side - Top edge"
-msgstr "右側 - 上辺"
-
-#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:645
-#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:661
-msgid "Right side - Center"
-msgstr "右側 - 中央"
-
-#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:646
-#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:662
-msgid "Right side - Bottom edge"
-msgstr "右側 - 下辺"
+#~ msgid ""
+#~ "Upgrade to Pro to use a custom logo image and adjust its display width."
+#~ msgstr "Proでは、独自のロゴ画像を使用し、表示幅を調整できます。"

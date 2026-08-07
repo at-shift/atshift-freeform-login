@@ -16,6 +16,7 @@
 	const previewIntro = root.querySelector('[data-preview-intro]');
 	const logoModeControls = root.querySelectorAll('[data-logo-mode-visible]');
 	const settingsGroups = root.querySelectorAll('[data-settings-accordion] > details');
+	const positionPicker = root.querySelector('[data-position-picker]');
 
 	settingsGroups.forEach(function (group) {
 		const summary = group.querySelector('summary');
@@ -56,6 +57,66 @@
 		}
 
 		return '0 18px 50px 0 rgba(0,0,0,0.18)';
+	}
+
+	function selectPosition(position) {
+		if (!positionPicker) {
+			return;
+		}
+
+		const positionValue = positionPicker.querySelector('[data-position-value]');
+		const selectedButton = positionPicker.querySelector('[data-position-option="' + position + '"]');
+		const positionLabel = positionPicker.querySelector('[data-position-label]');
+		if (!positionValue || !selectedButton || selectedButton.disabled) {
+			return;
+		}
+
+		positionValue.value = position;
+		positionPicker.querySelectorAll('[data-position-option]').forEach(function (button) {
+			const selected = button === selectedButton;
+			button.classList.toggle('is-selected', selected);
+			button.setAttribute('aria-pressed', selected ? 'true' : 'false');
+		});
+		if (positionLabel) {
+			positionLabel.textContent = selectedButton.getAttribute('aria-label');
+		}
+		positionValue.dispatchEvent(new Event('change', { bubbles: true }));
+	}
+
+	if (positionPicker) {
+		positionPicker.addEventListener('click', function (event) {
+			const button = event.target.closest('[data-position-option]');
+			if (button) {
+				selectPosition(button.dataset.positionOption);
+			}
+		});
+
+		positionPicker.addEventListener('keydown', function (event) {
+			const button = event.target.closest('[data-position-option]');
+			const offsets = { ArrowLeft: -1, ArrowRight: 1, ArrowUp: -5, ArrowDown: 5 };
+			if (!button || !Object.prototype.hasOwnProperty.call(offsets, event.key)) {
+				return;
+			}
+
+			const buttons = Array.from(positionPicker.querySelectorAll('[data-position-option]'));
+			const currentIndex = buttons.indexOf(button);
+			const currentRow = Math.floor(currentIndex / 5);
+			let index = currentIndex + offsets[event.key];
+			while (buttons[index]) {
+				if ((event.key === 'ArrowLeft' || event.key === 'ArrowRight') && Math.floor(index / 5) !== currentRow) {
+					return;
+				}
+				if (!buttons[index].disabled) {
+					break;
+				}
+				index += offsets[event.key];
+			}
+			if (buttons[index]) {
+				event.preventDefault();
+				buttons[index].focus();
+				selectPosition(buttons[index].dataset.positionOption);
+			}
+		});
 	}
 
 	function mixHexColor(source, target, weight) {
