@@ -209,8 +209,8 @@ class Atshift_Freeform_Login_Settings {
 
 			add_submenu_page(
 				self::PAGE_SLUG,
-				__( 'Settings' ),
-				__( 'Settings' ),
+				__( 'Settings', 'atshift-freeform-login' ),
+				__( 'Settings', 'atshift-freeform-login' ),
 				'manage_options',
 				self::PAGE_SLUG,
 				array( $this, 'render_page' )
@@ -289,9 +289,11 @@ class Atshift_Freeform_Login_Settings {
 
 		check_admin_referer( 'atshift_freeform_login_save_settings' );
 
-		$raw = isset( $_POST['settings'] ) && is_array( $_POST['settings'] )
-			? wp_unslash( $_POST['settings'] )
-			: array();
+		$raw = array();
+		if ( isset( $_POST['settings'] ) && is_array( $_POST['settings'] ) ) {
+			// phpcs:ignore WordPress.Security.ValidatedSanitizedInput.InputNotSanitized -- The submitted settings array is unslashed here and each supported key is sanitized by sanitize_settings().
+			$raw = wp_unslash( $_POST['settings'] );
+		}
 
 		$stored    = get_option( self::OPTION_KEY, array() );
 		$stored    = is_array( $stored ) ? array_intersect_key( $stored, self::base_defaults() ) : array();
