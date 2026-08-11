@@ -49,6 +49,7 @@ final class Atshift_Freeform_Login {
 	private function __construct() {
 		add_action( 'init', array( $this, 'load_textdomain' ) );
 		add_filter( 'plugin_action_links_' . plugin_basename( ATSHIFT_FREEFORM_LOGIN_FILE ), array( $this, 'filter_plugin_action_links' ) );
+		add_filter( 'plugin_row_meta', array( $this, 'filter_plugin_row_meta' ), 10, 4 );
 
 		new Atshift_Freeform_Login_Jetpack();
 		new Atshift_Freeform_Login_Settings();
@@ -66,7 +67,7 @@ final class Atshift_Freeform_Login {
 		$settings_link = sprintf(
 			'<a href="%1$s">%2$s</a>',
 			esc_url( Atshift_Freeform_Login_Settings::admin_page_url() ),
-			esc_html__( 'Settings' )
+			esc_html__( 'Settings', 'atshift-freeform-login' )
 		);
 
 		array_unshift( $links, $settings_link );
@@ -110,6 +111,41 @@ final class Atshift_Freeform_Login {
 		}
 
 		return false;
+	}
+
+	/**
+	 * Add the project details and usage guide to the plugin row.
+	 *
+	 * @param array<int, string>   $links       Existing plugin metadata links.
+	 * @param string               $plugin_file Plugin basename.
+	 * @param array<string, mixed> $plugin_data Parsed plugin headers.
+	 * @param string               $status      Plugin status.
+	 * @return array<int, string>
+	 */
+	public function filter_plugin_row_meta( $links, $plugin_file, $plugin_data, $status ) {
+		unset( $plugin_data, $status );
+
+		if ( plugin_basename( ATSHIFT_FREEFORM_LOGIN_FILE ) !== $plugin_file ) {
+			return $links;
+		}
+
+		$details_url = 'https://github.com/at-shift/atshift-freeform-login';
+		$guide_url   = 0 === strpos( determine_locale(), 'ja' )
+			? 'https://upf.at-shift.net/freeform-login/'
+			: 'https://upf.at-shift.net/en/freeform-login/';
+
+		$links[] = sprintf(
+			'<a href="%1$s" target="_blank" rel="noopener noreferrer">%2$s</a>',
+			esc_url( $details_url ),
+			esc_html__( 'View details', 'atshift-freeform-login' )
+		);
+		$links[] = sprintf(
+			'<a href="%1$s" target="_blank" rel="noopener noreferrer">%2$s</a>',
+			esc_url( $guide_url ),
+			esc_html__( 'Usage guide', 'atshift-freeform-login' )
+		);
+
+		return $links;
 	}
 
 	/**

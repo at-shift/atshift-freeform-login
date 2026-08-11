@@ -1,7 +1,7 @@
 <?php
 /**
  * Plugin Name: atshift Freeform Login
- * Plugin URI: https://upf.at-shift.net/
+ * Plugin URI: https://upf.at-shift.net/en/freeform-login/
  * Description: Design a beautiful WordPress login screen and place a matching login form anywhere with a shortcode.
  * Version: 1.0.0
  * Requires at least: 6.5
