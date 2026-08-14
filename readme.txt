@@ -2,7 +2,7 @@
 Contributors: atshift
 Tags: login, custom login, login form, shortcode, branding
 Requires at least: 6.5
-Tested up to: 7.0
+Tested up to: 7.1
 Requires PHP: 7.4
 Stable tag: 0.9.3-beta.3
 License: GPLv2 or later
@@ -31,6 +31,7 @@ An optional add-on can extend the free plugin with custom logo images, precise p
 == Changelog ==
 
 = 0.9.3-beta.3 =
+* Confirmed compatibility with WordPress 7.1 RC3.
 * Replaced long placement menus with a visual position picker.
 * Added responsive placement controls that switch cleanly between one and two columns.
 * Improved live-preview language visibility and placement labels.
