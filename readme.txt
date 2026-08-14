@@ -1,10 +1,10 @@
 === atshift Freeform Login ===
 Contributors: atshift
-Tags: login, custom login, login form, shortcode, branding
+Tags: login, custom login, login form, passkey, webauthn
 Requires at least: 6.5
 Tested up to: 7.1
 Requires PHP: 7.4
-Stable tag: 0.9.3-beta.3
+Stable tag: 2.0
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -16,9 +16,15 @@ atshift Freeform Login customizes the standard WordPress login screen without re
 
 The free plugin includes background colors and images, a site-title brand display, form placement and width, core color controls, responsive fallback, a live preview, the login shortcode, and Jetpack SSO compatibility.
 
+Passkey support is available on PHP 8.3 or newer when the PHP JSON and OpenSSL extensions are enabled and the site uses HTTPS. Localhost is supported for development. The rest of the plugin continues to run on its stated minimum PHP version when the passkey module is unavailable.
+
+Users can register, name, and remove multiple passkeys from the standard WordPress profile screen. Synced passkeys may also be available on other devices using the same storage account. After the first passkey is registered on the site, a passkey login button appears on the WordPress login screen and in the `[atshift_login]` shortcode. Username and password login remains available as a fallback, so users should keep a long, unique password and store it in a password manager.
+
 When Jetpack SSO is active, its WordPress.com login UI is styled without replacing Jetpack authentication. The shortcode uses Jetpack automatically and respects Jetpack settings that hide or bypass the local login form. Use `[atshift_login jetpack="hide"]` only when local username and password login remains available.
 
 An optional add-on can extend the free plugin with custom logo images, precise position offsets, transparency, borders, corner radius, and detailed shadow controls. The free plugin remains usable without an add-on.
+
+Passkey ceremonies are verified on the WordPress server and do not require an external authentication service. The bundled WebAuthn and supporting libraries are MIT licensed; package names and exact versions are recorded in `composer.lock`.
 
 == Installation ==
 
@@ -27,8 +33,14 @@ An optional add-on can extend the free plugin with custom logo images, precise p
 3. Open Settings > atshift Freeform Login in the WordPress administration menu.
 4. Configure and save the design.
 5. Enable login-screen application after reviewing the preview.
+6. On PHP 8.3 or newer, open Users > Profile to register a passkey.
 
 == Changelog ==
+
+= 2.0 =
+* Added server-verified passkey registration and passwordless login on supported PHP 8.3 or newer HTTPS sites.
+* Added profile management for multiple named passkeys with registration and last-used dates.
+* Added passkey login to the WordPress login screen and `[atshift_login]` shortcode alongside the existing password fallback.
 
 = 0.9.3-beta.3 =
 * Confirmed compatibility with WordPress 7.1 RC3.

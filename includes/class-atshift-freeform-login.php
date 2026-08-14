@@ -55,6 +55,12 @@ final class Atshift_Freeform_Login {
 		new Atshift_Freeform_Login_Settings();
 		new Atshift_Freeform_Login_Screen();
 		new Atshift_Freeform_Login_Shortcode();
+
+		if ( class_exists( 'Atshift_Freeform_Login_Passkeys' ) ) {
+			new Atshift_Freeform_Login_Passkeys();
+		} else {
+			new Atshift_Freeform_Login_Passkey_Profile( new Atshift_Freeform_Login_Passkey_Storage() );
+		}
 	}
 
 	/**

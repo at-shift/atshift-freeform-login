@@ -115,6 +115,7 @@ class Atshift_Freeform_Login_Shortcode {
 			? '<p class="atshift-freeform-login-lost"><a href="' . esc_url( wp_lostpassword_url( $redirect ) ) . '">' . esc_html__( 'Lost your password?', 'atshift-freeform-login' ) . '</a></p>'
 			: '';
 		$jetpack = '';
+		$passkey = (string) apply_filters( 'atshift_freeform_login_shortcode_passkey_html', '', $redirect, $sso_only );
 
 		if ( '' !== $jetpack_html ) {
 			$jetpack = '<div class="atshift-freeform-login-jetpack">' . $jetpack_html . '</div>';
@@ -124,7 +125,7 @@ class Atshift_Freeform_Login_Shortcode {
 			}
 		}
 
-		return '<div class="atshift-freeform-login ' . esc_attr( $custom_class ) . '" style="' . esc_attr( $style ) . '">' . $jetpack . $form . $lost_password . '</div>';
+		return '<div class="atshift-freeform-login ' . esc_attr( $custom_class ) . '" style="' . esc_attr( $style ) . '">' . $jetpack . $passkey . $form . $lost_password . '</div>';
 	}
 
 	/** @return void */

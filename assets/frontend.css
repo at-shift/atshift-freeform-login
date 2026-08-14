@@ -147,6 +147,34 @@
 	margin-right: 7px;
 }
 
+.atshift-freeform-login-passkey-login-button {
+	display: block;
+	width: 100%;
+	min-height: 44px;
+	color: var(--atshift-login-button-text, #fff);
+	background: var(--atshift-login-button, #2271b1);
+	border: 1px solid var(--atshift-login-button, #2271b1);
+	cursor: pointer;
+}
+
+.atshift-freeform-login-passkey-login-button:hover {
+	color: var(--atshift-login-button-text, #fff);
+	background: var(--atshift-login-button-hover, #3d82ba);
+	border-color: var(--atshift-login-button-hover, #3d82ba);
+}
+
+.atshift-freeform-login-passkey-login-button:focus-visible {
+	box-shadow: none;
+	outline: 2px solid var(--atshift-login-button-focus, #2271b1);
+	outline-offset: 2px;
+}
+
+.atshift-freeform-login-passkey-login-status {
+	margin-top: 8px !important;
+	font-size: 13px;
+	line-height: 1.5;
+}
+
 .atshift-freeform-login-separator {
 	position: relative;
 	margin: 20px 0;

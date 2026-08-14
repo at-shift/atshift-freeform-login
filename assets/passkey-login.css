@@ -1,0 +1,43 @@
+body.login #loginform .atshift-freeform-login-passkey-login-button {
+	display: block;
+	float: none;
+	width: 100%;
+	min-height: 46px;
+}
+
+body.login #loginform .atshift-freeform-login-passkey-auth {
+	margin-top: 20px;
+}
+
+body.login #loginform .atshift-freeform-login-passkey-login-screen {
+	margin-top: 0;
+}
+
+body.login #loginform .atshift-freeform-login-passkey-login-status {
+	margin: 8px 0 0;
+	font-size: 13px;
+	line-height: 1.5;
+}
+
+body.login #loginform .atshift-freeform-login-passkey-separator {
+	position: relative;
+	margin: 20px 0;
+	text-align: center;
+}
+
+body.login #loginform .atshift-freeform-login-passkey-separator::before {
+	position: absolute;
+	top: 50%;
+	left: 0;
+	width: 100%;
+	height: 1px;
+	background: currentColor;
+	opacity: 0.18;
+	content: "";
+}
+
+body.login #loginform .atshift-freeform-login-passkey-separator span {
+	position: relative;
+	padding: 0 10px;
+	background: #fff;
+}

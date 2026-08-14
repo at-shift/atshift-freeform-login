@@ -1,0 +1,17 @@
+{
+  "name": "at-shift/atshift-freeform-login",
+  "description": "Design a WordPress login screen and login shortcode with optional passkey support.",
+  "type": "wordpress-plugin",
+  "license": "GPL-2.0-or-later",
+  "require": {
+    "php": ">=8.3",
+    "web-auth/webauthn-lib": "^5.3"
+  },
+  "config": {
+    "allow-plugins": false,
+    "platform": {
+      "php": "8.3.0"
+    },
+    "sort-packages": true
+  }
+}

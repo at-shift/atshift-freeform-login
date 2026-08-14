@@ -1,9 +1,9 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: atshift Freeform Login 0.9.1-beta.1\n"
+"Project-Id-Version: atshift Freeform Login 2.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-08-07 09:03+0900\n"
-"PO-Revision-Date: 2026-08-03 18:20+0900\n"
+"POT-Creation-Date: 2026-08-14 11:50+0900\n"
+"PO-Revision-Date: 2026-08-14 11:50+0900\n"
 "Last-Translator: @shift\n"
 "Language-Team: Japanese\n"
 "Language: ja\n"
@@ -19,6 +19,10 @@ msgstr "390 × 844（標準）"
 #: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:512
 msgid "844 × 390 (Landscape)"
 msgstr "844 × 390（横向き）"
+
+#: includes/passkeys/class-atshift-freeform-login-passkey-profile.php:141
+msgid "Add passkey"
+msgstr "パスキーを追加"
 
 #: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:344
 msgid "Apply design to the login screen"
@@ -118,6 +122,19 @@ msgstr "全体を収める"
 msgid "Cover"
 msgstr "全体を覆う"
 
+#: includes/passkeys/class-atshift-freeform-login-passkey-profile.php:63
+msgid "Creating passkey..."
+msgstr "パスキーを作成しています..."
+
+#: includes/passkeys/class-atshift-freeform-login-passkey-profile.php:67
+#: includes/passkeys/class-atshift-freeform-login-passkey-profile.php:127
+msgid "Delete"
+msgstr "削除"
+
+#: includes/passkeys/class-atshift-freeform-login-passkey-profile.php:68
+msgid "Delete this passkey?"
+msgstr "このパスキーを削除しますか？"
+
 #: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:326
 msgid "Design your login, your way."
 msgstr "ログイン画面を、思いどおりに。"
@@ -206,6 +223,16 @@ msgstr "画像"
 msgid "Introductory text"
 msgstr "説明テキスト"
 
+#: includes/passkeys/class-atshift-freeform-login-passkey-rest.php:213
+#: includes/passkeys/class-atshift-freeform-login-passkey-rest.php:328
+msgid "Invalid passkey request."
+msgstr "パスキーのリクエストが正しくありません。"
+
+#: includes/passkeys/class-atshift-freeform-login-passkey-rest.php:228
+#: includes/passkeys/class-atshift-freeform-login-passkey-rest.php:353
+msgid "Invalid passkey response."
+msgstr "パスキーの応答が正しくありません。"
+
 #: atshift-freeform-login/includes/class-atshift-freeform-login-jetpack.php:147
 msgid ""
 "Jetpack SSO currently redirects the login screen directly to WordPress.com. "
@@ -239,6 +266,16 @@ msgstr "Jetpack SSO:"
 #: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:551
 msgid "Language"
 msgstr "言語"
+
+#. translators: %s: date and time when the passkey was last used.
+#: includes/passkeys/class-atshift-freeform-login-passkey-profile.php:132
+#, php-format
+msgid "Last used: %s"
+msgstr "最終使用: %s"
+
+#: includes/passkeys/class-atshift-freeform-login-passkey-profile.php:135
+msgid "Last used: Never"
+msgstr "最終使用: なし"
 
 #: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:411
 msgid "Left"
@@ -300,6 +337,10 @@ msgstr "ログイン"
 msgid "Log in with WordPress.com"
 msgstr "WordPress.comでログイン"
 
+#: includes/passkeys/class-atshift-freeform-login-passkey-login.php:120
+msgid "Log in with a passkey"
+msgstr "パスキーでログイン"
+
 #: atshift-freeform-login/includes/class-atshift-freeform-login-shortcode.php:65
 msgid "Log out"
 msgstr "ログアウト"
@@ -307,6 +348,10 @@ msgstr "ログアウト"
 #: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:329
 msgid "Login design settings saved."
 msgstr "ログインデザイン設定を保存しました。"
+
+#: includes/passkeys/class-atshift-freeform-login-passkey-rest.php:379
+msgid "Login is not available for this account."
+msgstr "このアカウントではログインできません。"
 
 #: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:392
 msgid "Logo"
@@ -322,6 +367,11 @@ msgstr "パスワードをお忘れですか？"
 msgid "Mobile"
 msgstr "モバイル"
 
+#: includes/passkeys/class-atshift-freeform-login-passkey-profile.php:69
+#: includes/passkeys/class-atshift-freeform-login-passkey-profile.php:135
+msgid "No passkeys are registered for this account."
+msgstr "このアカウントにはパスキーが登録されていません。"
+
 #: atshift-freeform-login/includes/class-atshift-freeform-login-shortcode.php:123
 #: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:530
 msgid "Or"
@@ -331,11 +381,91 @@ msgstr "または"
 msgid "Original size"
 msgstr "元のサイズ"
 
+#: includes/passkeys/class-atshift-freeform-login-passkey-profile.php:71
+#: includes/passkeys/class-atshift-freeform-login-passkey-profile.php:107
+#: includes/passkeys/class-atshift-freeform-login-passkey-rest.php:487
+#: includes/passkeys/class-atshift-freeform-login-passkey-storage.php:78
+msgid "Passkey"
+msgstr "パスキー"
+
+#: includes/passkeys/class-atshift-freeform-login-passkey-profile.php:65
+msgid "Passkey deleted."
+msgstr "パスキーを削除しました。"
+
+#: includes/passkeys/class-atshift-freeform-login-passkey-environment.php:66
+msgid "Passkey dependencies are not installed."
+msgstr "パスキーに必要な依存ライブラリがインストールされていません。"
+
+#: includes/passkeys/class-atshift-freeform-login-passkey-rest.php:304
+msgid "Passkey login could not be started."
+msgstr "パスキーログインを開始できませんでした。"
+
+#: includes/passkeys/class-atshift-freeform-login-passkey-login.php:102
+msgid "Passkey login failed."
+msgstr "パスキーログインに失敗しました。"
+
+#: includes/passkeys/class-atshift-freeform-login-passkey-rest.php:274
+msgid "Passkey login is not available."
+msgstr "パスキーログインは利用できません。"
+
+#: includes/passkeys/class-atshift-freeform-login-passkey-profile.php:70
+msgid "Passkey name"
+msgstr "パスキーの名前"
+
+#: includes/passkeys/class-atshift-freeform-login-passkey-rest.php:260
+msgid "Passkey not found."
+msgstr "パスキーが見つかりません。"
+
+#: includes/passkeys/class-atshift-freeform-login-passkey-profile.php:66
+msgid "Passkey operation failed."
+msgstr "パスキーの操作に失敗しました。"
+
+#: includes/passkeys/class-atshift-freeform-login-passkey-profile.php:64
+msgid "Passkey registered."
+msgstr "パスキーを登録しました。"
+
+#: includes/passkeys/class-atshift-freeform-login-passkey-rest.php:187
+msgid "Passkey registration could not be started."
+msgstr "パスキーの登録を開始できませんでした。"
+
+#: includes/passkeys/class-atshift-freeform-login-passkey-profile.php:93
+#: includes/passkeys/class-atshift-freeform-login-passkey-profile.php:96
+msgid "Passkeys"
+msgstr "パスキー"
+
+#: includes/passkeys/class-atshift-freeform-login-passkey-environment.php:73
+msgid "Passkeys are unavailable on this server."
+msgstr "このサーバーではパスキーを利用できません。"
+
+#: includes/passkeys/class-atshift-freeform-login-passkey-environment.php:70
+msgid "Passkeys require HTTPS, except on localhost during development."
+msgstr "パスキーにはHTTPSが必要です。開発用localhostは例外です。"
+
+#. translators: %s: required PHP version.
+#: includes/passkeys/class-atshift-freeform-login-passkey-environment.php:56
+#, php-format
+msgid "Passkeys require PHP %s or newer."
+msgstr "パスキーにはPHP %s以降が必要です。"
+
+#: includes/passkeys/class-atshift-freeform-login-passkey-environment.php:62
+msgid "Passkeys require the PHP JSON and OpenSSL extensions."
+msgstr "パスキーにはPHPのJSONおよびOpenSSL拡張が必要です。"
+
 #: atshift-freeform-login/includes/class-atshift-freeform-login-shortcode.php:152
 #: atshift-freeform-login/includes/class-atshift-freeform-login-screen.php:55
 #: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:535
 msgid "Password"
 msgstr "パスワード"
+
+#: includes/passkeys/class-atshift-freeform-login-passkey-profile.php:120
+msgid ""
+"Password login remains available after you register a passkey. To keep your "
+"account secure, use a long, strong password that you do not reuse on other "
+"services, and store it in a password manager."
+msgstr ""
+"パスキー登録後も、パスワードによるログインは引き続き利用できます。安全性を保"
+"つため、他のサービスで使い回していない長く強力なパスワードを設定し、パスワー"
+"ドマネージャーで保管してください。"
 
 #: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:648
 msgid "Position"
@@ -360,6 +490,20 @@ msgstr "プライバシーポリシー"
 #: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:660
 msgid "Pro unlocks the intermediate positions."
 msgstr "Proでは中間位置も選択できます。"
+
+#. translators: %s: passkey registration date.
+#: includes/passkeys/class-atshift-freeform-login-passkey-profile.php:118
+#, php-format
+msgid "Registered: %s"
+msgstr "登録日: %s"
+
+#: includes/passkeys/class-atshift-freeform-login-passkey-profile.php:79
+msgid "Registered: Just now"
+msgstr "登録日: たった今"
+
+#: includes/passkeys/class-atshift-freeform-login-passkey-profile.php:126
+msgid "Registered passkeys"
+msgstr "登録済みパスキー"
 
 #: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:537
 msgid "Remember Me"
@@ -457,7 +601,11 @@ msgstr "ログインフォームの配置と幅を設定します。"
 #: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:212
 #: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:213
 msgid "Settings"
-msgstr ""
+msgstr "設定"
+
+#: includes/passkeys/class-atshift-freeform-login-passkey-profile.php:111
+msgid "Set passkeys"
+msgstr "パスキーを設定"
 
 #: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:467
 msgid "Shadow"
@@ -492,6 +640,23 @@ msgstr "文字色"
 msgid "Text width"
 msgstr "テキスト幅"
 
+#: includes/passkeys/class-atshift-freeform-login-passkey-rest.php:239
+#: includes/passkeys/class-atshift-freeform-login-passkey-rest.php:367
+msgid "The passkey could not be verified."
+msgstr "パスキーを検証できませんでした。"
+
+#: includes/passkeys/class-atshift-freeform-login-passkey-rest.php:334
+msgid "The passkey login request expired. Please try again."
+msgstr "パスキーログインのリクエストが期限切れです。もう一度お試しください。"
+
+#: includes/passkeys/class-atshift-freeform-login-passkey-rest.php:219
+msgid "The passkey registration request expired. Please try again."
+msgstr "パスキー登録のリクエストが期限切れです。もう一度お試しください。"
+
+#: includes/passkeys/class-atshift-freeform-login-passkey-rest.php:341
+msgid "The selected passkey is not registered on this site."
+msgstr "選択したパスキーはこのサイトに登録されていません。"
+
 #: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:403
 msgid ""
 "The site tagline is used initially. You can replace it here, or leave it "
@@ -499,6 +664,23 @@ msgid ""
 msgstr ""
 "初期状態ではサイトのキャッチフレーズを使用します。ここで文言を置き換えられ、"
 "空欄にすると表示されません。"
+
+#: includes/passkeys/class-atshift-freeform-login-passkey-profile.php:71
+msgid "This device's passkey"
+msgstr "この端末のパスキー"
+
+#: includes/passkeys/class-atshift-freeform-login-passkey-login.php:100
+#: includes/passkeys/class-atshift-freeform-login-passkey-profile.php:62
+msgid "This browser does not support passkeys."
+msgstr "このブラウザはパスキーに対応していません。"
+
+#: includes/passkeys/class-atshift-freeform-login-passkey-rest.php:278
+msgid "This site requires WordPress.com login."
+msgstr "このサイトではWordPress.comログインが必要です。"
+
+#: includes/passkeys/class-atshift-freeform-login-passkey-rest.php:282
+msgid "Too many passkey requests. Please wait and try again."
+msgstr "パスキーのリクエストが多すぎます。しばらく待ってからお試しください。"
 
 #: atshift-freeform-login/includes/class-atshift-freeform-login.php:84
 msgid "Upgrade to Pro"
@@ -534,11 +716,24 @@ msgstr "この画像を使用"
 msgid "Use this video"
 msgstr "この動画を使用"
 
+#: includes/passkeys/class-atshift-freeform-login-passkey-rest.php:156
+#: includes/passkeys/class-atshift-freeform-login-passkey-rest.php:373
+msgid "User not found."
+msgstr "ユーザーが見つかりません。"
+
 #: atshift-freeform-login/includes/class-atshift-freeform-login-shortcode.php:151
 #: atshift-freeform-login/includes/class-atshift-freeform-login-screen.php:54
 #: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:534
 msgid "Username / Email"
 msgstr "ユーザー名 / メール"
+
+#: includes/passkeys/class-atshift-freeform-login-passkey-profile.php:146
+msgid "Users must add passkeys from their own profile screen."
+msgstr "パスキーはユーザー本人のプロフィール画面から追加する必要があります。"
+
+#: includes/passkeys/class-atshift-freeform-login-passkey-login.php:101
+msgid "Waiting for your passkey..."
+msgstr "パスキーの操作を待っています..."
 
 #: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:388
 #: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:397
@@ -554,6 +749,29 @@ msgstr "%s としてログインしています。"
 #: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:287
 msgid "You are not allowed to manage these settings."
 msgstr "この設定を管理する権限がありません。"
+
+#: includes/passkeys/class-atshift-freeform-login-passkey-profile.php:105
+msgid ""
+"Passkeys are a new way to sign in using biometric authentication and other "
+"security features on your device instead of entering a username and "
+"password. They reduce the risk of entering a password on a fake site or "
+"reusing the same password across services. Start by registering a device you "
+"use regularly. Passkeys synced to the same storage account can be used on "
+"your other devices, and you can add more than one when needed."
+msgstr ""
+"IDやパスワードを入力する従来の方法ではなく、使用する端末の生体認証などを活用"
+"してログインする新しい仕組みです。偽サイトにパスワードを入力してしまう危険"
+"や、パスワードの使い回しによる被害を減らせます。まずは普段使う端末で登録して"
+"ください。同じ保存先アカウントへ同期されるパスキーはほかの端末でも利用でき、"
+"必要に応じて複数登録できます。"
+
+#: includes/passkeys/class-atshift-freeform-login-passkey-rest.php:123
+msgid "You can only register passkeys for your own account."
+msgstr "パスキーは自分のアカウントにのみ登録できます。"
+
+#: includes/passkeys/class-atshift-freeform-login-passkey-rest.php:139
+msgid "You cannot delete this passkey."
+msgstr "このパスキーを削除する権限がありません。"
 
 #: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:202
 #: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:203

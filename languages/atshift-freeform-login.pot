@@ -6,9 +6,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: atshift-freeform-login 0.9.1-beta.1\n"
+"Project-Id-Version: atshift-freeform-login 2.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-08-07 09:03+0900\n"
+"POT-Creation-Date: 2026-08-14 11:50+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -23,6 +23,10 @@ msgstr ""
 
 #: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:512
 msgid "844 × 390 (Landscape)"
+msgstr ""
+
+#: includes/passkeys/class-atshift-freeform-login-passkey-profile.php:141
+msgid "Add passkey"
 msgstr ""
 
 #: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:344
@@ -119,6 +123,19 @@ msgstr ""
 msgid "Cover"
 msgstr ""
 
+#: includes/passkeys/class-atshift-freeform-login-passkey-profile.php:63
+msgid "Creating passkey..."
+msgstr ""
+
+#: includes/passkeys/class-atshift-freeform-login-passkey-profile.php:67
+#: includes/passkeys/class-atshift-freeform-login-passkey-profile.php:127
+msgid "Delete"
+msgstr ""
+
+#: includes/passkeys/class-atshift-freeform-login-passkey-profile.php:68
+msgid "Delete this passkey?"
+msgstr ""
+
 #: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:326
 msgid "Design your login, your way."
 msgstr ""
@@ -203,6 +220,16 @@ msgstr ""
 msgid "Introductory text"
 msgstr ""
 
+#: includes/passkeys/class-atshift-freeform-login-passkey-rest.php:213
+#: includes/passkeys/class-atshift-freeform-login-passkey-rest.php:328
+msgid "Invalid passkey request."
+msgstr ""
+
+#: includes/passkeys/class-atshift-freeform-login-passkey-rest.php:228
+#: includes/passkeys/class-atshift-freeform-login-passkey-rest.php:353
+msgid "Invalid passkey response."
+msgstr ""
+
 #: atshift-freeform-login/includes/class-atshift-freeform-login-jetpack.php:147
 msgid ""
 "Jetpack SSO currently redirects the login screen directly to WordPress.com. "
@@ -228,6 +255,16 @@ msgstr ""
 
 #: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:551
 msgid "Language"
+msgstr ""
+
+#. translators: %s: date and time when the passkey was last used.
+#: includes/passkeys/class-atshift-freeform-login-passkey-profile.php:132
+#, php-format
+msgid "Last used: %s"
+msgstr ""
+
+#: includes/passkeys/class-atshift-freeform-login-passkey-profile.php:135
+msgid "Last used: Never"
 msgstr ""
 
 #: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:411
@@ -290,12 +327,20 @@ msgstr ""
 msgid "Log in with WordPress.com"
 msgstr ""
 
+#: includes/passkeys/class-atshift-freeform-login-passkey-login.php:120
+msgid "Log in with a passkey"
+msgstr ""
+
 #: atshift-freeform-login/includes/class-atshift-freeform-login-shortcode.php:65
 msgid "Log out"
 msgstr ""
 
 #: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:329
 msgid "Login design settings saved."
+msgstr ""
+
+#: includes/passkeys/class-atshift-freeform-login-passkey-rest.php:379
+msgid "Login is not available for this account."
 msgstr ""
 
 #: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:392
@@ -312,6 +357,11 @@ msgstr ""
 msgid "Mobile"
 msgstr ""
 
+#: includes/passkeys/class-atshift-freeform-login-passkey-profile.php:69
+#: includes/passkeys/class-atshift-freeform-login-passkey-profile.php:135
+msgid "No passkeys are registered for this account."
+msgstr ""
+
 #: atshift-freeform-login/includes/class-atshift-freeform-login-shortcode.php:123
 #: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:530
 msgid "Or"
@@ -321,10 +371,87 @@ msgstr ""
 msgid "Original size"
 msgstr ""
 
+#: includes/passkeys/class-atshift-freeform-login-passkey-profile.php:71
+#: includes/passkeys/class-atshift-freeform-login-passkey-profile.php:107
+#: includes/passkeys/class-atshift-freeform-login-passkey-rest.php:487
+#: includes/passkeys/class-atshift-freeform-login-passkey-storage.php:78
+msgid "Passkey"
+msgstr ""
+
+#: includes/passkeys/class-atshift-freeform-login-passkey-profile.php:65
+msgid "Passkey deleted."
+msgstr ""
+
+#: includes/passkeys/class-atshift-freeform-login-passkey-environment.php:66
+msgid "Passkey dependencies are not installed."
+msgstr ""
+
+#: includes/passkeys/class-atshift-freeform-login-passkey-rest.php:304
+msgid "Passkey login could not be started."
+msgstr ""
+
+#: includes/passkeys/class-atshift-freeform-login-passkey-login.php:102
+msgid "Passkey login failed."
+msgstr ""
+
+#: includes/passkeys/class-atshift-freeform-login-passkey-rest.php:274
+msgid "Passkey login is not available."
+msgstr ""
+
+#: includes/passkeys/class-atshift-freeform-login-passkey-profile.php:70
+msgid "Passkey name"
+msgstr ""
+
+#: includes/passkeys/class-atshift-freeform-login-passkey-rest.php:260
+msgid "Passkey not found."
+msgstr ""
+
+#: includes/passkeys/class-atshift-freeform-login-passkey-profile.php:66
+msgid "Passkey operation failed."
+msgstr ""
+
+#: includes/passkeys/class-atshift-freeform-login-passkey-profile.php:64
+msgid "Passkey registered."
+msgstr ""
+
+#: includes/passkeys/class-atshift-freeform-login-passkey-rest.php:187
+msgid "Passkey registration could not be started."
+msgstr ""
+
+#: includes/passkeys/class-atshift-freeform-login-passkey-profile.php:93
+#: includes/passkeys/class-atshift-freeform-login-passkey-profile.php:96
+msgid "Passkeys"
+msgstr ""
+
+#: includes/passkeys/class-atshift-freeform-login-passkey-environment.php:73
+msgid "Passkeys are unavailable on this server."
+msgstr ""
+
+#: includes/passkeys/class-atshift-freeform-login-passkey-environment.php:70
+msgid "Passkeys require HTTPS, except on localhost during development."
+msgstr ""
+
+#. translators: %s: required PHP version.
+#: includes/passkeys/class-atshift-freeform-login-passkey-environment.php:56
+#, php-format
+msgid "Passkeys require PHP %s or newer."
+msgstr ""
+
+#: includes/passkeys/class-atshift-freeform-login-passkey-environment.php:62
+msgid "Passkeys require the PHP JSON and OpenSSL extensions."
+msgstr ""
+
 #: atshift-freeform-login/includes/class-atshift-freeform-login-shortcode.php:152
 #: atshift-freeform-login/includes/class-atshift-freeform-login-screen.php:55
 #: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:535
 msgid "Password"
+msgstr ""
+
+#: includes/passkeys/class-atshift-freeform-login-passkey-profile.php:120
+msgid ""
+"Password login remains available after you register a passkey. To keep your "
+"account secure, use a long, strong password that you do not reuse on other "
+"services, and store it in a password manager."
 msgstr ""
 
 #: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:648
@@ -349,6 +476,20 @@ msgstr ""
 
 #: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:660
 msgid "Pro unlocks the intermediate positions."
+msgstr ""
+
+#. translators: %s: passkey registration date.
+#: includes/passkeys/class-atshift-freeform-login-passkey-profile.php:118
+#, php-format
+msgid "Registered: %s"
+msgstr ""
+
+#: includes/passkeys/class-atshift-freeform-login-passkey-profile.php:79
+msgid "Registered: Just now"
+msgstr ""
+
+#: includes/passkeys/class-atshift-freeform-login-passkey-profile.php:126
+msgid "Registered passkeys"
 msgstr ""
 
 #: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:537
@@ -449,6 +590,10 @@ msgstr ""
 msgid "Settings"
 msgstr ""
 
+#: includes/passkeys/class-atshift-freeform-login-passkey-profile.php:111
+msgid "Set passkeys"
+msgstr ""
+
 #: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:467
 msgid "Shadow"
 msgstr ""
@@ -482,10 +627,44 @@ msgstr ""
 msgid "Text width"
 msgstr ""
 
+#: includes/passkeys/class-atshift-freeform-login-passkey-rest.php:239
+#: includes/passkeys/class-atshift-freeform-login-passkey-rest.php:367
+msgid "The passkey could not be verified."
+msgstr ""
+
+#: includes/passkeys/class-atshift-freeform-login-passkey-rest.php:334
+msgid "The passkey login request expired. Please try again."
+msgstr ""
+
+#: includes/passkeys/class-atshift-freeform-login-passkey-rest.php:219
+msgid "The passkey registration request expired. Please try again."
+msgstr ""
+
+#: includes/passkeys/class-atshift-freeform-login-passkey-rest.php:341
+msgid "The selected passkey is not registered on this site."
+msgstr ""
+
 #: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:403
 msgid ""
 "The site tagline is used initially. You can replace it here, or leave it "
 "blank to hide the text."
+msgstr ""
+
+#: includes/passkeys/class-atshift-freeform-login-passkey-profile.php:71
+msgid "This device's passkey"
+msgstr ""
+
+#: includes/passkeys/class-atshift-freeform-login-passkey-login.php:100
+#: includes/passkeys/class-atshift-freeform-login-passkey-profile.php:62
+msgid "This browser does not support passkeys."
+msgstr ""
+
+#: includes/passkeys/class-atshift-freeform-login-passkey-rest.php:278
+msgid "This site requires WordPress.com login."
+msgstr ""
+
+#: includes/passkeys/class-atshift-freeform-login-passkey-rest.php:282
+msgid "Too many passkey requests. Please wait and try again."
 msgstr ""
 
 #: atshift-freeform-login/includes/class-atshift-freeform-login.php:84
@@ -520,10 +699,23 @@ msgstr ""
 msgid "Use this video"
 msgstr ""
 
+#: includes/passkeys/class-atshift-freeform-login-passkey-rest.php:156
+#: includes/passkeys/class-atshift-freeform-login-passkey-rest.php:373
+msgid "User not found."
+msgstr ""
+
 #: atshift-freeform-login/includes/class-atshift-freeform-login-shortcode.php:151
 #: atshift-freeform-login/includes/class-atshift-freeform-login-screen.php:54
 #: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:534
 msgid "Username / Email"
+msgstr ""
+
+#: includes/passkeys/class-atshift-freeform-login-passkey-profile.php:146
+msgid "Users must add passkeys from their own profile screen."
+msgstr ""
+
+#: includes/passkeys/class-atshift-freeform-login-passkey-login.php:101
+msgid "Waiting for your passkey..."
 msgstr ""
 
 #: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:388
@@ -539,6 +731,24 @@ msgstr ""
 
 #: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:287
 msgid "You are not allowed to manage these settings."
+msgstr ""
+
+#: includes/passkeys/class-atshift-freeform-login-passkey-profile.php:105
+msgid ""
+"Passkeys are a new way to sign in using biometric authentication and other "
+"security features on your device instead of entering a username and "
+"password. They reduce the risk of entering a password on a fake site or "
+"reusing the same password across services. Start by registering a device you "
+"use regularly. Passkeys synced to the same storage account can be used on "
+"your other devices, and you can add more than one when needed."
+msgstr ""
+
+#: includes/passkeys/class-atshift-freeform-login-passkey-rest.php:123
+msgid "You can only register passkeys for your own account."
+msgstr ""
+
+#: includes/passkeys/class-atshift-freeform-login-passkey-rest.php:139
+msgid "You cannot delete this passkey."
 msgstr ""
 
 #: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:202

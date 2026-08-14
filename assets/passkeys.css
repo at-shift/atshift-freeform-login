@@ -1,0 +1,88 @@
+.atshift-freeform-login-passkeys {
+	max-width: 100%;
+}
+
+.atshift-freeform-login-passkey-heading {
+	margin-top: 2em;
+}
+
+.atshift-freeform-login-passkeys .atshift-freeform-login-passkey-intro {
+	margin: 0 0 8px;
+}
+
+.atshift-freeform-login-passkey-table {
+	margin: 0 0 24px;
+}
+
+.atshift-freeform-login-passkey-table > tbody > tr > td {
+	max-width: none;
+}
+
+.atshift-freeform-login-passkey-actions {
+	margin: 0;
+}
+
+.atshift-freeform-login-passkeys .atshift-freeform-login-passkey-password-note {
+	max-width: 760px;
+	margin: 8px 0 0;
+}
+
+.atshift-freeform-login-passkey-status {
+	min-height: 20px;
+	margin: 8px 0 0;
+}
+
+.atshift-freeform-login-passkey-history {
+	width: 100%;
+	margin: 0;
+}
+
+.atshift-freeform-login-passkey-list {
+	margin: 0;
+	border-top: 1px solid #dcdcde;
+}
+
+.atshift-freeform-login-passkey-list li {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 16px;
+	box-sizing: border-box;
+	margin: 0;
+	padding: 14px 0;
+	border-bottom: 1px solid #dcdcde;
+}
+
+.atshift-freeform-login-passkey-details {
+	min-width: 0;
+}
+
+.atshift-freeform-login-passkey-label {
+	display: block;
+	color: #1d2327;
+	font-size: 14px;
+	line-height: 1.4;
+}
+
+.atshift-freeform-login-passkey-meta {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 2px 18px;
+	margin-top: 4px;
+}
+
+.atshift-freeform-login-passkey-empty {
+	margin: 10px 0 0;
+}
+
+.atshift-freeform-login-passkey-delete {
+	flex: 0 0 auto;
+}
+
+@media screen and (max-width: 600px) {
+	.atshift-freeform-login-passkey-list li {
+		align-items: flex-start;
+		flex-direction: column;
+		gap: 10px;
+	}
+}
