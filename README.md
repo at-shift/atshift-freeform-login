@@ -49,10 +49,6 @@ Begin with the visual settings screen and choose a background, brand display, an
 
 After saving the design, enable it for the standard WordPress login screen. Add `[atshift_login]` to a page when the same login experience is needed within the site.
 
-## Screenshots
-
-![Freeform Login settings screen with the visual login preview and design controls.](screenshots/freeform-login-settings-free_en-US.png)
-
 ## Passkeys
 
 Passkeys let users sign in with a device's biometric authentication, PIN, or security key instead of typing a username and password. Because each credential is created for this site, passkeys reduce the risks of phishing and password reuse.
