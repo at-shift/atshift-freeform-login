@@ -20,9 +20,9 @@ Passkey support is available on PHP 8.3 or newer when the PHP JSON and OpenSSL e
 
 Users can register, name, and remove multiple passkeys from the standard WordPress profile screen. Synced passkeys may also be available on other devices using the same storage account. After the first passkey is registered on the site, a passkey login button appears on the WordPress login screen and in the `[atshift_login]` shortcode. Username and password login remains available as a fallback, so users should keep a long, unique password and store it in a password manager.
 
-When Jetpack SSO is active, its WordPress.com login UI is styled without replacing Jetpack authentication. The shortcode uses Jetpack automatically and respects Jetpack settings that hide or bypass the local login form. Use `[atshift_login jetpack="hide"]` only when local username and password login remains available.
+When atshift User Profile Fields is active, its optional Passkeys field can place the same management controls within the configured profile layout. Credentials and authentication remain managed by atshift Freeform Login.
 
-An optional add-on can extend the free plugin with custom logo images, precise position offsets, transparency, borders, corner radius, and detailed shadow controls. The free plugin remains usable without an add-on.
+When Jetpack SSO is active, its WordPress.com login UI is styled without replacing Jetpack authentication. The shortcode uses Jetpack automatically and respects Jetpack settings that hide or bypass the local login form. Use `[atshift_login jetpack="hide"]` only when local username and password login remains available.
 
 Passkey ceremonies are verified on the WordPress server and do not require an external authentication service. The bundled WebAuthn and supporting libraries are MIT licensed; package names and exact versions are recorded in `composer.lock`.
 
@@ -34,6 +34,12 @@ Passkey ceremonies are verified on the WordPress server and do not require an ex
 4. Configure and save the design.
 5. Enable login-screen application after reviewing the preview.
 6. On PHP 8.3 or newer, open Users > Profile to register a passkey.
+
+== Pro Add-on ==
+
+The optional Pro add-on extends the free plugin with custom logo images, precise position offsets, transparency, borders, corner radius, and detailed shadow controls. The free plugin remains usable without an add-on.
+
+* Pro add-on: [Upgrade to Pro](https://upf.at-shift.net/en/freeform-login/#pricing)
 
 == Changelog ==
 

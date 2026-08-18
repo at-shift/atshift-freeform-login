@@ -18,6 +18,24 @@
 	max-width: none;
 }
 
+.atshift-freeform-login-passkeys-upf .atshift-freeform-login-passkey-intro {
+	margin-bottom: 16px;
+}
+
+.atshift-freeform-login-passkey-upf-actions {
+	max-width: 760px;
+}
+
+.atshift-freeform-login-passkey-upf-history {
+	margin-top: 24px;
+}
+
+.atshift-freeform-login-passkey-upf-history h3 {
+	margin: 0 0 8px;
+	font-size: 14px;
+	line-height: 1.4;
+}
+
 .atshift-freeform-login-passkey-actions {
 	margin: 0;
 }

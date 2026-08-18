@@ -82,6 +82,19 @@ if ( is_wp_error( $test_user_id ) ) {
 	$check( false !== strpos( $profile_html, 'you can add more than one' ), 'The profile must explain that multiple passkeys can be registered.' );
 	$check( false !== strpos( $profile_html, 'Password login remains available' ), 'The profile must explain that password login remains available.' );
 	$check( false !== strpos( $profile_html, 'Last used: Never' ), 'A new passkey must be identified as unused.' );
+	$check( (bool) apply_filters( 'atshift_upf_passkeys_field_available', false ), 'Freeform Login must expose the optional UPF passkeys field.' );
+
+	ob_start();
+	$profile->render_upf_field( get_user_by( 'id', $test_user_id ), array( 'type' => 'passkeys' ), 'edit' );
+	$upf_profile_html = (string) ob_get_clean();
+	$check( false !== strpos( $upf_profile_html, 'atshift-freeform-login-passkeys-upf' ), 'UPF must receive the lightweight passkey management UI.' );
+	$check( false === strpos( $upf_profile_html, 'atshift-freeform-login-passkey-heading' ), 'The UPF field must not repeat the standalone Passkeys heading.' );
+	$check( false !== strpos( $upf_profile_html, 'Test device' ), 'The UPF field must list stored passkeys.' );
+
+	ob_start();
+	$profile->render( get_user_by( 'id', $test_user_id ) );
+	$duplicate_profile_html = (string) ob_get_clean();
+	$check( '' === trim( $duplicate_profile_html ), 'The standalone profile section must be suppressed after UPF renders the passkeys field.' );
 
 	$challenges = new Atshift_Freeform_Login_Passkey_Challenges();
 	$rest       = new Atshift_Freeform_Login_Passkey_REST( $storage, $challenges );
