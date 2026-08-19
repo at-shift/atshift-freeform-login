@@ -4,7 +4,7 @@ Tags: login, custom login, login form, passkey, webauthn
 Requires at least: 6.5
 Tested up to: 7.1
 Requires PHP: 7.4
-Stable tag: 2.0
+Stable tag: 2.0.1
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -42,6 +42,9 @@ The optional Pro add-on extends the free plugin with custom logo images, precise
 * Pro add-on: [Upgrade to Pro](https://upf.at-shift.net/en/freeform-login/#pricing)
 
 == Changelog ==
+
+= 2.0.1 =
+* Standardized the plugin action and metadata links shown on the Plugins screen.
 
 = 2.0 =
 * Added server-verified passkey registration and passwordless login on supported PHP 8.3 or newer HTTPS sites.

@@ -6,7 +6,7 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: atshift-freeform-login 2.0\n"
+"Project-Id-Version: atshift-freeform-login 2.0.1\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-08-14 11:50+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
@@ -669,6 +669,10 @@ msgstr ""
 
 #: atshift-freeform-login/includes/class-atshift-freeform-login.php:84
 msgid "Upgrade to Pro"
+msgstr ""
+
+#: includes/class-atshift-freeform-login.php
+msgid "Translate"
 msgstr ""
 
 #: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:608

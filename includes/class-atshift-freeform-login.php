@@ -120,7 +120,7 @@ final class Atshift_Freeform_Login {
 	}
 
 	/**
-	 * Add the project details and usage guide to the plugin row.
+	 * Build the plugin metadata row in the shared atshift order.
 	 *
 	 * @param array<int, string>   $links       Existing plugin metadata links.
 	 * @param string               $plugin_file Plugin basename.
@@ -129,27 +129,48 @@ final class Atshift_Freeform_Login {
 	 * @return array<int, string>
 	 */
 	public function filter_plugin_row_meta( $links, $plugin_file, $plugin_data, $status ) {
-		unset( $plugin_data, $status );
+		$original_links = $links;
+		unset( $status );
 
 		if ( plugin_basename( ATSHIFT_FREEFORM_LOGIN_FILE ) !== $plugin_file ) {
-			return $links;
+			return $original_links;
 		}
 
-		$details_url = 'https://github.com/at-shift/atshift-freeform-login';
-		$guide_url   = 0 === strpos( determine_locale(), 'ja' )
-			? 'https://upf.at-shift.net/freeform-login/'
-			: 'https://upf.at-shift.net/en/freeform-login/';
+		$details_url   = 'https://wordpress.org/plugins/atshift-freeform-login/';
+		$translate_url = 'https://translate.wordpress.org/projects/wp-plugins/atshift-freeform-login/';
+		$upgrade_url   = 0 === strpos( determine_locale(), 'ja' )
+			? 'https://upf.at-shift.net/freeform-login/#pricing'
+			: 'https://upf.at-shift.net/en/freeform-login/#pricing';
+		$links         = array(
+			sprintf(
+				/* translators: %s: Plugin version. */
+				esc_html__( 'Version %s' ),
+				esc_html( isset( $plugin_data['Version'] ) ? $plugin_data['Version'] : ATSHIFT_FREEFORM_LOGIN_VERSION )
+			),
+			sprintf(
+				/* translators: %s: Plugin author. */
+				__( 'By %s' ),
+				'<a href="' . esc_url( 'https://cfs.at-shift.net/' ) . '" target="_blank" rel="noopener noreferrer">@shift</a>'
+			),
+			sprintf(
+				'<a href="%1$s" target="_blank" rel="noopener noreferrer">%2$s</a>',
+				esc_url( $details_url ),
+				esc_html__( 'View details' )
+			),
+			sprintf(
+				'<a href="%1$s" target="_blank" rel="noopener noreferrer">%2$s</a>',
+				esc_url( $translate_url ),
+				esc_html__( 'Translate', 'atshift-freeform-login' )
+			),
+		);
 
-		$links[] = sprintf(
-			'<a href="%1$s" target="_blank" rel="noopener noreferrer">%2$s</a>',
-			esc_url( $details_url ),
-			esc_html__( 'View details', 'atshift-freeform-login' )
-		);
-		$links[] = sprintf(
-			'<a href="%1$s" target="_blank" rel="noopener noreferrer">%2$s</a>',
-			esc_url( $guide_url ),
-			esc_html__( 'Usage guide', 'atshift-freeform-login' )
-		);
+		if ( ! $this->is_pro_installed() ) {
+			$links[] = sprintf(
+				'<a href="%1$s" target="_blank" rel="noopener noreferrer">%2$s</a>',
+				esc_url( $upgrade_url ),
+				esc_html__( 'Upgrade to Pro', 'atshift-freeform-login' )
+			);
+		}
 
 		return $links;
 	}

@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: atshift Freeform Login 2.0\n"
+"Project-Id-Version: atshift Freeform Login 2.0.1\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-08-14 11:50+0900\n"
 "PO-Revision-Date: 2026-08-14 11:50+0900\n"
@@ -685,6 +685,10 @@ msgstr "パスキーのリクエストが多すぎます。しばらく待って
 #: atshift-freeform-login/includes/class-atshift-freeform-login.php:84
 msgid "Upgrade to Pro"
 msgstr "Pro版へアップグレード"
+
+#: includes/class-atshift-freeform-login.php
+msgid "Translate"
+msgstr "翻訳"
 
 #: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:608
 msgid ""
