@@ -1,7 +1,7 @@
 <div align="center">
   <img src="assets/plugin-icons/atshift-freeform-login-icon-256.png" width="128" height="128" alt="atshift Freeform Login">
   <h1>atshift Freeform Login</h1>
-  <p><strong>Design a polished WordPress login screen and use the same login experience anywhere on your site.</strong></p>
+  <p><strong>Add server-verified passkey login and design a polished WordPress login experience.</strong></p>
   <p>
     <a href="https://upf.at-shift.net/en/freeform-login/">Official Website</a> ·
     <a href="https://wordpress.org/plugins/atshift-freeform-login/">WordPress.org</a> ·
@@ -11,9 +11,37 @@
 
 ## Overview
 
-atshift Freeform Login customizes the standard WordPress login screen without replacing WordPress authentication. Administrators can control the background, branding, form placement, colors, width, and responsive behavior while checking the result in a live preview.
+atshift Freeform Login adds server-verified passkey registration and login while preserving the standard WordPress authentication flow and password fallback. Users manage multiple named passkeys from their WordPress profile, and verification takes place on the WordPress server without an external authentication service.
 
-The `[atshift_login]` shortcode places a matching login form on site pages. Jetpack SSO remains supported, and sites that meet the passkey requirements can also offer server-verified passkey registration and login alongside the existing password flow.
+The plugin also customizes the standard WordPress login screen. Administrators can control the background, branding, form placement, colors, width, and responsive behavior while checking the result in a live preview.
+
+The `[atshift_login]` shortcode places the complete login experience on site pages. `[atshift_passkey_login]` adds only the passkey button when WP-Members or another plugin already provides the username and password form. Jetpack SSO remains supported.
+
+## Screenshots
+
+### Passkey login
+
+![A customized WordPress login screen with a passkey button above the username and password form](assets/screenshots/passkey-login.png)
+
+After the first passkey is registered on the site, users can choose the passkey button and authenticate with their device before falling back to the standard username and password form.
+
+### Register a passkey
+
+![The Passkeys section in a WordPress user profile before a passkey is registered](assets/screenshots/passkey-registration.png)
+
+The WordPress profile explains how passkeys work, provides the registration action, and reminds users to keep a strong password while password login remains available.
+
+### Manage registered passkeys
+
+![A registered passkey with its device name, registration date, last-used date, and delete action](assets/screenshots/registered-passkey.png)
+
+Users can register multiple named passkeys and review each credential's registration and last-used dates before removing one that is no longer needed.
+
+### Design editor
+
+![The Freeform Login design editor with background controls and a responsive login preview](assets/screenshots/design-editor.png)
+
+The visual editor combines grouped design controls with desktop, tablet, and mobile previews before the customized login screen is enabled.
 
 ## Features
 

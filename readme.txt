@@ -8,23 +8,29 @@ Stable tag: 2.1.0
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
-Design a beautiful WordPress login screen and place a matching login form anywhere with a shortcode.
+Add server-verified passkey login to WordPress, customize the login screen, and place full or passkey-only login controls with shortcodes.
 
 == Description ==
 
-atshift Freeform Login customizes the standard WordPress login screen without replacing WordPress authentication. It also provides the `[atshift_login]` shortcode for site pages.
+atshift Freeform Login adds server-verified passkey registration and login to WordPress while keeping the standard WordPress authentication flow and password fallback.
 
-The free plugin includes background colors and images, a site-title brand display, form placement and width, core color controls, responsive fallback, a live preview, the login shortcode, and Jetpack SSO compatibility.
+Passkeys let users sign in with a device's biometric authentication, PIN, or security key instead of typing a username and password. Because each credential is created for this site, passkeys reduce the risks of phishing and password reuse.
+
+Users can register, name, and remove multiple passkeys from the standard WordPress profile screen. Synced passkeys may also be available on other devices using the same storage account. After the first passkey is registered on the site, a passkey login button appears on the WordPress login screen and in the `[atshift_login]` shortcode.
+
+If WP-Members or another plugin already provides the username and password form, `[atshift_passkey_login]` can add only the passkey button beside it. Username and password login remains available as a fallback, so users should keep a long, unique password and store it in a password manager.
 
 Passkey support is available on PHP 8.3 or newer when the PHP JSON and OpenSSL extensions are enabled and the site uses HTTPS. Localhost is supported for development. The rest of the plugin continues to run on its stated minimum PHP version when the passkey module is unavailable.
 
-Users can register, name, and remove multiple passkeys from the standard WordPress profile screen. Synced passkeys may also be available on other devices using the same storage account. After the first passkey is registered on the site, a passkey login button appears on the WordPress login screen and in the `[atshift_login]` shortcode. Username and password login remains available as a fallback, so users should keep a long, unique password and store it in a password manager.
+Passkey ceremonies are verified on the WordPress server and do not require an external authentication service. The bundled WebAuthn and supporting libraries are MIT licensed; package names and exact versions are recorded in `composer.lock`.
 
 When atshift User Profile Fields is active, its optional Passkeys field can place the same management controls within the configured profile layout. Credentials and authentication remain managed by atshift Freeform Login.
 
-When Jetpack SSO is active, its WordPress.com login UI is styled without replacing Jetpack authentication. The shortcode uses Jetpack automatically and respects Jetpack settings that hide or bypass the local login form. Use `[atshift_login jetpack="hide"]` only when local username and password login remains available.
+= Login screen design and shortcodes =
 
-Passkey ceremonies are verified on the WordPress server and do not require an external authentication service. The bundled WebAuthn and supporting libraries are MIT licensed; package names and exact versions are recorded in `composer.lock`.
+The plugin also customizes the standard WordPress login screen without replacing WordPress authentication. The free version includes background colors and images, a site-title brand display, form placement and width, core color controls, responsive fallback, a live preview, the login shortcode, and Jetpack SSO compatibility.
+
+When Jetpack SSO is active, its WordPress.com login UI is styled without replacing Jetpack authentication. The shortcode uses Jetpack automatically and respects Jetpack settings that hide or bypass the local login form. Use `[atshift_login jetpack="hide"]` only when local username and password login remains available.
 
 == Links ==
 
@@ -67,6 +73,13 @@ The optional Pro add-on extends the free plugin with custom logo images, precise
 
 * [atshift User Profile Fields](https://wordpress.org/plugins/atshift-user-profile-fields/) - create practical WordPress user profile fields and optionally place Freeform Login passkey controls within its profile layouts.
 * [at-shift Fields](https://wordpress.org/plugins/atshift-fields-maintenance-for-custom-field-suite/) - arrange custom fields for posts and custom post types with a similar field-building experience.
+
+== Screenshots ==
+
+1. A customized WordPress login screen places passkey login above the standard username and password fallback.
+2. Users can register a passkey from their WordPress profile, with guidance about passkeys and password security.
+3. Registered passkeys show a recognizable name, registration date, last-used date, and a delete action.
+4. The visual design editor provides grouped controls and responsive previews before login-screen changes are enabled.
 
 == Changelog ==
 
