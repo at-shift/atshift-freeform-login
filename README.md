@@ -147,6 +147,7 @@ Pro adds custom logo images, precise position offsets, transparency, borders, co
 
 - [atshift User Profile Fields](https://wordpress.org/plugins/atshift-user-profile-fields/) creates practical, configurable WordPress user profile screens and can place the Freeform Login Passkeys controls within its layouts.
 - [at-shift Fields](https://wordpress.org/plugins/atshift-fields-maintenance-for-custom-field-suite/) brings a similar field-building experience to posts and custom post types.
+- [atshift Feed Builder](https://github.com/at-shift/atshift-feed-builder) creates purpose-specific RSS 2.0 and JSON Feed 1.1 feeds from structured WordPress content.
 
 ## Reporting Issues
 

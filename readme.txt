@@ -73,6 +73,7 @@ The optional Pro add-on extends the free plugin with custom logo images, precise
 
 * [atshift User Profile Fields](https://wordpress.org/plugins/atshift-user-profile-fields/) - create practical WordPress user profile fields and optionally place Freeform Login passkey controls within its profile layouts.
 * [at-shift Fields](https://wordpress.org/plugins/atshift-fields-maintenance-for-custom-field-suite/) - arrange custom fields for posts and custom post types with a similar field-building experience.
+* [atshift Feed Builder](https://github.com/at-shift/atshift-feed-builder) - create purpose-specific RSS 2.0 and JSON Feed 1.1 feeds from structured WordPress content.
 
 == Screenshots ==
 
