@@ -27,6 +27,7 @@ class Atshift_Freeform_Login_Passkey_Login {
 		add_action( 'login_form', array( $this, 'render_login_screen_button' ) );
 		add_action( 'login_enqueue_scripts', array( $this, 'enqueue_login_assets' ) );
 		add_filter( 'atshift_freeform_login_shortcode_passkey_html', array( $this, 'shortcode_html' ), 10, 3 );
+		add_filter( 'atshift_freeform_login_standalone_passkey_html', array( $this, 'standalone_shortcode_html' ), 10, 3 );
 	}
 
 	/** @return bool */
@@ -82,6 +83,24 @@ class Atshift_Freeform_Login_Passkey_Login {
 		return $html . $this->button_html( $redirect, 'atshift-freeform-login-passkey-login-shortcode' );
 	}
 
+	/**
+	 * Render a passkey button that can sit beside another plugin's login form.
+	 *
+	 * @param string $html Existing integration HTML.
+	 * @param string $redirect Safe post-login redirect.
+	 * @param bool   $remember Whether to request a persistent login cookie.
+	 * @return string
+	 */
+	public function standalone_shortcode_html( $html, $redirect, $remember ) {
+		if ( ! $this->is_available() ) {
+			return $html;
+		}
+
+		$this->enqueue_script();
+
+		return $html . $this->button_html( $redirect, 'atshift-freeform-login-passkey-login-standalone', false, $remember );
+	}
+
 	/** @return void */
 	private function enqueue_script() {
 		wp_enqueue_script(
@@ -110,15 +129,24 @@ class Atshift_Freeform_Login_Passkey_Login {
 	 *
 	 * @param string $redirect Redirect URL.
 	 * @param string $context_class Context class.
+	 * @param bool   $include_separator Whether to append the local-login separator.
+	 * @param bool   $remember Whether to request a persistent login cookie.
 	 * @return string
 	 */
-	private function button_html( $redirect, $context_class ) {
-		return sprintf(
-			'<div class="atshift-freeform-login-passkey-auth %1$s" data-redirect="%2$s"><button type="button" class="button button-primary atshift-freeform-login-passkey-login-button">%3$s</button><p class="atshift-freeform-login-passkey-login-status" aria-live="polite"></p></div><div class="atshift-freeform-login-separator atshift-freeform-login-passkey-separator"><span>%4$s</span></div>',
+	private function button_html( $redirect, $context_class, $include_separator = true, $remember = null ) {
+		$remember_attribute = null === $remember ? '' : ' data-remember="' . ( $remember ? 'true' : 'false' ) . '"';
+		$html               = sprintf(
+			'<div class="atshift-freeform-login-passkey-auth %1$s" data-redirect="%2$s"%3$s><button type="button" class="button button-primary atshift-freeform-login-passkey-login-button">%4$s</button><p class="atshift-freeform-login-passkey-login-status" aria-live="polite"></p></div>',
 			esc_attr( $context_class ),
 			esc_url( $redirect ),
-			esc_html__( 'Log in with a passkey', 'atshift-freeform-login' ),
-			esc_html__( 'Or', 'atshift-freeform-login' )
+			$remember_attribute,
+			esc_html__( 'Log in with a passkey', 'atshift-freeform-login' )
 		);
+
+		if ( $include_separator ) {
+			$html .= '<div class="atshift-freeform-login-separator atshift-freeform-login-passkey-separator"><span>' . esc_html__( 'Or', 'atshift-freeform-login' ) . '</span></div>';
+		}
+
+		return $html;
 	}
 }

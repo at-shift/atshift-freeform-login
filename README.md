@@ -23,6 +23,7 @@ The `[atshift_login]` shortcode places a matching login form on site pages. Jetp
 - Form placement, width, colors, and responsive fallback settings
 - Live preview before login-screen changes are enabled
 - Matching frontend login form with the `[atshift_login]` shortcode
+- Standalone passkey button for existing login forms with `[atshift_passkey_login]`
 - Jetpack SSO and WordPress.com authentication-flow compatibility
 - Multiple named passkeys with registration and last-used dates
 - Passkey login on the WordPress login screen and shortcode form
@@ -77,6 +78,25 @@ Add the login form to a page with:
 
 Optional attributes include `redirect`, `show_lost_password`, `remember`, `jetpack`, and `class`.
 
+### Standalone passkey button
+
+When another plugin already provides the username and password form, add only the passkey button with:
+
+```text
+[atshift_passkey_login]
+```
+
+For example, it can be placed immediately after a WP-Members login form:
+
+```text
+[wpmem_form login]
+[atshift_passkey_login redirect="/my-account/"]
+```
+
+The standalone shortcode accepts `redirect`, `remember`, and `class`. `remember` defaults to `false`; set `remember="true"` when the passkey login should request WordPress's persistent login cookie. The button is omitted when the visitor is already logged in, the server does not meet the passkey requirements, no passkey has been registered on the site, or local login is disabled by Jetpack SSO.
+
+See the [Shortcode Guide](https://upf.at-shift.net/en/freeform-login/shortcodes/) for every attribute and integration examples. A [Japanese guide](https://upf.at-shift.net/freeform-login/shortcodes/) is also available.
+
 ## Pro Add-on
 
 The optional Pro add-on extends the design controls provided by the free plugin. It is installed alongside this free base plugin and is not included in this repository.
@@ -91,6 +111,7 @@ Pro adds custom logo images, precise position offsets, transparency, borders, co
 | Topic | English | 日本語 |
 | --- | --- | --- |
 | Product guide | [Freeform Login](https://upf.at-shift.net/en/freeform-login/) | [Freeform Login](https://upf.at-shift.net/freeform-login/) |
+| Shortcodes | [Shortcode guide](https://upf.at-shift.net/en/freeform-login/shortcodes/) | [ショートコードガイド](https://upf.at-shift.net/freeform-login/shortcodes/) |
 | WordPress.org | [Plugin directory](https://wordpress.org/plugins/atshift-freeform-login/) | [Plugin directory](https://ja.wordpress.org/plugins/atshift-freeform-login/) |
 | Releases | [GitHub Releases](https://github.com/at-shift/atshift-freeform-login/releases) | [GitHub Releases](https://github.com/at-shift/atshift-freeform-login/releases) |
 

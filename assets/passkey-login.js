@@ -119,9 +119,17 @@
     try {
       const form = root.closest('form') || root.parentElement.querySelector('form');
       const rememberField = form ? form.querySelector('input[name="rememberme"]') : null;
+      let remember = Boolean(rememberField && rememberField.checked);
+
+      if (root.dataset.remember === 'true') {
+        remember = true;
+      } else if (root.dataset.remember === 'false') {
+        remember = false;
+      }
+
       const options = await request('options', {
         redirect: root.dataset.redirect || '',
-        remember: Boolean(rememberField && rememberField.checked)
+        remember
       });
       const credential = await navigator.credentials.get({
         publicKey: parseRequestOptions(options.publicKey)

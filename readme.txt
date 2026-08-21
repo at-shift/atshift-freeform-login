@@ -4,7 +4,7 @@ Tags: login, custom login, login form, passkey, webauthn
 Requires at least: 6.5
 Tested up to: 7.1
 Requires PHP: 7.4
-Stable tag: 2.0.1
+Stable tag: 2.1.0
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -26,6 +26,18 @@ When Jetpack SSO is active, its WordPress.com login UI is styled without replaci
 
 Passkey ceremonies are verified on the WordPress server and do not require an external authentication service. The bundled WebAuthn and supporting libraries are MIT licensed; package names and exact versions are recorded in `composer.lock`.
 
+== Links ==
+
+* Official website: [upf.at-shift.net/en/freeform-login](https://upf.at-shift.net/en/freeform-login/)
+
+== Shortcodes ==
+
+Use `[atshift_login]` for the complete username, password, and passkey login experience.
+
+If WP-Members or another plugin already provides the username and password form, place `[atshift_passkey_login]` beside it to output only the passkey button. It accepts `redirect`, `remember`, and `class`. `remember` defaults to `false`; use `remember="true"` to request WordPress's persistent login cookie.
+
+The standalone button is omitted when the visitor is already logged in, passkeys are unavailable, no passkey has been registered on the site, or Jetpack SSO disables local login.
+
 == Installation ==
 
 1. Upload the plugin folder to `/wp-content/plugins/`.
@@ -34,6 +46,16 @@ Passkey ceremonies are verified on the WordPress server and do not require an ex
 4. Configure and save the design.
 5. Enable login-screen application after reviewing the preview.
 6. On PHP 8.3 or newer, open Users > Profile to register a passkey.
+7. To add the complete login form to a page, insert `[atshift_login]`.
+8. If another plugin already provides the login form, insert `[atshift_passkey_login]` where only the passkey button should appear.
+
+Shortcode examples:
+
+* Complete form with a redirect: `[atshift_login redirect="/my-account/"]`
+* Passkey button with a redirect: `[atshift_passkey_login redirect="/my-account/"]`
+* Passkey button with a persistent login cookie: `[atshift_passkey_login remember="true"]`
+
+For every attribute and examples of passkey-only integration with an existing login form, see the [Shortcode Guide](https://upf.at-shift.net/en/freeform-login/shortcodes/).
 
 == Pro Add-on ==
 
@@ -41,7 +63,18 @@ The optional Pro add-on extends the free plugin with custom logo images, precise
 
 * Pro add-on: [Upgrade to Pro](https://upf.at-shift.net/en/freeform-login/#pricing)
 
+== Related Projects ==
+
+* [atshift User Profile Fields](https://wordpress.org/plugins/atshift-user-profile-fields/) - create practical WordPress user profile fields and optionally place Freeform Login passkey controls within its profile layouts.
+* [at-shift Fields](https://wordpress.org/plugins/atshift-fields-maintenance-for-custom-field-suite/) - arrange custom fields for posts and custom post types with a similar field-building experience.
+
 == Changelog ==
+
+= 2.1.0 =
+* Added the `[atshift_passkey_login]` shortcode for placing a standalone passkey button beside an existing login form.
+* Added same-site redirect, persistent-login, and custom-class options for the standalone passkey button.
+* Improved the position of the WordPress 7.1 Remember Me help bubble across login layouts.
+* Added official shortcode documentation and integration examples.
 
 = 2.0.1 =
 * Standardized the plugin action and metadata links shown on the Plugins screen.

@@ -22,6 +22,7 @@ class Atshift_Freeform_Login_Shortcode {
 	/** @return void */
 	public function register() {
 		add_shortcode( 'atshift_login', array( $this, 'render' ) );
+		add_shortcode( 'atshift_passkey_login', array( $this, 'render_passkey' ) );
 	}
 
 	/** @return void */
@@ -30,7 +31,55 @@ class Atshift_Freeform_Login_Shortcode {
 
 		if ( $post instanceof WP_Post && has_shortcode( $post->post_content, 'atshift_login' ) ) {
 			$this->enqueue_assets();
+		} elseif ( $post instanceof WP_Post && has_shortcode( $post->post_content, 'atshift_passkey_login' ) ) {
+			$this->enqueue_style();
 		}
+	}
+
+	/**
+	 * Render a standalone passkey login button.
+	 *
+	 * @param array<string, mixed> $attributes Shortcode attributes.
+	 * @return string
+	 */
+	public function render_passkey( $attributes ) {
+		$attributes = shortcode_atts(
+			array(
+				'redirect' => '',
+				'remember' => 'false',
+				'class'    => '',
+			),
+			is_array( $attributes ) ? $attributes : array(),
+			'atshift_passkey_login'
+		);
+
+		if ( is_user_logged_in() ) {
+			return '';
+		}
+
+		$redirect = self::safe_redirect( $attributes['redirect'] );
+		$remember = self::to_bool( $attributes['remember'] );
+		$html     = (string) apply_filters( 'atshift_freeform_login_standalone_passkey_html', '', $redirect, $remember );
+
+		if ( '' === $html ) {
+			return '';
+		}
+
+		$this->enqueue_style();
+
+		$settings      = Atshift_Freeform_Login_Settings::get_settings();
+		$button_states = apply_filters( 'atshift_freeform_login_button_states', Atshift_Freeform_Login_Screen::interactive_color_states( $settings['button_background_color'] ), $settings );
+		$style         = sprintf(
+			'--atshift-login-button:%1$s;--atshift-login-button-hover:%2$s;--atshift-login-button-active:%3$s;--atshift-login-button-focus:%4$s;--atshift-login-button-text:%5$s;',
+			esc_attr( $settings['button_background_color'] ),
+			esc_attr( $button_states['hover'] ),
+			esc_attr( $button_states['active'] ),
+			esc_attr( $button_states['focus'] ),
+			esc_attr( $settings['button_text_color'] )
+		);
+		$style = apply_filters( 'atshift_freeform_login_standalone_passkey_style', $style, $settings );
+
+		return '<div class="atshift-freeform-login-passkey-standalone ' . esc_attr( self::class_names( $attributes['class'] ) ) . '" style="' . esc_attr( $style ) . '">' . $html . '</div>';
 	}
 
 	/**
@@ -132,12 +181,8 @@ class Atshift_Freeform_Login_Shortcode {
 	private function enqueue_assets() {
 		$settings = Atshift_Freeform_Login_Settings::get_settings();
 
-		wp_enqueue_style(
-			'atshift-freeform-login-frontend',
-			ATSHIFT_FREEFORM_LOGIN_URL . 'assets/frontend.css',
-			array(),
-			ATSHIFT_FREEFORM_LOGIN_VERSION
-		);
+		$this->enqueue_style();
+
 		wp_enqueue_script(
 			'atshift-freeform-login-frontend',
 			ATSHIFT_FREEFORM_LOGIN_URL . 'assets/frontend.js',
@@ -153,6 +198,16 @@ class Atshift_Freeform_Login_Shortcode {
 				'passwordPlaceholder' => __( 'Password', 'atshift-freeform-login' ),
 				'showFieldLabels'      => ! empty( $settings['show_field_labels'] ),
 			)
+		);
+	}
+
+	/** @return void */
+	private function enqueue_style() {
+		wp_enqueue_style(
+			'atshift-freeform-login-frontend',
+			ATSHIFT_FREEFORM_LOGIN_URL . 'assets/frontend.css',
+			array(),
+			ATSHIFT_FREEFORM_LOGIN_VERSION
 		);
 	}
 

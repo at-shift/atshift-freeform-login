@@ -29,6 +29,14 @@ body.login #loginform .forgetmenot {
 	margin: 20px 0 0;
 }
 
+/* Keep the WordPress 7.1 Remember Me help bubble anchored to its toggle. */
+@supports (anchor-name: --a) {
+	body.login #loginform #rememberme-help-toggletip {
+		position-area: top center;
+		position-try-fallbacks: flip-block;
+	}
+}
+
 body.login #loginform .submit {
 	margin: 18px 0 0;
 }

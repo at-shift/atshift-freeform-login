@@ -3,7 +3,7 @@
  * Plugin Name: atshift Freeform Login
  * Plugin URI: https://upf.at-shift.net/en/freeform-login/
  * Description: Design a beautiful WordPress login screen and place a matching login form anywhere with a shortcode.
- * Version: 2.0.1
+ * Version: 2.1.0
  * Requires at least: 6.5
  * Requires PHP: 7.4
  * Author: @shift
@@ -19,7 +19,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-define( 'ATSHIFT_FREEFORM_LOGIN_VERSION', '2.0.1' );
+define( 'ATSHIFT_FREEFORM_LOGIN_VERSION', '2.1.0' );
 define( 'ATSHIFT_FREEFORM_LOGIN_FILE', __FILE__ );
 define( 'ATSHIFT_FREEFORM_LOGIN_DIR', plugin_dir_path( __FILE__ ) );
 define( 'ATSHIFT_FREEFORM_LOGIN_URL', plugin_dir_url( __FILE__ ) );
