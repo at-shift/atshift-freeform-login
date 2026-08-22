@@ -378,16 +378,20 @@ class Atshift_Freeform_Login_Passkey_REST {
 			return new WP_Error( 'atshift_passkey_user_missing', __( 'User not found.', 'atshift-freeform-login' ), array( 'status' => 404 ) );
 		}
 
-		$authenticated_user = apply_filters( 'wp_authenticate_user', $user, '' );
+		$authenticated_user = apply_filters( 'authenticate', $user, $user->user_login, '' );
+
+		if ( ! is_wp_error( $authenticated_user ) && $authenticated_user instanceof WP_User ) {
+			$authenticated_user = apply_filters( 'wp_authenticate_user', $authenticated_user, '' );
+		}
 
 		if ( is_wp_error( $authenticated_user ) || ! $authenticated_user instanceof WP_User || (int) $authenticated_user->ID !== $user_id ) {
 			return new WP_Error( 'atshift_passkey_login_denied', __( 'Login is not available for this account.', 'atshift-freeform-login' ), array( 'status' => 403 ) );
 		}
 
 		$remember = ! empty( $stored['remember'] );
-		wp_set_current_user( $user_id );
-		wp_set_auth_cookie( $user_id, $remember, is_ssl() );
-		do_action( 'wp_login', $user->user_login, $user );
+		wp_set_current_user( $authenticated_user->ID );
+		wp_set_auth_cookie( $authenticated_user->ID, $remember, is_ssl() );
+		do_action( 'wp_login', $authenticated_user->user_login, $authenticated_user );
 
 		return rest_ensure_response(
 			array(
@@ -457,17 +461,50 @@ class Atshift_Freeform_Login_Passkey_REST {
 	 * @return bool
 	 */
 	private function authentication_rate_limit_allows_request() {
-		$address = isset( $_SERVER['REMOTE_ADDR'] ) ? sanitize_text_field( wp_unslash( $_SERVER['REMOTE_ADDR'] ) ) : 'unknown';
-		$key     = 'atshift_ffl_passkey_rate_' . hash( 'sha256', $address );
-		$count   = (int) get_transient( $key );
+		global $wpdb;
 
-		if ( $count >= 30 ) {
-			return false;
+		$address = isset( $_SERVER['REMOTE_ADDR'] ) ? sanitize_text_field( wp_unslash( $_SERVER['REMOTE_ADDR'] ) ) : 'unknown';
+		$bucket  = (int) floor( time() / MINUTE_IN_SECONDS );
+		$prefix  = 'atshift_ffl_passkey_rate_' . hash( 'sha256', $address ) . '_';
+		$key     = $prefix . $bucket;
+
+		if ( add_option( $key, 1, '', false ) ) {
+			$this->cleanup_authentication_rate_limits( $bucket );
+			return true;
 		}
 
-		set_transient( $key, $count + 1, MINUTE_IN_SECONDS );
+		$updated = $wpdb->query(
+			$wpdb->prepare(
+				"UPDATE {$wpdb->options} SET option_value = CAST(option_value AS UNSIGNED) + 1 WHERE option_name = %s AND CAST(option_value AS UNSIGNED) < %d",
+				$key,
+				30
+			)
+		);
 
-		return true;
+		return 1 === $updated;
+	}
+
+	/**
+	 * Remove expired database-backed rate-limit buckets occasionally.
+	 *
+	 * @param int $current_bucket Current minute bucket.
+	 * @return void
+	 */
+	private function cleanup_authentication_rate_limits( $current_bucket ) {
+		global $wpdb;
+
+		if ( 1 !== wp_rand( 1, 100 ) ) {
+			return;
+		}
+
+		$prefix = 'atshift_ffl_passkey_rate_';
+		$wpdb->query(
+			$wpdb->prepare(
+				"DELETE FROM {$wpdb->options} WHERE option_name LIKE %s AND CAST(SUBSTRING_INDEX(option_name, '_', -1) AS UNSIGNED) < %d",
+				$wpdb->esc_like( $prefix ) . '%',
+				max( 0, $current_bucket - 2 )
+			)
+		);
 	}
 
 	/**

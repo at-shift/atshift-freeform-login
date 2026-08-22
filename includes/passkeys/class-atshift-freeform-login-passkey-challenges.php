@@ -51,9 +51,16 @@ class Atshift_Freeform_Login_Passkey_Challenges {
 	public function consume_registration( $user_id, $request_id ) {
 		$request_id = sanitize_text_field( $request_id );
 		$key        = $this->registration_key( $user_id, $request_id );
-		$value      = get_transient( $key );
+		$claim_key  = $this->claim_key( $key );
+
+		if ( ! add_option( $claim_key, time(), '', false ) ) {
+			return false;
+		}
+
+		$value = get_transient( $key );
 
 		delete_transient( $key );
+		delete_option( $claim_key );
 
 		if ( ! is_array( $value ) || (int) ( $value['user_id'] ?? 0 ) !== (int) $user_id || empty( $value['options'] ) || ! is_array( $value['options'] ) ) {
 			return false;
@@ -104,10 +111,17 @@ class Atshift_Freeform_Login_Passkey_Challenges {
 	 * @return array<string, mixed>|false
 	 */
 	public function consume_authentication( $request_id ) {
-		$key   = $this->authentication_key( sanitize_text_field( $request_id ) );
+		$key       = $this->authentication_key( sanitize_text_field( $request_id ) );
+		$claim_key = $this->claim_key( $key );
+
+		if ( ! add_option( $claim_key, time(), '', false ) ) {
+			return false;
+		}
+
 		$value = get_transient( $key );
 
 		delete_transient( $key );
+		delete_option( $claim_key );
 
 		if ( ! is_array( $value ) || empty( $value['options'] ) || ! is_array( $value['options'] ) ) {
 			return false;
@@ -119,5 +133,10 @@ class Atshift_Freeform_Login_Passkey_Challenges {
 	/** @param string $request_id Request ID. @return string */
 	private function authentication_key( $request_id ) {
 		return self::AUTH_TRANSIENT_PREFIX . hash( 'sha256', $request_id );
+	}
+
+	/** @param string $key Transient key. @return string */
+	private function claim_key( $key ) {
+		return '_atshift_ffl_passkey_claim_' . hash( 'sha256', $key );
 	}
 }
