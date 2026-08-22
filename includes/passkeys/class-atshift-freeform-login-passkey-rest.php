@@ -378,9 +378,11 @@ class Atshift_Freeform_Login_Passkey_REST {
 			return new WP_Error( 'atshift_passkey_user_missing', __( 'User not found.', 'atshift-freeform-login' ), array( 'status' => 404 ) );
 		}
 
+		// phpcs:ignore WordPress.NamingConventions.PrefixAllGlobals.NonPrefixedHooknameFound -- WordPress core authentication hook.
 		$authenticated_user = apply_filters( 'authenticate', $user, $user->user_login, '' );
 
 		if ( ! is_wp_error( $authenticated_user ) && $authenticated_user instanceof WP_User ) {
+			// phpcs:ignore WordPress.NamingConventions.PrefixAllGlobals.NonPrefixedHooknameFound -- WordPress core authentication hook.
 			$authenticated_user = apply_filters( 'wp_authenticate_user', $authenticated_user, '' );
 		}
 
@@ -391,6 +393,7 @@ class Atshift_Freeform_Login_Passkey_REST {
 		$remember = ! empty( $stored['remember'] );
 		wp_set_current_user( $authenticated_user->ID );
 		wp_set_auth_cookie( $authenticated_user->ID, $remember, is_ssl() );
+		// phpcs:ignore WordPress.NamingConventions.PrefixAllGlobals.NonPrefixedHooknameFound -- WordPress core login hook.
 		do_action( 'wp_login', $authenticated_user->user_login, $authenticated_user );
 
 		return rest_ensure_response(
@@ -473,6 +476,7 @@ class Atshift_Freeform_Login_Passkey_REST {
 			return true;
 		}
 
+		// phpcs:ignore WordPress.DB.DirectDatabaseQuery.DirectQuery,WordPress.DB.DirectDatabaseQuery.NoCaching -- Atomic rate-limit increment cannot use the options API.
 		$updated = $wpdb->query(
 			$wpdb->prepare(
 				"UPDATE {$wpdb->options} SET option_value = CAST(option_value AS UNSIGNED) + 1 WHERE option_name = %s AND CAST(option_value AS UNSIGNED) < %d",
@@ -498,6 +502,7 @@ class Atshift_Freeform_Login_Passkey_REST {
 		}
 
 		$prefix = 'atshift_ffl_passkey_rate_';
+		// phpcs:ignore WordPress.DB.DirectDatabaseQuery.DirectQuery,WordPress.DB.DirectDatabaseQuery.NoCaching -- Occasional cleanup of database-backed rate-limit buckets.
 		$wpdb->query(
 			$wpdb->prepare(
 				"DELETE FROM {$wpdb->options} WHERE option_name LIKE %s AND CAST(SUBSTRING_INDEX(option_name, '_', -1) AS UNSIGNED) < %d",

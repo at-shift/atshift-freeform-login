@@ -59,7 +59,8 @@ class Atshift_Freeform_Login_Passkey_Login {
 			return;
 		}
 
-		$redirect = isset( $_GET['redirect_to'] ) ? wp_unslash( $_GET['redirect_to'] ) : admin_url();
+		// phpcs:ignore WordPress.Security.NonceVerification.Recommended -- Read-only login redirect.
+		$redirect = isset( $_GET['redirect_to'] ) ? esc_url_raw( wp_unslash( $_GET['redirect_to'] ) ) : admin_url();
 		$redirect = wp_validate_redirect( $redirect, admin_url() );
 
 		echo $this->button_html( $redirect, 'atshift-freeform-login-passkey-login-screen' ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- Escaped by button_html().

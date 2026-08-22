@@ -142,19 +142,20 @@ final class Atshift_Freeform_Login {
 			? 'https://upf.at-shift.net/freeform-login/#pricing'
 			: 'https://upf.at-shift.net/en/freeform-login/#pricing';
 		$links         = array(
-			sprintf(
+			 sprintf(
 				/* translators: %s: Plugin version. */
-				esc_html__( 'Version %s' ),
+				esc_html__( 'Version %s' ), // phpcs:ignore WordPress.WP.I18n.MissingArgDomain -- Reuse the WordPress core plugin-row translation.
 				esc_html( isset( $plugin_data['Version'] ) ? $plugin_data['Version'] : ATSHIFT_FREEFORM_LOGIN_VERSION )
 			),
-			sprintf(
+			 sprintf(
 				/* translators: %s: Plugin author. */
-				__( 'By %s' ),
+				__( 'By %s' ), // phpcs:ignore WordPress.WP.I18n.MissingArgDomain -- Reuse the WordPress core plugin-row translation.
 				'<a href="' . esc_url( 'https://cfs.at-shift.net/' ) . '" target="_blank" rel="noopener noreferrer">@shift</a>'
 			),
 			sprintf(
 				'<a href="%1$s" target="_blank" rel="noopener noreferrer">%2$s</a>',
 				esc_url( $details_url ),
+				// phpcs:ignore WordPress.WP.I18n.MissingArgDomain -- Reuse the WordPress core plugin-row translation.
 				esc_html__( 'View details' )
 			),
 			sprintf(
