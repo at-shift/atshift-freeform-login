@@ -182,7 +182,7 @@ final class Atshift_Freeform_Login {
 	 * @return void
 	 */
 	public function load_textdomain() {
-		// phpcs:ignore PluginCheck.CodeAnalysis.DiscouragedFunctions.load_plugin_textdomainFound -- The source package includes a Japanese translation for immediate use outside WordPress.org language packs.
+		// phpcs:ignore PluginCheck.CodeAnalysis.DiscouragedFunctions.load_plugin_textdomainFound -- The source package includes bundled translations for immediate use outside WordPress.org language packs.
 		load_plugin_textdomain(
 			'atshift-freeform-login',
 			false,

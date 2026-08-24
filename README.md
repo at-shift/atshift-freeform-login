@@ -56,6 +56,7 @@ The visual editor combines grouped design controls with desktop, tablet, and mob
 - Multiple named passkeys with registration and last-used dates
 - Passkey login on the WordPress login screen and shortcode form
 - Optional Passkeys field placement with atshift User Profile Fields
+- Bundled translations for 15 supported languages
 
 ## Requirements
 
@@ -63,6 +64,10 @@ The visual editor combines grouped design controls with desktop, tablet, and mob
 - PHP 7.4 or later
 
 Passkeys additionally require PHP 8.3 or later, the PHP JSON and OpenSSL extensions, and an HTTPS site. Localhost is supported for development. The design and shortcode features continue to work when the passkey requirements are not met.
+
+## Languages
+
+English is provided by the plugin source. Bundled translations are included for Japanese, Spanish, German, French, Brazilian Portuguese, Italian, Russian, Dutch, Simplified Chinese, Polish, Turkish, Indonesian, Traditional Chinese (Taiwan), and Korean.
 
 ## Installation
 
