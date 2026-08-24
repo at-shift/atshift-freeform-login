@@ -4,7 +4,7 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: atshift-freeform-login 2.2\n"
+"Project-Id-Version: atshift-freeform-login 2.3\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-08-14 11:50+0900\n"
 "PO-Revision-Date: 2026-08-24 00:00+0900\n"

@@ -52,6 +52,7 @@ The visual editor combines grouped design controls with desktop, tablet, and mob
 - Live preview before login-screen changes are enabled
 - Matching frontend login form with the `[atshift_login]` shortcode
 - Standalone passkey button for existing login forms with `[atshift_passkey_login]`
+- Current-user passkey management for frontend profile pages with `[atshift_passkey_profile]`
 - Jetpack SSO and WordPress.com authentication-flow compatibility
 - Multiple named passkeys with registration and last-used dates
 - Passkey login on the WordPress login screen and shortcode form
@@ -101,6 +102,8 @@ Passkey ceremonies are verified on the WordPress server and do not require an ex
 
 When [atshift User Profile Fields](https://wordpress.org/plugins/atshift-user-profile-fields/) is active, its optional Passkeys field can place the same management controls inside the configured profile layout. Credentials and authentication remain managed by atshift Freeform Login.
 
+When WP-Members or another plugin provides a frontend profile page, `[atshift_passkey_profile]` places the same registration and management controls on that page for the currently logged-in user. It never accepts a user ID, so one account cannot use the shortcode to manage another account's passkeys.
+
 ## Shortcode
 
 Add the login form to a page with:
@@ -127,6 +130,16 @@ For example, it can be placed immediately after a WP-Members login form:
 ```
 
 The standalone shortcode accepts `redirect`, `remember`, and `class`. `remember` defaults to `false`; set `remember="true"` when the passkey login should request WordPress's persistent login cookie. The button is omitted when the visitor is already logged in, the server does not meet the passkey requirements, no passkey has been registered on the site, or local login is disabled by Jetpack SSO.
+
+### Passkey management on frontend profiles
+
+To let a signed-in user register and manage passkeys from a profile page created by another plugin, add:
+
+```text
+[atshift_passkey_profile]
+```
+
+The shortcode outputs the explanation, Add passkey action, registered-passkey history, and delete controls for the current user. It outputs nothing for logged-out visitors and marks the page as non-cacheable and `noindex, nofollow`. The membership or profile plugin remains responsible for requiring a login for the whole page and providing its preferred login flow. Use `heading="false"` when the surrounding profile page already supplies a Passkeys heading, and use `class` to add sanitized custom CSS classes.
 
 See the [Shortcode Guide](https://upf.at-shift.net/en/freeform-login/shortcodes/) for every attribute and integration examples. A [Japanese guide](https://upf.at-shift.net/freeform-login/shortcodes/) is also available.
 

@@ -4,7 +4,7 @@ Tags: login, custom login, login form, passkey, webauthn
 Requires at least: 6.5
 Tested up to: 7.1
 Requires PHP: 7.4
-Stable tag: 2.2
+Stable tag: 2.3
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -46,6 +46,8 @@ If WP-Members or another plugin already provides the username and password form,
 
 The standalone button is omitted when the visitor is already logged in, passkeys are unavailable, no passkey has been registered on the site, or Jetpack SSO disables local login.
 
+If another plugin provides a frontend profile page, place `[atshift_passkey_profile]` on it to let the currently logged-in user add, review, and delete their own passkeys. It accepts `heading` and `class`; use `heading="false"` when the surrounding page already supplies the section heading. The shortcode never accepts a user ID, outputs nothing for logged-out visitors, and marks the page as non-cacheable and `noindex, nofollow`. The membership or profile plugin remains responsible for requiring a login for the whole page.
+
 == Installation ==
 
 1. Upload the plugin folder to `/wp-content/plugins/`.
@@ -56,14 +58,16 @@ The standalone button is omitted when the visitor is already logged in, passkeys
 6. On PHP 8.3 or newer, open Users > Profile to register a passkey.
 7. To add the complete login form to a page, insert `[atshift_login]`.
 8. If another plugin already provides the login form, insert `[atshift_passkey_login]` where only the passkey button should appear.
+9. If another plugin provides a frontend profile page, insert `[atshift_passkey_profile]` where the current user should manage passkeys.
 
 Shortcode examples:
 
 * Complete form with a redirect: `[atshift_login redirect="/my-account/"]`
 * Passkey button with a redirect: `[atshift_passkey_login redirect="/my-account/"]`
 * Passkey button with a persistent login cookie: `[atshift_passkey_login remember="true"]`
+* Passkey management without a duplicate heading: `[atshift_passkey_profile heading="false"]`
 
-For every attribute and examples of passkey-only integration with an existing login form, see the [Shortcode Guide](https://upf.at-shift.net/en/freeform-login/shortcodes/).
+For every attribute and examples of passkey-only login and frontend-profile integration, see the [Shortcode Guide](https://upf.at-shift.net/en/freeform-login/shortcodes/).
 
 == Pro Add-on ==
 
@@ -85,6 +89,11 @@ The optional Pro add-on extends the free plugin with custom logo images, precise
 4. The visual design editor provides grouped controls and responsive previews before login-screen changes are enabled.
 
 == Changelog ==
+
+= 2.3 =
+* Added the `[atshift_passkey_profile]` shortcode for placing current-user passkey registration and management controls on frontend profile pages.
+* Added self-only management, cache prevention, and search-index protection for frontend passkey profile integration.
+* Updated compatible bundled Symfony dependencies to their latest 7.4 patch releases.
 
 = 2.2 =
 * Added bundled translations for Spanish, German, French, Brazilian Portuguese, Italian, Russian, Dutch, Simplified Chinese, Polish, Turkish, Indonesian, Traditional Chinese (Taiwan), and Korean.

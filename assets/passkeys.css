@@ -97,7 +97,101 @@
 	flex: 0 0 auto;
 }
 
+.atshift-freeform-login-passkeys-shortcode {
+	box-sizing: border-box;
+	width: 100%;
+}
+
+.atshift-freeform-login-passkeys-shortcode > .atshift-freeform-login-passkey-heading {
+	margin: 0 0 24px;
+}
+
+.atshift-freeform-login-passkeys-shortcode > .atshift-freeform-login-passkey-intro {
+	margin-bottom: 28px;
+	color: #50575e;
+	line-height: 1.7;
+}
+
+.atshift-freeform-login-passkey-shortcode-section {
+	display: grid;
+	grid-template-columns: minmax(150px, 220px) minmax(0, 1fr);
+	gap: 24px;
+	box-sizing: border-box;
+	padding: 24px 0;
+}
+
+.atshift-freeform-login-passkey-shortcode-section + .atshift-freeform-login-passkey-shortcode-section {
+	border-top: 1px solid #dcdcde;
+}
+
+.atshift-freeform-login-passkey-shortcode-section h3 {
+	margin: 0;
+	font-size: 1rem;
+	line-height: 1.5;
+}
+
+.atshift-freeform-login-passkeys-shortcode .description {
+	color: #50575e;
+}
+
+.atshift-freeform-login-passkeys-shortcode .atshift-freeform-login-passkey-add {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	box-sizing: border-box;
+	min-height: 44px;
+	padding: 8px 18px;
+	color: #1d4ed8;
+	font: inherit;
+	font-weight: 600;
+	line-height: 1.4;
+	background: transparent;
+	border: 1px solid currentColor;
+	border-radius: 4px;
+	cursor: pointer;
+}
+
+.atshift-freeform-login-passkeys-shortcode .atshift-freeform-login-passkey-add:hover {
+	color: #1e40af;
+	background: #f6f7f7;
+}
+
+.atshift-freeform-login-passkeys-shortcode .atshift-freeform-login-passkey-add:focus-visible,
+.atshift-freeform-login-passkeys-shortcode .atshift-freeform-login-passkey-delete:focus-visible {
+	outline: 2px solid currentColor;
+	outline-offset: 2px;
+}
+
+.atshift-freeform-login-passkeys-shortcode .atshift-freeform-login-passkey-add:disabled,
+.atshift-freeform-login-passkeys-shortcode .atshift-freeform-login-passkey-delete:disabled {
+	cursor: wait;
+	opacity: .65;
+}
+
+.atshift-freeform-login-passkeys-shortcode .atshift-freeform-login-passkey-label {
+	color: inherit;
+}
+
+.atshift-freeform-login-passkeys-shortcode .atshift-freeform-login-passkey-delete {
+	padding: 4px;
+	color: #b32d2e;
+	font: inherit;
+	background: transparent;
+	border: 0;
+	cursor: pointer;
+}
+
+.atshift-freeform-login-passkeys-shortcode .atshift-freeform-login-passkey-delete:hover {
+	color: #8a2424;
+	text-decoration: underline;
+}
+
 @media screen and (max-width: 600px) {
+	.atshift-freeform-login-passkey-shortcode-section {
+		grid-template-columns: 1fr;
+		gap: 12px;
+	}
+
 	.atshift-freeform-login-passkey-list li {
 		align-items: flex-start;
 		flex-direction: column;

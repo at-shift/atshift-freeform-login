@@ -19,6 +19,9 @@ class Atshift_Freeform_Login_Passkey_Profile {
 	/** @var array<int, bool> */
 	private $upf_rendered_users = array();
 
+	/** @var bool */
+	private $management_assets_enqueued = false;
+
 	/**
 	 * Constructor.
 	 *
@@ -27,11 +30,23 @@ class Atshift_Freeform_Login_Passkey_Profile {
 	public function __construct( $storage ) {
 		$this->storage = $storage;
 
+		add_action( 'init', array( $this, 'register_shortcode' ) );
 		add_action( 'show_user_profile', array( $this, 'render' ), 20 );
 		add_action( 'edit_user_profile', array( $this, 'render' ), 20 );
 		add_action( 'admin_enqueue_scripts', array( $this, 'enqueue_assets' ) );
+		add_action( 'template_redirect', array( $this, 'maybe_protect_shortcode_page' ) );
+		add_action( 'wp_enqueue_scripts', array( $this, 'maybe_enqueue_frontend_assets' ) );
 		add_filter( 'atshift_upf_passkeys_field_available', array( $this, 'enable_upf_passkeys_field' ) );
 		add_action( 'atshift_upf_render_passkeys_field', array( $this, 'render_upf_field' ), 10, 3 );
+	}
+
+	/**
+	 * Register the current-user passkey management shortcode.
+	 *
+	 * @return void
+	 */
+	public function register_shortcode() {
+		add_shortcode( 'atshift_passkey_profile', array( $this, 'render_shortcode' ) );
 	}
 
 	/**
@@ -57,6 +72,65 @@ class Atshift_Freeform_Login_Passkey_Profile {
 			return;
 		}
 
+		$this->enqueue_management_assets();
+	}
+
+	/**
+	 * Enqueue assets early when the shortcode is present in post content.
+	 *
+	 * @return void
+	 */
+	public function maybe_enqueue_frontend_assets() {
+		global $post;
+
+		if ( is_user_logged_in() && $post instanceof WP_Post && has_shortcode( $post->post_content, 'atshift_passkey_profile' ) ) {
+			$this->enqueue_management_assets();
+		}
+	}
+
+	/**
+	 * Keep personalized passkey pages out of caches and search indexes.
+	 *
+	 * The surrounding membership plugin remains responsible for requiring a
+	 * login because it may provide its own login or account recovery flow.
+	 *
+	 * @return void
+	 */
+	public function maybe_protect_shortcode_page() {
+		global $post;
+
+		if ( ! $post instanceof WP_Post || ! has_shortcode( $post->post_content, 'atshift_passkey_profile' ) ) {
+			return;
+		}
+
+		self::prevent_page_cache();
+		add_filter( 'wp_robots', array( $this, 'filter_shortcode_page_robots' ) );
+	}
+
+	/**
+	 * Mark a passkey management page as private to search engines.
+	 *
+	 * @param array<string, bool> $robots Existing robots directives.
+	 * @return array<string, bool>
+	 */
+	public function filter_shortcode_page_robots( $robots ) {
+		$robots['noindex']  = true;
+		$robots['nofollow'] = true;
+
+		return $robots;
+	}
+
+	/**
+	 * Enqueue shared passkey management assets.
+	 *
+	 * @return void
+	 */
+	private function enqueue_management_assets() {
+		if ( $this->management_assets_enqueued ) {
+			return;
+		}
+
+		$this->management_assets_enqueued = true;
 		wp_enqueue_style(
 			'atshift-freeform-login-passkeys',
 			ATSHIFT_FREEFORM_LOGIN_URL . 'assets/passkeys.css',
@@ -98,6 +172,69 @@ class Atshift_Freeform_Login_Passkey_Profile {
 				),
 			)
 		);
+	}
+
+	/**
+	 * Render passkey management for the currently logged-in user.
+	 *
+	 * @param array<string, mixed> $attributes Shortcode attributes.
+	 * @return string
+	 */
+	public function render_shortcode( $attributes ) {
+		self::prevent_page_cache();
+
+		if ( ! is_user_logged_in() ) {
+			return '';
+		}
+
+		$user = wp_get_current_user();
+
+		if ( ! $user instanceof WP_User || 0 === (int) $user->ID ) {
+			return '';
+		}
+
+		$attributes = shortcode_atts(
+			array(
+				'heading' => 'true',
+				'class'   => '',
+			),
+			is_array( $attributes ) ? $attributes : array(),
+			'atshift_passkey_profile'
+		);
+
+		$this->enqueue_management_assets();
+
+		$user_id     = (int) $user->ID;
+		$can_manage  = Atshift_Freeform_Login_Passkey_Environment::is_available();
+		$credentials = $this->storage->get_credentials( $user_id );
+		$classes     = 'atshift-freeform-login-passkeys atshift-freeform-login-passkeys-shortcode';
+		$custom      = self::class_names( $attributes['class'] );
+
+		if ( '' !== $custom ) {
+			$classes .= ' ' . $custom;
+		}
+
+		ob_start();
+		?>
+		<div class="<?php echo esc_attr( $classes ); ?>" data-user-id="<?php echo esc_attr( (string) $user_id ); ?>">
+			<?php if ( self::to_bool( $attributes['heading'] ) ) : ?>
+				<h2 class="atshift-freeform-login-passkey-heading"><?php echo esc_html__( 'Passkeys', 'atshift-freeform-login' ); ?></h2>
+			<?php endif; ?>
+
+			<?php $this->render_intro( $can_manage ); ?>
+
+			<div class="atshift-freeform-login-passkey-shortcode-section">
+				<h3><?php echo esc_html__( 'Set passkeys', 'atshift-freeform-login' ); ?></h3>
+				<div><?php $this->render_actions( true, $can_manage ); ?></div>
+			</div>
+			<div class="atshift-freeform-login-passkey-shortcode-section">
+				<h3><?php echo esc_html__( 'Registered passkeys', 'atshift-freeform-login' ); ?></h3>
+				<div><?php $this->render_history( $credentials, $can_manage ); ?></div>
+			</div>
+		</div>
+		<?php
+
+		return (string) ob_get_clean();
 	}
 
 	/**
@@ -279,5 +416,43 @@ class Atshift_Freeform_Login_Passkey_Profile {
 			<?php endif; ?>
 		</div>
 		<?php
+	}
+
+	/**
+	 * Normalize a shortcode boolean attribute.
+	 *
+	 * @param mixed $value Raw value.
+	 * @return bool
+	 */
+	private static function to_bool( $value ) {
+		return in_array( strtolower( (string) $value ), array( '1', 'true', 'yes', 'on' ), true );
+	}
+
+	/**
+	 * Sanitize a space-separated class list.
+	 *
+	 * @param mixed $classes Raw classes.
+	 * @return string
+	 */
+	private static function class_names( $classes ) {
+		$classes = preg_split( '/\s+/', (string) $classes );
+		$classes = array_filter( array_map( 'sanitize_html_class', is_array( $classes ) ? $classes : array() ) );
+
+		return implode( ' ', $classes );
+	}
+
+	/**
+	 * Prevent personalized passkey content from being stored in page caches.
+	 *
+	 * @return void
+	 */
+	private static function prevent_page_cache() {
+		if ( ! defined( 'DONOTCACHEPAGE' ) ) {
+			define( 'DONOTCACHEPAGE', true );
+		}
+
+		if ( ! headers_sent() ) {
+			nocache_headers();
+		}
 	}
 }
