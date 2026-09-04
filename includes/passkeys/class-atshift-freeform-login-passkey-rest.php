@@ -123,6 +123,23 @@ class Atshift_Freeform_Login_Passkey_REST {
 			return new WP_Error( 'atshift_passkey_forbidden', __( 'You can only register passkeys for your own account.', 'atshift-freeform-login' ), array( 'status' => 403 ) );
 		}
 
+		if ( ! $this->storage->has_registration_capacity( $user_id ) ) {
+			$registered_count = count( $this->storage->get_credentials( $user_id ) );
+			return new WP_Error(
+				'atshift_passkey_limit_reached',
+				sprintf(
+					/* translators: %d: maximum number of passkeys. */
+					__( 'You can register up to %d passkeys.', 'atshift-freeform-login' ),
+					$this->storage->get_max_credentials()
+				),
+				array(
+					'status'          => 409,
+					'registeredCount' => $registered_count,
+					'maximum'         => $this->storage->get_max_credentials(),
+				)
+			);
+		}
+
 		return true;
 	}
 
@@ -135,7 +152,7 @@ class Atshift_Freeform_Login_Passkey_REST {
 	public function can_delete_credential( $request ) {
 		$user_id = absint( $request->get_param( 'userId' ) );
 
-		if ( ! is_user_logged_in() || ( get_current_user_id() !== $user_id && ! current_user_can( 'edit_user', $user_id ) ) ) {
+		if ( ! Atshift_Freeform_Login_Passkey_Environment::current_user_can_delete_for_user( $user_id ) ) {
 			return new WP_Error( 'atshift_passkey_forbidden', __( 'You cannot delete this passkey.', 'atshift-freeform-login' ), array( 'status' => 403 ) );
 		}
 
@@ -244,9 +261,22 @@ class Atshift_Freeform_Login_Passkey_REST {
 			return new WP_Error( 'atshift_passkey_verify_failed', __( 'The passkey could not be verified.', 'atshift-freeform-login' ), array( 'status' => 400 ) );
 		}
 
+		if ( is_wp_error( $item ) ) {
+			$item->add_data(
+				array(
+					'status'          => 409,
+					'registeredCount' => count( $this->storage->get_credentials( $user_id ) ),
+					'maximum'         => $this->storage->get_max_credentials(),
+				)
+			);
+			return $item;
+		}
+
 		return rest_ensure_response(
 			array(
-				'credential' => $this->public_credential_item( $item ),
+				'credential'      => $this->public_credential_item( $item ),
+				'registeredCount' => count( $this->storage->get_credentials( $user_id ) ),
+				'maximum'         => $this->storage->get_max_credentials(),
 			)
 		);
 	}
@@ -265,7 +295,13 @@ class Atshift_Freeform_Login_Passkey_REST {
 			return new WP_Error( 'atshift_passkey_not_found', __( 'Passkey not found.', 'atshift-freeform-login' ), array( 'status' => 404 ) );
 		}
 
-		return rest_ensure_response( array( 'deleted' => true ) );
+		return rest_ensure_response(
+			array(
+				'deleted'         => true,
+				'registeredCount' => count( $this->storage->get_credentials( $user_id ) ),
+				'maximum'         => $this->storage->get_max_credentials(),
+			)
+		);
 	}
 
 	/**

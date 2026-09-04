@@ -16,6 +16,8 @@ class Atshift_Freeform_Login_Passkey_Storage {
 	const META_KEY        = 'atshift_freeform_login_passkeys';
 	const USER_HANDLE_KEY = 'atshift_freeform_login_passkey_user_handle';
 	const INDEX_KEY       = 'atshift_freeform_login_passkey_index';
+	const MAX_CREDENTIALS = 5;
+	const REGISTRATION_LOCK_PREFIX = 'atshift_ffl_passkey_save_';
 
 	/**
 	 * Return stored credentials for a user.
@@ -27,6 +29,16 @@ class Atshift_Freeform_Login_Passkey_Storage {
 		$credentials = get_user_meta( $user_id, self::META_KEY, true );
 
 		return is_array( $credentials ) ? array_values( $credentials ) : array();
+	}
+
+	/** @return int */
+	public function get_max_credentials() {
+		return self::MAX_CREDENTIALS;
+	}
+
+	/** @param int $user_id User ID. @return bool */
+	public function has_registration_capacity( $user_id ) {
+		return count( $this->get_credentials( $user_id ) ) < self::MAX_CREDENTIALS;
 	}
 
 	/**
@@ -87,46 +99,73 @@ class Atshift_Freeform_Login_Passkey_Storage {
 	 * @param Webauthn\CredentialRecord   $record Credential record.
 	 * @param array<string, mixed>        $normalized_record Normalized credential record.
 	 * @param string                      $label User-facing label.
-	 * @return array<string, mixed>
+	 * @return array<string, mixed>|WP_Error
 	 */
 	public function save_credential( $user_id, $record, $normalized_record, $label ) {
-		$credentials   = $this->get_credentials( $user_id );
-		$credential_id = $this->encode_base64url( $record->publicKeyCredentialId );
-		$now           = current_time( 'mysql', true );
-		$label         = wp_html_excerpt( sanitize_text_field( $label ), 80, '' );
+		$lock_token = $this->acquire_registration_lock( $user_id );
 
-		if ( '' === $label ) {
-			$label = __( 'Passkey', 'atshift-freeform-login' );
+		if ( false === $lock_token ) {
+			return new WP_Error( 'atshift_passkey_registration_busy', __( 'Another passkey is being registered. Please try again.', 'atshift-freeform-login' ) );
 		}
 
-		$item = array(
-			'credential_id'   => $credential_id,
-			'label'           => $label,
-			'transports'      => array_values( array_map( 'strval', $record->transports ) ),
-			'attestation_type' => $record->attestationType,
-			'counter'         => (int) $record->counter,
-			'backup_eligible' => null === $record->backupEligible ? null : (bool) $record->backupEligible,
-			'backup_status'   => null === $record->backupStatus ? null : (bool) $record->backupStatus,
-			'uv_initialized'  => null === $record->uvInitialized ? null : (bool) $record->uvInitialized,
-			'record'          => $normalized_record,
-			'created_at'      => $now,
-			'last_used_at'    => '',
-		);
+		try {
+			$credentials   = $this->get_credentials( $user_id );
+			$credential_id = $this->encode_base64url( $record->publicKeyCredentialId );
+			$now           = current_time( 'mysql', true );
+			$label         = wp_html_excerpt( sanitize_text_field( $label ), 80, '' );
 
-		$credentials = array_values(
-			array_filter(
-				$credentials,
-				static function ( $credential ) use ( $credential_id ) {
-					return ! is_array( $credential ) || (string) ( $credential['credential_id'] ?? '' ) !== $credential_id;
-				}
-			)
-		);
-		$credentials[] = $item;
+			if ( '' === $label ) {
+				$label = __( 'Passkey', 'atshift-freeform-login' );
+			}
 
-		update_user_meta( $user_id, self::META_KEY, $credentials );
-		$this->set_index_owner( $credential_id, $user_id );
+			$item = array(
+				'credential_id'   => $credential_id,
+				'label'           => $label,
+				'transports'      => array_values( array_map( 'strval', $record->transports ) ),
+				'attestation_type' => $record->attestationType,
+				'counter'         => (int) $record->counter,
+				'backup_eligible' => null === $record->backupEligible ? null : (bool) $record->backupEligible,
+				'backup_status'   => null === $record->backupStatus ? null : (bool) $record->backupStatus,
+				'uv_initialized'  => null === $record->uvInitialized ? null : (bool) $record->uvInitialized,
+				'record'          => $normalized_record,
+				'created_at'      => $now,
+				'last_used_at'    => '',
+			);
 
-		return $item;
+			$existing_count = count( $credentials );
+			$credentials    = array_values(
+				array_filter(
+					$credentials,
+					static function ( $credential ) use ( $credential_id ) {
+						return ! is_array( $credential ) || (string) ( $credential['credential_id'] ?? '' ) !== $credential_id;
+					}
+				)
+			);
+
+			if ( count( $credentials ) === $existing_count && self::MAX_CREDENTIALS <= $existing_count ) {
+				return new WP_Error(
+					'atshift_passkey_limit_reached',
+					sprintf(
+						/* translators: %d: maximum number of passkeys. */
+						__( 'You can register up to %d passkeys.', 'atshift-freeform-login' ),
+						self::MAX_CREDENTIALS
+					)
+				);
+			}
+
+			$credentials[] = $item;
+			$updated       = update_user_meta( $user_id, self::META_KEY, $credentials );
+
+			if ( false === $updated && $credentials !== get_user_meta( $user_id, self::META_KEY, true ) ) {
+				return new WP_Error( 'atshift_passkey_storage_failed', __( 'The passkey could not be saved.', 'atshift-freeform-login' ) );
+			}
+
+			$this->set_index_owner( $credential_id, $user_id );
+
+			return $item;
+		} finally {
+			$this->release_registration_lock( $user_id, $lock_token );
+		}
 	}
 
 	/**
@@ -263,6 +302,49 @@ class Atshift_Freeform_Login_Passkey_Storage {
 			unset( $index[ $index_key ] );
 			update_option( self::INDEX_KEY, $index, false );
 		}
+	}
+
+	/** @param int $user_id User ID. @return string|false */
+	private function acquire_registration_lock( $user_id ) {
+		$key      = self::REGISTRATION_LOCK_PREFIX . absint( $user_id );
+		$existing = $this->get_registration_lock( $key );
+
+		if ( is_array( $existing ) && ! empty( $existing['expires'] ) && absint( $existing['expires'] ) <= time() ) {
+			$this->delete_registration_lock( $key );
+		}
+
+		$token = wp_generate_uuid4();
+		$value = array(
+			'token'   => $token,
+			'expires' => time() + 30,
+		);
+
+		return $this->add_registration_lock( $key, $value ) ? $token : false;
+	}
+
+	/** @param int $user_id User ID. @param string $token Lock owner token. @return void */
+	private function release_registration_lock( $user_id, $token ) {
+		$key   = self::REGISTRATION_LOCK_PREFIX . absint( $user_id );
+		$value = $this->get_registration_lock( $key );
+
+		if ( is_array( $value ) && isset( $value['token'] ) && hash_equals( (string) $value['token'], (string) $token ) ) {
+			$this->delete_registration_lock( $key );
+		}
+	}
+
+	/** @param string $key Lock key. @return mixed */
+	private function get_registration_lock( $key ) {
+		return is_multisite() ? get_site_option( $key, array() ) : get_option( $key, array() );
+	}
+
+	/** @param string $key Lock key. @param array<string,mixed> $value Lock value. @return bool */
+	private function add_registration_lock( $key, $value ) {
+		return is_multisite() ? add_site_option( $key, $value ) : add_option( $key, $value, '', false );
+	}
+
+	/** @param string $key Lock key. @return bool */
+	private function delete_registration_lock( $key ) {
+		return is_multisite() ? delete_site_option( $key ) : delete_option( $key );
 	}
 
 	/**

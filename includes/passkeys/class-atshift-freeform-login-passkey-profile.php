@@ -169,6 +169,7 @@ class Atshift_Freeform_Login_Passkey_Profile {
 					'defaultName' => __( "This device's passkey", 'atshift-freeform-login' ),
 					'registeredNow' => __( 'Registered: Just now', 'atshift-freeform-login' ),
 					'lastUsedNever' => __( 'Last used: Never', 'atshift-freeform-login' ),
+					'registrationCount' => __( 'Registered: %1$d/%2$d', 'atshift-freeform-login' ),
 				),
 			)
 		);
@@ -216,7 +217,7 @@ class Atshift_Freeform_Login_Passkey_Profile {
 
 		ob_start();
 		?>
-		<div class="<?php echo esc_attr( $classes ); ?>" data-user-id="<?php echo esc_attr( (string) $user_id ); ?>">
+		<div class="<?php echo esc_attr( $classes ); ?>" data-user-id="<?php echo esc_attr( (string) $user_id ); ?>" data-max-passkeys="<?php echo esc_attr( (string) $this->storage->get_max_credentials() ); ?>">
 			<?php if ( self::to_bool( $attributes['heading'] ) ) : ?>
 				<h2 class="atshift-freeform-login-passkey-heading"><?php echo esc_html__( 'Passkeys', 'atshift-freeform-login' ); ?></h2>
 			<?php endif; ?>
@@ -225,7 +226,7 @@ class Atshift_Freeform_Login_Passkey_Profile {
 
 			<div class="atshift-freeform-login-passkey-shortcode-section">
 				<h3><?php echo esc_html__( 'Set passkeys', 'atshift-freeform-login' ); ?></h3>
-				<div><?php $this->render_actions( true, $can_manage ); ?></div>
+				<div><?php $this->render_actions( true, $can_manage, count( $credentials ) ); ?></div>
 			</div>
 			<div class="atshift-freeform-login-passkey-shortcode-section">
 				<h3><?php echo esc_html__( 'Registered passkeys', 'atshift-freeform-login' ); ?></h3>
@@ -250,17 +251,17 @@ class Atshift_Freeform_Login_Passkey_Profile {
 
 		$is_self     = get_current_user_id() === (int) $user->ID;
 		$can_manage  = $is_self && Atshift_Freeform_Login_Passkey_Environment::is_available();
-		$can_delete  = $can_manage || current_user_can( 'edit_user', $user->ID );
+		$can_delete  = Atshift_Freeform_Login_Passkey_Environment::current_user_can_delete_for_user( $user->ID );
 		$credentials = $this->storage->get_credentials( $user->ID );
 		?>
 		<h2 class="atshift-freeform-login-passkey-heading"><?php echo esc_html__( 'Passkeys', 'atshift-freeform-login' ); ?></h2>
-		<div class="atshift-freeform-login-passkeys" data-user-id="<?php echo esc_attr( (string) $user->ID ); ?>">
+		<div class="atshift-freeform-login-passkeys" data-user-id="<?php echo esc_attr( (string) $user->ID ); ?>" data-max-passkeys="<?php echo esc_attr( (string) $this->storage->get_max_credentials() ); ?>">
 			<?php $this->render_intro( $can_manage ); ?>
 
 			<table class="form-table atshift-freeform-login-passkey-table" role="presentation">
 				<tr>
 					<th scope="row"><?php echo esc_html__( 'Set passkeys', 'atshift-freeform-login' ); ?></th>
-					<td><?php $this->render_actions( $is_self, $can_manage ); ?></td>
+					<td><?php $this->render_actions( $is_self, $can_manage, count( $credentials ) ); ?></td>
 				</tr>
 				<tr>
 					<th scope="row"><?php echo esc_html__( 'Registered passkeys', 'atshift-freeform-login' ); ?></th>
@@ -290,13 +291,13 @@ class Atshift_Freeform_Login_Passkey_Profile {
 		$this->upf_rendered_users[ $user_id ] = true;
 		$is_self     = get_current_user_id() === $user_id;
 		$can_manage  = $is_self && Atshift_Freeform_Login_Passkey_Environment::is_available();
-		$can_delete  = $can_manage || current_user_can( 'edit_user', $user_id );
+		$can_delete  = Atshift_Freeform_Login_Passkey_Environment::current_user_can_delete_for_user( $user_id );
 		$credentials = $this->storage->get_credentials( $user_id );
 		?>
-		<div class="atshift-freeform-login-passkeys atshift-freeform-login-passkeys-upf" data-user-id="<?php echo esc_attr( (string) $user_id ); ?>">
+		<div class="atshift-freeform-login-passkeys atshift-freeform-login-passkeys-upf" data-user-id="<?php echo esc_attr( (string) $user_id ); ?>" data-max-passkeys="<?php echo esc_attr( (string) $this->storage->get_max_credentials() ); ?>">
 			<?php $this->render_intro( $can_manage ); ?>
 			<div class="atshift-freeform-login-passkey-upf-actions">
-				<?php $this->render_actions( $is_self, $can_manage ); ?>
+				<?php $this->render_actions( $is_self, $can_manage, count( $credentials ) ); ?>
 			</div>
 			<div class="atshift-freeform-login-passkey-upf-history">
 				<h3><?php echo esc_html__( 'Registered passkeys', 'atshift-freeform-login' ); ?></h3>
@@ -326,9 +327,25 @@ class Atshift_Freeform_Login_Passkey_Profile {
 	 *
 	 * @param bool $is_self Whether this is the current user's profile.
 	 * @param bool $can_manage Whether registration is available.
+	 * @param int  $credential_count Number of registered credentials.
 	 * @return void
 	 */
-	private function render_actions( $is_self, $can_manage ) {
+	private function render_actions( $is_self, $can_manage, $credential_count = 0 ) {
+		$maximum = $this->storage->get_max_credentials();
+		?>
+		<p class="description atshift-freeform-login-passkey-count">
+			<?php
+			echo esc_html(
+				sprintf(
+					/* translators: 1: registered passkey count, 2: maximum passkey count. */
+					__( 'Registered: %1$d/%2$d', 'atshift-freeform-login' ),
+					absint( $credential_count ),
+					$maximum
+				)
+			);
+			?>
+		</p>
+		<?php
 		if ( ! Atshift_Freeform_Login_Passkey_Environment::is_available() ) :
 			?>
 			<p class="description"><?php echo esc_html( Atshift_Freeform_Login_Passkey_Environment::unavailable_message() ); ?></p>
@@ -336,7 +353,7 @@ class Atshift_Freeform_Login_Passkey_Profile {
 		elseif ( $can_manage ) :
 			?>
 			<p class="atshift-freeform-login-passkey-actions">
-				<button type="button" class="button button-secondary atshift-freeform-login-passkey-add">
+				<button type="button" class="button button-secondary atshift-freeform-login-passkey-add" <?php disabled( $maximum <= $credential_count ); ?>>
 					<?php echo esc_html__( 'Add passkey', 'atshift-freeform-login' ); ?>
 				</button>
 			</p>

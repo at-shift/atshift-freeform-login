@@ -4,7 +4,7 @@ Tags: login, custom login, login form, passkey, webauthn
 Requires at least: 6.5
 Tested up to: 7.1
 Requires PHP: 7.4
-Stable tag: 2.3
+Stable tag: 2.3.1
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -16,7 +16,7 @@ atshift Freeform Login adds server-verified passkey registration and login to Wo
 
 Passkeys let users sign in with a device's biometric authentication, PIN, or security key instead of typing a username and password. Because each credential is created for this site, passkeys reduce the risks of phishing and password reuse.
 
-Users can register, name, and remove multiple passkeys from the standard WordPress profile screen. Synced passkeys may also be available on other devices using the same storage account. After the first passkey is registered on the site, a passkey login button appears on the WordPress login screen and in the `[atshift_login]` shortcode.
+Users can register, name, and remove up to five passkeys from the standard WordPress profile screen. The current registration count is shown from 0/5 through 5/5. Synced passkeys may also be available on other devices using the same storage account. After the first passkey is registered on the site, a passkey login button appears on the WordPress login screen and in the `[atshift_login]` shortcode.
 
 If WP-Members or another plugin already provides the username and password form, `[atshift_passkey_login]` can add only the passkey button beside it. Username and password login remains available as a fallback, so users should keep a long, unique password and store it in a password manager.
 
@@ -89,6 +89,10 @@ The optional Pro add-on extends the free plugin with custom logo images, precise
 4. The visual design editor provides grouped controls and responsive previews before login-screen changes are enabled.
 
 == Changelog ==
+
+= 2.3.1 =
+* Limited each account to five registered passkeys and displayed the current count from 0/5 through 5/5.
+* Hardened passkey registration limits, profile management permissions, and multisite handling.
 
 = 2.3 =
 * Added the `[atshift_passkey_profile]` shortcode for placing current-user passkey registration and management controls on frontend profile pages.

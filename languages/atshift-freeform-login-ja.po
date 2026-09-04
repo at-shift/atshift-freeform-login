@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: atshift Freeform Login 2.3\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-08-14 11:50+0900\n"
-"PO-Revision-Date: 2026-08-14 11:50+0900\n"
+"PO-Revision-Date: 2026-08-24 21:47+0900\n"
 "Last-Translator: @shift\n"
 "Language-Team: Japanese\n"
 "Language: ja\n"
@@ -11,14 +11,15 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Poedit 3.9\n"
 
 #: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:511
 msgid "390 × 844 (Standard)"
-msgstr "390 × 844（標準）"
+msgstr "390 × 844 (標準)"
 
 #: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:512
 msgid "844 × 390 (Landscape)"
-msgstr "844 × 390（横向き）"
+msgstr "844 × 390 (横向き)"
 
 #: includes/passkeys/class-atshift-freeform-login-passkey-profile.php:141
 msgid "Add passkey"
@@ -154,7 +155,7 @@ msgstr "表示サイズ"
 
 #: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:398
 msgid "Displayed in a 4:1 frame. Tall images are cropped from the center."
-msgstr "4:1の枠で表示します。高さが合わない画像は中央を基準に切り取られます。"
+msgstr "4:1 の枠で表示します。高さが合わない画像は中央を基準に切り取られます。"
 
 #: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:389
 msgid "Do not show"
@@ -202,8 +203,8 @@ msgid ""
 "height are cropped from the center. Pro preserves wide and tall image ratios "
 "and lets you adjust the logo width."
 msgstr ""
-"無料版では横長ロゴ画像を4:1の固定枠で表示し、高さが合わない画像は中央を基準に"
-"切り取ります。Proでは横長・縦長画像の比率を保ち、ロゴ幅を調整できます。"
+"無料版では横長ロゴ画像を 4:1 の固定枠で表示し、高さが合わない画像は中央を基準"
+"に切り取ります。Pro では横長・縦長画像の比率を保ち、ロゴ幅を調整できます。"
 
 #: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:612
 msgid ""
@@ -211,8 +212,8 @@ msgid ""
 "states. Pro lets you choose each interaction color and hide the language "
 "selector on the login screen."
 msgstr ""
-"無料版ではリンクとボタンのホバー時・押下時の色を自動調整します。Proでは各状態"
-"の色を指定し、ログイン画面の言語選択を非表示にできます。"
+"無料版ではリンクとボタンのホバー時・押下時の色を自動調整します。Pro では各状"
+"態の色を指定し、ログイン画面の言語選択を非表示にできます。"
 
 #: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:361
 #: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:369
@@ -238,8 +239,8 @@ msgid ""
 "Jetpack SSO currently redirects the login screen directly to WordPress.com. "
 "This login screen design is not shown during that redirect."
 msgstr ""
-"Jetpack SSOは現在、ログイン画面からWordPress.comへ直接転送する設定です。転送"
-"中はこのログイン画面デザインは表示されません。"
+"Jetpack SSO は現在、ログイン画面から WordPress.com へ直接転送する設定です。転"
+"送中はこのログイン画面デザインは表示されません。"
 
 #: atshift-freeform-login/includes/class-atshift-freeform-login-jetpack.php:150
 msgid ""
@@ -247,17 +248,17 @@ msgid ""
 "password fields are hidden, and the WordPress.com login area uses this "
 "design."
 msgstr ""
-"Jetpack SSOはWordPress.comログインのみを使用する設定です。ユーザー名とパス"
-"ワードの入力欄は非表示になり、WordPress.comログインのエリアにこのデザインが適"
-"用されます。"
+"Jetpack SSO は WordPress.com ログインのみを使用する設定です。ユーザー名とパス"
+"ワードの入力欄は非表示になり、WordPress.com ログインのエリアにこのデザインが"
+"適用されます。"
 
 #: atshift-freeform-login/includes/class-atshift-freeform-login-jetpack.php:153
 msgid ""
 "Jetpack SSO was detected. The local login and WordPress.com login areas both "
 "use this design."
 msgstr ""
-"Jetpack SSOを検出しました。通常のログインとWordPress.comログインの両方にこの"
-"デザインが適用されます。"
+"Jetpack SSO を検出しました。通常のログインと WordPress.com ログインの両方にこ"
+"のデザインが適用されます。"
 
 #: atshift-freeform-login/includes/class-atshift-freeform-login-jetpack.php:160
 msgid "Jetpack SSO:"
@@ -335,7 +336,7 @@ msgstr "ログイン"
 #: atshift-freeform-login/includes/class-atshift-freeform-login-jetpack.php:119
 #: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:527
 msgid "Log in with WordPress.com"
-msgstr "WordPress.comでログイン"
+msgstr "WordPress.com でログイン"
 
 #: includes/passkeys/class-atshift-freeform-login-passkey-login.php:120
 msgid "Log in with a passkey"
@@ -439,17 +440,17 @@ msgstr "このサーバーではパスキーを利用できません。"
 
 #: includes/passkeys/class-atshift-freeform-login-passkey-environment.php:70
 msgid "Passkeys require HTTPS, except on localhost during development."
-msgstr "パスキーにはHTTPSが必要です。開発用localhostは例外です。"
+msgstr "パスキーには HTTPS が必要です。開発用 localhost は例外です。"
 
 #. translators: %s: required PHP version.
 #: includes/passkeys/class-atshift-freeform-login-passkey-environment.php:56
 #, php-format
 msgid "Passkeys require PHP %s or newer."
-msgstr "パスキーにはPHP %s以降が必要です。"
+msgstr "パスキーには PHP %s 以降が必要です。"
 
 #: includes/passkeys/class-atshift-freeform-login-passkey-environment.php:62
 msgid "Passkeys require the PHP JSON and OpenSSL extensions."
-msgstr "パスキーにはPHPのJSONおよびOpenSSL拡張が必要です。"
+msgstr "パスキーには PHP の JSON および OpenSSL 拡張が必要です。"
 
 #: atshift-freeform-login/includes/class-atshift-freeform-login-shortcode.php:152
 #: atshift-freeform-login/includes/class-atshift-freeform-login-screen.php:55
@@ -489,17 +490,23 @@ msgstr "プライバシーポリシー"
 
 #: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:660
 msgid "Pro unlocks the intermediate positions."
-msgstr "Proでは中間位置も選択できます。"
+msgstr "Pro では中間位置も選択できます。"
 
 #. translators: %s: passkey registration date.
 #: includes/passkeys/class-atshift-freeform-login-passkey-profile.php:118
 #, php-format
 msgid "Registered: %s"
-msgstr "登録日: %s"
+msgstr "登録日:  %s"
 
 #: includes/passkeys/class-atshift-freeform-login-passkey-profile.php:79
 msgid "Registered: Just now"
 msgstr "登録日: たった今"
+
+#. translators: 1: registered passkey count, 2: maximum passkey count.
+#: includes/passkeys/class-atshift-freeform-login-passkey-profile.php:341
+#, php-format
+msgid "Registered: %1$d/%2$d"
+msgstr "登録数：%1$d/%2$d件"
 
 #: includes/passkeys/class-atshift-freeform-login-passkey-profile.php:126
 msgid "Registered passkeys"
@@ -676,7 +683,7 @@ msgstr "このブラウザはパスキーに対応していません。"
 
 #: includes/passkeys/class-atshift-freeform-login-passkey-rest.php:278
 msgid "This site requires WordPress.com login."
-msgstr "このサイトではWordPress.comログインが必要です。"
+msgstr "このサイトでは WordPress.com ログインが必要です。"
 
 #: includes/passkeys/class-atshift-freeform-login-passkey-rest.php:282
 msgid "Too many passkey requests. Please wait and try again."
@@ -684,7 +691,7 @@ msgstr "パスキーのリクエストが多すぎます。しばらく待って
 
 #: atshift-freeform-login/includes/class-atshift-freeform-login.php:84
 msgid "Upgrade to Pro"
-msgstr "Pro版へアップグレード"
+msgstr "Pro 版へアップグレード"
 
 #: includes/class-atshift-freeform-login.php
 msgid "Translate"
@@ -695,18 +702,18 @@ msgid ""
 "Upgrade to Pro to add a glass panel, rectangle, vertical band, or horizontal "
 "band behind the form, and adjust opacity, corner radius, and border styling."
 msgstr ""
-"Proでは、フォームの背面にグラス、矩形、縦帯、横帯を追加し、透明度、角丸、枠線"
-"を調整できます。"
+"Pro では、フォームの背面にグラス、矩形、縦帯、横帯を追加し、透明度、角丸、枠"
+"線を調整できます。"
 
 #: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:616
 msgid ""
 "Upgrade to Pro to adjust shadow position, blur, spread, color, and opacity."
-msgstr "Proでは、シャドウの位置、ぼかし、広がり、色、透明度を調整できます。"
+msgstr "Pro では、シャドウの位置、ぼかし、広がり、色、透明度を調整できます。"
 
 #: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:604
 msgid ""
 "Upgrade to Pro to fine-tune the horizontal and vertical position in pixels."
-msgstr "Proでは、水平・垂直方向の位置をピクセル単位で微調整できます。"
+msgstr "Pro では、水平・垂直方向の位置をピクセル単位で微調整できます。"
 
 #: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:453
 msgid "Use placeholders"
@@ -763,7 +770,7 @@ msgid ""
 "use regularly. Passkeys synced to the same storage account can be used on "
 "your other devices, and you can add more than one when needed."
 msgstr ""
-"IDやパスワードを入力する従来の方法ではなく、使用する端末の生体認証などを活用"
+"ID やパスワードを入力する従来の方法ではなく、使用する端末の生体認証などを活用"
 "してログインする新しい仕組みです。偽サイトにパスワードを入力してしまう危険"
 "や、パスワードの使い回しによる被害を減らせます。まずは普段使う端末で登録して"
 "ください。同じ保存先アカウントへ同期されるパスキーはほかの端末でも利用でき、"
@@ -772,6 +779,21 @@ msgstr ""
 #: includes/passkeys/class-atshift-freeform-login-passkey-rest.php:123
 msgid "You can only register passkeys for your own account."
 msgstr "パスキーは自分のアカウントにのみ登録できます。"
+
+#: includes/passkeys/class-atshift-freeform-login-passkey-storage.php:105
+msgid "Another passkey is being registered. Please try again."
+msgstr "別のパスキーを登録中です。しばらくしてから、もう一度お試しください。"
+
+#: includes/passkeys/class-atshift-freeform-login-passkey-storage.php:166
+msgid "The passkey could not be saved."
+msgstr "パスキーを保存できませんでした。"
+
+#. translators: %d: maximum number of passkeys.
+#: includes/passkeys/class-atshift-freeform-login-passkey-rest.php:132
+#: includes/passkeys/class-atshift-freeform-login-passkey-storage.php:151
+#, php-format
+msgid "You can register up to %d passkeys."
+msgstr "パスキーは最大 %d件まで登録できます。"
 
 #: includes/passkeys/class-atshift-freeform-login-passkey-rest.php:139
 msgid "You cannot delete this passkey."

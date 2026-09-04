@@ -19,6 +19,38 @@
     }
   };
 
+  const readRegisteredCount = (payload) => {
+    const source = payload && payload.data && payload.data.registeredCount !== undefined
+      ? payload.data
+      : payload;
+    const count = source ? Number(source.registeredCount) : NaN;
+
+    return Number.isFinite(count) ? count : null;
+  };
+
+  const refreshCredentialCount = (root, countOverride) => {
+    const domCount = root.querySelectorAll('.atshift-freeform-login-passkey-list > li').length;
+    const override = countOverride === undefined || countOverride === null ? NaN : Number(countOverride);
+    const tracked = root.dataset.passkeyCount === undefined ? NaN : Number(root.dataset.passkeyCount);
+    const count = Number.isFinite(override) ? override : (Number.isFinite(tracked) ? tracked : domCount);
+    const maximumValue = Number(root.dataset.maxPasskeys || 5);
+    const maximum = Number.isFinite(maximumValue) && maximumValue > 0 ? maximumValue : 5;
+    const counter = root.querySelector('.atshift-freeform-login-passkey-count');
+    const addButton = root.querySelector('.atshift-freeform-login-passkey-add');
+
+    root.dataset.passkeyCount = String(Math.max(0, count));
+
+    if (counter) {
+      counter.textContent = String(config.messages.registrationCount || '%1$d/%2$d')
+        .replace('%1$d', String(count))
+        .replace('%2$d', String(maximum));
+    }
+
+    if (addButton && addButton.getAttribute('aria-busy') !== 'true') {
+      addButton.disabled = count >= maximum;
+    }
+  };
+
   const request = async (path, options) => {
     const response = await fetch(config.restUrl + path, {
       credentials: 'same-origin',
@@ -31,7 +63,9 @@
     const data = await response.json().catch(() => ({}));
 
     if (!response.ok) {
-      throw new Error(data.message || config.messages.failed);
+      const error = new Error(data.message || config.messages.failed);
+      error.responseData = data;
+      throw error;
     }
 
     return data;
@@ -110,6 +144,14 @@
       empty.remove();
     }
 
+    const existing = Array.from(list.children).find((item) => (
+      item.dataset.credentialId === credential.credential_id
+    ));
+
+    if (existing) {
+      existing.remove();
+    }
+
     const item = document.createElement('li');
     item.dataset.credentialId = credential.credential_id;
     item.innerHTML = `
@@ -162,18 +204,26 @@
     });
 
     appendCredential(root, verified.credential);
+    const registeredCount = readRegisteredCount(verified);
+    refreshCredentialCount(
+      root,
+      registeredCount === null
+        ? root.querySelectorAll('.atshift-freeform-login-passkey-list > li').length
+        : registeredCount
+    );
     setStatus(root, config.messages.registered);
   };
 
   const deletePasskey = async (root, button) => {
     const credentialId = button.dataset.credentialId;
     const userId = Number(root.dataset.userId || config.currentUserId);
+    const previousCount = Number(root.dataset.passkeyCount);
 
     if (!window.confirm(config.messages.confirmDelete)) {
       return;
     }
 
-    await request(`${credentialId}?userId=${encodeURIComponent(userId)}`, {
+    const deleted = await request(`${credentialId}?userId=${encodeURIComponent(userId)}`, {
       method: 'DELETE'
     });
 
@@ -189,6 +239,13 @@
       empty.textContent = config.messages.none;
       list.insertAdjacentElement('afterend', empty);
     }
+    const registeredCount = readRegisteredCount(deleted);
+    refreshCredentialCount(
+      root,
+      registeredCount === null && Number.isFinite(previousCount)
+        ? Math.max(0, previousCount - 1)
+        : registeredCount
+    );
     setStatus(root, config.messages.deleted);
   };
 
@@ -205,6 +262,7 @@
 
     const activeButton = addButton || deleteButton;
     activeButton.disabled = true;
+    activeButton.setAttribute('aria-busy', 'true');
 
     try {
       if (addButton) {
@@ -213,9 +271,21 @@
         await deletePasskey(root, deleteButton);
       }
     } catch (error) {
+      const registeredCount = readRegisteredCount(error.responseData);
+
+      if (registeredCount !== null) {
+        refreshCredentialCount(root, registeredCount);
+      }
       setStatus(root, error.message || config.messages.failed);
     } finally {
+      activeButton.removeAttribute('aria-busy');
       activeButton.disabled = false;
+      refreshCredentialCount(root);
     }
+  });
+
+  document.querySelectorAll('.atshift-freeform-login-passkeys').forEach((root) => {
+    const initialCount = root.querySelectorAll('.atshift-freeform-login-passkey-list > li').length;
+    refreshCredentialCount(root, initialCount);
   });
 }());

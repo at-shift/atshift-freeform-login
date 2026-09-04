@@ -35,7 +35,7 @@ The WordPress profile explains how passkeys work, provides the registration acti
 
 ![A registered passkey with its device name, registration date, last-used date, and delete action](assets/screenshots/registered-passkey.png)
 
-Users can register multiple named passkeys and review each credential's registration and last-used dates before removing one that is no longer needed.
+Users can register up to five named passkeys and review the visible registration count, each credential's registration and last-used dates, and remove one that is no longer needed.
 
 ### Design editor
 
@@ -54,7 +54,7 @@ The visual editor combines grouped design controls with desktop, tablet, and mob
 - Standalone passkey button for existing login forms with `[atshift_passkey_login]`
 - Current-user passkey management for frontend profile pages with `[atshift_passkey_profile]`
 - Jetpack SSO and WordPress.com authentication-flow compatibility
-- Multiple named passkeys with registration and last-used dates
+- Up to five named passkeys with a visible registration count and registration and last-used dates
 - Passkey login on the WordPress login screen and shortcode form
 - Optional Passkeys field placement with atshift User Profile Fields
 - Bundled translations for 15 supported languages
@@ -94,7 +94,7 @@ On a supported server, the registration flow is:
 2. Select **Add passkey** and approve the prompt shown by the browser or operating system.
 3. Give the passkey a recognizable name and confirm it appears in the registered passkeys list.
 
-The device decides whether to use biometrics, a device PIN, a security key, or a QR-code handoff to another device. Users can register more than one passkey. A passkey synchronized through the same storage account may already be available on other devices; otherwise, sign in normally on the additional device and register another passkey there.
+The device decides whether to use biometrics, a device PIN, a security key, or a QR-code handoff to another device. Each account can register up to five passkeys, and the profile screen shows the current count from 0/5 through 5/5. A passkey synchronized through the same storage account may already be available on other devices; otherwise, sign in normally on the additional device and register another passkey there.
 
 After the first passkey is registered on the site, a passkey login button appears on the WordPress login screen and in the `[atshift_login]` shortcode. Password login remains available as a fallback, so each account should still use a long, unique password stored in a password manager.
 

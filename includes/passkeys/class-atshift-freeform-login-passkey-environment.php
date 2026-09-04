@@ -45,6 +45,33 @@ class Atshift_Freeform_Login_Passkey_Environment {
 	}
 
 	/**
+	 * Determine whether the current user may delete another account's passkey.
+	 *
+	 * Passkeys are stored in network-global user meta on multisite, so site-level
+	 * user administration is not sufficient for cross-account deletion there.
+	 *
+	 * @param int $user_id Credential owner ID.
+	 * @return bool
+	 */
+	public static function current_user_can_delete_for_user( $user_id ) {
+		$user_id = absint( $user_id );
+
+		if ( ! is_user_logged_in() || 1 > $user_id ) {
+			return false;
+		}
+
+		if ( get_current_user_id() === $user_id ) {
+			return true;
+		}
+
+		if ( is_multisite() ) {
+			return is_super_admin() && current_user_can( 'manage_network_users' );
+		}
+
+		return current_user_can( 'edit_user', $user_id );
+	}
+
+	/**
 	 * Return the user-facing reason passkeys are unavailable.
 	 *
 	 * @return string
