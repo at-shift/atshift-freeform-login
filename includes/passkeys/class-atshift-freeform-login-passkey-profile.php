@@ -169,7 +169,9 @@ class Atshift_Freeform_Login_Passkey_Profile {
 					'defaultName' => __( "This device's passkey", 'atshift-freeform-login' ),
 					'registeredNow' => __( 'Registered: Just now', 'atshift-freeform-login' ),
 					'lastUsedNever' => __( 'Last used: Never', 'atshift-freeform-login' ),
-					'registrationCount' => __( 'Registered: %1$d/%2$d', 'atshift-freeform-login' ),
+					'registrationCount' =>
+						/* translators: 1: registered passkey count, 2: maximum passkey count. */
+						__( 'Registered: %1$d/%2$d', 'atshift-freeform-login' ),
 				),
 			)
 		);
@@ -465,6 +467,7 @@ class Atshift_Freeform_Login_Passkey_Profile {
 	 */
 	private static function prevent_page_cache() {
 		if ( ! defined( 'DONOTCACHEPAGE' ) ) {
+			// phpcs:ignore WordPress.NamingConventions.PrefixAllGlobals.NonPrefixedConstantFound -- WordPress cache-control contract.
 			define( 'DONOTCACHEPAGE', true );
 		}
 
