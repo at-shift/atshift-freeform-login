@@ -3,9 +3,9 @@
   <h1>atshift Freeform Login</h1>
   <p><strong>Add server-verified passkey login and design a polished WordPress login experience.</strong></p>
   <p>
-    <a href="https://upf.at-shift.net/en/freeform-login/">Official Website</a> ·
+    <a href="https://plugins.at-shift.net/en/freeform-login/">Official Website</a> ·
     <a href="https://wordpress.org/plugins/atshift-freeform-login/">WordPress.org</a> ·
-    <a href="https://upf.at-shift.net/freeform-login/">日本語</a>
+    <a href="https://plugins.at-shift.net/freeform-login/">日本語</a>
   </p>
 </div>
 
@@ -141,7 +141,7 @@ To let a signed-in user register and manage passkeys from a profile page created
 
 The shortcode outputs the explanation, Add passkey action, registered-passkey history, and delete controls for the current user. It outputs nothing for logged-out visitors and marks the page as non-cacheable and `noindex, nofollow`. The membership or profile plugin remains responsible for requiring a login for the whole page and providing its preferred login flow. Use `heading="false"` when the surrounding profile page already supplies a Passkeys heading, and use `class` to add sanitized custom CSS classes.
 
-See the [Shortcode Guide](https://upf.at-shift.net/en/freeform-login/shortcodes/) for every attribute and integration examples. A [Japanese guide](https://upf.at-shift.net/freeform-login/shortcodes/) is also available.
+See the [Shortcode Guide](https://plugins.at-shift.net/en/freeform-login/shortcodes/) for every attribute and integration examples. A [Japanese guide](https://plugins.at-shift.net/freeform-login/shortcodes/) is also available.
 
 ## Pro Add-on
 
@@ -149,15 +149,15 @@ The optional Pro add-on extends the design controls provided by the free plugin.
 
 Pro adds custom logo images, precise position offsets, transparency, borders, corner radius, and detailed shadow controls.
 
-- Pro add-on: [Upgrade to Pro](https://upf.at-shift.net/en/freeform-login/#pricing)
-- Japanese product page: [Freeform Login](https://upf.at-shift.net/freeform-login/)
+- Pro add-on: [Upgrade to Pro](https://plugins.at-shift.net/en/freeform-login/#pricing)
+- Japanese product page: [Freeform Login](https://plugins.at-shift.net/freeform-login/)
 
 ## Documentation
 
 | Topic | English | 日本語 |
 | --- | --- | --- |
-| Product guide | [Freeform Login](https://upf.at-shift.net/en/freeform-login/) | [Freeform Login](https://upf.at-shift.net/freeform-login/) |
-| Shortcodes | [Shortcode guide](https://upf.at-shift.net/en/freeform-login/shortcodes/) | [ショートコードガイド](https://upf.at-shift.net/freeform-login/shortcodes/) |
+| Product guide | [Freeform Login](https://plugins.at-shift.net/en/freeform-login/) | [Freeform Login](https://plugins.at-shift.net/freeform-login/) |
+| Shortcodes | [Shortcode guide](https://plugins.at-shift.net/en/freeform-login/shortcodes/) | [ショートコードガイド](https://plugins.at-shift.net/freeform-login/shortcodes/) |
 | WordPress.org | [Plugin directory](https://wordpress.org/plugins/atshift-freeform-login/) | [Plugin directory](https://ja.wordpress.org/plugins/atshift-freeform-login/) |
 | Releases | [GitHub Releases](https://github.com/at-shift/atshift-freeform-login/releases) | [GitHub Releases](https://github.com/at-shift/atshift-freeform-login/releases) |
 

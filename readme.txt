@@ -36,7 +36,7 @@ English is provided by the plugin source. Bundled translations are included for 
 
 == Links ==
 
-* Official website: [upf.at-shift.net/en/freeform-login](https://upf.at-shift.net/en/freeform-login/)
+* Official website: [plugins.at-shift.net/en/freeform-login](https://plugins.at-shift.net/en/freeform-login/)
 
 == Shortcodes ==
 
@@ -67,13 +67,13 @@ Shortcode examples:
 * Passkey button with a persistent login cookie: `[atshift_passkey_login remember="true"]`
 * Passkey management without a duplicate heading: `[atshift_passkey_profile heading="false"]`
 
-For every attribute and examples of passkey-only login and frontend-profile integration, see the [Shortcode Guide](https://upf.at-shift.net/en/freeform-login/shortcodes/).
+For every attribute and examples of passkey-only login and frontend-profile integration, see the [Shortcode Guide](https://plugins.at-shift.net/en/freeform-login/shortcodes/).
 
 == Pro Add-on ==
 
 The optional Pro add-on extends the free plugin with custom logo images, precise position offsets, transparency, borders, corner radius, and detailed shadow controls. The free plugin remains usable without an add-on.
 
-* Pro add-on: [Upgrade to Pro](https://upf.at-shift.net/en/freeform-login/#pricing)
+* Pro add-on: [Upgrade to Pro](https://plugins.at-shift.net/en/freeform-login/#pricing)
 
 == Related Projects ==
 
