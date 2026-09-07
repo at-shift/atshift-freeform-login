@@ -83,12 +83,12 @@ final class Atshift_Freeform_Login {
 		}
 
 		$upgrade_url = 0 === strpos( determine_locale(), 'ja' )
-			? 'https://upf.at-shift.net/freeform-login/#pricing'
-			: 'https://upf.at-shift.net/en/freeform-login/#pricing';
+			? 'https://plugins.at-shift.net/freeform-login/#pricing'
+			: 'https://plugins.at-shift.net/en/freeform-login/#pricing';
 		$pro_link    = sprintf(
 			'<a href="%1$s" target="_blank" rel="noopener noreferrer"><strong>%2$s</strong></a>',
 			esc_url( $upgrade_url ),
-			esc_html__( 'Upgrade to Pro', 'atshift-freeform-login' )
+			esc_html__( 'Purchase Pro add-on', 'atshift-freeform-login' )
 		);
 
 		array_splice( $links, 1, 0, array( $pro_link ) );
@@ -136,11 +136,10 @@ final class Atshift_Freeform_Login {
 			return $original_links;
 		}
 
-		$details_url   = 'https://wordpress.org/plugins/atshift-freeform-login/';
-		$translate_url = 'https://translate.wordpress.org/projects/wp-plugins/atshift-freeform-login/';
-		$upgrade_url   = 0 === strpos( determine_locale(), 'ja' )
-			? 'https://upf.at-shift.net/freeform-login/#pricing'
-			: 'https://upf.at-shift.net/en/freeform-login/#pricing';
+		$details_url = 'https://wordpress.org/plugins/atshift-freeform-login/';
+		$upgrade_url = 0 === strpos( determine_locale(), 'ja' )
+			? 'https://plugins.at-shift.net/freeform-login/#pricing'
+			: 'https://plugins.at-shift.net/en/freeform-login/#pricing';
 		$links         = array(
 			 sprintf(
 				/* translators: %s: Plugin version. */
@@ -150,7 +149,7 @@ final class Atshift_Freeform_Login {
 			 sprintf(
 				/* translators: %s: Plugin author. */
 				__( 'By %s' ), // phpcs:ignore WordPress.WP.I18n.MissingArgDomain -- Reuse the WordPress core plugin-row translation.
-				'<a href="' . esc_url( 'https://cfs.at-shift.net/' ) . '" target="_blank" rel="noopener noreferrer">@shift</a>'
+				'<a href="' . esc_url( 'https://plugins.at-shift.net/' ) . '" target="_blank" rel="noopener noreferrer">@shift</a>'
 			),
 			sprintf(
 				'<a href="%1$s" target="_blank" rel="noopener noreferrer">%2$s</a>',
@@ -158,18 +157,13 @@ final class Atshift_Freeform_Login {
 				// phpcs:ignore WordPress.WP.I18n.MissingArgDomain -- Reuse the WordPress core plugin-row translation.
 				esc_html__( 'View details' )
 			),
-			sprintf(
-				'<a href="%1$s" target="_blank" rel="noopener noreferrer">%2$s</a>',
-				esc_url( $translate_url ),
-				esc_html__( 'Translate', 'atshift-freeform-login' )
-			),
 		);
 
 		if ( ! $this->is_pro_installed() ) {
 			$links[] = sprintf(
 				'<a href="%1$s" target="_blank" rel="noopener noreferrer">%2$s</a>',
 				esc_url( $upgrade_url ),
-				esc_html__( 'Upgrade to Pro', 'atshift-freeform-login' )
+				esc_html__( 'Purchase Pro add-on', 'atshift-freeform-login' )
 			);
 		}
 

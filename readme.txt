@@ -4,7 +4,7 @@ Tags: login, custom login, login form, passkey, webauthn
 Requires at least: 6.5
 Tested up to: 7.1
 Requires PHP: 7.4
-Stable tag: 2.3.1
+Stable tag: 2.3.2
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -73,7 +73,7 @@ For every attribute and examples of passkey-only login and frontend-profile inte
 
 The optional Pro add-on extends the free plugin with custom logo images, precise position offsets, transparency, borders, corner radius, and detailed shadow controls. The free plugin remains usable without an add-on.
 
-* Pro add-on: [Upgrade to Pro](https://plugins.at-shift.net/en/freeform-login/#pricing)
+* Pro add-on: [Purchase Pro add-on](https://plugins.at-shift.net/en/freeform-login/#pricing)
 
 == Related Projects ==
 
@@ -89,6 +89,10 @@ The optional Pro add-on extends the free plugin with custom logo images, precise
 4. The visual design editor provides grouped controls and responsive previews before login-screen changes are enabled.
 
 == Changelog ==
+
+= 2.3.2 =
+* Updated the official product, author, and Pro add-on links following the website migration.
+* Refined the Plugins screen purchase labels and removed its translation-project link.
 
 = 2.3.1 =
 * Limited each account to five registered passkeys and displayed the current count from 0/5 through 5/5.

@@ -5,7 +5,7 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: atshift Freeform Login 2.3\n"
+"Project-Id-Version: atshift Freeform Login 2.3.2\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-08-14 11:50+0900\n"
 "PO-Revision-Date: 2026-08-24 00:00+0900\n"
@@ -669,12 +669,8 @@ msgid "Too many passkey requests. Please wait and try again."
 msgstr "Troppe richieste di passkey. Attendi e riprova."
 
 #: atshift-freeform-login/includes/class-atshift-freeform-login.php:84
-msgid "Upgrade to Pro"
-msgstr "Passa a Pro"
-
-#: includes/class-atshift-freeform-login.php
-msgid "Translate"
-msgstr "Traduci"
+msgid "Purchase Pro add-on"
+msgstr "Acquista l'add-on Pro"
 
 #: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:608
 msgid ""

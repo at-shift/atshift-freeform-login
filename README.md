@@ -149,7 +149,7 @@ The optional Pro add-on extends the design controls provided by the free plugin.
 
 Pro adds custom logo images, precise position offsets, transparency, borders, corner radius, and detailed shadow controls.
 
-- Pro add-on: [Upgrade to Pro](https://plugins.at-shift.net/en/freeform-login/#pricing)
+- Pro add-on: [Purchase Pro add-on](https://plugins.at-shift.net/en/freeform-login/#pricing)
 - Japanese product page: [Freeform Login](https://plugins.at-shift.net/freeform-login/)
 
 ## Documentation

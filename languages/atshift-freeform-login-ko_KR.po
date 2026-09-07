@@ -4,7 +4,7 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: atshift-freeform-login 2.3\n"
+"Project-Id-Version: atshift-freeform-login 2.3.2\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-08-14 11:50+0900\n"
 "PO-Revision-Date: 2026-08-24 00:00+0900\n"
@@ -645,12 +645,8 @@ msgid "Too many passkey requests. Please wait and try again."
 msgstr "패스키 요청이 너무 많습니다. 잠시 기다린 후 다시 시도해 주세요."
 
 #: atshift-freeform-login/includes/class-atshift-freeform-login.php:84
-msgid "Upgrade to Pro"
-msgstr "Pro로 업그레이드"
-
-#: includes/class-atshift-freeform-login.php
-msgid "Translate"
-msgstr "번역"
+msgid "Purchase Pro add-on"
+msgstr "Pro 애드온 구매"
 
 #: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:608
 msgid "Upgrade to Pro to add a glass panel, rectangle, vertical band, or horizontal band behind the form, and adjust opacity, corner radius, and border styling."
