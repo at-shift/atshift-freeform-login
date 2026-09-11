@@ -4,10 +4,10 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: atshift-freeform-login 2.3.2\n"
+"Project-Id-Version: atshift-freeform-login 2.3.3\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-08-14 11:50+0900\n"
-"PO-Revision-Date: 2026-08-24 00:00+0900\n"
+"POT-Creation-Date: 2026-09-11 15:45+0900\n"
+"PO-Revision-Date: 2026-09-11 15:45+0900\n"
 "Last-Translator: @shift\n"
 "Language-Team: Portuguese (Brazil)\n"
 "Language: pt_BR\n"
@@ -107,8 +107,8 @@ msgid ""
 "Choose labels or placeholders and set the colors used for text, links, and "
 "the login button."
 msgstr ""
-"Escolha entre rótulos e textos de espaço reservado e defina as cores usadas no "
-"texto, nos links e no botão de acesso."
+"Escolha entre rótulos e textos de espaço reservado e defina as cores usadas "
+"no texto, nos links e no botão de acesso."
 
 #: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:468
 msgid "Choose whether the form has a shadow."
@@ -515,9 +515,30 @@ msgstr "Registrada em %s"
 msgid "Registered: Just now"
 msgstr "Registrada: agora mesmo"
 
+#. translators: 1: registered passkey count, 2: maximum passkey count.
+#: includes/passkeys/class-atshift-freeform-login-passkey-profile.php:341
+#, php-format
+msgid "Registered: %1$d/%2$d"
+msgstr "Registradas: %1$d/%2$d"
+
 #: includes/passkeys/class-atshift-freeform-login-passkey-profile.php:126
 msgid "Registered passkeys"
 msgstr "Chaves de acesso registradas"
+
+#: includes/passkeys/class-atshift-freeform-login-passkey-storage.php:105
+msgid "Another passkey is being registered. Please try again."
+msgstr "Outra chave de acesso está sendo cadastrada. Tente novamente."
+
+#: includes/passkeys/class-atshift-freeform-login-passkey-storage.php:166
+msgid "The passkey could not be saved."
+msgstr "Não foi possível salvar a chave de acesso."
+
+#. translators: %d: maximum number of passkeys.
+#: includes/passkeys/class-atshift-freeform-login-passkey-rest.php:132
+#: includes/passkeys/class-atshift-freeform-login-passkey-storage.php:151
+#, php-format
+msgid "You can register up to %d passkeys."
+msgstr "Você pode cadastrar até %d chaves de acesso."
 
 #: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:537
 msgid "Remember Me"
@@ -696,7 +717,8 @@ msgstr "Este site exige login pelo WordPress.com."
 msgid "Too many passkey requests. Please wait and try again."
 msgstr "Muitas solicitações de chave de acesso. Aguarde e tente novamente."
 
-#: atshift-freeform-login/includes/class-atshift-freeform-login.php:84
+#: atshift-freeform-login/includes/class-atshift-freeform-login.php:91
+#: atshift-freeform-login/includes/class-atshift-freeform-login.php:168
 msgid "Purchase Pro add-on"
 msgstr "Comprar o complemento Pro"
 
@@ -783,8 +805,8 @@ msgstr ""
 "um nome de usuário e uma senha. Elas reduzem o risco de inserir uma senha em "
 "um site falso ou de reutilizar a mesma senha em vários serviços. Comece "
 "registrando um dispositivo que você usa com frequência. As chaves de acesso "
-"sincronizadas com a mesma conta do provedor de armazenamento podem ser usadas "
-"em seus outros dispositivos, e você pode adicionar mais de uma quando "
+"sincronizadas com a mesma conta do provedor de armazenamento podem ser "
+"usadas em seus outros dispositivos, e você pode adicionar mais de uma quando "
 "necessário."
 
 #: includes/passkeys/class-atshift-freeform-login-passkey-rest.php:123
@@ -802,3 +824,11 @@ msgstr "Você não pode excluir esta chave de acesso."
 #: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:325
 msgid "atshift Freeform Login"
 msgstr "atshift Freeform Login"
+
+#: includes/class-atshift-freeform-login.php:90
+msgid "Passkey cleanup is pending."
+msgstr "A remoção dos dados das chaves de acesso está pendente."
+
+#: includes/passkeys/class-atshift-freeform-login-passkey-storage.php:117
+msgid "This account is not available."
+msgstr "Esta conta não está disponível."

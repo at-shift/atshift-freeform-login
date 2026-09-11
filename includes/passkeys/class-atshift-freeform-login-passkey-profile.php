@@ -36,8 +36,22 @@ class Atshift_Freeform_Login_Passkey_Profile {
 		add_action( 'admin_enqueue_scripts', array( $this, 'enqueue_assets' ) );
 		add_action( 'template_redirect', array( $this, 'maybe_protect_shortcode_page' ) );
 		add_action( 'wp_enqueue_scripts', array( $this, 'maybe_enqueue_frontend_assets' ) );
+		add_filter( 'atshift_freeform_login_passkeys_available', array( $this, 'passkeys_available' ) );
 		add_filter( 'atshift_upf_passkeys_field_available', array( $this, 'enable_upf_passkeys_field' ) );
+		add_filter( 'atshift_freeform_login_passkey_profile_available', array( $this, 'profile_available' ) );
 		add_action( 'atshift_upf_render_passkeys_field', array( $this, 'render_upf_field' ), 10, 3 );
+	}
+
+	/**
+	 * Let integrations check whether the passkey runtime is available.
+	 *
+	 * @param bool $available Previous availability value.
+	 * @return bool
+	 */
+	public function passkeys_available( $available ) {
+		unset( $available );
+
+		return Atshift_Freeform_Login_Passkey_Environment::is_available();
 	}
 
 	/**
@@ -47,6 +61,18 @@ class Atshift_Freeform_Login_Passkey_Profile {
 	 */
 	public function register_shortcode() {
 		add_shortcode( 'atshift_passkey_profile', array( $this, 'render_shortcode' ) );
+	}
+
+	/**
+	 * Let account-page integrations hide controls when passkeys cannot be used.
+	 *
+	 * @param bool $available Previous availability value.
+	 * @return bool
+	 */
+	public function profile_available( $available ) {
+		unset( $available );
+
+		return is_user_logged_in() && Atshift_Freeform_Login_Passkey_Environment::is_available();
 	}
 
 	/**

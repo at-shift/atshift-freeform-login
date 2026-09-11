@@ -1,9 +1,9 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: atshift Freeform Login 2.3.2\n"
+"Project-Id-Version: atshift Freeform Login 2.3.3\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-08-14 11:50+0900\n"
-"PO-Revision-Date: 2026-08-24 00:00+0900\n"
+"POT-Creation-Date: 2026-09-11 15:45+0900\n"
+"PO-Revision-Date: 2026-09-11 15:45+0900\n"
 "Last-Translator: @shift\n"
 "Language-Team: Indonesian\n"
 "Language: id_ID\n"
@@ -47,7 +47,9 @@ msgstr "Warna latar belakang"
 msgid ""
 "Background color and images are available in the free version. Upgrade to "
 "Pro to use a lightweight loop video."
-msgstr "Warna dan gambar latar belakang tersedia dalam versi gratis. Tingkatkan ke Pro untuk menggunakan video berulang yang ringan."
+msgstr ""
+"Warna dan gambar latar belakang tersedia dalam versi gratis. Tingkatkan ke "
+"Pro untuk menggunakan video berulang yang ringan."
 
 #: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:364
 msgid "Background type"
@@ -100,7 +102,9 @@ msgstr "Ubah"
 msgid ""
 "Choose labels or placeholders and set the colors used for text, links, and "
 "the login button."
-msgstr "Pilih label atau placeholder, lalu atur warna yang digunakan untuk teks, tautan, dan tombol log masuk."
+msgstr ""
+"Pilih label atau placeholder, lalu atur warna yang digunakan untuk teks, "
+"tautan, dan tombol log masuk."
 
 #: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:468
 msgid "Choose whether the form has a shadow."
@@ -109,7 +113,9 @@ msgstr "Pilih apakah formulir memiliki bayangan."
 #: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:381
 msgid ""
 "Choose whether the site title appears above the login form and set its color."
-msgstr "Pilih apakah judul situs ditampilkan di atas formulir log masuk, lalu atur warnanya."
+msgstr ""
+"Pilih apakah judul situs ditampilkan di atas formulir log masuk, lalu atur "
+"warnanya."
 
 #: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:372
 msgid "Contain"
@@ -151,7 +157,9 @@ msgstr "Ukuran tampilan"
 
 #: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:398
 msgid "Displayed in a 4:1 frame. Tall images are cropped from the center."
-msgstr "Ditampilkan dalam bingkai 4:1. Gambar yang tinggi dipangkas dari bagian tengah."
+msgstr ""
+"Ditampilkan dalam bingkai 4:1. Gambar yang tinggi dipangkas dari bagian "
+"tengah."
 
 #: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:389
 msgid "Do not show"
@@ -198,14 +206,20 @@ msgid ""
 "Free accepts a wide logo image in a fixed 4:1 frame; images with a different "
 "height are cropped from the center. Pro preserves wide and tall image ratios "
 "and lets you adjust the logo width."
-msgstr "Versi gratis menerima gambar logo lebar dalam bingkai tetap 4:1; gambar dengan tinggi berbeda dipangkas dari bagian tengah. Pro mempertahankan rasio gambar lebar maupun tinggi dan memungkinkan Anda menyesuaikan lebar logo."
+msgstr ""
+"Versi gratis menerima gambar logo lebar dalam bingkai tetap 4:1; gambar "
+"dengan tinggi berbeda dipangkas dari bagian tengah. Pro mempertahankan rasio "
+"gambar lebar maupun tinggi dan memungkinkan Anda menyesuaikan lebar logo."
 
 #: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:612
 msgid ""
 "Free automatically adjusts link and button colors for hover and pressed "
 "states. Pro lets you choose each interaction color and hide the language "
 "selector on the login screen."
-msgstr "Versi gratis secara otomatis menyesuaikan warna tautan dan tombol saat kursor diarahkan atau tombol ditekan. Pro memungkinkan Anda memilih warna untuk setiap interaksi dan menyembunyikan pemilih bahasa di layar log masuk."
+msgstr ""
+"Versi gratis secara otomatis menyesuaikan warna tautan dan tombol saat "
+"kursor diarahkan atau tombol ditekan. Pro memungkinkan Anda memilih warna "
+"untuk setiap interaksi dan menyembunyikan pemilih bahasa di layar log masuk."
 
 #: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:361
 #: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:369
@@ -230,20 +244,27 @@ msgstr "Respons kunci sandi tidak valid."
 msgid ""
 "Jetpack SSO currently redirects the login screen directly to WordPress.com. "
 "This login screen design is not shown during that redirect."
-msgstr "Jetpack SSO saat ini mengalihkan layar log masuk langsung ke WordPress.com. Desain layar log masuk ini tidak ditampilkan selama pengalihan tersebut."
+msgstr ""
+"Jetpack SSO saat ini mengalihkan layar log masuk langsung ke WordPress.com. "
+"Desain layar log masuk ini tidak ditampilkan selama pengalihan tersebut."
 
 #: atshift-freeform-login/includes/class-atshift-freeform-login-jetpack.php:150
 msgid ""
 "Jetpack SSO is set to use WordPress.com login only. The local username and "
 "password fields are hidden, and the WordPress.com login area uses this "
 "design."
-msgstr "Jetpack SSO diatur untuk hanya menggunakan log masuk WordPress.com. Kolom nama pengguna dan kata sandi lokal disembunyikan, dan area log masuk WordPress.com menggunakan desain ini."
+msgstr ""
+"Jetpack SSO diatur untuk hanya menggunakan log masuk WordPress.com. Kolom "
+"nama pengguna dan kata sandi lokal disembunyikan, dan area log masuk "
+"WordPress.com menggunakan desain ini."
 
 #: atshift-freeform-login/includes/class-atshift-freeform-login-jetpack.php:153
 msgid ""
 "Jetpack SSO was detected. The local login and WordPress.com login areas both "
 "use this design."
-msgstr "Jetpack SSO terdeteksi. Area log masuk lokal dan WordPress.com sama-sama menggunakan desain ini."
+msgstr ""
+"Jetpack SSO terdeteksi. Area log masuk lokal dan WordPress.com sama-sama "
+"menggunakan desain ini."
 
 #: atshift-freeform-login/includes/class-atshift-freeform-login-jetpack.php:160
 msgid "Jetpack SSO:"
@@ -425,7 +446,8 @@ msgstr "Kunci sandi tidak tersedia di server ini."
 
 #: includes/passkeys/class-atshift-freeform-login-passkey-environment.php:70
 msgid "Passkeys require HTTPS, except on localhost during development."
-msgstr "Kunci sandi memerlukan HTTPS, kecuali di localhost selama pengembangan."
+msgstr ""
+"Kunci sandi memerlukan HTTPS, kecuali di localhost selama pengembangan."
 
 #. translators: %s: required PHP version.
 #: includes/passkeys/class-atshift-freeform-login-passkey-environment.php:56
@@ -448,7 +470,11 @@ msgid ""
 "Password login remains available after you register a passkey. To keep your "
 "account secure, use a long, strong password that you do not reuse on other "
 "services, and store it in a password manager."
-msgstr "Log masuk dengan kata sandi tetap tersedia setelah Anda mendaftarkan kunci sandi. Untuk menjaga keamanan akun, gunakan kata sandi yang panjang dan kuat, jangan gunakan kembali kata sandi tersebut di layanan lain, dan simpan kata sandi tersebut di pengelola kata sandi."
+msgstr ""
+"Log masuk dengan kata sandi tetap tersedia setelah Anda mendaftarkan kunci "
+"sandi. Untuk menjaga keamanan akun, gunakan kata sandi yang panjang dan "
+"kuat, jangan gunakan kembali kata sandi tersebut di layanan lain, dan simpan "
+"kata sandi tersebut di pengelola kata sandi."
 
 #: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:648
 msgid "Position"
@@ -484,9 +510,30 @@ msgstr "Terdaftar: %s"
 msgid "Registered: Just now"
 msgstr "Terdaftar: Baru saja"
 
+#. translators: 1: registered passkey count, 2: maximum passkey count.
+#: includes/passkeys/class-atshift-freeform-login-passkey-profile.php:341
+#, php-format
+msgid "Registered: %1$d/%2$d"
+msgstr "Terdaftar: %1$d/%2$d"
+
 #: includes/passkeys/class-atshift-freeform-login-passkey-profile.php:126
 msgid "Registered passkeys"
 msgstr "Kunci sandi terdaftar"
+
+#: includes/passkeys/class-atshift-freeform-login-passkey-storage.php:105
+msgid "Another passkey is being registered. Please try again."
+msgstr "Kunci sandi lain sedang didaftarkan. Silakan coba lagi."
+
+#: includes/passkeys/class-atshift-freeform-login-passkey-storage.php:166
+msgid "The passkey could not be saved."
+msgstr "Kunci sandi tidak dapat disimpan."
+
+#. translators: %d: maximum number of passkeys.
+#: includes/passkeys/class-atshift-freeform-login-passkey-rest.php:132
+#: includes/passkeys/class-atshift-freeform-login-passkey-storage.php:151
+#, php-format
+msgid "You can register up to %d passkeys."
+msgstr "Anda dapat mendaftarkan hingga %d kunci sandi."
 
 #: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:537
 msgid "Remember Me"
@@ -630,11 +677,13 @@ msgstr "Kunci sandi tidak dapat diverifikasi."
 
 #: includes/passkeys/class-atshift-freeform-login-passkey-rest.php:334
 msgid "The passkey login request expired. Please try again."
-msgstr "Permintaan log masuk dengan kunci sandi telah kedaluwarsa. Silakan coba lagi."
+msgstr ""
+"Permintaan log masuk dengan kunci sandi telah kedaluwarsa. Silakan coba lagi."
 
 #: includes/passkeys/class-atshift-freeform-login-passkey-rest.php:219
 msgid "The passkey registration request expired. Please try again."
-msgstr "Permintaan pendaftaran kunci sandi telah kedaluwarsa. Silakan coba lagi."
+msgstr ""
+"Permintaan pendaftaran kunci sandi telah kedaluwarsa. Silakan coba lagi."
 
 #: includes/passkeys/class-atshift-freeform-login-passkey-rest.php:341
 msgid "The selected passkey is not registered on this site."
@@ -644,7 +693,9 @@ msgstr "Kunci sandi yang dipilih tidak terdaftar di situs ini."
 msgid ""
 "The site tagline is used initially. You can replace it here, or leave it "
 "blank to hide the text."
-msgstr "Slogan situs digunakan sebagai teks awal. Anda dapat menggantinya di sini atau membiarkannya kosong untuk menyembunyikan teks."
+msgstr ""
+"Slogan situs digunakan sebagai teks awal. Anda dapat menggantinya di sini "
+"atau membiarkannya kosong untuk menyembunyikan teks."
 
 #: includes/passkeys/class-atshift-freeform-login-passkey-profile.php:71
 msgid "This device's passkey"
@@ -663,7 +714,8 @@ msgstr "Situs ini mewajibkan log masuk melalui WordPress.com."
 msgid "Too many passkey requests. Please wait and try again."
 msgstr "Terlalu banyak permintaan kunci sandi. Harap tunggu, lalu coba lagi."
 
-#: atshift-freeform-login/includes/class-atshift-freeform-login.php:84
+#: atshift-freeform-login/includes/class-atshift-freeform-login.php:91
+#: atshift-freeform-login/includes/class-atshift-freeform-login.php:168
 msgid "Purchase Pro add-on"
 msgstr "Beli add-on Pro"
 
@@ -671,17 +723,24 @@ msgstr "Beli add-on Pro"
 msgid ""
 "Upgrade to Pro to add a glass panel, rectangle, vertical band, or horizontal "
 "band behind the form, and adjust opacity, corner radius, and border styling."
-msgstr "Tingkatkan ke Pro untuk menambahkan panel kaca, persegi panjang, pita vertikal, atau pita horizontal di belakang formulir, serta menyesuaikan opasitas, radius sudut, dan gaya garis tepi."
+msgstr ""
+"Tingkatkan ke Pro untuk menambahkan panel kaca, persegi panjang, pita "
+"vertikal, atau pita horizontal di belakang formulir, serta menyesuaikan "
+"opasitas, radius sudut, dan gaya garis tepi."
 
 #: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:616
 msgid ""
 "Upgrade to Pro to adjust shadow position, blur, spread, color, and opacity."
-msgstr "Tingkatkan ke Pro untuk menyesuaikan posisi, keburaman, sebaran, warna, dan opasitas bayangan."
+msgstr ""
+"Tingkatkan ke Pro untuk menyesuaikan posisi, keburaman, sebaran, warna, dan "
+"opasitas bayangan."
 
 #: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:604
 msgid ""
 "Upgrade to Pro to fine-tune the horizontal and vertical position in pixels."
-msgstr "Tingkatkan ke Pro untuk menyempurnakan posisi horizontal dan vertikal dalam satuan piksel."
+msgstr ""
+"Tingkatkan ke Pro untuk menyempurnakan posisi horizontal dan vertikal dalam "
+"satuan piksel."
 
 #: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:453
 msgid "Use placeholders"
@@ -708,7 +767,8 @@ msgstr "Nama Pengguna / Email"
 
 #: includes/passkeys/class-atshift-freeform-login-passkey-profile.php:146
 msgid "Users must add passkeys from their own profile screen."
-msgstr "Pengguna harus menambahkan kunci sandi dari layar profil mereka sendiri."
+msgstr ""
+"Pengguna harus menambahkan kunci sandi dari layar profil mereka sendiri."
 
 #: includes/passkeys/class-atshift-freeform-login-passkey-login.php:101
 msgid "Waiting for your passkey..."
@@ -737,7 +797,14 @@ msgid ""
 "reusing the same password across services. Start by registering a device you "
 "use regularly. Passkeys synced to the same storage account can be used on "
 "your other devices, and you can add more than one when needed."
-msgstr "Kunci sandi adalah cara baru untuk log masuk dengan autentikasi biometrik dan fitur keamanan lain di perangkat Anda, tanpa memasukkan nama pengguna dan kata sandi. Kunci sandi mengurangi risiko memasukkan kata sandi di situs palsu atau menggunakan kembali kata sandi yang sama di berbagai layanan. Mulailah dengan mendaftarkan perangkat yang rutin Anda gunakan. Kunci sandi yang disinkronkan ke akun penyimpanan yang sama dapat digunakan di perangkat Anda yang lain, dan Anda dapat menambahkan lebih dari satu bila diperlukan."
+msgstr ""
+"Kunci sandi adalah cara baru untuk log masuk dengan autentikasi biometrik "
+"dan fitur keamanan lain di perangkat Anda, tanpa memasukkan nama pengguna "
+"dan kata sandi. Kunci sandi mengurangi risiko memasukkan kata sandi di situs "
+"palsu atau menggunakan kembali kata sandi yang sama di berbagai layanan. "
+"Mulailah dengan mendaftarkan perangkat yang rutin Anda gunakan. Kunci sandi "
+"yang disinkronkan ke akun penyimpanan yang sama dapat digunakan di perangkat "
+"Anda yang lain, dan Anda dapat menambahkan lebih dari satu bila diperlukan."
 
 #: includes/passkeys/class-atshift-freeform-login-passkey-rest.php:123
 msgid "You can only register passkeys for your own account."
@@ -754,3 +821,11 @@ msgstr "Anda tidak dapat menghapus kunci sandi ini."
 #: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:325
 msgid "atshift Freeform Login"
 msgstr "atshift Freeform Login"
+
+#: includes/class-atshift-freeform-login.php:90
+msgid "Passkey cleanup is pending."
+msgstr "Pembersihan data kunci sandi masih tertunda."
+
+#: includes/passkeys/class-atshift-freeform-login-passkey-storage.php:117
+msgid "This account is not available."
+msgstr "Akun ini tidak tersedia."

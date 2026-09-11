@@ -2,10 +2,10 @@
 # This file is distributed under the same license as the atshift-freeform-login package.
 msgid ""
 msgstr ""
-"Project-Id-Version: atshift-freeform-login 2.3.2\n"
+"Project-Id-Version: atshift-freeform-login 2.3.3\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-08-14 11:50+0900\n"
-"PO-Revision-Date: 2026-08-24 00:00+0900\n"
+"POT-Creation-Date: 2026-09-11 15:45+0900\n"
+"PO-Revision-Date: 2026-09-11 15:45+0900\n"
 "Last-Translator: atshift Translation Team\n"
 "Language-Team: Chinese (Taiwan)\n"
 "Language: zh_TW\n"
@@ -200,14 +200,18 @@ msgid ""
 "Free accepts a wide logo image in a fixed 4:1 frame; images with a different "
 "height are cropped from the center. Pro preserves wide and tall image ratios "
 "and lets you adjust the logo width."
-msgstr "免費版會在固定的 4:1 畫框中顯示橫式標誌；高度比例不同的圖片會從中央裁切。Pro 可保留橫式及直式圖片的長寬比，並可調整標誌寬度。"
+msgstr ""
+"免費版會在固定的 4:1 畫框中顯示橫式標誌；高度比例不同的圖片會從中央裁切。Pro "
+"可保留橫式及直式圖片的長寬比，並可調整標誌寬度。"
 
 #: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:612
 msgid ""
 "Free automatically adjusts link and button colors for hover and pressed "
 "states. Pro lets you choose each interaction color and hide the language "
 "selector on the login screen."
-msgstr "免費版會自動調整連結和按鈕在游標停留及按下狀態時的顏色。Pro 可分別設定各個互動狀態的顏色，並可隱藏登入畫面上的語言選擇器。"
+msgstr ""
+"免費版會自動調整連結和按鈕在游標停留及按下狀態時的顏色。Pro 可分別設定各個互"
+"動狀態的顏色，並可隱藏登入畫面上的語言選擇器。"
 
 #: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:361
 #: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:369
@@ -232,20 +236,25 @@ msgstr "通行密鑰回應無效。"
 msgid ""
 "Jetpack SSO currently redirects the login screen directly to WordPress.com. "
 "This login screen design is not shown during that redirect."
-msgstr "Jetpack SSO 目前會將登入畫面直接重新導向至 WordPress.com。重新導向期間不會顯示此登入畫面設計。"
+msgstr ""
+"Jetpack SSO 目前會將登入畫面直接重新導向至 WordPress.com。重新導向期間不會顯"
+"示此登入畫面設計。"
 
 #: atshift-freeform-login/includes/class-atshift-freeform-login-jetpack.php:150
 msgid ""
 "Jetpack SSO is set to use WordPress.com login only. The local username and "
 "password fields are hidden, and the WordPress.com login area uses this "
 "design."
-msgstr "Jetpack SSO 已設定為僅使用 WordPress.com 登入。本機使用者名稱和密碼欄位會隱藏，而 WordPress.com 登入區域會使用此設計。"
+msgstr ""
+"Jetpack SSO 已設定為僅使用 WordPress.com 登入。本機使用者名稱和密碼欄位會隱"
+"藏，而 WordPress.com 登入區域會使用此設計。"
 
 #: atshift-freeform-login/includes/class-atshift-freeform-login-jetpack.php:153
 msgid ""
 "Jetpack SSO was detected. The local login and WordPress.com login areas both "
 "use this design."
-msgstr "偵測到 Jetpack SSO。本機登入區域和 WordPress.com 登入區域都會使用此設計。"
+msgstr ""
+"偵測到 Jetpack SSO。本機登入區域和 WordPress.com 登入區域都會使用此設計。"
 
 #: atshift-freeform-login/includes/class-atshift-freeform-login-jetpack.php:160
 msgid "Jetpack SSO:"
@@ -450,7 +459,9 @@ msgid ""
 "Password login remains available after you register a passkey. To keep your "
 "account secure, use a long, strong password that you do not reuse on other "
 "services, and store it in a password manager."
-msgstr "註冊通行密鑰後，仍可使用密碼登入。為了確保帳號安全，請使用夠長且強度高、未在其他服務重複使用的密碼，並將密碼儲存在密碼管理工具中。"
+msgstr ""
+"註冊通行密鑰後，仍可使用密碼登入。為了確保帳號安全，請使用夠長且強度高、未在"
+"其他服務重複使用的密碼，並將密碼儲存在密碼管理工具中。"
 
 #: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:648
 msgid "Position"
@@ -486,9 +497,30 @@ msgstr "註冊時間：%s"
 msgid "Registered: Just now"
 msgstr "註冊時間：剛剛"
 
+#. translators: 1: registered passkey count, 2: maximum passkey count.
+#: includes/passkeys/class-atshift-freeform-login-passkey-profile.php:341
+#, php-format
+msgid "Registered: %1$d/%2$d"
+msgstr "已註冊：%1$d/%2$d"
+
 #: includes/passkeys/class-atshift-freeform-login-passkey-profile.php:126
 msgid "Registered passkeys"
 msgstr "已註冊的通行密鑰"
+
+#: includes/passkeys/class-atshift-freeform-login-passkey-storage.php:105
+msgid "Another passkey is being registered. Please try again."
+msgstr "正在註冊另一個通行密鑰。請再試一次。"
+
+#: includes/passkeys/class-atshift-freeform-login-passkey-storage.php:166
+msgid "The passkey could not be saved."
+msgstr "無法儲存通行密鑰。"
+
+#. translators: %d: maximum number of passkeys.
+#: includes/passkeys/class-atshift-freeform-login-passkey-rest.php:132
+#: includes/passkeys/class-atshift-freeform-login-passkey-storage.php:151
+#, php-format
+msgid "You can register up to %d passkeys."
+msgstr "最多可以註冊 %d 個通行密鑰。"
 
 #: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:537
 msgid "Remember Me"
@@ -665,7 +697,8 @@ msgstr "此網站要求使用 WordPress.com 登入。"
 msgid "Too many passkey requests. Please wait and try again."
 msgstr "通行密鑰要求次數過多。請稍候再試。"
 
-#: atshift-freeform-login/includes/class-atshift-freeform-login.php:84
+#: atshift-freeform-login/includes/class-atshift-freeform-login.php:91
+#: atshift-freeform-login/includes/class-atshift-freeform-login.php:168
 msgid "Purchase Pro add-on"
 msgstr "購買 Pro 附加元件"
 
@@ -673,7 +706,9 @@ msgstr "購買 Pro 附加元件"
 msgid ""
 "Upgrade to Pro to add a glass panel, rectangle, vertical band, or horizontal "
 "band behind the form, and adjust opacity, corner radius, and border styling."
-msgstr "升級至 Pro 後，可在表單後方加入玻璃面板、矩形、垂直色帶或水平色帶，並調整不透明度、圓角半徑及邊框樣式。"
+msgstr ""
+"升級至 Pro 後，可在表單後方加入玻璃面板、矩形、垂直色帶或水平色帶，並調整不透"
+"明度、圓角半徑及邊框樣式。"
 
 #: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:616
 msgid ""
@@ -739,7 +774,11 @@ msgid ""
 "reusing the same password across services. Start by registering a device you "
 "use regularly. Passkeys synced to the same storage account can be used on "
 "your other devices, and you can add more than one when needed."
-msgstr "通行密鑰是一種新的登入方式，不需輸入使用者名稱和密碼，而是使用裝置上的生物辨識驗證及其他安全功能。這可降低在假冒網站輸入密碼，或在多項服務中重複使用相同密碼所帶來的風險。請先在常用裝置上註冊通行密鑰。同步至同一個儲存帳號的通行密鑰可在你的其他裝置上使用，並可視需要註冊多個通行密鑰。"
+msgstr ""
+"通行密鑰是一種新的登入方式，不需輸入使用者名稱和密碼，而是使用裝置上的生物辨"
+"識驗證及其他安全功能。這可降低在假冒網站輸入密碼，或在多項服務中重複使用相同"
+"密碼所帶來的風險。請先在常用裝置上註冊通行密鑰。同步至同一個儲存帳號的通行密"
+"鑰可在你的其他裝置上使用，並可視需要註冊多個通行密鑰。"
 
 #: includes/passkeys/class-atshift-freeform-login-passkey-rest.php:123
 msgid "You can only register passkeys for your own account."
@@ -756,3 +795,11 @@ msgstr "你無法刪除此通行密鑰。"
 #: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:325
 msgid "atshift Freeform Login"
 msgstr "atshift Freeform Login"
+
+#: includes/class-atshift-freeform-login.php:90
+msgid "Passkey cleanup is pending."
+msgstr "通行密鑰資料清理尚未完成。"
+
+#: includes/passkeys/class-atshift-freeform-login-passkey-storage.php:117
+msgid "This account is not available."
+msgstr "此帳號無法使用。"

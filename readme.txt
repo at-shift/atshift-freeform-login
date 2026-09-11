@@ -4,7 +4,7 @@ Tags: login, custom login, login form, passkey, webauthn
 Requires at least: 6.5
 Tested up to: 7.1
 Requires PHP: 7.4
-Stable tag: 2.3.2
+Stable tag: 2.3.3
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -25,6 +25,8 @@ Passkey support is available on PHP 8.3 or newer when the PHP JSON and OpenSSL e
 Passkey ceremonies are verified on the WordPress server and do not require an external authentication service. The bundled WebAuthn and supporting libraries are MIT licensed; package names and exact versions are recorded in `composer.lock`.
 
 When atshift User Profile Fields is active, its optional Passkeys field can place the same management controls within the configured profile layout. Credentials and authentication remain managed by atshift Freeform Login.
+
+When atshift Members is active, its account editing screen can show the same passkey management controls with or without User Profile Fields. Its account-withdrawal flow asks Freeform Login to erase the departing user's passkey credentials and index entries before deletion is completed.
 
 = Login screen design and shortcodes =
 
@@ -89,6 +91,10 @@ The optional Pro add-on extends the free plugin with custom logo images, precise
 4. The visual design editor provides grouped controls and responsive previews before login-screen changes are enabled.
 
 == Changelog ==
+
+= 2.3.3 =
+* Added passkey availability and account-data erasure hooks for atshift Members integration.
+* Hardened concurrent credential-index updates, account eligibility checks, and passkey deletion with non-pretty permalinks.
 
 = 2.3.2 =
 * Updated the official product, author, and Pro add-on links following the website migration.

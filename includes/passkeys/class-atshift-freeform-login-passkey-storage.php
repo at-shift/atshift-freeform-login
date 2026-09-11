@@ -109,7 +109,17 @@ class Atshift_Freeform_Login_Passkey_Storage {
 		}
 
 		try {
+			$user = get_userdata( $user_id );
+
+			if ( ! $user instanceof WP_User || is_wp_error( apply_filters( 'wp_authenticate_user', $user, '' ) ) ) {
+				return new WP_Error(
+					'atshift_passkey_account_unavailable',
+					__( 'This account is not available.', 'atshift-freeform-login' )
+				);
+			}
+
 			$credentials   = $this->get_credentials( $user_id );
+			$previous      = $credentials;
 			$credential_id = $this->encode_base64url( $record->publicKeyCredentialId );
 			$now           = current_time( 'mysql', true );
 			$label         = wp_html_excerpt( sanitize_text_field( $label ), 80, '' );
@@ -156,11 +166,15 @@ class Atshift_Freeform_Login_Passkey_Storage {
 			$credentials[] = $item;
 			$updated       = update_user_meta( $user_id, self::META_KEY, $credentials );
 
-			if ( false === $updated && $credentials !== get_user_meta( $user_id, self::META_KEY, true ) ) {
+			if ( false === $updated && get_user_meta( $user_id, self::META_KEY, true ) !== $credentials ) {
 				return new WP_Error( 'atshift_passkey_storage_failed', __( 'The passkey could not be saved.', 'atshift-freeform-login' ) );
 			}
 
-			$this->set_index_owner( $credential_id, $user_id );
+			if ( ! $this->set_index_owner( $credential_id, $user_id ) ) {
+				$this->restore_credentials( $user_id, $previous );
+
+				return new WP_Error( 'atshift_passkey_storage_failed', __( 'The passkey could not be saved.', 'atshift-freeform-login' ) );
+			}
 
 			return $item;
 		} finally {
@@ -191,8 +205,17 @@ class Atshift_Freeform_Login_Passkey_Storage {
 			return false;
 		}
 
-		update_user_meta( $user_id, self::META_KEY, $remaining );
-		$this->remove_index_owner( $credential_id, $user_id );
+		if ( ! $this->remove_index_owner( $credential_id, $user_id ) ) {
+			return false;
+		}
+
+		$updated = update_user_meta( $user_id, self::META_KEY, $remaining );
+
+		if ( false === $updated && get_user_meta( $user_id, self::META_KEY, true ) !== $remaining ) {
+			$this->set_index_owner( $credential_id, $user_id );
+
+			return false;
+		}
 
 		return true;
 	}
@@ -286,21 +309,154 @@ class Atshift_Freeform_Login_Passkey_Storage {
 		return hash( 'sha256', $credential_id );
 	}
 
-	/** @param string $credential_id Credential ID. @param int $user_id User ID. @return void */
-	private function set_index_owner( $credential_id, $user_id ) {
-		$index = $this->get_index();
-		$index[ $this->index_key( $credential_id ) ] = (int) $user_id;
-		update_option( self::INDEX_KEY, $index, false );
+	/**
+	 * Restore credential metadata after a failed index update.
+	 *
+	 * @param int                              $user_id     User ID.
+	 * @param array<int, array<string, mixed>> $credentials Previous credentials.
+	 * @return void
+	 */
+	private function restore_credentials( $user_id, $credentials ) {
+		if ( empty( $credentials ) ) {
+			delete_user_meta( $user_id, self::META_KEY );
+			return;
+		}
+
+		update_user_meta( $user_id, self::META_KEY, array_values( $credentials ) );
 	}
 
-	/** @param string $credential_id Credential ID. @param int $user_id User ID. @return void */
-	private function remove_index_owner( $credential_id, $user_id ) {
-		$index     = $this->get_index();
+	/**
+	 * Assign a credential index entry to a user.
+	 *
+	 * @param string $credential_id Credential ID.
+	 * @param int    $user_id       User ID.
+	 * @return bool
+	 */
+	private function set_index_owner( $credential_id, $user_id ) {
 		$index_key = $this->index_key( $credential_id );
 
-		if ( isset( $index[ $index_key ] ) && (int) $index[ $index_key ] === (int) $user_id ) {
-			unset( $index[ $index_key ] );
-			update_option( self::INDEX_KEY, $index, false );
+		return $this->mutate_index(
+			static function ( $index ) use ( $index_key, $user_id ) {
+				$index[ $index_key ] = (int) $user_id;
+
+				return $index;
+			}
+		);
+	}
+
+	/**
+	 * Remove a credential index entry when it still belongs to the user.
+	 *
+	 * @param string $credential_id Credential ID.
+	 * @param int    $user_id       User ID.
+	 * @return bool
+	 */
+	private function remove_index_owner( $credential_id, $user_id ) {
+		$index_key = $this->index_key( $credential_id );
+
+		return $this->mutate_index(
+			static function ( $index ) use ( $index_key, $user_id ) {
+				if ( isset( $index[ $index_key ] ) && (int) $index[ $index_key ] === (int) $user_id ) {
+					unset( $index[ $index_key ] );
+				}
+
+				return $index;
+			}
+		);
+	}
+
+	/**
+	 * Update the shared index without overwriting another concurrent mutation.
+	 *
+	 * @param callable(array<string, int>):array<string, int> $callback Index mutation.
+	 * @return bool
+	 */
+	private function mutate_index( $callback ) {
+		global $wpdb;
+
+		for ( $attempt = 0; $attempt < 8; $attempt++ ) {
+			// phpcs:ignore WordPress.DB.DirectDatabaseQuery.DirectQuery,WordPress.DB.DirectDatabaseQuery.NoCaching -- Compare-and-swap requires the current raw value; successful writes invalidate option caches below.
+			$raw   = $wpdb->get_var( $wpdb->prepare( "SELECT option_value FROM {$wpdb->options} WHERE option_name = %s", self::INDEX_KEY ) );
+			$index = null === $raw ? array() : maybe_unserialize( $raw );
+
+			if ( ! is_array( $index ) ) {
+				return false;
+			}
+
+			$next = call_user_func( $callback, $index );
+
+			if ( $next === $index ) {
+				return true;
+			}
+
+			if ( null === $raw ) {
+				// phpcs:ignore WordPress.DB.DirectDatabaseQuery.DirectQuery -- Atomic create prevents a concurrent writer from being overwritten.
+				$changed = $wpdb->query( $wpdb->prepare( "INSERT IGNORE INTO {$wpdb->options} (option_name, option_value, autoload) VALUES (%s, %s, 'off')", self::INDEX_KEY, maybe_serialize( $next ) ) );
+			} else {
+				// phpcs:ignore WordPress.DB.DirectDatabaseQuery.DirectQuery -- The raw-value condition is the compare step of this bounded CAS loop.
+				$changed = $wpdb->query( $wpdb->prepare( "UPDATE {$wpdb->options} SET option_value = %s WHERE option_name = %s AND BINARY option_value = BINARY %s", maybe_serialize( $next ), self::INDEX_KEY, $raw ) );
+			}
+
+			if ( false === $changed ) {
+				return false;
+			}
+
+			if ( 1 === $changed ) {
+				wp_cache_delete( self::INDEX_KEY, 'options' );
+				wp_cache_delete( 'alloptions', 'options' );
+				wp_cache_delete( 'notoptions', 'options' );
+
+				return true;
+			}
+		}
+
+		return false;
+	}
+
+	/**
+	 * Erase all passkey storage owned by a user.
+	 *
+	 * This method does not require WebAuthn library objects, so account cleanup
+	 * remains available when the runtime requirements are not met.
+	 *
+	 * @param int $user_id User ID.
+	 * @return bool
+	 */
+	public function erase_user_credentials( $user_id ) {
+		$user_id = absint( $user_id );
+
+		if ( 1 > $user_id ) {
+			return false;
+		}
+
+		$lock_token = $this->acquire_registration_lock( $user_id );
+
+		if ( false === $lock_token ) {
+			return false;
+		}
+
+		try {
+			$index_updated = $this->mutate_index(
+				static function ( $index ) use ( $user_id ) {
+					return array_filter(
+						$index,
+						static function ( $owner ) use ( $user_id ) {
+							return (int) $owner !== $user_id;
+						}
+					);
+				}
+			);
+
+			if ( ! $index_updated ) {
+				return false;
+			}
+
+			delete_user_meta( $user_id, self::META_KEY );
+			delete_user_meta( $user_id, self::USER_HANDLE_KEY );
+
+			return ! metadata_exists( 'user', $user_id, self::META_KEY ) && ! metadata_exists( 'user', $user_id, self::USER_HANDLE_KEY );
+		} finally {
+			$this->release_registration_lock( $user_id, $lock_token );
 		}
 	}
 

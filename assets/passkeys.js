@@ -223,8 +223,10 @@
       return;
     }
 
-    const deleted = await request(`${credentialId}?userId=${encodeURIComponent(userId)}`, {
-      method: 'DELETE'
+    // Keep this valid for both pretty REST URLs and ?rest_route= permalinks.
+    const deleted = await request(credentialId, {
+      method: 'DELETE',
+      body: JSON.stringify({ userId })
     });
 
     const item = button.closest('li');

@@ -1,9 +1,9 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: atshift Freeform Login 2.3.2\n"
+"Project-Id-Version: atshift Freeform Login 2.3.3\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-08-14 11:50+0900\n"
-"PO-Revision-Date: 2026-08-24 00:00+0900\n"
+"POT-Creation-Date: 2026-09-11 15:45+0900\n"
+"PO-Revision-Date: 2026-09-11 15:45+0900\n"
 "Last-Translator: @shift\n"
 "Language-Team: Turkish\n"
 "Language: tr_TR\n"
@@ -47,7 +47,9 @@ msgstr "Arka plan rengi"
 msgid ""
 "Background color and images are available in the free version. Upgrade to "
 "Pro to use a lightweight loop video."
-msgstr "Ücretsiz sürümde arka plan rengi ve görseller kullanılabilir. Hafif bir döngü videosu kullanmak için Pro sürümüne yükseltin."
+msgstr ""
+"Ücretsiz sürümde arka plan rengi ve görseller kullanılabilir. Hafif bir "
+"döngü videosu kullanmak için Pro sürümüne yükseltin."
 
 #: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:364
 msgid "Background type"
@@ -100,7 +102,9 @@ msgstr "Değiştir"
 msgid ""
 "Choose labels or placeholders and set the colors used for text, links, and "
 "the login button."
-msgstr "Etiketleri veya yer tutucuları seçin; metin, bağlantılar ve giriş düğmesi için kullanılan renkleri ayarlayın."
+msgstr ""
+"Etiketleri veya yer tutucuları seçin; metin, bağlantılar ve giriş düğmesi "
+"için kullanılan renkleri ayarlayın."
 
 #: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:468
 msgid "Choose whether the form has a shadow."
@@ -109,7 +113,9 @@ msgstr "Formda gölge olup olmayacağını seçin."
 #: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:381
 msgid ""
 "Choose whether the site title appears above the login form and set its color."
-msgstr "Site başlığının giriş formunun üzerinde görünüp görünmeyeceğini seçin ve rengini ayarlayın."
+msgstr ""
+"Site başlığının giriş formunun üzerinde görünüp görünmeyeceğini seçin ve "
+"rengini ayarlayın."
 
 #: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:372
 msgid "Contain"
@@ -151,7 +157,8 @@ msgstr "Görüntüleme boyutu"
 
 #: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:398
 msgid "Displayed in a 4:1 frame. Tall images are cropped from the center."
-msgstr "4:1 oranlı bir çerçevede görüntülenir. Uzun görseller ortadan kırpılır."
+msgstr ""
+"4:1 oranlı bir çerçevede görüntülenir. Uzun görseller ortadan kırpılır."
 
 #: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:389
 msgid "Do not show"
@@ -198,14 +205,22 @@ msgid ""
 "Free accepts a wide logo image in a fixed 4:1 frame; images with a different "
 "height are cropped from the center. Pro preserves wide and tall image ratios "
 "and lets you adjust the logo width."
-msgstr "Ücretsiz sürüm, sabit 4:1 oranlı bir çerçevede geniş bir logo görseli kabul eder; farklı yükseklikteki görseller ortadan kırpılır. Pro, geniş ve uzun görsellerin en-boy oranlarını korur ve logo genişliğini ayarlamanıza olanak tanır."
+msgstr ""
+"Ücretsiz sürüm, sabit 4:1 oranlı bir çerçevede geniş bir logo görseli kabul "
+"eder; farklı yükseklikteki görseller ortadan kırpılır. Pro, geniş ve uzun "
+"görsellerin en-boy oranlarını korur ve logo genişliğini ayarlamanıza olanak "
+"tanır."
 
 #: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:612
 msgid ""
 "Free automatically adjusts link and button colors for hover and pressed "
 "states. Pro lets you choose each interaction color and hide the language "
 "selector on the login screen."
-msgstr "Ücretsiz sürüm, bağlantı ve düğme renklerini fareyle üzerlerine gelme ve basma durumlarında otomatik olarak ayarlar. Pro, her etkileşim durumu için ayrı bir renk seçmenize ve giriş ekranındaki dil seçiciyi gizlemenize olanak tanır."
+msgstr ""
+"Ücretsiz sürüm, bağlantı ve düğme renklerini fareyle üzerlerine gelme ve "
+"basma durumlarında otomatik olarak ayarlar. Pro, her etkileşim durumu için "
+"ayrı bir renk seçmenize ve giriş ekranındaki dil seçiciyi gizlemenize olanak "
+"tanır."
 
 #: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:361
 #: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:369
@@ -230,20 +245,27 @@ msgstr "Geçersiz geçiş anahtarı yanıtı."
 msgid ""
 "Jetpack SSO currently redirects the login screen directly to WordPress.com. "
 "This login screen design is not shown during that redirect."
-msgstr "Jetpack SSO şu anda giriş ekranını doğrudan WordPress.com'a yönlendiriyor. Bu yönlendirme sırasında giriş ekranı tasarımı gösterilmez."
+msgstr ""
+"Jetpack SSO şu anda giriş ekranını doğrudan WordPress.com'a yönlendiriyor. "
+"Bu yönlendirme sırasında giriş ekranı tasarımı gösterilmez."
 
 #: atshift-freeform-login/includes/class-atshift-freeform-login-jetpack.php:150
 msgid ""
 "Jetpack SSO is set to use WordPress.com login only. The local username and "
 "password fields are hidden, and the WordPress.com login area uses this "
 "design."
-msgstr "Jetpack SSO yalnızca WordPress.com girişini kullanacak şekilde ayarlanmıştır. Yerel kullanıcı adı ve parola alanları gizlenir; WordPress.com giriş alanı bu tasarımı kullanır."
+msgstr ""
+"Jetpack SSO yalnızca WordPress.com girişini kullanacak şekilde "
+"ayarlanmıştır. Yerel kullanıcı adı ve parola alanları gizlenir; "
+"WordPress.com giriş alanı bu tasarımı kullanır."
 
 #: atshift-freeform-login/includes/class-atshift-freeform-login-jetpack.php:153
 msgid ""
 "Jetpack SSO was detected. The local login and WordPress.com login areas both "
 "use this design."
-msgstr "Jetpack SSO algılandı. Hem yerel giriş alanı hem de WordPress.com giriş alanı bu tasarımı kullanır."
+msgstr ""
+"Jetpack SSO algılandı. Hem yerel giriş alanı hem de WordPress.com giriş "
+"alanı bu tasarımı kullanır."
 
 #: atshift-freeform-login/includes/class-atshift-freeform-login-jetpack.php:160
 msgid "Jetpack SSO:"
@@ -425,7 +447,9 @@ msgstr "Geçiş anahtarları bu sunucuda kullanılamıyor."
 
 #: includes/passkeys/class-atshift-freeform-login-passkey-environment.php:70
 msgid "Passkeys require HTTPS, except on localhost during development."
-msgstr "Geçiş anahtarları, geliştirme sırasında localhost kullanımı dışında HTTPS gerektirir."
+msgstr ""
+"Geçiş anahtarları, geliştirme sırasında localhost kullanımı dışında HTTPS "
+"gerektirir."
 
 #. translators: %s: required PHP version.
 #: includes/passkeys/class-atshift-freeform-login-passkey-environment.php:56
@@ -448,7 +472,10 @@ msgid ""
 "Password login remains available after you register a passkey. To keep your "
 "account secure, use a long, strong password that you do not reuse on other "
 "services, and store it in a password manager."
-msgstr "Bir geçiş anahtarı kaydettikten sonra parolayla giriş kullanılabilir durumda kalır. Hesabınızı güvende tutmak için başka hizmetlerde kullanmadığınız uzun ve güçlü bir parola kullanın ve parolanızı bir parola yöneticisinde saklayın."
+msgstr ""
+"Bir geçiş anahtarı kaydettikten sonra parolayla giriş kullanılabilir durumda "
+"kalır. Hesabınızı güvende tutmak için başka hizmetlerde kullanmadığınız uzun "
+"ve güçlü bir parola kullanın ve parolanızı bir parola yöneticisinde saklayın."
 
 #: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:648
 msgid "Position"
@@ -484,9 +511,30 @@ msgstr "Kaydedildi: %s"
 msgid "Registered: Just now"
 msgstr "Kaydedildi: Az önce"
 
+#. translators: 1: registered passkey count, 2: maximum passkey count.
+#: includes/passkeys/class-atshift-freeform-login-passkey-profile.php:341
+#, php-format
+msgid "Registered: %1$d/%2$d"
+msgstr "Kayıtlı: %1$d/%2$d"
+
 #: includes/passkeys/class-atshift-freeform-login-passkey-profile.php:126
 msgid "Registered passkeys"
 msgstr "Kayıtlı geçiş anahtarları"
+
+#: includes/passkeys/class-atshift-freeform-login-passkey-storage.php:105
+msgid "Another passkey is being registered. Please try again."
+msgstr "Başka bir geçiş anahtarı kaydediliyor. Lütfen yeniden deneyin."
+
+#: includes/passkeys/class-atshift-freeform-login-passkey-storage.php:166
+msgid "The passkey could not be saved."
+msgstr "Geçiş anahtarı kaydedilemedi."
+
+#. translators: %d: maximum number of passkeys.
+#: includes/passkeys/class-atshift-freeform-login-passkey-rest.php:132
+#: includes/passkeys/class-atshift-freeform-login-passkey-storage.php:151
+#, php-format
+msgid "You can register up to %d passkeys."
+msgstr "En fazla %d geçiş anahtarı kaydedebilirsiniz."
 
 #: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:537
 msgid "Remember Me"
@@ -630,7 +678,8 @@ msgstr "Geçiş anahtarı doğrulanamadı."
 
 #: includes/passkeys/class-atshift-freeform-login-passkey-rest.php:334
 msgid "The passkey login request expired. Please try again."
-msgstr "Geçiş anahtarıyla giriş isteğinin süresi doldu. Lütfen yeniden deneyin."
+msgstr ""
+"Geçiş anahtarıyla giriş isteğinin süresi doldu. Lütfen yeniden deneyin."
 
 #: includes/passkeys/class-atshift-freeform-login-passkey-rest.php:219
 msgid "The passkey registration request expired. Please try again."
@@ -644,7 +693,9 @@ msgstr "Seçilen geçiş anahtarı bu sitede kayıtlı değil."
 msgid ""
 "The site tagline is used initially. You can replace it here, or leave it "
 "blank to hide the text."
-msgstr "Başlangıçta site sloganı kullanılır. Burada değiştirebilir veya metni gizlemek için boş bırakabilirsiniz."
+msgstr ""
+"Başlangıçta site sloganı kullanılır. Burada değiştirebilir veya metni "
+"gizlemek için boş bırakabilirsiniz."
 
 #: includes/passkeys/class-atshift-freeform-login-passkey-profile.php:71
 msgid "This device's passkey"
@@ -661,9 +712,11 @@ msgstr "Bu site WordPress.com ile giriş yapılmasını gerektirir."
 
 #: includes/passkeys/class-atshift-freeform-login-passkey-rest.php:282
 msgid "Too many passkey requests. Please wait and try again."
-msgstr "Çok fazla geçiş anahtarı isteği gönderildi. Lütfen bekleyip yeniden deneyin."
+msgstr ""
+"Çok fazla geçiş anahtarı isteği gönderildi. Lütfen bekleyip yeniden deneyin."
 
-#: atshift-freeform-login/includes/class-atshift-freeform-login.php:84
+#: atshift-freeform-login/includes/class-atshift-freeform-login.php:91
+#: atshift-freeform-login/includes/class-atshift-freeform-login.php:168
 msgid "Purchase Pro add-on"
 msgstr "Pro eklentisini satın al"
 
@@ -671,17 +724,24 @@ msgstr "Pro eklentisini satın al"
 msgid ""
 "Upgrade to Pro to add a glass panel, rectangle, vertical band, or horizontal "
 "band behind the form, and adjust opacity, corner radius, and border styling."
-msgstr "Formun arkasına cam panel, dikdörtgen, dikey bant veya yatay bant eklemek ve opaklığı, köşe yarıçapını ve kenarlık stilini ayarlamak için Pro sürümüne yükseltin."
+msgstr ""
+"Formun arkasına cam panel, dikdörtgen, dikey bant veya yatay bant eklemek ve "
+"opaklığı, köşe yarıçapını ve kenarlık stilini ayarlamak için Pro sürümüne "
+"yükseltin."
 
 #: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:616
 msgid ""
 "Upgrade to Pro to adjust shadow position, blur, spread, color, and opacity."
-msgstr "Gölgenin konumunu, bulanıklığını, yayılmasını, rengini ve opaklığını ayarlamak için Pro sürümüne yükseltin."
+msgstr ""
+"Gölgenin konumunu, bulanıklığını, yayılmasını, rengini ve opaklığını "
+"ayarlamak için Pro sürümüne yükseltin."
 
 #: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:604
 msgid ""
 "Upgrade to Pro to fine-tune the horizontal and vertical position in pixels."
-msgstr "Yatay ve dikey konumu piksel cinsinden hassas biçimde ayarlamak için Pro sürümüne yükseltin."
+msgstr ""
+"Yatay ve dikey konumu piksel cinsinden hassas biçimde ayarlamak için Pro "
+"sürümüne yükseltin."
 
 #: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:453
 msgid "Use placeholders"
@@ -708,7 +768,8 @@ msgstr "Kullanıcı adı / E-posta"
 
 #: includes/passkeys/class-atshift-freeform-login-passkey-profile.php:146
 msgid "Users must add passkeys from their own profile screen."
-msgstr "Kullanıcılar geçiş anahtarlarını kendi profil ekranlarından eklemelidir."
+msgstr ""
+"Kullanıcılar geçiş anahtarlarını kendi profil ekranlarından eklemelidir."
 
 #: includes/passkeys/class-atshift-freeform-login-passkey-login.php:101
 msgid "Waiting for your passkey..."
@@ -737,7 +798,14 @@ msgid ""
 "reusing the same password across services. Start by registering a device you "
 "use regularly. Passkeys synced to the same storage account can be used on "
 "your other devices, and you can add more than one when needed."
-msgstr "Geçiş anahtarları, kullanıcı adı ve parola girmek yerine cihazınızdaki biyometrik kimlik doğrulamayı ve diğer güvenlik özelliklerini kullanarak giriş yapmanın yeni bir yoludur. Sahte bir siteye parola girme veya aynı parolayı farklı hizmetlerde yeniden kullanma riskini azaltır. Önce düzenli olarak kullandığınız bir cihazı kaydedin. Aynı depolama hesabıyla eşzamanlanan geçiş anahtarları diğer cihazlarınızda da kullanılabilir; gerektiğinde birden fazla geçiş anahtarı ekleyebilirsiniz."
+msgstr ""
+"Geçiş anahtarları, kullanıcı adı ve parola girmek yerine cihazınızdaki "
+"biyometrik kimlik doğrulamayı ve diğer güvenlik özelliklerini kullanarak "
+"giriş yapmanın yeni bir yoludur. Sahte bir siteye parola girme veya aynı "
+"parolayı farklı hizmetlerde yeniden kullanma riskini azaltır. Önce düzenli "
+"olarak kullandığınız bir cihazı kaydedin. Aynı depolama hesabıyla "
+"eşzamanlanan geçiş anahtarları diğer cihazlarınızda da kullanılabilir; "
+"gerektiğinde birden fazla geçiş anahtarı ekleyebilirsiniz."
 
 #: includes/passkeys/class-atshift-freeform-login-passkey-rest.php:123
 msgid "You can only register passkeys for your own account."
@@ -754,3 +822,11 @@ msgstr "Bu geçiş anahtarını silemezsiniz."
 #: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:325
 msgid "atshift Freeform Login"
 msgstr "atshift Freeform Login"
+
+#: includes/class-atshift-freeform-login.php:90
+msgid "Passkey cleanup is pending."
+msgstr "Geçiş anahtarı verilerinin temizlenmesi bekliyor."
+
+#: includes/passkeys/class-atshift-freeform-login-passkey-storage.php:117
+msgid "This account is not available."
+msgstr "Bu hesap kullanılamıyor."

@@ -5,17 +5,18 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: atshift-freeform-login 2.3.2\n"
+"Project-Id-Version: atshift-freeform-login 2.3.3\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-08-14 11:50+0900\n"
-"PO-Revision-Date: 2026-08-24 00:00+0900\n"
+"POT-Creation-Date: 2026-09-11 15:45+0900\n"
+"PO-Revision-Date: 2026-09-11 15:45+0900\n"
 "Last-Translator: @shift Translation Team\n"
 "Language-Team: Russian\n"
 "Language: ru_RU\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
+"n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 "X-Generator: Context-aware AI translation with linguistic review\n"
 
 #: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:511
@@ -52,7 +53,9 @@ msgstr "Цвет фона"
 msgid ""
 "Background color and images are available in the free version. Upgrade to "
 "Pro to use a lightweight loop video."
-msgstr "Цвет фона и изображения доступны в бесплатной версии. Перейдите на Pro, чтобы использовать облегчённое зацикленное видео."
+msgstr ""
+"Цвет фона и изображения доступны в бесплатной версии. Перейдите на Pro, "
+"чтобы использовать облегчённое зацикленное видео."
 
 #: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:364
 msgid "Background type"
@@ -105,7 +108,9 @@ msgstr "Изменить"
 msgid ""
 "Choose labels or placeholders and set the colors used for text, links, and "
 "the login button."
-msgstr "Выберите подписи или заполнители и задайте цвета текста, ссылок и кнопки входа."
+msgstr ""
+"Выберите подписи или заполнители и задайте цвета текста, ссылок и кнопки "
+"входа."
 
 #: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:468
 msgid "Choose whether the form has a shadow."
@@ -114,7 +119,8 @@ msgstr "Выберите, должна ли форма отбрасывать т
 #: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:381
 msgid ""
 "Choose whether the site title appears above the login form and set its color."
-msgstr "Укажите, отображать ли название сайта над формой входа, и задайте его цвет."
+msgstr ""
+"Укажите, отображать ли название сайта над формой входа, и задайте его цвет."
 
 #: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:372
 msgid "Contain"
@@ -156,7 +162,9 @@ msgstr "Размер отображения"
 
 #: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:398
 msgid "Displayed in a 4:1 frame. Tall images are cropped from the center."
-msgstr "Изображение отображается в рамке с соотношением сторон 4:1. Высокие изображения обрезаются по центру."
+msgstr ""
+"Изображение отображается в рамке с соотношением сторон 4:1. Высокие "
+"изображения обрезаются по центру."
 
 #: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:389
 msgid "Do not show"
@@ -203,14 +211,21 @@ msgid ""
 "Free accepts a wide logo image in a fixed 4:1 frame; images with a different "
 "height are cropped from the center. Pro preserves wide and tall image ratios "
 "and lets you adjust the logo width."
-msgstr "В бесплатной версии широкое изображение логотипа помещается в фиксированную рамку 4:1; изображения другой высоты обрезаются по центру. Pro сохраняет пропорции широких и высоких изображений и позволяет настраивать ширину логотипа."
+msgstr ""
+"В бесплатной версии широкое изображение логотипа помещается в фиксированную "
+"рамку 4:1; изображения другой высоты обрезаются по центру. Pro сохраняет "
+"пропорции широких и высоких изображений и позволяет настраивать ширину "
+"логотипа."
 
 #: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:612
 msgid ""
 "Free automatically adjusts link and button colors for hover and pressed "
 "states. Pro lets you choose each interaction color and hide the language "
 "selector on the login screen."
-msgstr "Бесплатная версия автоматически настраивает цвета ссылок и кнопок при наведении и нажатии. Pro позволяет выбрать цвет для каждого состояния взаимодействия и скрыть переключатель языка на странице входа."
+msgstr ""
+"Бесплатная версия автоматически настраивает цвета ссылок и кнопок при "
+"наведении и нажатии. Pro позволяет выбрать цвет для каждого состояния "
+"взаимодействия и скрыть переключатель языка на странице входа."
 
 #: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:361
 #: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:369
@@ -235,20 +250,28 @@ msgstr "Недопустимый ответ ключа доступа."
 msgid ""
 "Jetpack SSO currently redirects the login screen directly to WordPress.com. "
 "This login screen design is not shown during that redirect."
-msgstr "Jetpack SSO сейчас перенаправляет со страницы входа непосредственно на WordPress.com. Во время этого перенаправления данное оформление страницы входа не отображается."
+msgstr ""
+"Jetpack SSO сейчас перенаправляет со страницы входа непосредственно на "
+"WordPress.com. Во время этого перенаправления данное оформление страницы "
+"входа не отображается."
 
 #: atshift-freeform-login/includes/class-atshift-freeform-login-jetpack.php:150
 msgid ""
 "Jetpack SSO is set to use WordPress.com login only. The local username and "
 "password fields are hidden, and the WordPress.com login area uses this "
 "design."
-msgstr "В Jetpack SSO настроен вход только через WordPress.com. Локальные поля имени пользователя и пароля скрыты, а область входа через WordPress.com использует это оформление."
+msgstr ""
+"В Jetpack SSO настроен вход только через WordPress.com. Локальные поля имени "
+"пользователя и пароля скрыты, а область входа через WordPress.com использует "
+"это оформление."
 
 #: atshift-freeform-login/includes/class-atshift-freeform-login-jetpack.php:153
 msgid ""
 "Jetpack SSO was detected. The local login and WordPress.com login areas both "
 "use this design."
-msgstr "Обнаружен Jetpack SSO. Это оформление используется как для локального входа, так и для входа через WordPress.com."
+msgstr ""
+"Обнаружен Jetpack SSO. Это оформление используется как для локального входа, "
+"так и для входа через WordPress.com."
 
 #: atshift-freeform-login/includes/class-atshift-freeform-login-jetpack.php:160
 msgid "Jetpack SSO:"
@@ -430,7 +453,9 @@ msgstr "Ключи доступа недоступны на этом серве�
 
 #: includes/passkeys/class-atshift-freeform-login-passkey-environment.php:70
 msgid "Passkeys require HTTPS, except on localhost during development."
-msgstr "Для ключей доступа требуется HTTPS; исключение — localhost в среде разработки."
+msgstr ""
+"Для ключей доступа требуется HTTPS; исключение — localhost в среде "
+"разработки."
 
 #. translators: %s: required PHP version.
 #: includes/passkeys/class-atshift-freeform-login-passkey-environment.php:56
@@ -453,7 +478,10 @@ msgid ""
 "Password login remains available after you register a passkey. To keep your "
 "account secure, use a long, strong password that you do not reuse on other "
 "services, and store it in a password manager."
-msgstr "После регистрации ключа доступа вход по паролю останется доступен. Чтобы защитить учётную запись, используйте длинный надёжный пароль, который вы не используете в других сервисах, и храните его в менеджере паролей."
+msgstr ""
+"После регистрации ключа доступа вход по паролю останется доступен. Чтобы "
+"защитить учётную запись, используйте длинный надёжный пароль, который вы не "
+"используете в других сервисах, и храните его в менеджере паролей."
 
 #: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:648
 msgid "Position"
@@ -489,9 +517,30 @@ msgstr "Зарегистрирован: %s"
 msgid "Registered: Just now"
 msgstr "Зарегистрирован: только что"
 
+#. translators: 1: registered passkey count, 2: maximum passkey count.
+#: includes/passkeys/class-atshift-freeform-login-passkey-profile.php:341
+#, php-format
+msgid "Registered: %1$d/%2$d"
+msgstr "Зарегистрировано: %1$d/%2$d"
+
 #: includes/passkeys/class-atshift-freeform-login-passkey-profile.php:126
 msgid "Registered passkeys"
 msgstr "Зарегистрированные ключи доступа"
+
+#: includes/passkeys/class-atshift-freeform-login-passkey-storage.php:105
+msgid "Another passkey is being registered. Please try again."
+msgstr "Выполняется регистрация другого ключа доступа. Повторите попытку."
+
+#: includes/passkeys/class-atshift-freeform-login-passkey-storage.php:166
+msgid "The passkey could not be saved."
+msgstr "Не удалось сохранить ключ доступа."
+
+#. translators: %d: maximum number of passkeys.
+#: includes/passkeys/class-atshift-freeform-login-passkey-rest.php:132
+#: includes/passkeys/class-atshift-freeform-login-passkey-storage.php:151
+#, php-format
+msgid "You can register up to %d passkeys."
+msgstr "Можно зарегистрировать до %d ключей доступа."
 
 #: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:537
 msgid "Remember Me"
@@ -635,11 +684,14 @@ msgstr "Не удалось проверить ключ доступа."
 
 #: includes/passkeys/class-atshift-freeform-login-passkey-rest.php:334
 msgid "The passkey login request expired. Please try again."
-msgstr "Срок действия запроса на вход с помощью ключа доступа истёк. Повторите попытку."
+msgstr ""
+"Срок действия запроса на вход с помощью ключа доступа истёк. Повторите "
+"попытку."
 
 #: includes/passkeys/class-atshift-freeform-login-passkey-rest.php:219
 msgid "The passkey registration request expired. Please try again."
-msgstr "Срок действия запроса на регистрацию ключа доступа истёк. Повторите попытку."
+msgstr ""
+"Срок действия запроса на регистрацию ключа доступа истёк. Повторите попытку."
 
 #: includes/passkeys/class-atshift-freeform-login-passkey-rest.php:341
 msgid "The selected passkey is not registered on this site."
@@ -649,7 +701,9 @@ msgstr "Выбранный ключ доступа не зарегистриро
 msgid ""
 "The site tagline is used initially. You can replace it here, or leave it "
 "blank to hide the text."
-msgstr "Изначально используется краткое описание сайта. Его можно заменить здесь или оставить поле пустым, чтобы скрыть текст."
+msgstr ""
+"Изначально используется краткое описание сайта. Его можно заменить здесь или "
+"оставить поле пустым, чтобы скрыть текст."
 
 #: includes/passkeys/class-atshift-freeform-login-passkey-profile.php:71
 msgid "This device's passkey"
@@ -666,9 +720,12 @@ msgstr "На этом сайте требуется вход через WordPres
 
 #: includes/passkeys/class-atshift-freeform-login-passkey-rest.php:282
 msgid "Too many passkey requests. Please wait and try again."
-msgstr "Слишком много запросов на вход с помощью ключа доступа. Подождите и повторите попытку."
+msgstr ""
+"Слишком много запросов на вход с помощью ключа доступа. Подождите и "
+"повторите попытку."
 
-#: atshift-freeform-login/includes/class-atshift-freeform-login.php:84
+#: atshift-freeform-login/includes/class-atshift-freeform-login.php:91
+#: atshift-freeform-login/includes/class-atshift-freeform-login.php:168
 msgid "Purchase Pro add-on"
 msgstr "Купить дополнение Pro"
 
@@ -676,17 +733,24 @@ msgstr "Купить дополнение Pro"
 msgid ""
 "Upgrade to Pro to add a glass panel, rectangle, vertical band, or horizontal "
 "band behind the form, and adjust opacity, corner radius, and border styling."
-msgstr "Перейдите на Pro, чтобы добавить за формой стеклянную панель, прямоугольник, вертикальную или горизонтальную полосу, а также настроить непрозрачность, радиус скругления и оформление рамки."
+msgstr ""
+"Перейдите на Pro, чтобы добавить за формой стеклянную панель, прямоугольник, "
+"вертикальную или горизонтальную полосу, а также настроить непрозрачность, "
+"радиус скругления и оформление рамки."
 
 #: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:616
 msgid ""
 "Upgrade to Pro to adjust shadow position, blur, spread, color, and opacity."
-msgstr "Перейдите на Pro, чтобы настроить положение, размытие, расширение, цвет и непрозрачность тени."
+msgstr ""
+"Перейдите на Pro, чтобы настроить положение, размытие, расширение, цвет и "
+"непрозрачность тени."
 
 #: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:604
 msgid ""
 "Upgrade to Pro to fine-tune the horizontal and vertical position in pixels."
-msgstr "Перейдите на Pro, чтобы точно настроить положение по горизонтали и вертикали в пикселях."
+msgstr ""
+"Перейдите на Pro, чтобы точно настроить положение по горизонтали и вертикали "
+"в пикселях."
 
 #: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:453
 msgid "Use placeholders"
@@ -713,7 +777,8 @@ msgstr "Имя пользователя / Эл. почта"
 
 #: includes/passkeys/class-atshift-freeform-login-passkey-profile.php:146
 msgid "Users must add passkeys from their own profile screen."
-msgstr "Пользователи должны добавлять ключи доступа на странице собственного профиля."
+msgstr ""
+"Пользователи должны добавлять ключи доступа на странице собственного профиля."
 
 #: includes/passkeys/class-atshift-freeform-login-passkey-login.php:101
 msgid "Waiting for your passkey..."
@@ -742,11 +807,20 @@ msgid ""
 "reusing the same password across services. Start by registering a device you "
 "use regularly. Passkeys synced to the same storage account can be used on "
 "your other devices, and you can add more than one when needed."
-msgstr "Ключи доступа — это новый способ входа с использованием биометрической аутентификации и других средств защиты устройства вместо ввода имени пользователя и пароля. Они снижают риск ввода пароля на поддельном сайте или повторного использования одного пароля в разных сервисах. Сначала зарегистрируйте устройство, которым регулярно пользуетесь. Ключи доступа, синхронизированные через одну и ту же учётную запись службы хранения, можно использовать на других ваших устройствах; при необходимости можно добавить несколько ключей."
+msgstr ""
+"Ключи доступа — это новый способ входа с использованием биометрической "
+"аутентификации и других средств защиты устройства вместо ввода имени "
+"пользователя и пароля. Они снижают риск ввода пароля на поддельном сайте или "
+"повторного использования одного пароля в разных сервисах. Сначала "
+"зарегистрируйте устройство, которым регулярно пользуетесь. Ключи доступа, "
+"синхронизированные через одну и ту же учётную запись службы хранения, можно "
+"использовать на других ваших устройствах; при необходимости можно добавить "
+"несколько ключей."
 
 #: includes/passkeys/class-atshift-freeform-login-passkey-rest.php:123
 msgid "You can only register passkeys for your own account."
-msgstr "Вы можете регистрировать ключи доступа только для собственной учётной записи."
+msgstr ""
+"Вы можете регистрировать ключи доступа только для собственной учётной записи."
 
 #: includes/passkeys/class-atshift-freeform-login-passkey-rest.php:139
 msgid "You cannot delete this passkey."
@@ -759,3 +833,11 @@ msgstr "Вы не можете удалить этот ключ доступа."
 #: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:325
 msgid "atshift Freeform Login"
 msgstr "atshift Freeform Login"
+
+#: includes/class-atshift-freeform-login.php:90
+msgid "Passkey cleanup is pending."
+msgstr "Очистка данных ключей доступа ожидает выполнения."
+
+#: includes/passkeys/class-atshift-freeform-login-passkey-storage.php:117
+msgid "This account is not available."
+msgstr "Эта учетная запись недоступна."

@@ -104,6 +104,8 @@ When [atshift User Profile Fields](https://wordpress.org/plugins/atshift-user-pr
 
 When WP-Members or another plugin provides a frontend profile page, `[atshift_passkey_profile]` places the same registration and management controls on that page for the currently logged-in user. It never accepts a user ID, so one account cannot use the shortcode to manage another account's passkeys.
 
+Account-page integrations can check `apply_filters( 'atshift_freeform_login_passkey_profile_available', false )` before rendering the shortcode. Freeform Login returns true only for a logged-in user when its passkey runtime and origin checks pass. Integrations should render before `wp_head` to enqueue the shared assets in time and enforce their own membership access rules. atshift Members embeds the current-user controls in its account editing page, either through a configured User Profile Fields placement or in a dedicated section. Its account-withdrawal flow also asks Freeform Login to erase the departing user's passkey data before deletion is completed.
+
 ## Shortcode
 
 Add the login form to a page with:

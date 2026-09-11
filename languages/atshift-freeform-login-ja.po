@@ -1,9 +1,9 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: atshift Freeform Login 2.3.2\n"
+"Project-Id-Version: atshift Freeform Login 2.3.3\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-08-14 11:50+0900\n"
-"PO-Revision-Date: 2026-08-24 21:47+0900\n"
+"POT-Creation-Date: 2026-09-11 15:45+0900\n"
+"PO-Revision-Date: 2026-09-11 15:45+0900\n"
 "Last-Translator: @shift\n"
 "Language-Team: Japanese\n"
 "Language: ja\n"
@@ -512,6 +512,21 @@ msgstr "登録数：%1$d/%2$d件"
 msgid "Registered passkeys"
 msgstr "登録済みパスキー"
 
+#: includes/passkeys/class-atshift-freeform-login-passkey-storage.php:105
+msgid "Another passkey is being registered. Please try again."
+msgstr "別のパスキーを登録中です。しばらくしてから、もう一度お試しください。"
+
+#: includes/passkeys/class-atshift-freeform-login-passkey-storage.php:166
+msgid "The passkey could not be saved."
+msgstr "パスキーを保存できませんでした。"
+
+#. translators: %d: maximum number of passkeys.
+#: includes/passkeys/class-atshift-freeform-login-passkey-rest.php:132
+#: includes/passkeys/class-atshift-freeform-login-passkey-storage.php:151
+#, php-format
+msgid "You can register up to %d passkeys."
+msgstr "パスキーは最大 %d件まで登録できます。"
+
 #: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:537
 msgid "Remember Me"
 msgstr "ログイン状態を保存"
@@ -689,7 +704,8 @@ msgstr "このサイトでは WordPress.com ログインが必要です。"
 msgid "Too many passkey requests. Please wait and try again."
 msgstr "パスキーのリクエストが多すぎます。しばらく待ってからお試しください。"
 
-#: atshift-freeform-login/includes/class-atshift-freeform-login.php:84
+#: atshift-freeform-login/includes/class-atshift-freeform-login.php:91
+#: atshift-freeform-login/includes/class-atshift-freeform-login.php:168
 msgid "Purchase Pro add-on"
 msgstr "PROアドオンを購入"
 
@@ -776,21 +792,6 @@ msgstr ""
 msgid "You can only register passkeys for your own account."
 msgstr "パスキーは自分のアカウントにのみ登録できます。"
 
-#: includes/passkeys/class-atshift-freeform-login-passkey-storage.php:105
-msgid "Another passkey is being registered. Please try again."
-msgstr "別のパスキーを登録中です。しばらくしてから、もう一度お試しください。"
-
-#: includes/passkeys/class-atshift-freeform-login-passkey-storage.php:166
-msgid "The passkey could not be saved."
-msgstr "パスキーを保存できませんでした。"
-
-#. translators: %d: maximum number of passkeys.
-#: includes/passkeys/class-atshift-freeform-login-passkey-rest.php:132
-#: includes/passkeys/class-atshift-freeform-login-passkey-storage.php:151
-#, php-format
-msgid "You can register up to %d passkeys."
-msgstr "パスキーは最大 %d件まで登録できます。"
-
 #: includes/passkeys/class-atshift-freeform-login-passkey-rest.php:139
 msgid "You cannot delete this passkey."
 msgstr "このパスキーを削除する権限がありません。"
@@ -802,6 +803,14 @@ msgstr "このパスキーを削除する権限がありません。"
 #: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:325
 msgid "atshift Freeform Login"
 msgstr "atshift Freeform Login"
+
+#: includes/class-atshift-freeform-login.php:90
+msgid "Passkey cleanup is pending."
+msgstr "パスキーの削除処理が保留されています。"
+
+#: includes/passkeys/class-atshift-freeform-login-passkey-storage.php:117
+msgid "This account is not available."
+msgstr "このアカウントは利用できません。"
 
 #~ msgid "Bottom center"
 #~ msgstr "下中央"

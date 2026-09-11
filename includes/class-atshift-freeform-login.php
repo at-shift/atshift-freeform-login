@@ -48,6 +48,10 @@ final class Atshift_Freeform_Login {
 	 */
 	private function __construct() {
 		add_action( 'init', array( $this, 'load_textdomain' ) );
+		add_action( 'delete_user', array( $this, 'erase_deleted_user_passkeys' ) );
+		add_action( 'deleted_user', array( $this, 'erase_deleted_user_passkeys' ) );
+		add_action( 'wpmu_delete_user', array( $this, 'erase_network_deleted_user_passkeys' ) );
+		add_filter( 'atshift_members_erase_user_data', array( $this, 'erase_member_passkeys' ), 10, 2 );
 		add_filter( 'plugin_action_links_' . plugin_basename( ATSHIFT_FREEFORM_LOGIN_FILE ), array( $this, 'filter_plugin_action_links' ) );
 		add_filter( 'plugin_row_meta', array( $this, 'filter_plugin_row_meta' ), 10, 4 );
 
@@ -60,6 +64,80 @@ final class Atshift_Freeform_Login {
 			new Atshift_Freeform_Login_Passkeys();
 		} else {
 			new Atshift_Freeform_Login_Passkey_Profile( new Atshift_Freeform_Login_Passkey_Storage() );
+		}
+	}
+
+	/**
+	 * Remove passkey data before atshift Members deletes an account.
+	 *
+	 * Returning an error keeps the Members erasure job pending so it can retry
+	 * without reporting an incomplete account deletion as successful.
+	 *
+	 * @param WP_Error $errors  Existing erasure errors.
+	 * @param int      $user_id User ID.
+	 * @return WP_Error
+	 */
+	public function erase_member_passkeys( $errors, $user_id ) {
+		if ( ! $errors instanceof WP_Error ) {
+			$errors = new WP_Error();
+		}
+
+		$storage = new Atshift_Freeform_Login_Passkey_Storage();
+
+		if ( ! $storage->erase_user_credentials( $user_id ) ) {
+			$errors->add(
+				'atshift_passkey_erasure_pending',
+				__( 'Passkey cleanup is pending.', 'atshift-freeform-login' )
+			);
+		}
+
+		return $errors;
+	}
+
+	/**
+	 * Remove passkey data during ordinary WordPress user deletion.
+	 *
+	 * This runs both before and after core deletion. The second idempotent pass
+	 * retries index cleanup if a concurrent update prevented the first pass.
+	 *
+	 * @param int $user_id User ID.
+	 * @return void
+	 */
+	public function erase_deleted_user_passkeys( $user_id ) {
+		if ( is_multisite() ) {
+			return;
+		}
+
+		$storage = new Atshift_Freeform_Login_Passkey_Storage();
+		$storage->erase_user_credentials( $user_id );
+	}
+
+	/**
+	 * Remove passkey data when a user is deleted from a multisite network.
+	 *
+	 * Removing a user from one site must not erase their network-wide passkeys,
+	 * so multisite cleanup is attached only to the network deletion hook.
+	 *
+	 * @param int $user_id User ID.
+	 * @return void
+	 */
+	public function erase_network_deleted_user_passkeys( $user_id ) {
+		$site_ids = get_sites(
+			array(
+				'fields' => 'ids',
+				'number' => 0,
+			)
+		);
+
+		foreach ( $site_ids as $site_id ) {
+			switch_to_blog( $site_id );
+
+			try {
+				$storage = new Atshift_Freeform_Login_Passkey_Storage();
+				$storage->erase_user_credentials( $user_id );
+			} finally {
+				restore_current_blog();
+			}
 		}
 	}
 

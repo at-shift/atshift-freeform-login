@@ -4,10 +4,10 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: atshift-freeform-login 2.3.2\n"
+"Project-Id-Version: atshift-freeform-login 2.3.3\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-08-14 11:50+0900\n"
-"PO-Revision-Date: 2026-08-24 00:00+0900\n"
+"POT-Creation-Date: 2026-09-11 15:45+0900\n"
+"PO-Revision-Date: 2026-09-11 15:45+0900\n"
 "Last-Translator: @shift\n"
 "Language-Team: Spanish (Spain)\n"
 "Language: es_ES\n"
@@ -480,8 +480,8 @@ msgid ""
 "account secure, use a long, strong password that you do not reuse on other "
 "services, and store it in a password manager."
 msgstr ""
-"El acceso con contraseña sigue disponible después de registrar una clave "
-"de acceso. Para mantener segura tu cuenta, utiliza una contraseña larga y "
+"El acceso con contraseña sigue disponible después de registrar una clave de "
+"acceso. Para mantener segura tu cuenta, utiliza una contraseña larga y "
 "robusta que no reutilices en otros servicios y guárdala en un gestor de "
 "contraseñas."
 
@@ -519,9 +519,30 @@ msgstr "Registrada: %s"
 msgid "Registered: Just now"
 msgstr "Registrada: ahora mismo"
 
+#. translators: 1: registered passkey count, 2: maximum passkey count.
+#: includes/passkeys/class-atshift-freeform-login-passkey-profile.php:341
+#, php-format
+msgid "Registered: %1$d/%2$d"
+msgstr "Registradas: %1$d/%2$d"
+
 #: includes/passkeys/class-atshift-freeform-login-passkey-profile.php:126
 msgid "Registered passkeys"
 msgstr "Claves de acceso registradas"
+
+#: includes/passkeys/class-atshift-freeform-login-passkey-storage.php:105
+msgid "Another passkey is being registered. Please try again."
+msgstr "Se está registrando otra clave de acceso. Inténtalo de nuevo."
+
+#: includes/passkeys/class-atshift-freeform-login-passkey-storage.php:166
+msgid "The passkey could not be saved."
+msgstr "No se ha podido guardar la clave de acceso."
+
+#. translators: %d: maximum number of passkeys.
+#: includes/passkeys/class-atshift-freeform-login-passkey-rest.php:132
+#: includes/passkeys/class-atshift-freeform-login-passkey-storage.php:151
+#, php-format
+msgid "You can register up to %d passkeys."
+msgstr "Puedes registrar hasta %d claves de acceso."
 
 #: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:537
 msgid "Remember Me"
@@ -705,7 +726,8 @@ msgstr ""
 "Se han realizado demasiadas solicitudes de claves de acceso. Espera un "
 "momento e inténtalo de nuevo."
 
-#: atshift-freeform-login/includes/class-atshift-freeform-login.php:84
+#: atshift-freeform-login/includes/class-atshift-freeform-login.php:91
+#: atshift-freeform-login/includes/class-atshift-freeform-login.php:168
 msgid "Purchase Pro add-on"
 msgstr "Comprar el complemento Pro"
 
@@ -813,3 +835,11 @@ msgstr "No puedes eliminar esta clave de acceso."
 #: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:325
 msgid "atshift Freeform Login"
 msgstr "atshift Freeform Login"
+
+#: includes/class-atshift-freeform-login.php:90
+msgid "Passkey cleanup is pending."
+msgstr "La eliminación de los datos de las claves de acceso está pendiente."
+
+#: includes/passkeys/class-atshift-freeform-login-passkey-storage.php:117
+msgid "This account is not available."
+msgstr "Esta cuenta no está disponible."

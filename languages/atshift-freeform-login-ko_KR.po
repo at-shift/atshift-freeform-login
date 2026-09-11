@@ -4,10 +4,10 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: atshift-freeform-login 2.3.2\n"
+"Project-Id-Version: atshift-freeform-login 2.3.3\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-08-14 11:50+0900\n"
-"PO-Revision-Date: 2026-08-24 00:00+0900\n"
+"POT-Creation-Date: 2026-09-11 15:45+0900\n"
+"PO-Revision-Date: 2026-09-11 15:45+0900\n"
 "Last-Translator: @shift\n"
 "Language-Team: Korean\n"
 "Language: ko_KR\n"
@@ -48,8 +48,12 @@ msgid "Background color"
 msgstr "배경색"
 
 #: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:596
-msgid "Background color and images are available in the free version. Upgrade to Pro to use a lightweight loop video."
-msgstr "무료 버전에서는 배경색과 이미지를 사용할 수 있습니다. 가벼운 반복 재생 동영상을 사용하려면 Pro로 업그레이드하세요."
+msgid ""
+"Background color and images are available in the free version. Upgrade to "
+"Pro to use a lightweight loop video."
+msgstr ""
+"무료 버전에서는 배경색과 이미지를 사용할 수 있습니다. 가벼운 반복 재생 동영상"
+"을 사용하려면 Pro로 업그레이드하세요."
 
 #: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:364
 msgid "Background type"
@@ -99,16 +103,22 @@ msgid "Change"
 msgstr "변경"
 
 #: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:446
-msgid "Choose labels or placeholders and set the colors used for text, links, and the login button."
-msgstr "레이블 또는 자리 표시자 사용 여부를 선택하고 텍스트, 링크, 로그인 버튼에 사용할 색상을 설정합니다."
+msgid ""
+"Choose labels or placeholders and set the colors used for text, links, and "
+"the login button."
+msgstr ""
+"레이블 또는 자리 표시자 사용 여부를 선택하고 텍스트, 링크, 로그인 버튼에 사용"
+"할 색상을 설정합니다."
 
 #: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:468
 msgid "Choose whether the form has a shadow."
 msgstr "양식에 그림자를 표시할지 선택합니다."
 
 #: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:381
-msgid "Choose whether the site title appears above the login form and set its color."
-msgstr "로그인 양식 위에 사이트 제목을 표시할지 선택하고 제목 색상을 설정합니다."
+msgid ""
+"Choose whether the site title appears above the login form and set its color."
+msgstr ""
+"로그인 양식 위에 사이트 제목을 표시할지 선택하고 제목 색상을 설정합니다."
 
 #: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:372
 msgid "Contain"
@@ -150,7 +160,8 @@ msgstr "표시 크기"
 
 #: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:398
 msgid "Displayed in a 4:1 frame. Tall images are cropped from the center."
-msgstr "4:1 프레임으로 표시됩니다. 세로로 긴 이미지는 가운데를 기준으로 잘립니다."
+msgstr ""
+"4:1 프레임으로 표시됩니다. 세로로 긴 이미지는 가운데를 기준으로 잘립니다."
 
 #: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:389
 msgid "Do not show"
@@ -193,12 +204,24 @@ msgid "Form width"
 msgstr "양식 너비"
 
 #: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:600
-msgid "Free accepts a wide logo image in a fixed 4:1 frame; images with a different height are cropped from the center. Pro preserves wide and tall image ratios and lets you adjust the logo width."
-msgstr "무료 버전은 가로형 로고 이미지를 고정된 4:1 프레임에 표시하며, 높이가 다른 이미지는 가운데를 기준으로 잘립니다. Pro에서는 가로형 및 세로형 이미지의 비율을 유지하고 로고 너비를 조절할 수 있습니다."
+msgid ""
+"Free accepts a wide logo image in a fixed 4:1 frame; images with a different "
+"height are cropped from the center. Pro preserves wide and tall image ratios "
+"and lets you adjust the logo width."
+msgstr ""
+"무료 버전은 가로형 로고 이미지를 고정된 4:1 프레임에 표시하며, 높이가 다른 이"
+"미지는 가운데를 기준으로 잘립니다. Pro에서는 가로형 및 세로형 이미지의 비율"
+"을 유지하고 로고 너비를 조절할 수 있습니다."
 
 #: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:612
-msgid "Free automatically adjusts link and button colors for hover and pressed states. Pro lets you choose each interaction color and hide the language selector on the login screen."
-msgstr "무료 버전은 마우스를 올리거나 누른 상태에 맞춰 링크와 버튼 색상을 자동으로 조정합니다. Pro에서는 각 상호작용 상태의 색상을 직접 선택하고 로그인 화면의 언어 선택기를 숨길 수 있습니다."
+msgid ""
+"Free automatically adjusts link and button colors for hover and pressed "
+"states. Pro lets you choose each interaction color and hide the language "
+"selector on the login screen."
+msgstr ""
+"무료 버전은 마우스를 올리거나 누른 상태에 맞춰 링크와 버튼 색상을 자동으로 조"
+"정합니다. Pro에서는 각 상호작용 상태의 색상을 직접 선택하고 로그인 화면의 언"
+"어 선택기를 숨길 수 있습니다."
 
 #: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:361
 #: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:369
@@ -220,16 +243,31 @@ msgid "Invalid passkey response."
 msgstr "패스키 응답이 올바르지 않습니다."
 
 #: atshift-freeform-login/includes/class-atshift-freeform-login-jetpack.php:147
-msgid "Jetpack SSO currently redirects the login screen directly to WordPress.com. This login screen design is not shown during that redirect."
-msgstr "현재 Jetpack SSO가 로그인 화면에서 WordPress.com으로 바로 리디렉션하도록 설정되어 있습니다. 리디렉션되는 동안에는 이 로그인 화면 디자인이 표시되지 않습니다."
+msgid ""
+"Jetpack SSO currently redirects the login screen directly to WordPress.com. "
+"This login screen design is not shown during that redirect."
+msgstr ""
+"현재 Jetpack SSO가 로그인 화면에서 WordPress.com으로 바로 리디렉션하도록 설정"
+"되어 있습니다. 리디렉션되는 동안에는 이 로그인 화면 디자인이 표시되지 않습니"
+"다."
 
 #: atshift-freeform-login/includes/class-atshift-freeform-login-jetpack.php:150
-msgid "Jetpack SSO is set to use WordPress.com login only. The local username and password fields are hidden, and the WordPress.com login area uses this design."
-msgstr "Jetpack SSO가 WordPress.com 로그인만 사용하도록 설정되어 있습니다. 로컬 사용자 이름과 비밀번호 필드는 숨겨지고 WordPress.com 로그인 영역에 이 디자인이 적용됩니다."
+msgid ""
+"Jetpack SSO is set to use WordPress.com login only. The local username and "
+"password fields are hidden, and the WordPress.com login area uses this "
+"design."
+msgstr ""
+"Jetpack SSO가 WordPress.com 로그인만 사용하도록 설정되어 있습니다. 로컬 사용"
+"자 이름과 비밀번호 필드는 숨겨지고 WordPress.com 로그인 영역에 이 디자인이 적"
+"용됩니다."
 
 #: atshift-freeform-login/includes/class-atshift-freeform-login-jetpack.php:153
-msgid "Jetpack SSO was detected. The local login and WordPress.com login areas both use this design."
-msgstr "Jetpack SSO가 감지되었습니다. 로컬 로그인 영역과 WordPress.com 로그인 영역 모두에 이 디자인이 적용됩니다."
+msgid ""
+"Jetpack SSO was detected. The local login and WordPress.com login areas both "
+"use this design."
+msgstr ""
+"Jetpack SSO가 감지되었습니다. 로컬 로그인 영역과 WordPress.com 로그인 영역 모"
+"두에 이 디자인이 적용됩니다."
 
 #: atshift-freeform-login/includes/class-atshift-freeform-login-jetpack.php:160
 msgid "Jetpack SSO:"
@@ -411,7 +449,8 @@ msgstr "이 서버에서는 패스키를 사용할 수 없습니다."
 
 #: includes/passkeys/class-atshift-freeform-login-passkey-environment.php:70
 msgid "Passkeys require HTTPS, except on localhost during development."
-msgstr "패스키를 사용하려면 HTTPS가 필요합니다. 단, 개발 중인 localhost는 예외입니다."
+msgstr ""
+"패스키를 사용하려면 HTTPS가 필요합니다. 단, 개발 중인 localhost는 예외입니다."
 
 #. translators: %s: required PHP version.
 #: includes/passkeys/class-atshift-freeform-login-passkey-environment.php:56
@@ -430,8 +469,14 @@ msgid "Password"
 msgstr "비밀번호"
 
 #: includes/passkeys/class-atshift-freeform-login-passkey-profile.php:120
-msgid "Password login remains available after you register a passkey. To keep your account secure, use a long, strong password that you do not reuse on other services, and store it in a password manager."
-msgstr "패스키를 등록한 뒤에도 비밀번호로 로그인할 수 있습니다. 계정을 안전하게 보호하려면 다른 서비스에서 재사용하지 않는 길고 강력한 비밀번호를 사용하고 비밀번호 관리자에 보관하세요."
+msgid ""
+"Password login remains available after you register a passkey. To keep your "
+"account secure, use a long, strong password that you do not reuse on other "
+"services, and store it in a password manager."
+msgstr ""
+"패스키를 등록한 뒤에도 비밀번호로 로그인할 수 있습니다. 계정을 안전하게 보호"
+"하려면 다른 서비스에서 재사용하지 않는 길고 강력한 비밀번호를 사용하고 비밀번"
+"호 관리자에 보관하세요."
 
 #: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:648
 msgid "Position"
@@ -467,9 +512,30 @@ msgstr "등록일: %s"
 msgid "Registered: Just now"
 msgstr "등록: 방금 전"
 
+#. translators: 1: registered passkey count, 2: maximum passkey count.
+#: includes/passkeys/class-atshift-freeform-login-passkey-profile.php:341
+#, php-format
+msgid "Registered: %1$d/%2$d"
+msgstr "등록됨: %1$d/%2$d"
+
 #: includes/passkeys/class-atshift-freeform-login-passkey-profile.php:126
 msgid "Registered passkeys"
 msgstr "등록된 패스키"
+
+#: includes/passkeys/class-atshift-freeform-login-passkey-storage.php:105
+msgid "Another passkey is being registered. Please try again."
+msgstr "다른 패스키를 등록하는 중입니다. 다시 시도해 주세요."
+
+#: includes/passkeys/class-atshift-freeform-login-passkey-storage.php:166
+msgid "The passkey could not be saved."
+msgstr "패스키를 저장할 수 없습니다."
+
+#. translators: %d: maximum number of passkeys.
+#: includes/passkeys/class-atshift-freeform-login-passkey-rest.php:132
+#: includes/passkeys/class-atshift-freeform-login-passkey-storage.php:151
+#, php-format
+msgid "You can register up to %d passkeys."
+msgstr "패스키는 최대 %d개까지 등록할 수 있습니다."
 
 #: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:537
 msgid "Remember Me"
@@ -624,8 +690,12 @@ msgid "The selected passkey is not registered on this site."
 msgstr "선택한 패스키가 이 사이트에 등록되어 있지 않습니다."
 
 #: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:403
-msgid "The site tagline is used initially. You can replace it here, or leave it blank to hide the text."
-msgstr "처음에는 사이트 태그라인이 사용됩니다. 여기에서 다른 문구로 바꾸거나, 텍스트를 숨기려면 비워 두세요."
+msgid ""
+"The site tagline is used initially. You can replace it here, or leave it "
+"blank to hide the text."
+msgstr ""
+"처음에는 사이트 태그라인이 사용됩니다. 여기에서 다른 문구로 바꾸거나, 텍스트"
+"를 숨기려면 비워 두세요."
 
 #: includes/passkeys/class-atshift-freeform-login-passkey-profile.php:71
 msgid "This device's passkey"
@@ -644,21 +714,32 @@ msgstr "이 사이트에서는 WordPress.com 로그인이 필요합니다."
 msgid "Too many passkey requests. Please wait and try again."
 msgstr "패스키 요청이 너무 많습니다. 잠시 기다린 후 다시 시도해 주세요."
 
-#: atshift-freeform-login/includes/class-atshift-freeform-login.php:84
+#: atshift-freeform-login/includes/class-atshift-freeform-login.php:91
+#: atshift-freeform-login/includes/class-atshift-freeform-login.php:168
 msgid "Purchase Pro add-on"
 msgstr "Pro 애드온 구매"
 
 #: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:608
-msgid "Upgrade to Pro to add a glass panel, rectangle, vertical band, or horizontal band behind the form, and adjust opacity, corner radius, and border styling."
-msgstr "Pro로 업그레이드하면 양식 뒤에 글래스 패널, 사각형, 세로 띠 또는 가로 띠를 추가하고 불투명도, 모서리 반경 및 테두리 스타일을 조절할 수 있습니다."
+msgid ""
+"Upgrade to Pro to add a glass panel, rectangle, vertical band, or horizontal "
+"band behind the form, and adjust opacity, corner radius, and border styling."
+msgstr ""
+"Pro로 업그레이드하면 양식 뒤에 글래스 패널, 사각형, 세로 띠 또는 가로 띠를 추"
+"가하고 불투명도, 모서리 반경 및 테두리 스타일을 조절할 수 있습니다."
 
 #: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:616
-msgid "Upgrade to Pro to adjust shadow position, blur, spread, color, and opacity."
-msgstr "Pro로 업그레이드하면 그림자의 위치, 흐림 정도, 퍼짐 정도, 색상 및 불투명도를 조절할 수 있습니다."
+msgid ""
+"Upgrade to Pro to adjust shadow position, blur, spread, color, and opacity."
+msgstr ""
+"Pro로 업그레이드하면 그림자의 위치, 흐림 정도, 퍼짐 정도, 색상 및 불투명도를 "
+"조절할 수 있습니다."
 
 #: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:604
-msgid "Upgrade to Pro to fine-tune the horizontal and vertical position in pixels."
-msgstr "Pro로 업그레이드하면 가로 및 세로 위치를 픽셀 단위로 세밀하게 조정할 수 있습니다."
+msgid ""
+"Upgrade to Pro to fine-tune the horizontal and vertical position in pixels."
+msgstr ""
+"Pro로 업그레이드하면 가로 및 세로 위치를 픽셀 단위로 세밀하게 조정할 수 있습"
+"니다."
 
 #: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:453
 msgid "Use placeholders"
@@ -707,8 +788,20 @@ msgid "You are not allowed to manage these settings."
 msgstr "이 설정을 관리할 권한이 없습니다."
 
 #: includes/passkeys/class-atshift-freeform-login-passkey-profile.php:105
-msgid "Passkeys are a new way to sign in using biometric authentication and other security features on your device instead of entering a username and password. They reduce the risk of entering a password on a fake site or reusing the same password across services. Start by registering a device you use regularly. Passkeys synced to the same storage account can be used on your other devices, and you can add more than one when needed."
-msgstr "패스키는 사용자 이름과 비밀번호를 입력하는 대신 기기의 생체 인증 등 보안 기능을 이용해 로그인하는 새로운 방식입니다. 가짜 사이트에 비밀번호를 입력하거나 여러 서비스에서 같은 비밀번호를 재사용할 때 생기는 위험을 줄여 줍니다. 먼저 자주 사용하는 기기에서 등록하세요. 동일한 저장소 제공업체 계정에 동기화된 패스키는 다른 기기에서도 사용할 수 있으며, 필요하면 여러 개를 등록할 수 있습니다."
+msgid ""
+"Passkeys are a new way to sign in using biometric authentication and other "
+"security features on your device instead of entering a username and "
+"password. They reduce the risk of entering a password on a fake site or "
+"reusing the same password across services. Start by registering a device you "
+"use regularly. Passkeys synced to the same storage account can be used on "
+"your other devices, and you can add more than one when needed."
+msgstr ""
+"패스키는 사용자 이름과 비밀번호를 입력하는 대신 기기의 생체 인증 등 보안 기능"
+"을 이용해 로그인하는 새로운 방식입니다. 가짜 사이트에 비밀번호를 입력하거나 "
+"여러 서비스에서 같은 비밀번호를 재사용할 때 생기는 위험을 줄여 줍니다. 먼저 "
+"자주 사용하는 기기에서 등록하세요. 동일한 저장소 제공업체 계정에 동기화된 패"
+"스키는 다른 기기에서도 사용할 수 있으며, 필요하면 여러 개를 등록할 수 있습니"
+"다."
 
 #: includes/passkeys/class-atshift-freeform-login-passkey-rest.php:123
 msgid "You can only register passkeys for your own account."
@@ -725,3 +818,11 @@ msgstr "이 패스키를 삭제할 권한이 없습니다."
 #: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:325
 msgid "atshift Freeform Login"
 msgstr "atshift Freeform Login"
+
+#: includes/class-atshift-freeform-login.php:90
+msgid "Passkey cleanup is pending."
+msgstr "패스키 데이터 정리가 보류 중입니다."
+
+#: includes/passkeys/class-atshift-freeform-login-passkey-storage.php:117
+msgid "This account is not available."
+msgstr "이 계정은 사용할 수 없습니다."
