@@ -4,7 +4,7 @@ Tags: login, custom login, login form, passkey, webauthn
 Requires at least: 6.5
 Tested up to: 7.1
 Requires PHP: 7.4
-Stable tag: 2.3.3
+Stable tag: 2.4
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -75,7 +75,9 @@ For every attribute and examples of passkey-only login and frontend-profile inte
 
 The optional Pro add-on extends the free plugin with custom logo images, precise position offsets, transparency, borders, corner radius, and detailed shadow controls. The free plugin remains usable without an add-on.
 
-* Pro add-on: [Purchase Pro add-on](https://plugins.at-shift.net/en/freeform-login/#pricing)
+You can try the complete Pro design controls on one site for seven days without entering card details. The trial does not renew or charge automatically. When it ends, only Pro design controls stop; Free login, passkeys, Free settings, and saved Pro design values remain intact. A purchased license re-enables the saved Pro design.
+
+* Pro add-on: [Try Pro for 7 days or purchase](https://plugins.at-shift.net/en/trial/?product=freeform-login)
 
 == Related Projects ==
 
@@ -91,6 +93,11 @@ The optional Pro add-on extends the free plugin with custom logo images, precise
 4. The visual design editor provides grouped controls and responsive previews before login-screen changes are enabled.
 
 == Changelog ==
+
+= 2.4 =
+* Added a seven-day Freeform Login Pro trial path across the Plugins screen, settings guidance, and official website.
+* Added non-destructive trial expiry handling so Free login, passkeys, Free settings, and saved Pro design values remain available.
+* Added safe trial, purchased-license, and license-server outage states with multilingual guidance.
 
 = 2.3.3 =
 * Added passkey availability and account-data erasure hooks for atshift Members integration.

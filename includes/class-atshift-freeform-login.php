@@ -54,6 +54,7 @@ final class Atshift_Freeform_Login {
 		add_filter( 'atshift_members_erase_user_data', array( $this, 'erase_member_passkeys' ), 10, 2 );
 		add_filter( 'plugin_action_links_' . plugin_basename( ATSHIFT_FREEFORM_LOGIN_FILE ), array( $this, 'filter_plugin_action_links' ) );
 		add_filter( 'plugin_row_meta', array( $this, 'filter_plugin_row_meta' ), 10, 4 );
+		add_action( 'atshift_freeform_login_upgrade_note_action', array( $this, 'render_trial_link' ) );
 
 		new Atshift_Freeform_Login_Jetpack();
 		new Atshift_Freeform_Login_Settings();
@@ -160,13 +161,10 @@ final class Atshift_Freeform_Login {
 			return $links;
 		}
 
-		$upgrade_url = 0 === strpos( determine_locale(), 'ja' )
-			? 'https://plugins.at-shift.net/freeform-login/#pricing'
-			: 'https://plugins.at-shift.net/en/freeform-login/#pricing';
 		$pro_link    = sprintf(
 			'<a href="%1$s" target="_blank" rel="noopener noreferrer"><strong>%2$s</strong></a>',
-			esc_url( $upgrade_url ),
-			esc_html__( 'Purchase Pro add-on', 'atshift-freeform-login' )
+			esc_url( self::trial_url() ),
+			esc_html__( 'Try Pro Add-on for 7 Days / Purchase', 'atshift-freeform-login' )
 		);
 
 		array_splice( $links, 1, 0, array( $pro_link ) );
@@ -179,7 +177,7 @@ final class Atshift_Freeform_Login {
 	 *
 	 * @return bool
 	 */
-	private function is_pro_installed() {
+	public function is_pro_installed() {
 		if ( defined( 'ATSHIFT_FREEFORM_LOGIN_PRO_FILE' ) ) {
 			return true;
 		}
@@ -195,6 +193,42 @@ final class Atshift_Freeform_Login {
 		}
 
 		return false;
+	}
+
+	/**
+	 * Return the localized trial page with this site and product preselected.
+	 *
+	 * @return string
+	 */
+	public static function trial_url() {
+		$url = 0 === strpos( determine_locale(), 'ja' )
+			? 'https://plugins.at-shift.net/trial/'
+			: 'https://plugins.at-shift.net/en/trial/';
+
+		return add_query_arg(
+			array(
+				'product'  => 'freeform-login',
+				'site_url' => home_url(),
+			),
+			$url
+		);
+	}
+
+	/**
+	 * Add the trial-first action beside Free-only setting explanations.
+	 *
+	 * @return void
+	 */
+	public function render_trial_link() {
+		if ( $this->is_pro_installed() ) {
+			return;
+		}
+
+		printf(
+			'<a class="button button-secondary" href="%1$s" target="_blank" rel="noopener noreferrer">%2$s</a>',
+			esc_url( self::trial_url() ),
+			esc_html__( 'Try Pro for 7 Days / Purchase', 'atshift-freeform-login' )
+		);
 	}
 
 	/**
@@ -215,9 +249,6 @@ final class Atshift_Freeform_Login {
 		}
 
 		$details_url = 'https://wordpress.org/plugins/atshift-freeform-login/';
-		$upgrade_url = 0 === strpos( determine_locale(), 'ja' )
-			? 'https://plugins.at-shift.net/freeform-login/#pricing'
-			: 'https://plugins.at-shift.net/en/freeform-login/#pricing';
 		$links         = array(
 			 sprintf(
 				/* translators: %s: Plugin version. */
@@ -240,8 +271,8 @@ final class Atshift_Freeform_Login {
 		if ( ! $this->is_pro_installed() ) {
 			$links[] = sprintf(
 				'<a href="%1$s" target="_blank" rel="noopener noreferrer">%2$s</a>',
-				esc_url( $upgrade_url ),
-				esc_html__( 'Purchase Pro add-on', 'atshift-freeform-login' )
+				esc_url( self::trial_url() ),
+				esc_html__( 'Try Pro Add-on for 7 Days / Purchase', 'atshift-freeform-login' )
 			);
 		}
 

@@ -4,9 +4,9 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: atshift-freeform-login 2.3.3\n"
+"Project-Id-Version: atshift Freeform Login 2.4\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-09-11 15:45+0900\n"
+"POT-Creation-Date: 2026-09-16 13:37+0900\n"
 "PO-Revision-Date: 2026-09-11 15:45+0900\n"
 "Last-Translator: @shift\n"
 "Language-Team: Spanish (Spain)\n"
@@ -17,37 +17,41 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Context-aware AI translation with linguistic review\n"
 
-#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:511
+#: includes/class-atshift-freeform-login-settings.php:515
 msgid "390 × 844 (Standard)"
 msgstr "390 × 844 (Estándar)"
 
-#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:512
+#: includes/class-atshift-freeform-login-settings.php:516
 msgid "844 × 390 (Landscape)"
 msgstr "844 × 390 (Horizontal)"
 
-#: includes/passkeys/class-atshift-freeform-login-passkey-profile.php:141
+#: includes/passkeys/class-atshift-freeform-login-passkey-profile.php:385
 msgid "Add passkey"
 msgstr "Añadir clave de acceso"
 
-#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:344
+#: includes/passkeys/class-atshift-freeform-login-passkey-storage.php:108
+msgid "Another passkey is being registered. Please try again."
+msgstr "Se está registrando otra clave de acceso. Inténtalo de nuevo."
+
+#: includes/class-atshift-freeform-login-settings.php:346
 msgid "Apply design to the login screen"
 msgstr "Aplicar el diseño a la pantalla de acceso"
 
-#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:547
+#: includes/class-atshift-freeform-login-settings.php:551
 msgid "Back to site"
 msgstr "Volver al sitio"
 
-#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:353
+#: includes/class-atshift-freeform-login-settings.php:355
 msgid "Background"
 msgstr "Fondo"
 
-#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:268
-#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:360
-#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:367
+#: includes/class-atshift-freeform-login-settings.php:268
+#: includes/class-atshift-freeform-login-settings.php:362
+#: includes/class-atshift-freeform-login-settings.php:369
 msgid "Background color"
 msgstr "Color de fondo"
 
-#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:596
+#: includes/class-atshift-freeform-login-settings.php:597
 msgid ""
 "Background color and images are available in the free version. Upgrade to "
 "Pro to use a lightweight loop video."
@@ -55,54 +59,60 @@ msgstr ""
 "El color y las imágenes de fondo están disponibles en la versión gratuita. "
 "Actualiza a Pro para usar un vídeo ligero en bucle."
 
-#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:364
+#: includes/class-atshift-freeform-login-settings.php:366
 msgid "Background type"
 msgstr "Tipo de fondo"
 
-#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:380
+#: includes/class-atshift-freeform-login-settings.php:382
 msgid "Brand"
 msgstr "Marca"
 
-#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:458
+#: includes/class-atshift-freeform-login-settings.php:462
 msgid "Button color"
 msgstr "Color del botón"
 
-#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:459
+#: includes/class-atshift-freeform-login-settings.php:463
 msgid "Button text color"
 msgstr "Color del texto del botón"
 
-#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:412
+#. translators: %s: Plugin author.
+#: includes/class-atshift-freeform-login.php:260
+#, php-format
+msgid "By %s"
+msgstr "Por %s"
+
+#: includes/class-atshift-freeform-login-settings.php:414
 msgid "Center"
 msgstr "Centro"
 
-#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:691
-#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:705
+#: includes/class-atshift-freeform-login-settings.php:694
+#: includes/class-atshift-freeform-login-settings.php:708
 msgid "Center - Bottom edge"
 msgstr "Centro - Borde inferior"
 
-#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:686
+#: includes/class-atshift-freeform-login-settings.php:689
 msgid "Center - Lower-center"
 msgstr "Centro - Zona central inferior"
 
-#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:671
-#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:703
+#: includes/class-atshift-freeform-login-settings.php:674
+#: includes/class-atshift-freeform-login-settings.php:706
 msgid "Center - Top edge"
 msgstr "Centro - Borde superior"
 
-#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:676
+#: includes/class-atshift-freeform-login-settings.php:679
 msgid "Center - Upper-center"
 msgstr "Centro - Zona central superior"
 
-#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:681
-#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:704
+#: includes/class-atshift-freeform-login-settings.php:684
+#: includes/class-atshift-freeform-login-settings.php:707
 msgid "Center of screen"
 msgstr "Centro de la pantalla"
 
-#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:552
+#: includes/class-atshift-freeform-login-settings.php:556
 msgid "Change"
 msgstr "Cambiar"
 
-#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:446
+#: includes/class-atshift-freeform-login-settings.php:450
 msgid ""
 "Choose labels or placeholders and set the colors used for text, links, and "
 "the login button."
@@ -110,102 +120,102 @@ msgstr ""
 "Elige entre etiquetas o marcadores de posición y define los colores del "
 "texto, los enlaces y el botón de acceso."
 
-#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:468
+#: includes/class-atshift-freeform-login-settings.php:472
 msgid "Choose whether the form has a shadow."
 msgstr "Elige si el formulario debe tener sombra."
 
-#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:381
+#: includes/class-atshift-freeform-login-settings.php:383
 msgid ""
 "Choose whether the site title appears above the login form and set its color."
 msgstr ""
 "Elige si el título del sitio aparece sobre el formulario de acceso y define "
 "su color."
 
-#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:372
+#: includes/class-atshift-freeform-login-settings.php:374
 msgid "Contain"
 msgstr "Contener"
 
-#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:372
+#: includes/class-atshift-freeform-login-settings.php:374
 msgid "Cover"
 msgstr "Cubrir"
 
-#: includes/passkeys/class-atshift-freeform-login-passkey-profile.php:63
+#: includes/passkeys/class-atshift-freeform-login-passkey-profile.php:187
 msgid "Creating passkey..."
 msgstr "Creando la clave de acceso..."
 
-#: includes/passkeys/class-atshift-freeform-login-passkey-profile.php:67
-#: includes/passkeys/class-atshift-freeform-login-passkey-profile.php:127
+#: includes/passkeys/class-atshift-freeform-login-passkey-profile.php:191
+#: includes/passkeys/class-atshift-freeform-login-passkey-profile.php:452
 msgid "Delete"
 msgstr "Eliminar"
 
-#: includes/passkeys/class-atshift-freeform-login-passkey-profile.php:68
+#: includes/passkeys/class-atshift-freeform-login-passkey-profile.php:192
 msgid "Delete this passkey?"
 msgstr "¿Eliminar esta clave de acceso?"
 
-#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:326
+#: includes/class-atshift-freeform-login-settings.php:328
 msgid "Design your login, your way."
 msgstr "Diseña el inicio de sesión a tu manera."
 
-#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:493
-#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:500
+#: includes/class-atshift-freeform-login-settings.php:497
+#: includes/class-atshift-freeform-login-settings.php:504
 msgid "Desktop"
 msgstr "Escritorio"
 
-#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:371
+#: includes/class-atshift-freeform-login-settings.php:373
 msgid "Display position"
 msgstr "Posición de visualización"
 
-#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:372
+#: includes/class-atshift-freeform-login-settings.php:374
 msgid "Display size"
 msgstr "Tamaño de visualización"
 
-#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:398
+#: includes/class-atshift-freeform-login-settings.php:400
 msgid "Displayed in a 4:1 frame. Tall images are cropped from the center."
 msgstr ""
 "Se muestra en un marco de 4:1. Las imágenes altas se recortan desde el "
 "centro."
 
-#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:389
+#: includes/class-atshift-freeform-login-settings.php:391
 msgid "Do not show"
 msgstr "No mostrar"
 
-#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:471
+#: includes/class-atshift-freeform-login-settings.php:475
 msgid "Drop shadow"
 msgstr "Sombra paralela"
 
-#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:475
+#: includes/class-atshift-freeform-login-settings.php:479
 msgid "Enable drop shadow"
 msgstr "Activar la sombra paralela"
 
-#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:269
+#: includes/class-atshift-freeform-login-settings.php:269
 msgid "Fallback background color"
 msgstr "Color de fondo alternativo"
 
-#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:449
+#: includes/class-atshift-freeform-login-settings.php:453
 msgid "Field labels"
 msgstr "Etiquetas de los campos"
 
-#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:438
+#: includes/class-atshift-freeform-login-settings.php:442
 msgid "Form background"
 msgstr "Fondo del formulario"
 
-#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:435
+#: includes/class-atshift-freeform-login-settings.php:439
 msgid "Form background and border"
 msgstr "Fondo y borde del formulario"
 
-#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:422
+#: includes/class-atshift-freeform-login-settings.php:424
 msgid "Form placement and size"
 msgstr "Ubicación y tamaño del formulario"
 
-#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:650
+#: includes/class-atshift-freeform-login-settings.php:654
 msgid "Form position"
 msgstr "Posición del formulario"
 
-#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:426
+#: includes/class-atshift-freeform-login-settings.php:429
 msgid "Form width"
 msgstr "Anchura del formulario"
 
-#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:600
+#: includes/class-atshift-freeform-login-settings.php:601
 msgid ""
 "Free accepts a wide logo image in a fixed 4:1 frame; images with a different "
 "height are cropped from the center. Pro preserves wide and tall image ratios "
@@ -216,7 +226,7 @@ msgstr ""
 "Pro conserva la proporción de las imágenes apaisadas y verticales, y permite "
 "ajustar la anchura del logotipo."
 
-#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:612
+#: includes/class-atshift-freeform-login-settings.php:613
 msgid ""
 "Free automatically adjusts link and button colors for hover and pressed "
 "states. Pro lets you choose each interaction color and hide the language "
@@ -227,26 +237,26 @@ msgstr ""
 "estado de interacción y ocultar el selector de idioma de la pantalla de "
 "acceso."
 
-#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:361
-#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:369
+#: includes/class-atshift-freeform-login-settings.php:363
+#: includes/class-atshift-freeform-login-settings.php:371
 msgid "Image"
 msgstr "Imagen"
 
-#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:403
+#: includes/class-atshift-freeform-login-settings.php:405
 msgid "Introductory text"
 msgstr "Texto introductorio"
 
-#: includes/passkeys/class-atshift-freeform-login-passkey-rest.php:213
-#: includes/passkeys/class-atshift-freeform-login-passkey-rest.php:328
+#: includes/passkeys/class-atshift-freeform-login-passkey-rest.php:230
+#: includes/passkeys/class-atshift-freeform-login-passkey-rest.php:369
 msgid "Invalid passkey request."
 msgstr "La solicitud de la clave de acceso no es válida."
 
-#: includes/passkeys/class-atshift-freeform-login-passkey-rest.php:228
-#: includes/passkeys/class-atshift-freeform-login-passkey-rest.php:353
+#: includes/passkeys/class-atshift-freeform-login-passkey-rest.php:245
+#: includes/passkeys/class-atshift-freeform-login-passkey-rest.php:394
 msgid "Invalid passkey response."
 msgstr "La respuesta de la clave de acceso no es válida."
 
-#: atshift-freeform-login/includes/class-atshift-freeform-login-jetpack.php:147
+#: includes/class-atshift-freeform-login-jetpack.php:147
 msgid ""
 "Jetpack SSO currently redirects the login screen directly to WordPress.com. "
 "This login screen design is not shown during that redirect."
@@ -255,7 +265,7 @@ msgstr ""
 "WordPress.com. Este diseño de la pantalla de acceso no se muestra durante la "
 "redirección."
 
-#: atshift-freeform-login/includes/class-atshift-freeform-login-jetpack.php:150
+#: includes/class-atshift-freeform-login-jetpack.php:150
 msgid ""
 "Jetpack SSO is set to use WordPress.com login only. The local username and "
 "password fields are hidden, and the WordPress.com login area uses this "
@@ -265,7 +275,7 @@ msgstr ""
 "WordPress.com. Los campos locales de nombre de usuario y contraseña están "
 "ocultos, y el área de acceso de WordPress.com utiliza este diseño."
 
-#: atshift-freeform-login/includes/class-atshift-freeform-login-jetpack.php:153
+#: includes/class-atshift-freeform-login-jetpack.php:153
 msgid ""
 "Jetpack SSO was detected. The local login and WordPress.com login areas both "
 "use this design."
@@ -273,536 +283,187 @@ msgstr ""
 "Se ha detectado Jetpack SSO. Tanto el área de acceso local como la de "
 "WordPress.com utilizan este diseño."
 
-#: atshift-freeform-login/includes/class-atshift-freeform-login-jetpack.php:160
+#: includes/class-atshift-freeform-login-jetpack.php:160
 msgid "Jetpack SSO:"
 msgstr "Jetpack SSO:"
 
-#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:551
+#: includes/class-atshift-freeform-login-settings.php:555
 msgid "Language"
 msgstr "Idioma"
 
 #. translators: %s: date and time when the passkey was last used.
-#: includes/passkeys/class-atshift-freeform-login-passkey-profile.php:132
+#: includes/passkeys/class-atshift-freeform-login-passkey-profile.php:441
 #, php-format
 msgid "Last used: %s"
 msgstr "Último uso: %s"
 
-#: includes/passkeys/class-atshift-freeform-login-passkey-profile.php:135
+#: includes/passkeys/class-atshift-freeform-login-passkey-profile.php:197
+#: includes/passkeys/class-atshift-freeform-login-passkey-profile.php:444
 msgid "Last used: Never"
 msgstr "Último uso: nunca"
 
-#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:411
+#: includes/class-atshift-freeform-login-settings.php:413
 msgid "Left"
 msgstr "Izquierda"
 
-#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:689
-#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:702
+#: includes/class-atshift-freeform-login-settings.php:692
+#: includes/class-atshift-freeform-login-settings.php:705
 msgid "Left side - Bottom edge"
 msgstr "Lado izquierdo - Borde inferior"
 
-#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:679
-#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:701
+#: includes/class-atshift-freeform-login-settings.php:682
+#: includes/class-atshift-freeform-login-settings.php:704
 msgid "Left side - Center"
 msgstr "Lado izquierdo - Centro"
 
-#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:684
+#: includes/class-atshift-freeform-login-settings.php:687
 msgid "Left side - Lower-center"
 msgstr "Lado izquierdo - Zona central inferior"
 
-#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:669
-#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:700
+#: includes/class-atshift-freeform-login-settings.php:672
+#: includes/class-atshift-freeform-login-settings.php:703
 msgid "Left side - Top edge"
 msgstr "Lado izquierdo - Borde superior"
 
-#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:674
+#: includes/class-atshift-freeform-login-settings.php:677
 msgid "Left side - Upper-center"
 msgstr "Lado izquierdo - Zona central superior"
 
-#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:690
+#: includes/class-atshift-freeform-login-settings.php:693
 msgid "Left-center - Bottom edge"
 msgstr "Centro-izquierda - Borde inferior"
 
-#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:680
+#: includes/class-atshift-freeform-login-settings.php:683
 msgid "Left-center - Center"
 msgstr "Centro-izquierda - Centro"
 
-#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:685
+#: includes/class-atshift-freeform-login-settings.php:688
 msgid "Left-center - Lower-center"
 msgstr "Centro-izquierda - Zona central inferior"
 
-#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:670
+#: includes/class-atshift-freeform-login-settings.php:673
 msgid "Left-center - Top edge"
 msgstr "Centro-izquierda - Borde superior"
 
-#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:675
+#: includes/class-atshift-freeform-login-settings.php:678
 msgid "Left-center - Upper-center"
 msgstr "Centro-izquierda - Zona central superior"
 
-#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:457
+#: includes/class-atshift-freeform-login-settings.php:461
 msgid "Link color"
 msgstr "Color de los enlaces"
 
-#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:538
+#: includes/class-atshift-freeform-login-settings.php:542
 msgid "Log In"
 msgstr "Acceder"
 
-#: atshift-freeform-login/includes/class-atshift-freeform-login-jetpack.php:119
-#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:527
+#: includes/class-atshift-freeform-login-jetpack.php:119
+#: includes/class-atshift-freeform-login-settings.php:531
 msgid "Log in with WordPress.com"
 msgstr "Acceder con WordPress.com"
 
-#: includes/passkeys/class-atshift-freeform-login-passkey-login.php:120
+#: includes/passkeys/class-atshift-freeform-login-passkey-login.php:144
 msgid "Log in with a passkey"
 msgstr "Acceder con una clave de acceso"
 
-#: atshift-freeform-login/includes/class-atshift-freeform-login-shortcode.php:65
+#: includes/class-atshift-freeform-login-shortcode.php:114
 msgid "Log out"
 msgstr "Salir"
 
-#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:329
+#: includes/class-atshift-freeform-login-settings.php:331
 msgid "Login design settings saved."
 msgstr "Se han guardado los ajustes de diseño de la pantalla de acceso."
 
-#: includes/passkeys/class-atshift-freeform-login-passkey-rest.php:379
+#: includes/passkeys/class-atshift-freeform-login-passkey-rest.php:426
 msgid "Login is not available for this account."
 msgstr "No se puede iniciar sesión con esta cuenta."
 
-#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:392
+#: includes/class-atshift-freeform-login-settings.php:394
 msgid "Logo"
 msgstr "Logotipo"
 
-#: atshift-freeform-login/includes/class-atshift-freeform-login-shortcode.php:115
-#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:545
+#: includes/class-atshift-freeform-login-settings.php:549
+#: includes/class-atshift-freeform-login-shortcode.php:164
 msgid "Lost your password?"
 msgstr "¿Has olvidado tu contraseña?"
 
-#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:495
-#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:510
+#: includes/class-atshift-freeform-login-settings.php:499
+#: includes/class-atshift-freeform-login-settings.php:514
 msgid "Mobile"
 msgstr "Móvil"
 
-#: includes/passkeys/class-atshift-freeform-login-passkey-profile.php:69
-#: includes/passkeys/class-atshift-freeform-login-passkey-profile.php:135
+#: includes/passkeys/class-atshift-freeform-login-passkey-profile.php:193
+#: includes/passkeys/class-atshift-freeform-login-passkey-profile.php:460
 msgid "No passkeys are registered for this account."
 msgstr "No hay ninguna clave de acceso registrada para esta cuenta."
 
-#: atshift-freeform-login/includes/class-atshift-freeform-login-shortcode.php:123
-#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:530
+#: includes/class-atshift-freeform-login-settings.php:534
+#: includes/class-atshift-freeform-login-shortcode.php:173
+#: includes/passkeys/class-atshift-freeform-login-passkey-login.php:148
 msgid "Or"
 msgstr "O"
 
-#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:372
+#: includes/class-atshift-freeform-login-settings.php:374
 msgid "Original size"
 msgstr "Tamaño original"
 
-#: includes/passkeys/class-atshift-freeform-login-passkey-profile.php:71
-#: includes/passkeys/class-atshift-freeform-login-passkey-profile.php:107
-#: includes/passkeys/class-atshift-freeform-login-passkey-rest.php:487
-#: includes/passkeys/class-atshift-freeform-login-passkey-storage.php:78
+#: includes/passkeys/class-atshift-freeform-login-passkey-profile.php:414
+#: includes/passkeys/class-atshift-freeform-login-passkey-rest.php:560
+#: includes/passkeys/class-atshift-freeform-login-passkey-storage.php:128
 msgid "Passkey"
 msgstr "Clave de acceso"
 
-#: includes/passkeys/class-atshift-freeform-login-passkey-profile.php:65
+#: includes/class-atshift-freeform-login.php:91
+msgid "Passkey cleanup is pending."
+msgstr "La eliminación de los datos de las claves de acceso está pendiente."
+
+#: includes/passkeys/class-atshift-freeform-login-passkey-profile.php:189
 msgid "Passkey deleted."
 msgstr "Clave de acceso eliminada."
 
-#: includes/passkeys/class-atshift-freeform-login-passkey-environment.php:66
+#: includes/passkeys/class-atshift-freeform-login-passkey-environment.php:93
 msgid "Passkey dependencies are not installed."
 msgstr ""
 "No están instaladas las dependencias necesarias para las claves de acceso."
 
-#: includes/passkeys/class-atshift-freeform-login-passkey-rest.php:304
+#: includes/passkeys/class-atshift-freeform-login-passkey-rest.php:345
 msgid "Passkey login could not be started."
 msgstr "No se ha podido iniciar el acceso con clave de acceso."
 
-#: includes/passkeys/class-atshift-freeform-login-passkey-login.php:102
+#: includes/passkeys/class-atshift-freeform-login-passkey-login.php:122
 msgid "Passkey login failed."
 msgstr "Ha fallado el acceso con clave de acceso."
 
-#: includes/passkeys/class-atshift-freeform-login-passkey-rest.php:274
+#: includes/passkeys/class-atshift-freeform-login-passkey-rest.php:315
 msgid "Passkey login is not available."
 msgstr "El acceso con clave de acceso no está disponible."
 
-#: includes/passkeys/class-atshift-freeform-login-passkey-profile.php:70
+#: includes/passkeys/class-atshift-freeform-login-passkey-profile.php:194
 msgid "Passkey name"
 msgstr "Nombre de la clave de acceso"
 
-#: includes/passkeys/class-atshift-freeform-login-passkey-rest.php:260
+#: includes/passkeys/class-atshift-freeform-login-passkey-rest.php:295
 msgid "Passkey not found."
 msgstr "No se ha encontrado la clave de acceso."
 
-#: includes/passkeys/class-atshift-freeform-login-passkey-profile.php:66
+#: includes/passkeys/class-atshift-freeform-login-passkey-profile.php:190
 msgid "Passkey operation failed."
 msgstr "La operación con la clave de acceso ha fallado."
 
-#: includes/passkeys/class-atshift-freeform-login-passkey-profile.php:64
+#: includes/passkeys/class-atshift-freeform-login-passkey-profile.php:188
 msgid "Passkey registered."
 msgstr "Clave de acceso registrada."
 
-#: includes/passkeys/class-atshift-freeform-login-passkey-rest.php:187
+#: includes/passkeys/class-atshift-freeform-login-passkey-rest.php:204
 msgid "Passkey registration could not be started."
 msgstr "No se ha podido iniciar el registro de la clave de acceso."
 
-#: includes/passkeys/class-atshift-freeform-login-passkey-profile.php:93
-#: includes/passkeys/class-atshift-freeform-login-passkey-profile.php:96
+#: includes/passkeys/class-atshift-freeform-login-passkey-profile.php:250
+#: includes/passkeys/class-atshift-freeform-login-passkey-profile.php:285
 msgid "Passkeys"
 msgstr "Claves de acceso"
 
-#: includes/passkeys/class-atshift-freeform-login-passkey-environment.php:73
-msgid "Passkeys are unavailable on this server."
-msgstr "Las claves de acceso no están disponibles en este servidor."
-
-#: includes/passkeys/class-atshift-freeform-login-passkey-environment.php:70
-msgid "Passkeys require HTTPS, except on localhost during development."
-msgstr ""
-"Las claves de acceso requieren HTTPS, excepto en localhost durante el "
-"desarrollo."
-
-#. translators: %s: required PHP version.
-#: includes/passkeys/class-atshift-freeform-login-passkey-environment.php:56
-#, php-format
-msgid "Passkeys require PHP %s or newer."
-msgstr "Las claves de acceso requieren PHP %s o una versión posterior."
-
-#: includes/passkeys/class-atshift-freeform-login-passkey-environment.php:62
-msgid "Passkeys require the PHP JSON and OpenSSL extensions."
-msgstr "Las claves de acceso requieren las extensiones JSON y OpenSSL de PHP."
-
-#: atshift-freeform-login/includes/class-atshift-freeform-login-shortcode.php:152
-#: atshift-freeform-login/includes/class-atshift-freeform-login-screen.php:55
-#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:535
-msgid "Password"
-msgstr "Contraseña"
-
-#: includes/passkeys/class-atshift-freeform-login-passkey-profile.php:120
-msgid ""
-"Password login remains available after you register a passkey. To keep your "
-"account secure, use a long, strong password that you do not reuse on other "
-"services, and store it in a password manager."
-msgstr ""
-"El acceso con contraseña sigue disponible después de registrar una clave de "
-"acceso. Para mantener segura tu cuenta, utiliza una contraseña larga y "
-"robusta que no reutilices en otros servicios y guárdala en un gestor de "
-"contraseñas."
-
-#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:648
-msgid "Position"
-msgstr "Posición"
-
-#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:488
-msgid "Preview"
-msgstr "Vista previa"
-
-#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:492
-msgid "Preview device"
-msgstr "Dispositivo de vista previa"
-
-#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:489
-msgid "Preview using representative screen sizes."
-msgstr "Obtén una vista previa con tamaños de pantalla representativos."
-
-#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:548
-msgid "Privacy Policy"
-msgstr "Política de privacidad"
-
-#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:660
-msgid "Pro unlocks the intermediate positions."
-msgstr "Pro desbloquea las posiciones intermedias."
-
-#. translators: %s: passkey registration date.
-#: includes/passkeys/class-atshift-freeform-login-passkey-profile.php:118
-#, php-format
-msgid "Registered: %s"
-msgstr "Registrada: %s"
-
-#: includes/passkeys/class-atshift-freeform-login-passkey-profile.php:79
-msgid "Registered: Just now"
-msgstr "Registrada: ahora mismo"
-
-#. translators: 1: registered passkey count, 2: maximum passkey count.
-#: includes/passkeys/class-atshift-freeform-login-passkey-profile.php:341
-#, php-format
-msgid "Registered: %1$d/%2$d"
-msgstr "Registradas: %1$d/%2$d"
-
-#: includes/passkeys/class-atshift-freeform-login-passkey-profile.php:126
-msgid "Registered passkeys"
-msgstr "Claves de acceso registradas"
-
-#: includes/passkeys/class-atshift-freeform-login-passkey-storage.php:105
-msgid "Another passkey is being registered. Please try again."
-msgstr "Se está registrando otra clave de acceso. Inténtalo de nuevo."
-
-#: includes/passkeys/class-atshift-freeform-login-passkey-storage.php:166
-msgid "The passkey could not be saved."
-msgstr "No se ha podido guardar la clave de acceso."
-
-#. translators: %d: maximum number of passkeys.
-#: includes/passkeys/class-atshift-freeform-login-passkey-rest.php:132
-#: includes/passkeys/class-atshift-freeform-login-passkey-storage.php:151
-#, php-format
-msgid "You can register up to %d passkeys."
-msgstr "Puedes registrar hasta %d claves de acceso."
-
-#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:537
-msgid "Remember Me"
-msgstr "Recuérdame"
-
-#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:818
-msgid "Remove"
-msgstr "Quitar"
-
-#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:413
-msgid "Right"
-msgstr "Derecha"
-
-#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:693
-#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:708
-msgid "Right side - Bottom edge"
-msgstr "Lado derecho - Borde inferior"
-
-#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:683
-#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:707
-msgid "Right side - Center"
-msgstr "Lado derecho - Centro"
-
-#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:688
-msgid "Right side - Lower-center"
-msgstr "Lado derecho - Zona central inferior"
-
-#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:673
-#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:706
-msgid "Right side - Top edge"
-msgstr "Lado derecho - Borde superior"
-
-#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:678
-msgid "Right side - Upper-center"
-msgstr "Lado derecho - Zona central superior"
-
-#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:692
-msgid "Right-center - Bottom edge"
-msgstr "Centro-derecha - Borde inferior"
-
-#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:682
-msgid "Right-center - Center"
-msgstr "Centro-derecha - Centro"
-
-#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:687
-msgid "Right-center - Lower-center"
-msgstr "Centro-derecha - Zona central inferior"
-
-#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:672
-msgid "Right-center - Top edge"
-msgstr "Centro-derecha - Borde superior"
-
-#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:677
-msgid "Right-center - Upper-center"
-msgstr "Centro-derecha - Zona central superior"
-
-#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:346
-msgid "Save changes"
-msgstr "Guardar los cambios"
-
-#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:498
-#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:499
-msgid "Screen size"
-msgstr "Tamaño de pantalla"
-
-#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:266
-msgid "Select a loop video"
-msgstr "Selecciona un vídeo en bucle"
-
-#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:264
-msgid "Select an image"
-msgstr "Selecciona una imagen"
-
-#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:809
-msgid "Select image"
-msgstr "Seleccionar imagen"
-
-#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:809
-msgid "Select video"
-msgstr "Seleccionar vídeo"
-
-#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:354
-msgid "Set the background color and image for the entire login screen."
-msgstr "Define el color y la imagen de fondo de toda la pantalla de acceso."
-
-#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:436
-msgid "Set the form background color."
-msgstr "Define el color de fondo del formulario."
-
-#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:423
-msgid "Set the login form position and width."
-msgstr "Define la posición y la anchura del formulario de acceso."
-
-#: atshift-freeform-login/includes/class-atshift-freeform-login.php:69
-#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:212
-#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:213
-msgid "Settings"
-msgstr "Ajustes"
-
-#: includes/passkeys/class-atshift-freeform-login-passkey-profile.php:111
-msgid "Set passkeys"
-msgstr "Configurar claves de acceso"
-
-#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:467
-msgid "Shadow"
-msgstr "Sombra"
-
-#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:387
-msgid "Site title"
-msgstr "Título del sitio"
-
-#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:395
-msgid "Site title color"
-msgstr "Color del título del sitio"
-
-#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:494
-#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:506
-msgid "Tablet"
-msgstr "Tableta"
-
-#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:408
-msgid "Text alignment"
-msgstr "Alineación del texto"
-
-#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:445
-msgid "Text and buttons"
-msgstr "Texto y botones"
-
-#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:456
-msgid "Text color"
-msgstr "Color del texto"
-
-#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:404
-msgid "Text width"
-msgstr "Anchura del texto"
-
-#: includes/passkeys/class-atshift-freeform-login-passkey-rest.php:239
-#: includes/passkeys/class-atshift-freeform-login-passkey-rest.php:367
-msgid "The passkey could not be verified."
-msgstr "No se ha podido verificar la clave de acceso."
-
-#: includes/passkeys/class-atshift-freeform-login-passkey-rest.php:334
-msgid "The passkey login request expired. Please try again."
-msgstr ""
-"La solicitud de acceso con clave de acceso ha caducado. Inténtalo de nuevo."
-
-#: includes/passkeys/class-atshift-freeform-login-passkey-rest.php:219
-msgid "The passkey registration request expired. Please try again."
-msgstr ""
-"La solicitud de registro de la clave de acceso ha caducado. Inténtalo de "
-"nuevo."
-
-#: includes/passkeys/class-atshift-freeform-login-passkey-rest.php:341
-msgid "The selected passkey is not registered on this site."
-msgstr "La clave de acceso seleccionada no está registrada en este sitio."
-
-#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:403
-msgid ""
-"The site tagline is used initially. You can replace it here, or leave it "
-"blank to hide the text."
-msgstr ""
-"Al principio se utiliza la descripción corta del sitio. Puedes sustituirla "
-"aquí o dejar el campo en blanco para ocultar el texto."
-
-#: includes/passkeys/class-atshift-freeform-login-passkey-profile.php:71
-msgid "This device's passkey"
-msgstr "Clave de acceso de este dispositivo"
-
-#: includes/passkeys/class-atshift-freeform-login-passkey-login.php:100
-#: includes/passkeys/class-atshift-freeform-login-passkey-profile.php:62
-msgid "This browser does not support passkeys."
-msgstr "Este navegador no admite claves de acceso."
-
-#: includes/passkeys/class-atshift-freeform-login-passkey-rest.php:278
-msgid "This site requires WordPress.com login."
-msgstr "Este sitio requiere acceder mediante WordPress.com."
-
-#: includes/passkeys/class-atshift-freeform-login-passkey-rest.php:282
-msgid "Too many passkey requests. Please wait and try again."
-msgstr ""
-"Se han realizado demasiadas solicitudes de claves de acceso. Espera un "
-"momento e inténtalo de nuevo."
-
-#: atshift-freeform-login/includes/class-atshift-freeform-login.php:91
-#: atshift-freeform-login/includes/class-atshift-freeform-login.php:168
-msgid "Purchase Pro add-on"
-msgstr "Comprar el complemento Pro"
-
-#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:608
-msgid ""
-"Upgrade to Pro to add a glass panel, rectangle, vertical band, or horizontal "
-"band behind the form, and adjust opacity, corner radius, and border styling."
-msgstr ""
-"Actualiza a Pro para añadir detrás del formulario un panel de cristal, un "
-"rectángulo o una franja vertical u horizontal, y ajustar la opacidad, el "
-"radio de las esquinas y el estilo del borde."
-
-#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:616
-msgid ""
-"Upgrade to Pro to adjust shadow position, blur, spread, color, and opacity."
-msgstr ""
-"Actualiza a Pro para ajustar la posición, el desenfoque, la extensión, el "
-"color y la opacidad de la sombra."
-
-#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:604
-msgid ""
-"Upgrade to Pro to fine-tune the horizontal and vertical position in pixels."
-msgstr ""
-"Actualiza a Pro para ajustar con precisión la posición horizontal y vertical "
-"en píxeles."
-
-#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:453
-msgid "Use placeholders"
-msgstr "Usar marcadores de posición"
-
-#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:265
-msgid "Use this image"
-msgstr "Usar esta imagen"
-
-#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:267
-msgid "Use this video"
-msgstr "Usar este vídeo"
-
-#: includes/passkeys/class-atshift-freeform-login-passkey-rest.php:156
-#: includes/passkeys/class-atshift-freeform-login-passkey-rest.php:373
-msgid "User not found."
-msgstr "No se ha encontrado el usuario."
-
-#: atshift-freeform-login/includes/class-atshift-freeform-login-shortcode.php:151
-#: atshift-freeform-login/includes/class-atshift-freeform-login-screen.php:54
-#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:534
-msgid "Username / Email"
-msgstr "Nombre de usuario / correo electrónico"
-
-#: includes/passkeys/class-atshift-freeform-login-passkey-profile.php:146
-msgid "Users must add passkeys from their own profile screen."
-msgstr ""
-"Los usuarios deben añadir las claves de acceso desde la pantalla de su "
-"propio perfil."
-
-#: includes/passkeys/class-atshift-freeform-login-passkey-login.php:101
-msgid "Waiting for your passkey..."
-msgstr "Esperando tu clave de acceso..."
-
-#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:388
-#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:397
-msgid "Wide logo image"
-msgstr "Imagen de logotipo apaisada"
-
-#. translators: %s: Display name of the currently logged-in user.
-#: atshift-freeform-login/includes/class-atshift-freeform-login-shortcode.php:63
-#, php-format
-msgid "You are logged in as %s."
-msgstr "Has accedido como %s."
-
-#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:287
-msgid "You are not allowed to manage these settings."
-msgstr "No tienes permisos para gestionar estos ajustes."
-
-#: includes/passkeys/class-atshift-freeform-login-passkey-profile.php:105
+#: includes/passkeys/class-atshift-freeform-login-passkey-profile.php:349
 msgid ""
 "Passkeys are a new way to sign in using biometric authentication and other "
 "security features on your device instead of entering a username and "
@@ -820,26 +481,394 @@ msgstr ""
 "cuenta del proveedor de almacenamiento se pueden utilizar en tus otros "
 "dispositivos, y puedes añadir más de una cuando lo necesites."
 
-#: includes/passkeys/class-atshift-freeform-login-passkey-rest.php:123
-msgid "You can only register passkeys for your own account."
-msgstr "Solo puedes registrar claves de acceso para tu propia cuenta."
+#: includes/passkeys/class-atshift-freeform-login-passkey-environment.php:100
+msgid "Passkeys are unavailable on this server."
+msgstr "Las claves de acceso no están disponibles en este servidor."
 
-#: includes/passkeys/class-atshift-freeform-login-passkey-rest.php:139
-msgid "You cannot delete this passkey."
-msgstr "No puedes eliminar esta clave de acceso."
+#: includes/passkeys/class-atshift-freeform-login-passkey-environment.php:97
+msgid "Passkeys require HTTPS, except on localhost during development."
+msgstr ""
+"Las claves de acceso requieren HTTPS, excepto en localhost durante el "
+"desarrollo."
 
-#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:202
-#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:203
-#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:222
-#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:223
-#: atshift-freeform-login/includes/class-atshift-freeform-login-settings.php:325
-msgid "atshift Freeform Login"
-msgstr "atshift Freeform Login"
+#. translators: %s: required PHP version.
+#: includes/passkeys/class-atshift-freeform-login-passkey-environment.php:83
+#, php-format
+msgid "Passkeys require PHP %s or newer."
+msgstr "Las claves de acceso requieren PHP %s o una versión posterior."
 
-#: includes/class-atshift-freeform-login.php:90
-msgid "Passkey cleanup is pending."
-msgstr "La eliminación de los datos de las claves de acceso está pendiente."
+#: includes/passkeys/class-atshift-freeform-login-passkey-environment.php:89
+msgid "Passkeys require the PHP JSON and OpenSSL extensions."
+msgstr "Las claves de acceso requieren las extensiones JSON y OpenSSL de PHP."
+
+#: includes/class-atshift-freeform-login-screen.php:55
+#: includes/class-atshift-freeform-login-settings.php:539
+#: includes/class-atshift-freeform-login-shortcode.php:198
+msgid "Password"
+msgstr "Contraseña"
+
+#: includes/passkeys/class-atshift-freeform-login-passkey-profile.php:388
+msgid ""
+"Password login remains available after you register a passkey. To keep your "
+"account secure, use a long, strong password that you do not reuse on other "
+"services, and store it in a password manager."
+msgstr ""
+"El acceso con contraseña sigue disponible después de registrar una clave de "
+"acceso. Para mantener segura tu cuenta, utiliza una contraseña larga y "
+"robusta que no reutilices en otros servicios y guárdala en un gestor de "
+"contraseñas."
+
+#: includes/class-atshift-freeform-login-settings.php:650
+msgid "Position"
+msgstr "Posición"
+
+#: includes/class-atshift-freeform-login-settings.php:492
+msgid "Preview"
+msgstr "Vista previa"
+
+#: includes/class-atshift-freeform-login-settings.php:496
+msgid "Preview device"
+msgstr "Dispositivo de vista previa"
+
+#: includes/class-atshift-freeform-login-settings.php:493
+msgid "Preview using representative screen sizes."
+msgstr "Obtén una vista previa con tamaños de pantalla representativos."
+
+#: includes/class-atshift-freeform-login-settings.php:552
+msgid "Privacy Policy"
+msgstr "Política de privacidad"
+
+#: includes/class-atshift-freeform-login-settings.php:663
+msgid "Pro unlocks the intermediate positions."
+msgstr "Pro desbloquea las posiciones intermedias."
+
+#: includes/passkeys/class-atshift-freeform-login-passkey-profile.php:260
+#: includes/passkeys/class-atshift-freeform-login-passkey-profile.php:295
+#: includes/passkeys/class-atshift-freeform-login-passkey-profile.php:331
+msgid "Registered passkeys"
+msgstr "Claves de acceso registradas"
+
+#. translators: 1: registered passkey count, 2: maximum passkey count.
+#: includes/passkeys/class-atshift-freeform-login-passkey-profile.php:200
+#: includes/passkeys/class-atshift-freeform-login-passkey-profile.php:369
+#, php-format
+msgid "Registered: %1$d/%2$d"
+msgstr "Registradas: %1$d/%2$d"
+
+#. translators: %s: passkey registration date.
+#: includes/passkeys/class-atshift-freeform-login-passkey-profile.php:428
+#, php-format
+msgid "Registered: %s"
+msgstr "Registrada: %s"
+
+#: includes/passkeys/class-atshift-freeform-login-passkey-profile.php:196
+msgid "Registered: Just now"
+msgstr "Registrada: ahora mismo"
+
+#: includes/class-atshift-freeform-login-settings.php:541
+msgid "Remember Me"
+msgstr "Recuérdame"
+
+#: includes/class-atshift-freeform-login-settings.php:821
+msgid "Remove"
+msgstr "Quitar"
+
+#: includes/class-atshift-freeform-login-settings.php:415
+msgid "Right"
+msgstr "Derecha"
+
+#: includes/class-atshift-freeform-login-settings.php:696
+#: includes/class-atshift-freeform-login-settings.php:711
+msgid "Right side - Bottom edge"
+msgstr "Lado derecho - Borde inferior"
+
+#: includes/class-atshift-freeform-login-settings.php:686
+#: includes/class-atshift-freeform-login-settings.php:710
+msgid "Right side - Center"
+msgstr "Lado derecho - Centro"
+
+#: includes/class-atshift-freeform-login-settings.php:691
+msgid "Right side - Lower-center"
+msgstr "Lado derecho - Zona central inferior"
+
+#: includes/class-atshift-freeform-login-settings.php:676
+#: includes/class-atshift-freeform-login-settings.php:709
+msgid "Right side - Top edge"
+msgstr "Lado derecho - Borde superior"
+
+#: includes/class-atshift-freeform-login-settings.php:681
+msgid "Right side - Upper-center"
+msgstr "Lado derecho - Zona central superior"
+
+#: includes/class-atshift-freeform-login-settings.php:695
+msgid "Right-center - Bottom edge"
+msgstr "Centro-derecha - Borde inferior"
+
+#: includes/class-atshift-freeform-login-settings.php:685
+msgid "Right-center - Center"
+msgstr "Centro-derecha - Centro"
+
+#: includes/class-atshift-freeform-login-settings.php:690
+msgid "Right-center - Lower-center"
+msgstr "Centro-derecha - Zona central inferior"
+
+#: includes/class-atshift-freeform-login-settings.php:675
+msgid "Right-center - Top edge"
+msgstr "Centro-derecha - Borde superior"
+
+#: includes/class-atshift-freeform-login-settings.php:680
+msgid "Right-center - Upper-center"
+msgstr "Centro-derecha - Zona central superior"
+
+#: includes/class-atshift-freeform-login-settings.php:348
+msgid "Save changes"
+msgstr "Guardar los cambios"
+
+#: includes/class-atshift-freeform-login-settings.php:502
+#: includes/class-atshift-freeform-login-settings.php:503
+msgid "Screen size"
+msgstr "Tamaño de pantalla"
+
+#: includes/class-atshift-freeform-login-settings.php:266
+msgid "Select a loop video"
+msgstr "Selecciona un vídeo en bucle"
+
+#: includes/class-atshift-freeform-login-settings.php:264
+msgid "Select an image"
+msgstr "Selecciona una imagen"
+
+#: includes/class-atshift-freeform-login-settings.php:812
+msgid "Select image"
+msgstr "Seleccionar imagen"
+
+#: includes/class-atshift-freeform-login-settings.php:812
+msgid "Select video"
+msgstr "Seleccionar vídeo"
+
+#: includes/passkeys/class-atshift-freeform-login-passkey-profile.php:256
+#: includes/passkeys/class-atshift-freeform-login-passkey-profile.php:291
+msgid "Set passkeys"
+msgstr "Configurar claves de acceso"
+
+#: includes/class-atshift-freeform-login-settings.php:356
+msgid "Set the background color and image for the entire login screen."
+msgstr "Define el color y la imagen de fondo de toda la pantalla de acceso."
+
+#: includes/class-atshift-freeform-login-settings.php:440
+msgid "Set the form background color."
+msgstr "Define el color de fondo del formulario."
+
+#: includes/class-atshift-freeform-login-settings.php:425
+msgid "Set the login form position and width."
+msgstr "Define la posición y la anchura del formulario de acceso."
+
+#: includes/class-atshift-freeform-login-settings.php:212
+#: includes/class-atshift-freeform-login-settings.php:213
+#: includes/class-atshift-freeform-login.php:155
+msgid "Settings"
+msgstr "Ajustes"
+
+#: includes/class-atshift-freeform-login-settings.php:471
+msgid "Shadow"
+msgstr "Sombra"
+
+#: includes/class-atshift-freeform-login-settings.php:389
+msgid "Site title"
+msgstr "Título del sitio"
+
+#: includes/class-atshift-freeform-login-settings.php:397
+msgid "Site title color"
+msgstr "Color del título del sitio"
+
+#: includes/class-atshift-freeform-login-settings.php:498
+#: includes/class-atshift-freeform-login-settings.php:510
+msgid "Tablet"
+msgstr "Tableta"
+
+#: includes/class-atshift-freeform-login-settings.php:410
+msgid "Text alignment"
+msgstr "Alineación del texto"
+
+#: includes/class-atshift-freeform-login-settings.php:449
+msgid "Text and buttons"
+msgstr "Texto y botones"
+
+#: includes/class-atshift-freeform-login-settings.php:460
+msgid "Text color"
+msgstr "Color del texto"
+
+#: includes/class-atshift-freeform-login-settings.php:406
+msgid "Text width"
+msgstr "Anchura del texto"
+
+#: includes/passkeys/class-atshift-freeform-login-passkey-storage.php:170
+#: includes/passkeys/class-atshift-freeform-login-passkey-storage.php:176
+msgid "The passkey could not be saved."
+msgstr "No se ha podido guardar la clave de acceso."
+
+#: includes/passkeys/class-atshift-freeform-login-passkey-rest.php:261
+#: includes/passkeys/class-atshift-freeform-login-passkey-rest.php:408
+msgid "The passkey could not be verified."
+msgstr "No se ha podido verificar la clave de acceso."
+
+#: includes/passkeys/class-atshift-freeform-login-passkey-rest.php:375
+msgid "The passkey login request expired. Please try again."
+msgstr ""
+"La solicitud de acceso con clave de acceso ha caducado. Inténtalo de nuevo."
+
+#: includes/passkeys/class-atshift-freeform-login-passkey-rest.php:236
+msgid "The passkey registration request expired. Please try again."
+msgstr ""
+"La solicitud de registro de la clave de acceso ha caducado. Inténtalo de "
+"nuevo."
+
+#: includes/passkeys/class-atshift-freeform-login-passkey-rest.php:382
+msgid "The selected passkey is not registered on this site."
+msgstr "La clave de acceso seleccionada no está registrada en este sitio."
+
+#: includes/class-atshift-freeform-login-settings.php:405
+msgid ""
+"The site tagline is used initially. You can replace it here, or leave it "
+"blank to hide the text."
+msgstr ""
+"Al principio se utiliza la descripción corta del sitio. Puedes sustituirla "
+"aquí o dejar el campo en blanco para ocultar el texto."
 
 #: includes/passkeys/class-atshift-freeform-login-passkey-storage.php:117
 msgid "This account is not available."
 msgstr "Esta cuenta no está disponible."
+
+#: includes/passkeys/class-atshift-freeform-login-passkey-login.php:120
+#: includes/passkeys/class-atshift-freeform-login-passkey-profile.php:186
+msgid "This browser does not support passkeys."
+msgstr "Este navegador no admite claves de acceso."
+
+#: includes/passkeys/class-atshift-freeform-login-passkey-profile.php:195
+msgid "This device's passkey"
+msgstr "Clave de acceso de este dispositivo"
+
+#: includes/passkeys/class-atshift-freeform-login-passkey-rest.php:319
+msgid "This site requires WordPress.com login."
+msgstr "Este sitio requiere acceder mediante WordPress.com."
+
+#: includes/passkeys/class-atshift-freeform-login-passkey-rest.php:323
+msgid "Too many passkey requests. Please wait and try again."
+msgstr ""
+"Se han realizado demasiadas solicitudes de claves de acceso. Espera un "
+"momento e inténtalo de nuevo."
+
+#: includes/class-atshift-freeform-login.php:167
+#: includes/class-atshift-freeform-login.php:275
+msgid "Try Pro Add-on for 7 Days / Purchase"
+msgstr "Probar el complemento Pro durante 7 días / Comprar"
+
+#: includes/class-atshift-freeform-login.php:230
+msgid "Try Pro for 7 Days / Purchase"
+msgstr "Probar Pro durante 7 días / Comprar"
+
+#: includes/class-atshift-freeform-login-settings.php:609
+msgid ""
+"Upgrade to Pro to add a glass panel, rectangle, vertical band, or horizontal "
+"band behind the form, and adjust opacity, corner radius, and border styling."
+msgstr ""
+"Actualiza a Pro para añadir detrás del formulario un panel de cristal, un "
+"rectángulo o una franja vertical u horizontal, y ajustar la opacidad, el "
+"radio de las esquinas y el estilo del borde."
+
+#: includes/class-atshift-freeform-login-settings.php:617
+msgid ""
+"Upgrade to Pro to adjust shadow position, blur, spread, color, and opacity."
+msgstr ""
+"Actualiza a Pro para ajustar la posición, el desenfoque, la extensión, el "
+"color y la opacidad de la sombra."
+
+#: includes/class-atshift-freeform-login-settings.php:605
+msgid ""
+"Upgrade to Pro to fine-tune the horizontal and vertical position in pixels."
+msgstr ""
+"Actualiza a Pro para ajustar con precisión la posición horizontal y vertical "
+"en píxeles."
+
+#: includes/class-atshift-freeform-login-settings.php:457
+msgid "Use placeholders"
+msgstr "Usar marcadores de posición"
+
+#: includes/class-atshift-freeform-login-settings.php:265
+msgid "Use this image"
+msgstr "Usar esta imagen"
+
+#: includes/class-atshift-freeform-login-settings.php:267
+msgid "Use this video"
+msgstr "Usar este vídeo"
+
+#: includes/passkeys/class-atshift-freeform-login-passkey-rest.php:173
+#: includes/passkeys/class-atshift-freeform-login-passkey-rest.php:414
+msgid "User not found."
+msgstr "No se ha encontrado el usuario."
+
+#: includes/class-atshift-freeform-login-screen.php:54
+#: includes/class-atshift-freeform-login-settings.php:538
+#: includes/class-atshift-freeform-login-shortcode.php:197
+msgid "Username / Email"
+msgstr "Nombre de usuario / correo electrónico"
+
+#: includes/passkeys/class-atshift-freeform-login-passkey-profile.php:392
+msgid "Users must add passkeys from their own profile screen."
+msgstr ""
+"Los usuarios deben añadir las claves de acceso desde la pantalla de su "
+"propio perfil."
+
+#. translators: %s: Plugin version.
+#: includes/class-atshift-freeform-login.php:255
+#, php-format
+msgid "Version %s"
+msgstr "Versión %s"
+
+#: includes/class-atshift-freeform-login.php:267
+msgid "View details"
+msgstr "Ver detalles"
+
+#: includes/passkeys/class-atshift-freeform-login-passkey-login.php:121
+msgid "Waiting for your passkey..."
+msgstr "Esperando tu clave de acceso..."
+
+#: includes/class-atshift-freeform-login-settings.php:390
+#: includes/class-atshift-freeform-login-settings.php:399
+msgid "Wide logo image"
+msgstr "Imagen de logotipo apaisada"
+
+#. translators: %s: Display name of the currently logged-in user.
+#: includes/class-atshift-freeform-login-shortcode.php:112
+#, php-format
+msgid "You are logged in as %s."
+msgstr "Has accedido como %s."
+
+#: includes/class-atshift-freeform-login-settings.php:287
+msgid "You are not allowed to manage these settings."
+msgstr "No tienes permisos para gestionar estos ajustes."
+
+#: includes/passkeys/class-atshift-freeform-login-passkey-rest.php:123
+msgid "You can only register passkeys for your own account."
+msgstr "Solo puedes registrar claves de acceso para tu propia cuenta."
+
+#. translators: %d: maximum number of passkeys.
+#: includes/passkeys/class-atshift-freeform-login-passkey-rest.php:132
+#: includes/passkeys/class-atshift-freeform-login-passkey-storage.php:160
+#, php-format
+msgid "You can register up to %d passkeys."
+msgstr "Puedes registrar hasta %d claves de acceso."
+
+#: includes/passkeys/class-atshift-freeform-login-passkey-rest.php:156
+msgid "You cannot delete this passkey."
+msgstr "No puedes eliminar esta clave de acceso."
+
+#: includes/class-atshift-freeform-login-settings.php:202
+#: includes/class-atshift-freeform-login-settings.php:203
+#: includes/class-atshift-freeform-login-settings.php:222
+#: includes/class-atshift-freeform-login-settings.php:223
+#: includes/class-atshift-freeform-login-settings.php:327
+msgid "atshift Freeform Login"
+msgstr "atshift Freeform Login"
+
+#~ msgid "Purchase Pro add-on"
+#~ msgstr "Comprar el complemento Pro"

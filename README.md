@@ -5,6 +5,7 @@
   <p>
     <a href="https://plugins.at-shift.net/en/freeform-login/">Official Website</a> ·
     <a href="https://wordpress.org/plugins/atshift-freeform-login/">WordPress.org</a> ·
+    <a href="https://plugins.at-shift.net/en/trial/?product=freeform-login">7-Day Pro Trial</a> ·
     <a href="https://plugins.at-shift.net/freeform-login/">日本語</a>
   </p>
 </div>
@@ -151,7 +152,9 @@ The optional Pro add-on extends the design controls provided by the free plugin.
 
 Pro adds custom logo images, precise position offsets, transparency, borders, corner radius, and detailed shadow controls.
 
-- Pro add-on: [Purchase Pro add-on](https://plugins.at-shift.net/en/freeform-login/#pricing)
+The full Pro feature set can be tried on one site for seven days without card details or automatic billing. When the trial ends, only Pro design controls stop; Free login, passkeys, Free settings, and saved Pro design values remain intact. Entering a purchased license restores the saved Pro design.
+
+- Pro add-on: [Try Pro for 7 days or purchase](https://plugins.at-shift.net/en/trial/?product=freeform-login)
 - Japanese product page: [Freeform Login](https://plugins.at-shift.net/freeform-login/)
 
 ## Documentation

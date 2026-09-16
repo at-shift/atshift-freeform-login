@@ -580,17 +580,14 @@ class Atshift_Freeform_Login_Settings {
 	/**
 	 * Explain the free boundary and the corresponding Pro extension.
 	 *
-	 * The note is intentionally absent while Pro is active. A purchase action
-	 * can be added later through the action without changing this layout.
+	 * The note is intentionally absent while Pro is installed because the Pro
+	 * license screen owns trial, expiry, and purchase state guidance.
 	 *
 	 * @param string $group Group identifier.
 	 * @return void
 	 */
 	private function render_upgrade_note( $group ) {
-		if (
-			function_exists( 'atshift_freeform_login_pro_features_available' )
-			&& atshift_freeform_login_pro_features_available()
-		) {
+		if ( function_exists( 'atshift_freeform_login_pro_features_available' ) ) {
 			return;
 		}
 

@@ -131,7 +131,8 @@
 
 .atshift-freeform-login-upgrade-note {
 	display: flex;
-	align-items: flex-start;
+	align-items: center;
+	flex-wrap: wrap;
 	gap: 10px;
 	margin: 0 24px 24px;
 	padding: 12px 14px;
@@ -141,6 +142,11 @@
 	background: #f6f7f7;
 	border-left: 3px solid #a7aaad;
 	border-radius: 4px;
+}
+
+.atshift-freeform-login-upgrade-note .button {
+	flex: 0 0 auto;
+	margin-left: auto;
 }
 
 .atshift-freeform-login-upgrade-note.is-pro {
