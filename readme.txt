@@ -77,7 +77,7 @@ The optional Pro add-on extends the free plugin with custom logo images, precise
 
 You can try the complete Pro design controls on one site for seven days without entering card details. The trial does not renew or charge automatically. When it ends, only Pro design controls stop; Free login, passkeys, Free settings, and saved Pro design values remain intact. A purchased license re-enables the saved Pro design.
 
-* Pro add-on: [Try Pro for 7 days or purchase](https://plugins.at-shift.net/en/trial/?product=freeform-login)
+* Pro add-on: [Try Pro for 7 days or purchase](https://plugins.at-shift.net/freeform-login/pro/)
 
 == Related Projects ==
 

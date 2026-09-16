@@ -154,7 +154,7 @@ Pro adds custom logo images, precise position offsets, transparency, borders, co
 
 The full Pro feature set can be tried on one site for seven days without card details or automatic billing. When the trial ends, only Pro design controls stop; Free login, passkeys, Free settings, and saved Pro design values remain intact. Entering a purchased license restores the saved Pro design.
 
-- Pro add-on: [Try Pro for 7 days or purchase](https://plugins.at-shift.net/en/trial/?product=freeform-login)
+- Pro add-on: [Try Pro for 7 days or purchase](https://plugins.at-shift.net/freeform-login/pro/)
 - Japanese product page: [Freeform Login](https://plugins.at-shift.net/freeform-login/)
 
 ## Documentation
