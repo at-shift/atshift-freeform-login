@@ -5,7 +5,7 @@
   <p>
     <a href="https://plugins.at-shift.net/en/freeform-login/">Official Website</a> ·
     <a href="https://wordpress.org/plugins/atshift-freeform-login/">WordPress.org</a> ·
-    <a href="https://plugins.at-shift.net/en/trial/?product=freeform-login">7-Day Pro Trial</a> ·
+    <a href="https://plugins.at-shift.net/freeform-login/pro/">7-Day Pro Trial</a> ·
     <a href="https://plugins.at-shift.net/freeform-login/">日本語</a>
   </p>
 </div>

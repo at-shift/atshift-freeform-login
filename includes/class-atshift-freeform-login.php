@@ -163,7 +163,7 @@ final class Atshift_Freeform_Login {
 
 		$pro_link    = sprintf(
 			'<a href="%1$s" target="_blank" rel="noopener noreferrer"><strong>%2$s</strong></a>',
-			esc_url( self::trial_url() ),
+			esc_url( self::pro_url() ),
 			esc_html__( 'Try Pro Add-on for 7 Days / Purchase', 'atshift-freeform-login' )
 		);
 
@@ -196,26 +196,27 @@ final class Atshift_Freeform_Login {
 	}
 
 	/**
-	 * Return the localized trial page with this site and product preselected.
+	 * Return the Freeform Login Pro product page.
+	 *
+	 * @return string
+	 */
+	public static function pro_url() {
+		return 'https://plugins.at-shift.net/freeform-login/pro/';
+	}
+
+	/**
+	 * Return the Freeform Login Pro product page.
+	 *
+	 * Retained for compatibility with integrations that used the previous helper.
 	 *
 	 * @return string
 	 */
 	public static function trial_url() {
-		$url = 0 === strpos( determine_locale(), 'ja' )
-			? 'https://plugins.at-shift.net/trial/'
-			: 'https://plugins.at-shift.net/en/trial/';
-
-		return add_query_arg(
-			array(
-				'product'  => 'freeform-login',
-				'site_url' => home_url(),
-			),
-			$url
-		);
+		return self::pro_url();
 	}
 
 	/**
-	 * Add the trial-first action beside Free-only setting explanations.
+	 * Add the Pro action beside Free-only setting explanations.
 	 *
 	 * @return void
 	 */
@@ -226,7 +227,7 @@ final class Atshift_Freeform_Login {
 
 		printf(
 			'<a class="button button-secondary" href="%1$s" target="_blank" rel="noopener noreferrer">%2$s</a>',
-			esc_url( self::trial_url() ),
+			esc_url( self::pro_url() ),
 			esc_html__( 'Try Pro for 7 Days / Purchase', 'atshift-freeform-login' )
 		);
 	}
@@ -271,7 +272,7 @@ final class Atshift_Freeform_Login {
 		if ( ! $this->is_pro_installed() ) {
 			$links[] = sprintf(
 				'<a href="%1$s" target="_blank" rel="noopener noreferrer">%2$s</a>',
-				esc_url( self::trial_url() ),
+				esc_url( self::pro_url() ),
 				esc_html__( 'Try Pro Add-on for 7 Days / Purchase', 'atshift-freeform-login' )
 			);
 		}
