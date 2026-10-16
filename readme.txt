@@ -4,7 +4,7 @@ Tags: login, custom login, login form, passkey, webauthn
 Requires at least: 6.5
 Tested up to: 7.1
 Requires PHP: 7.4
-Stable tag: 2.4.1
+Stable tag: 2.4.2
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -93,6 +93,9 @@ You can try the complete Pro design controls on one site for seven days without 
 4. The visual design editor provides grouped controls and responsive previews before login-screen changes are enabled.
 
 == Changelog ==
+
+= 2.4.2 =
+* Updated the bundled WebAuthn library to 5.3.9 and refreshed compatible dependencies for security, standards compliance, and bug fixes.
 
 = 2.4.1 =
 * Updated the Plugins screen, settings guidance, and documentation links to open the dedicated Freeform Login Pro page.
