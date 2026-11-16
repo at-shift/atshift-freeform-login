@@ -1,9 +1,9 @@
 <?php return array(
     'root' => array(
         'name' => 'at-shift/atshift-freeform-login',
-        'pretty_version' => '1.0.0+no-version-set',
-        'version' => '1.0.0.0',
-        'reference' => null,
+        'pretty_version' => 'dev-main',
+        'version' => 'dev-main',
+        'reference' => 'a2986b5b08c0598be781fb637d99118d12266174',
         'type' => 'wordpress-plugin',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -11,9 +11,9 @@
     ),
     'versions' => array(
         'at-shift/atshift-freeform-login' => array(
-            'pretty_version' => '1.0.0+no-version-set',
-            'version' => '1.0.0.0',
-            'reference' => null,
+            'pretty_version' => 'dev-main',
+            'version' => 'dev-main',
+            'reference' => 'a2986b5b08c0598be781fb637d99118d12266174',
             'type' => 'wordpress-plugin',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
@@ -251,9 +251,9 @@
             'dev_requirement' => false,
         ),
         'symfony/serializer' => array(
-            'pretty_version' => 'v7.4.17',
-            'version' => '7.4.17.0',
-            'reference' => 'e62e47f41fe72ae3540c4f8fe36f7f68348019cd',
+            'pretty_version' => 'v7.4.23',
+            'version' => '7.4.23.0',
+            'reference' => '9df8eb88c4d067d7aef1f3940075521769f34086',
             'type' => 'library',
             'install_path' => __DIR__ . '/../symfony/serializer',
             'aliases' => array(),
@@ -296,9 +296,9 @@
             'dev_requirement' => false,
         ),
         'web-auth/webauthn-lib' => array(
-            'pretty_version' => '5.3.9',
-            'version' => '5.3.9.0',
-            'reference' => '727e378fb7a36c26be5c911e4a0120c146741ce7',
+            'pretty_version' => '5.3.12',
+            'version' => '5.3.12.0',
+            'reference' => 'c7aeeb1d35e39b7d32ab5146cce4b668f271a68e',
             'type' => 'library',
             'install_path' => __DIR__ . '/../web-auth/webauthn-lib',
             'aliases' => array(),

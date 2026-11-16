@@ -4,7 +4,7 @@ Tags: login, custom login, login form, passkey, webauthn
 Requires at least: 6.5
 Tested up to: 7.1
 Requires PHP: 7.4
-Stable tag: 2.4.2
+Stable tag: 2.4.3
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -93,6 +93,10 @@ You can try the complete Pro design controls on one site for seven days without 
 4. The visual design editor provides grouped controls and responsive previews before login-screen changes are enabled.
 
 == Changelog ==
+
+= 2.4.3 =
+* Updated Symfony Serializer to 7.4.23 to include upstream security fixes.
+* Updated the WebAuthn library to 5.3.12 with upstream security fixes and stricter credential and authentication-data validation.
 
 = 2.4.2 =
 * Updated the bundled WebAuthn library to 5.3.9 and refreshed compatible dependencies for security, standards compliance, and bug fixes.
