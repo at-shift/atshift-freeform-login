@@ -13,7 +13,7 @@ if ( ! defined( 'ABSPATH' ) ) {
  * Handles passkey registration requests.
  */
 class Atshift_Freeform_Login_Passkey_REST {
-	const NAMESPACE = 'atshift-freeform-login/v1';
+	const REST_NAMESPACE = 'atshift-freeform-login/v1';
 
 	/** @var Atshift_Freeform_Login_Passkey_Storage */
 	private $storage;
@@ -41,7 +41,7 @@ class Atshift_Freeform_Login_Passkey_REST {
 	 */
 	public function register_routes() {
 		register_rest_route(
-			self::NAMESPACE,
+			self::REST_NAMESPACE,
 			'/passkeys/registration/options',
 			array(
 				'methods'             => WP_REST_Server::CREATABLE,
@@ -57,7 +57,7 @@ class Atshift_Freeform_Login_Passkey_REST {
 			)
 		);
 		register_rest_route(
-			self::NAMESPACE,
+			self::REST_NAMESPACE,
 			'/passkeys/registration/verify',
 			array(
 				'methods'             => WP_REST_Server::CREATABLE,
@@ -66,7 +66,7 @@ class Atshift_Freeform_Login_Passkey_REST {
 			)
 		);
 		register_rest_route(
-			self::NAMESPACE,
+			self::REST_NAMESPACE,
 			'/passkeys/(?P<credentialId>[A-Za-z0-9_-]+)',
 			array(
 				'methods'             => WP_REST_Server::DELETABLE,
@@ -87,7 +87,7 @@ class Atshift_Freeform_Login_Passkey_REST {
 			)
 		);
 		register_rest_route(
-			self::NAMESPACE,
+			self::REST_NAMESPACE,
 			'/passkeys/authentication/options',
 			array(
 				'methods'             => WP_REST_Server::CREATABLE,
@@ -96,7 +96,7 @@ class Atshift_Freeform_Login_Passkey_REST {
 			),
 		);
 		register_rest_route(
-			self::NAMESPACE,
+			self::REST_NAMESPACE,
 			'/passkeys/authentication/verify',
 			array(
 				'methods'             => WP_REST_Server::CREATABLE,

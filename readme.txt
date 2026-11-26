@@ -2,9 +2,9 @@
 Contributors: atshift
 Tags: login, custom login, login form, passkey, webauthn
 Requires at least: 6.5
-Tested up to: 7.1
+Tested up to: 7.2
 Requires PHP: 7.4
-Stable tag: 2.4.3
+Stable tag: 2.4.4
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -93,6 +93,10 @@ You can try the complete Pro design controls on one site for seven days without 
 4. The visual design editor provides grouped controls and responsive previews before login-screen changes are enabled.
 
 == Changelog ==
+
+= 2.4.4 =
+* Confirmed compatibility with WordPress 7.2 and PHP 8.6.
+* Renamed an internal REST namespace constant for PHP 8.6 compatibility without changing endpoint URLs.
 
 = 2.4.3 =
 * Updated Symfony Serializer to 7.4.23 to include upstream security fixes.
